@@ -116,7 +116,7 @@ header nav ul li a.active {
 header nav ul li a.active:hover {
   color: #1a1a1a;
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 850px) {
   header {
     flex-direction: column;
   }
@@ -127,13 +127,13 @@ header nav ul li a.active:hover {
     margin: 20px 0;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   header .btn-menu {
     display: block;
   }
   header nav {
     transition-duration: 0.5s;
-    height: 230px;
+    height: 200px;
     overflow: hidden;
     margin: 0;
   }
