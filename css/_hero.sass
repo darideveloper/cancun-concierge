@@ -1,0 +1,60 @@
+.hero
+    position: relative
+
+    > .paralax
+        background-image: url("../imgs/hero1.jpg")
+    
+    .text-wrapper
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        top: 150px
+
+        .paralax-text
+            display: inline-block
+            background-color: $color_b
+            padding: 5px 20px
+            font-weight: normal
+            text-transform: uppercase
+
+    .about
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin: 100px auto
+
+        img
+            width: 65%
+
+        .text
+            width: 30%
+
+        .paralax
+            display: none
+
+    @media screen and (max-width: 1100px)
+        .about
+            margin-top: 0
+            margin-bottom: 0
+            flex-direction: column
+
+            img
+                display: none
+
+            .text
+                width: 100%
+                order: -1
+                margin-top: 50px
+                margin-bottom: 50px
+
+            .paralax
+                width: 100vw
+                height: 300px
+                display: block
+                background-image: url("../imgs/hero2.jpg")
+
+    @media screen and (max-width: 750px)
+        .text-wrapper
+            .paralax-text
+                text-align: center

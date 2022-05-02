@@ -1,12 +1,14 @@
 html {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
+  font-family: "Urbanist", sans-serif;
 }
 
 .wrapper-img {
@@ -55,6 +57,18 @@ a {
   margin: 0 auto;
 }
 
+.full-width, paralax {
+  width: 100%;
+}
+
+.paralax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -62,8 +76,8 @@ header {
   font-family: "Maven Pro", sans-serif;
 }
 header .logo {
-  height: 100px;
-  margin-top: 20px;
+  height: 50px;
+  margin: 20px 0;
 }
 header .btn-menu {
   display: none;
@@ -102,8 +116,11 @@ header nav ul li a.active:hover {
   header {
     flex-direction: column;
   }
+  header .logo {
+    margin-bottom: 10px;
+  }
   header nav {
-    margin-top: 20px;
+    margin: 20px 0;
   }
 }
 @media screen and (max-width: 800px) {
@@ -114,6 +131,7 @@ header nav ul li a.active:hover {
     transition-duration: 0.5s;
     height: 230px;
     overflow: hidden;
+    margin: 0;
   }
   header nav.collapsed {
     height: 0;
@@ -127,6 +145,69 @@ header nav ul li a.active:hover {
   header nav ul li {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+}
+
+.hero {
+  position: relative;
+}
+.hero > .paralax {
+  background-image: url("../imgs/hero1.jpg");
+}
+.hero .text-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  top: 150px;
+}
+.hero .text-wrapper .paralax-text {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 5px 20px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.hero .about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 100px auto;
+}
+.hero .about img {
+  width: 65%;
+}
+.hero .about .text {
+  width: 30%;
+}
+.hero .about .paralax {
+  display: none;
+}
+@media screen and (max-width: 1100px) {
+  .hero .about {
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+  .hero .about img {
+    display: none;
+  }
+  .hero .about .text {
+    width: 100%;
+    order: -1;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .hero .about .paralax {
+    width: 100vw;
+    height: 300px;
+    display: block;
+    background-image: url("../imgs/hero2.jpg");
+  }
+}
+@media screen and (max-width: 750px) {
+  .hero .text-wrapper .paralax-text {
+    text-align: center;
   }
 }
 
@@ -144,15 +225,20 @@ footer .wrapper-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 footer .wrapper-btn .btn-footer {
   margin-top: -25px;
+  position: absolute;
+  top: 0;
+  z-index: 2;
 }
 footer .widgets {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+  margin-top: 30px;
 }
 footer .widgets .widget:nth-child(1) {
   width: 400px;
@@ -228,13 +314,19 @@ footer .copyright {
   height: 50px;
   transition-duration: 0.5s;
   box-shadow: 0px 0px 10px rgba(23, 23, 23, 0.2);
+  text-align: center;
+  color: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .btn-footer:hover {
   transform: scale(1.1);
 }
 .btn-footer svg {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */

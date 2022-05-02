@@ -5,8 +5,8 @@ header
     font-family: 'Maven Pro', sans-serif
 
     .logo
-        height: 100px
-        margin-top: 20px
+        height: 50px
+        margin: 20px 0
 
     .btn-menu
         display: none
@@ -43,8 +43,12 @@ header
     @media screen and (max-width: 1150px)
         flex-direction: column
 
+        .logo
+            margin-bottom: 10px
+
         nav
-            margin-top: 20px
+            margin: 20px 0
+
 
     @media screen and (max-width: 800px)
         .btn-menu
@@ -54,6 +58,7 @@ header
             transition-duration: $transition-duration
             height: 230px
             overflow: hidden
+            margin: 0
     
             &.collapsed
                 height: 0
