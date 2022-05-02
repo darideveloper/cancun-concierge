@@ -1,7 +1,7 @@
 $color_a: #1a1a1a
 $color_b: #ffffff
 $color_c: #BFAA69
-$color_d: #fff
+$color_d: #171717
 $transition-duration: 0.5s
     
 html
@@ -38,4 +38,15 @@ p
 a
     text-decoration: none
     color: $color_a
-    
+
+.max-width
+    width: calc(100% - 100px)
+    margin: 0 auto
+
+    @media screen and (max-width: 1150px)
+        width: 95%
+
+.regular-width
+    width: 95%
+    max-width: 960px
+    margin: 0 auto
