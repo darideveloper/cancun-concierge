@@ -69,11 +69,15 @@ a {
   height: 600px;
 }
 
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: "Maven Pro", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Maven Pro", sans-serif;
 }
 header .logo {
   height: 50px;
@@ -100,7 +104,6 @@ header nav ul li a {
   padding: 15px;
   text-transform: uppercase;
   font-size: 12px;
-  letter-spacing: 0.1rem;
 }
 header nav ul li a:hover {
   color: #BFAA69;
@@ -205,7 +208,7 @@ header nav ul li a.active:hover {
     background-image: url("../imgs/hero2.jpg");
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
   .hero .text-wrapper .paralax-text {
     text-align: center;
   }
