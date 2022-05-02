@@ -348,6 +348,10 @@ footer .copyright {
 }
 .services .service {
   margin-top: 100px;
+  cursor: pointer;
+}
+.services .service .paralax {
+  display: block;
 }
 .services .service.translation .paralax {
   background-image: url("../imgs/service-translation.jpg");
