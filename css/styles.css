@@ -345,6 +345,7 @@ footer .copyright {
 .services h1 {
   margin-top: 50px;
   font-size: 35px;
+  margin-bottom: -50px;
 }
 .services .service {
   margin-top: 100px;
@@ -352,6 +353,15 @@ footer .copyright {
 }
 .services .service .paralax {
   display: block;
+}
+.services .service .text {
+  position: relative;
+}
+.services .service .text h2 {
+  position: absolute;
+  top: 150px;
+  background-color: #ffffff;
+  padding: 10px 20px;
 }
 .services .service.translation .paralax {
   background-image: url("../imgs/service-translation.jpg");
