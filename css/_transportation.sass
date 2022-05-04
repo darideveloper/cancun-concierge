@@ -1,8 +1,27 @@
 .transportation
+
+    h2
+        text-align: center
+        margin-top: 100px
+        margin-bottom: 100px
+
+    .cards
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 50px
+        margin-bottom: 100px
+
+        .card
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            text-align: center
+
     &.details
 
         .paralax
-            background-image: url("../imgs/transportation.PNG")
+            background-image: url("../imgs/transportation-details.jpg")
 
             .titles 
                 display: flex
@@ -33,25 +52,43 @@
                         display: none
 
         .cards
-            display: grid
-            grid-template-columns: repeat(3, 1fr)
-            gap: 50px
-            margin: 100px auto
-
             .card
-                display: flex
-                align-items: center
-                justify-content: center
-                flex-direction: column
-
                 svg
                     width: 80px
                     height: 80px
 
-                h3
-                    text-align: center
+    &.transport
+
+        .paralax
+            background-image: url("../imgs/transportation-transport.jpg")
+
+        .cards
+            .card
+                p
+                    line-height: 25px
+                    margin-top: 0
+
+                    &.people
+                        &:before
+                            content: "a"
+                            width: 30px
+                            height: 25px
+                            color: rgba(0,0,0,0)
+                            display: inline-block
+                            background-image: url("../imgs/svg-people.svg")
+                            background-fill: cover
+                            background-repeat: no-repeat
+
+                    &.price
+                        color: $color_c
+                        font-size: 16px
+                        font-stretch: italic
+
+                img
+                    width: 100%
+                    height: auto
     
-    @media screen and (max-width: 650px)
+    @media screen and (max-width: 700px)
         &.details
             .paralax
                 .titles
@@ -59,15 +96,11 @@
                         br
                             display: block 
 
-            .cards
-                grid-template-columns: repeat(2, 1fr)
-                gap: 25px
-
-                p
-                    text-align: center
+        .cards
+            grid-template-columns: repeat(2, 1fr)
 
 
-    @media screen and (max-width: 450px)
+    @media screen and (max-width: 500px)
         &.details
             .paralax
                 .titles
@@ -75,11 +108,9 @@
                         br
                             display: block 
 
-            .cards
-                grid-template-columns: repeat(1, 1fr)
-                gap: 25px
-                
-                p
-                    text-align: center
+        .cards
+            grid-template-columns: repeat(1, 1fr)
 
+            .card
+                margin-bottom: 50px
 

@@ -342,6 +342,30 @@ footer .copyright {
   height: 15px;
 }
 
+.btn {
+  background: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  text-transform: upper;
+  display: inline-block;
+  background: #1a1a1a;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 30px;
+  transition-duration: 0.5s;
+  margin-bottom: 0;
+  border: 2px solid black;
+}
+.btn:hover {
+  border-radius: 30px;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+.btn:active {
+  background: rgba(26, 26, 26, 0.3);
+}
+
 .services h1 {
   margin-top: 50px;
   font-size: 35px;
@@ -391,8 +415,26 @@ footer .copyright {
   background-image: url("../imgs/service-floral.jpg");
 }
 
+.transportation h2 {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.transportation .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-bottom: 100px;
+}
+.transportation .cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
 .transportation.details .paralax {
-  background-image: url("../imgs/transportation.PNG");
+  background-image: url("../imgs/transportation-details.jpg");
 }
 .transportation.details .paralax .titles {
   display: flex;
@@ -422,47 +464,53 @@ footer .copyright {
 .transportation.details .paralax .titles p br {
   display: none;
 }
-.transportation.details .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-  margin: 100px auto;
-}
-.transportation.details .cards .card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 .transportation.details .cards .card svg {
   width: 80px;
   height: 80px;
 }
-.transportation.details .cards .card h3 {
-  text-align: center;
+.transportation.transport .paralax {
+  background-image: url("../imgs/transportation-transport.jpg");
 }
-@media screen and (max-width: 650px) {
+.transportation.transport .cards .card p {
+  line-height: 25px;
+  margin-top: 0;
+}
+.transportation.transport .cards .card p.people:before {
+  content: "a";
+  width: 30px;
+  height: 25px;
+  color: rgba(0, 0, 0, 0);
+  display: inline-block;
+  background-image: url("../imgs/svg-people.svg");
+  background-fill: cover;
+  background-repeat: no-repeat;
+}
+.transportation.transport .cards .card p.price {
+  color: #BFAA69;
+  font-size: 16px;
+  font-stretch: italic;
+}
+.transportation.transport .cards .card img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 700px) {
   .transportation.details .paralax .titles h1 br {
     display: block;
   }
-  .transportation.details .cards {
+  .transportation .cards {
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-  .transportation.details .cards p {
-    text-align: center;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .transportation.details .paralax .titles p br {
     display: block;
   }
-  .transportation.details .cards {
+  .transportation .cards {
     grid-template-columns: repeat(1, 1fr);
-    gap: 25px;
   }
-  .transportation.details .cards p {
-    text-align: center;
+  .transportation .cards .card {
+    margin-bottom: 50px;
   }
 }
 

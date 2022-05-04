@@ -37,4 +37,25 @@
         width: 15px
         height: 15px
 
+.btn
+    background: none
+    border: none
+    border-radius: 10px
+    font-size: 20px
+    text-transform: upper
+    display: inline-block
+    background: $color-a
+    color: $color-b
+    font-weight: bold
+    padding: 10px 30px
+    transition-duration: $transition-duration
+    margin-bottom: 0
+    border: 2px solid black
 
+    &:hover
+        border-radius: 30px
+        background: $color-b
+        color: $color-a
+
+    &:active
+        background: rgba($color-a, 0.3)
