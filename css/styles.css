@@ -391,4 +391,79 @@ footer .copyright {
   background-image: url("../imgs/service-floral.jpg");
 }
 
+.transportation.details .paralax {
+  background-image: url("../imgs/transportation.PNG");
+}
+.transportation.details .paralax .titles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-top: 100px;
+}
+.transportation.details .paralax .titles h1, .transportation.details .paralax .titles p {
+  text-align: right;
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 10px 20px;
+}
+.transportation.details .paralax .titles h1 {
+  font-size: 35px;
+  margin-bottom: 0;
+}
+.transportation.details .paralax .titles h1 br {
+  display: none;
+}
+.transportation.details .paralax .titles p {
+  font-style: italic;
+  margin-top: 0;
+  font-size: 28px;
+}
+.transportation.details .paralax .titles p br {
+  display: none;
+}
+.transportation.details .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin: 100px auto;
+}
+.transportation.details .cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.transportation.details .cards .card svg {
+  width: 80px;
+  height: 80px;
+}
+.transportation.details .cards .card h3 {
+  text-align: center;
+}
+@media screen and (max-width: 650px) {
+  .transportation.details .paralax .titles h1 br {
+    display: block;
+  }
+  .transportation.details .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .transportation.details .cards p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  .transportation.details .paralax .titles p br {
+    display: block;
+  }
+  .transportation.details .cards {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+  }
+  .transportation.details .cards p {
+    text-align: center;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
