@@ -387,13 +387,17 @@ footer .copyright {
   display: block;
 }
 .services .service .text {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -150px;
 }
 .services .service .text h2 {
-  position: absolute;
-  top: 150px;
+  order: 1;
+  margin-top: 100px;
+  display: inline-block;
   background-color: #ffffff;
-  padding: 10px 20px;
+  padding: 10px 40px;
+  align-self: flex-start;
 }
 .services .service.translation .paralax {
   background-image: url("../imgs/service-translation.jpg");
