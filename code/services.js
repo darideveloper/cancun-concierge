@@ -1,4 +1,3 @@
-// "Me%20interesa%20su%20servicio%20de%20Actividades%20Acu%C3%A1ticas"
 const links = document.querySelectorAll (".service .paralax")
 
 for (let link of links) {
