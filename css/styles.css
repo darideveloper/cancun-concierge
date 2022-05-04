@@ -564,6 +564,7 @@ footer .copyright {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition-duration: 0.5s;
 }
 .social .flex .gallery .imgs-wrapper .imgs img {
   width: 100%;
