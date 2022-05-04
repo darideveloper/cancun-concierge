@@ -1,0 +1,77 @@
+.social
+    h1
+        font-size: 35px
+
+    p
+        span
+            font-weight: bold
+
+    .paralax
+        &.top
+            background-image: url("../imgs/social-1.jpg")
+    
+        &.bottom
+            background-image: url("../imgs/social-2.jpg")
+
+    .text
+        &.top
+            margin-bottom: 50px
+
+        &.bottom
+            margin: 50px auto
+
+    .flex
+        margin: 50px auto
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        .info, .gallery
+            width: 48%
+
+        .gallery
+            display: flex
+            align-items: center
+            justify-content: space-between
+            position: relative
+            margin-top: 10px
+
+            .imgs-wrapper
+                width: 100%
+                overflow: hidden
+
+                .imgs
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+
+                    img
+                        width: 100%
+                        height: auto
+                
+            button
+                position: absolute
+                top: 50%
+                z-index: 1
+                margin-top: -15px
+
+                &.next
+                    right: -15px
+                    svg
+                        transform: rotateZ(90deg)
+
+                &.back
+                    left: -15px
+                    svg
+                        transform: rotateZ(-90deg)
+                        
+    @media screen and (max-width: 800px)
+        .flex
+            flex-direction: column
+
+            .info
+                width: 100%
+
+            .gallery
+                width: 90%
+                max-width: 491px

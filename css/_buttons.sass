@@ -1,61 +1,74 @@
-.btn-menu
-    margin: 0
-    padding: 10px
-    background: none
-    border: none
-    transition-duration: $transition-duration
-
-    svg
-        width: 30px
-        height: 30px
-        fill: $color_c
-
-    &.active
-        transform: rotateZ(180deg)
-
-.btn-footer
-    margin: 0
-    padding: 0
-    background: $color_b
-    border: none
-    border-radius: 50%
-    width: 50px
-    height: 50px
-    transition-duration: $transition-duration
-    box-shadow: 0px 0px 10px rgba($color_d, 0.2)
-    text-align: center
-    color: $color_d
-    display: flex
-    align-items: center
-    justify-content: center
-    flex-direction: column
-
-    &:hover
-        transform: scale(1.1)
-
-    svg
-        width: 15px
-        height: 15px
-
 .btn
-    background: none
-    border: none
-    border-radius: 10px
-    font-size: 20px
-    text-transform: upper
-    display: inline-block
-    background: $color-a
-    color: $color-b
-    font-weight: bold
-    padding: 10px 30px
-    transition-duration: $transition-duration
-    margin-bottom: 0
-    border: 2px solid black
+    
+    &.menu
+        margin: 0
+        padding: 10px
+        background: none
+        border: none
+        transition-duration: $transition-duration
 
-    &:hover
-        border-radius: 30px
-        background: $color-b
-        color: $color-a
+        svg
+            width: 30px
+            height: 30px
+            fill: $color_c
 
-    &:active
-        background: rgba($color-a, 0.3)
+        &.active
+            transform: rotateZ(180deg)
+
+    &.white
+        margin: 0
+        padding: 0
+        background: $color_b
+        border: none
+        border-radius: 50%
+        transition-duration: $transition-duration
+        box-shadow: 0px 0px 10px rgba($color_d, 0.2)
+        text-align: center
+        color: $color_d
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+
+        &:hover
+            transform: scale(1.1)
+
+    &.slide
+        width: 40px
+        height: 40px
+
+        svg
+            width: 50%
+            height: 50%
+
+
+    &.footer
+        width: 50px
+        height: 50px
+
+        svg
+            width: 15px
+            height: 15px
+
+    &.cta
+        background: none
+        border: none
+        border-radius: 10px
+        font-size: 20px
+        text-transform: upper
+        display: inline-block
+        background: $color-a
+        color: $color-b
+        font-weight: bold
+        padding: 10px 30px
+        transition-duration: $transition-duration
+        margin-bottom: 0
+        border: 2px solid black
+
+        &:hover
+            border-radius: 30px
+            background: $color-b
+            color: $color-a
+
+        &:active
+            background: rgba($color-a, 0.3)
