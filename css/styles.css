@@ -242,6 +242,7 @@ header .content nav ul li a.active:hover {
   position: absolute;
   top: 0;
   z-index: 2;
+  color: #1a1a1a;
 }
 #footer .widgets {
   display: flex;
@@ -406,54 +407,87 @@ header .content nav ul li a.active:hover {
 .services h1 {
   margin-top: 50px;
   font-size: 35px;
-  margin-bottom: -50px;
+  margin-bottom: 50px;
 }
-.services .service {
-  margin-top: 100px;
-  cursor: pointer;
+.services .services-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
-.services .service .paralax {
-  display: block;
-}
-.services .service .text {
+.services .services-cards .service {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  margin-bottom: -150px;
+  position: relative;
+  overflow: hidden;
 }
-.services .service .text h2 {
-  order: 1;
-  margin-top: 100px;
-  display: inline-block;
-  background-color: #ffffff;
-  padding: 10px 40px;
-  align-self: flex-start;
+.services .services-cards .service:hover .wrapper-img {
+  opacity: 0.05;
 }
-.services .service.translation .paralax {
-  background-image: url("../imgs/service-translation.jpg");
+.services .services-cards .service .wrapper-img {
+  border-radius: 20px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 230px;
+  opacity: 1;
+  transition-duration: 0.5s;
+  top: 0;
 }
-.services .service.activities .paralax {
-  background-image: url("../imgs/service-activities.jpg");
+.services .services-cards .service .wrapper-img img {
+  width: auto;
+  height: 110%;
 }
-.services .service.excursions .paralax {
-  background-image: url("../imgs/service-excursions.jpg");
+.services .services-cards .service h2 {
+  order: 3;
+  height: 75px;
+  text-align: center;
+  margin-top: 15px;
 }
-.services .service.golf .paralax {
-  background-image: url("../imgs/service-golf.jpg");
+.services .services-cards .service .wrapper-text {
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4F6A9E;
+  border-radius: 20px;
 }
-.services .service.amenities .paralax {
-  background-image: url("../imgs/service-amenities.jpg");
+.services .services-cards .service .wrapper-text p {
+  font-size: 15px;
+  width: 85%;
+  color: #ffffff;
+  text-align: center;
 }
-.services .service.restaurants .paralax {
-  background-image: url("../imgs/service-restaurants.jpg");
+@media screen and (max-width: 850px) {
+  .services .services-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-.services .service.entertainment .paralax {
-  background-image: url("../imgs/service-entertainment.jpg");
+@media screen and (max-width: 650px) {
+  .services .services-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .services .services-cards .service .wrapper-img {
+    width: 100%;
+  }
+  .services .services-cards .service .wrapper-img img {
+    width: 110%;
+    height: auto;
+  }
 }
-.services .service.decoration .paralax {
-  background-image: url("../imgs/service-decoration.jpg");
-}
-.services .service.floral .paralax {
-  background-image: url("../imgs/service-floral.jpg");
+@media screen and (max-width: 420px) {
+  .services .services-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .services .services-cards .service .wrapper-img {
+    width: 100%;
+    height: 230px;
+  }
+  .services .services-cards .service .wrapper-img img {
+    width: auto;
+    height: 110%;
+  }
 }
 
 .transportation h2 {
