@@ -1,73 +1,77 @@
 header
-    display: flex
-    align-items: center
-    justify-content: space-between
+    background-color: $color_d
 
-    .logo
-        height: 50px
-        margin: 20px 0
-
-    .btn.menu
-        display: none
-
-    nav
-        margin: 0
-        padding: 0
-
-        ul
-            margin: 0
-            padding: 0
-            display: flex
-            align-items: center
-            justify-content: flex-start
-
-            li
-                list-style: none
-                a
-                    padding: 15px
-                    font-size: 12px
-
-                    &:hover
-                        color: $color_c
-
-                    &.active
-                        font-weight: bold
-                        cursor: default
-
-                        &:hover
-                            color: $color_a
-
-    @media screen and (max-width: 850px)
-        flex-direction: column
+    .content
+        display: flex
+        align-items: center
+        justify-content: space-between
 
         .logo
-            margin-bottom: 10px
-
-        nav
+            height: 50px
             margin: 20px 0
 
-
-    @media screen and (max-width: 700px)
         .btn.menu
-            display: block
+            display: none
 
         nav
-            transition-duration: $transition-duration
-            height: 200px
-            overflow: hidden
             margin: 0
-    
-            &.collapsed
-                height: 0
+            padding: 0
 
             ul
+                margin: 0
+                padding: 0
                 display: flex
                 align-items: center
-                justify-content: center
-                flex-direction: column
+                justify-content: flex-start
 
                 li
-                    padding-top: 10px
-                    padding-bottom: 10px
+                    list-style: none
+                    a
+                        padding: 15px
+                        font-size: 12px
+                        color: $color_b
 
-    
+                        &:hover
+                            color: $color_c
+
+                        &.active
+                            font-weight: bold
+                            cursor: default
+
+                            &:hover
+                                color: $color_b
+
+        @media screen and (max-width: 850px)
+            flex-direction: column
+
+            .logo
+                margin-bottom: 10px
+
+            nav
+                margin: 20px 0
+
+
+        @media screen and (max-width: 700px)
+            .btn.menu
+                display: block
+
+            nav
+                transition-duration: $transition-duration
+                height: 200px
+                overflow: hidden
+                margin: 0
+        
+                &.collapsed
+                    height: 0
+
+                ul
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    flex-direction: column
+
+                    li
+                        padding-top: 10px
+                        padding-bottom: 10px
+
+        

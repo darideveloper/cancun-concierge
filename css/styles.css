@@ -77,76 +77,80 @@ h1, h2, h3, h4, h5, h6, .title {
 }
 
 header {
+  background-color: #4F6A9E;
+}
+header .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header .logo {
+header .content .logo {
   height: 50px;
   margin: 20px 0;
 }
-header .btn.menu {
+header .content .btn.menu {
   display: none;
 }
-header nav {
+header .content nav {
   margin: 0;
   padding: 0;
 }
-header nav ul {
+header .content nav ul {
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-header nav ul li {
+header .content nav ul li {
   list-style: none;
 }
-header nav ul li a {
+header .content nav ul li a {
   padding: 15px;
   font-size: 12px;
+  color: #ffffff;
 }
-header nav ul li a:hover {
-  color: #BFAA69;
+header .content nav ul li a:hover {
+  color: #C8B568;
 }
-header nav ul li a.active {
+header .content nav ul li a.active {
   font-weight: bold;
   cursor: default;
 }
-header nav ul li a.active:hover {
-  color: #1a1a1a;
+header .content nav ul li a.active:hover {
+  color: #ffffff;
 }
 @media screen and (max-width: 850px) {
-  header {
+  header .content {
     flex-direction: column;
   }
-  header .logo {
+  header .content .logo {
     margin-bottom: 10px;
   }
-  header nav {
+  header .content nav {
     margin: 20px 0;
   }
 }
 @media screen and (max-width: 700px) {
-  header .btn.menu {
+  header .content .btn.menu {
     display: block;
   }
-  header nav {
+  header .content nav {
     transition-duration: 0.5s;
     height: 200px;
     overflow: hidden;
     margin: 0;
   }
-  header nav.collapsed {
+  header .content nav.collapsed {
     height: 0;
   }
-  header nav ul {
+  header .content nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
-  header nav ul li {
+  header .content nav ul li {
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -215,7 +219,7 @@ header nav ul li a.active:hover {
 
 footer {
   width: 100%;
-  background-color: #171717;
+  background-color: #4F6A9E;
   color: white;
   font-family: "Maven Pro", sans-serif;
 }
@@ -250,6 +254,7 @@ footer .widgets .widget:nth-child(2) {
 }
 footer .widgets .widget h2 {
   font-size: 18px;
+  color: #C8B568;
 }
 footer .widgets .widget a, footer .widgets .widget p {
   font-style: normal;
@@ -265,6 +270,9 @@ footer .widgets .widget a svg, footer .widgets .widget p svg {
   width: 15px;
   height: 20px;
   fill: #ffffff;
+}
+footer .widgets .widget a:hover {
+  color: #C8B568;
 }
 footer .copyright {
   padding-top: 20px;
@@ -311,7 +319,7 @@ footer .copyright {
 .btn.menu svg {
   width: 30px;
   height: 30px;
-  fill: #BFAA69;
+  fill: #C8B568;
 }
 .btn.menu.active {
   transform: rotateZ(180deg);
@@ -323,9 +331,9 @@ footer .copyright {
   border: none;
   border-radius: 50%;
   transition-duration: 0.5s;
-  box-shadow: 0px 0px 10px rgba(23, 23, 23, 0.2);
+  box-shadow: 0px 0px 10px rgba(79, 106, 158, 0.2);
   text-align: center;
-  color: #171717;
+  color: #4F6A9E;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -498,7 +506,7 @@ footer .copyright {
   background-repeat: no-repeat;
 }
 .transportation.transport .cards .card p.price {
-  color: #BFAA69;
+  color: #C8B568;
   font-size: 16px;
   font-stretch: italic;
 }
