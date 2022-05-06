@@ -1,0 +1,45 @@
+.wrapper-testimonials
+    margin-bottom: 100px
+    margin-top: 100px
+
+    h2
+        text-align: center
+        margin-bottom: 50px
+    
+    .testimonials
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 50px
+
+        article
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            flex-direction: column
+
+            img
+                border-radius: 50%
+                overflow: hidden
+                width: 40%
+                height: auto
+
+            cite
+                display: block
+                
+                &:nth-child(1)
+                    font-weight: bold
+    
+    @media screen and (max-width: 850px)
+        .testimonials
+            grid-template-columns: repeat(1, 1fr)
+
+            article
+                margin-bottom: 50px
+
+                &:last-child
+                    margin-bottom: 0
+
+                img
+                    max-width: 150px
+
+                
