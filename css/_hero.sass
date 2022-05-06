@@ -1,8 +1,17 @@
 .hero
     position: relative
 
-    > .paralax
+    h2
+        text-align: center
+        margin-top: 100px
+
+    .paralax
         background-image: url("../imgs/hero-1.jpg")
+
+    p.center
+        text-align: center
+        margin-bottom: 100px
+        margin-top: 50px
     
     .text-wrapper
         position: absolute
@@ -20,16 +29,13 @@
         display: flex
         align-items: center
         justify-content: space-between
-        margin: 100px auto
+        margin: 0 auto
 
         img
             width: 65%
 
         .text
             width: 30%
-
-        .paralax
-            display: none
 
     @media screen and (max-width: 1100px)
         .info
@@ -45,12 +51,6 @@
                 order: -1
                 margin-top: 50px
                 margin-bottom: 50px
-
-            .paralax
-                width: 100vw
-                height: 300px
-                display: block
-                background-image: url("../imgs/hero-2.jpg")
 
     @media screen and (max-width: 850px)
         .text-wrapper

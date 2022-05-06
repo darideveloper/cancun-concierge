@@ -76,6 +76,10 @@ h1, h2, h3, h4, h5, h6, .title {
   font-weight: normal;
 }
 
+h2 {
+  font-size: 30px;
+}
+
 header {
   background-color: #4F6A9E;
 }
@@ -159,8 +163,17 @@ header .content nav ul li a.active:hover {
 .hero {
   position: relative;
 }
-.hero > .paralax {
+.hero h2 {
+  text-align: center;
+  margin-top: 100px;
+}
+.hero .paralax {
   background-image: url("../imgs/hero-1.jpg");
+}
+.hero p.center {
+  text-align: center;
+  margin-bottom: 100px;
+  margin-top: 50px;
 }
 .hero .text-wrapper {
   position: absolute;
@@ -178,16 +191,13 @@ header .content nav ul li a.active:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 100px auto;
+  margin: 0 auto;
 }
 .hero .info img {
   width: 65%;
 }
 .hero .info .text {
   width: 30%;
-}
-.hero .info .paralax {
-  display: none;
 }
 @media screen and (max-width: 1100px) {
   .hero .info {
@@ -203,12 +213,6 @@ header .content nav ul li a.active:hover {
     order: -1;
     margin-top: 50px;
     margin-bottom: 50px;
-  }
-  .hero .info .paralax {
-    width: 100vw;
-    height: 300px;
-    display: block;
-    background-image: url("../imgs/hero-2.jpg");
   }
 }
 @media screen and (max-width: 850px) {
@@ -298,15 +302,32 @@ footer .copyright {
   }
 }
 
-.about {
+.about .paralax {
+  background-image: url("../imgs/about-1.jpg");
+}
+.about .paralax .wrapper-text h2, .about .paralax .wrapper-text p {
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 5px 20px;
+}
+.about .paralax .wrapper-text h2 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.about .paralax .wrapper-text p {
+  margin-top: 0;
+}
+.about .omar {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-bottom: 100px;
+  margin-top: 100px;
 }
-.about h2 {
-  font-size: 30px;
+.about .omar h2 {
+  font-size: 20px;
+  order: 3;
 }
 
 .btn.menu {
