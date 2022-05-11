@@ -300,19 +300,34 @@ header .content nav ul li a.active:hover {
 }
 
 .about .paralax {
+  margin-top: 100px;
+  height: 400px;
+}
+.about > .paralax {
   background-image: url("../imgs/about-1.png");
 }
-.about .paralax .wrapper-text h2, .about .paralax .wrapper-text p {
+.about > .paralax .wrapper-text h2 {
   background-color: #ffffff;
   display: inline-block;
   padding: 5px 20px;
-}
-.about .paralax .wrapper-text h2 {
   margin-top: 100px;
   margin-bottom: 50px;
 }
-.about .paralax .wrapper-text p {
-  margin-top: 0;
+.about .details .imgs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.about .details .imgs img {
+  width: 31%;
+  height: auto;
+}
+.about .details p {
+  font-size: 15px;
+  margin-bottom: 0;
+  margin-top: 5px;
 }
 .about .omar {
   display: flex;
@@ -320,11 +335,57 @@ header .content nav ul li a.active:hover {
   justify-content: center;
   flex-direction: column;
   margin-bottom: 100px;
+}
+.about .omar .paralax {
+  background-image: url("../imgs/about-2.png");
+}
+.about .omar .paralax h2 {
   margin-top: 100px;
 }
-.about .omar h2 {
+.about .omar .paralax h2 span {
+  background-color: #ffffff;
+  display: inline-block;
+}
+.about .omar .paralax h2 span:last-child {
   font-size: 20px;
-  order: 3;
+}
+.about .omar .details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.about .omar .details img {
+  width: 150px;
+  height: auto;
+  margin-right: 50px;
+}
+@media screen and (max-width: 600px) {
+  .about .omar .details {
+    flex-direction: column;
+  }
+  .about .omar .details img {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .about .details .imgs {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about .details .imgs img {
+    width: 60%;
+    margin-bottom: 50px;
+  }
+  .about .details .imgs img:last-child {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .about .details .imgs img {
+    width: 90%;
+  }
 }
 
 .btn.menu {
@@ -744,7 +805,7 @@ header .content nav ul li a.active:hover {
     align-items: center;
   }
   .why-us .cards .card {
-    width: 70%;
+    width: 60%;
     margin-bottom: 50px;
   }
   .why-us .cards .card:last-child {
