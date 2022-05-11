@@ -169,11 +169,6 @@ header .content nav ul li a.active:hover {
 .hero .paralax {
   background-image: url("../imgs/hero-1.png");
 }
-.hero p.center {
-  text-align: center;
-  margin-bottom: 100px;
-  margin-top: 50px;
-}
 .hero .text-wrapper {
   position: absolute;
   top: 0;
@@ -192,6 +187,7 @@ header .content nav ul li a.active:hover {
   justify-content: space-between;
   margin: 0 auto;
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 .hero .info img {
   width: 55%;
@@ -735,6 +731,12 @@ header .content nav ul li a.active:hover {
 .why-us .cards .card p {
   font-weight: bold;
   font-size: 16px;
+}
+.why-us h3 {
+  font-weight: bold;
+  text-align: center;
+  width: 80%;
+  margin: 50px auto;
 }
 @media screen and (max-width: 750px) {
   .why-us .cards {
