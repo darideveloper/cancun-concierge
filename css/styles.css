@@ -165,7 +165,6 @@ header .content nav ul li a.active:hover {
 }
 .hero h2 {
   text-align: center;
-  margin-top: 100px;
 }
 .hero .paralax {
   background-image: url("../imgs/hero-1.png");
@@ -192,12 +191,13 @@ header .content nav ul li a.active:hover {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+  margin-top: 100px;
 }
 .hero .info img {
-  width: 65%;
+  width: 55%;
 }
 .hero .info .text {
-  width: 30%;
+  width: 40%;
 }
 @media screen and (max-width: 1100px) {
   .hero .info {
