@@ -1,0 +1,35 @@
+.gallery
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: relative
+    overflow: hidden
+    
+
+    .imgs-wrapper
+        width: 100%
+        overflow: hidden
+
+        .imgs
+            display: flex
+            align-items: center
+            justify-content: space-between
+            transition-duration: $transition-duration
+
+            img
+                width: 100%
+                height: auto
+    
+    button
+        position: absolute
+        top: 50%
+        z-index: 1
+        margin-top: -15px
+
+        &.next
+            svg
+                transform: rotateZ(90deg)
+
+        &.back
+            svg
+                transform: rotateZ(-90deg)

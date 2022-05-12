@@ -356,7 +356,7 @@ header .content nav ul li a.active:hover {
   margin-top: 50px;
 }
 .about .omar .details img {
-  width: 150px;
+  width: 200px;
   height: auto;
   margin-right: 50px;
 }
@@ -565,43 +565,42 @@ header .content nav ul li a.active:hover {
   flex-direction: column;
   text-align: center;
 }
-.transportation.details .paralax {
-  background-image: url("../imgs/transportation-details.jpg");
+.transportation.transport .gallery {
+  width: 100%;
+  position: relative;
 }
-.transportation.details .paralax .titles {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  padding-top: 100px;
+.transportation.transport .gallery .titles {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
-.transportation.details .paralax .titles h1, .transportation.details .paralax .titles p {
-  text-align: right;
+.transportation.transport .gallery .titles h1, .transportation.transport .gallery .titles p {
   background-color: #ffffff;
+  padding: 15px 40px;
   display: inline-block;
-  padding: 10px 20px;
 }
-.transportation.details .paralax .titles h1 {
-  font-size: 35px;
+.transportation.transport .gallery .titles h1 {
+  font-size: 50px;
   margin-bottom: 0;
 }
-.transportation.details .paralax .titles h1 br {
-  display: none;
-}
-.transportation.details .paralax .titles p {
-  font-style: italic;
+.transportation.transport .gallery .titles p {
+  font-size: 40px;
   margin-top: 0;
-  font-size: 28px;
 }
-.transportation.details .paralax .titles p br {
-  display: none;
+.transportation.transport .gallery .imgs-wrapper .imgs {
+  width: 300%;
 }
-.transportation.details .cards .card svg {
-  width: 80px;
-  height: 80px;
+.transportation.transport .gallery .imgs-wrapper .imgs img {
+  width: 33.33%;
 }
-.transportation.transport .paralax {
-  background-image: url("../imgs/transportation-transport.jpg");
+.transportation.transport .gallery button.next {
+  right: 0;
+  margin-right: 15px;
+}
+.transportation.transport .gallery button.back {
+  left: 0;
+  margin-left: 15px;
 }
 .transportation.transport .cards .card p {
   line-height: 25px;
@@ -626,18 +625,19 @@ header .content nav ul li a.active:hover {
   width: 100%;
   height: auto;
 }
+.transportation.details .paralax {
+  background-image: url("../imgs/transportation-transport.jpg");
+}
+.transportation.details .cards .card svg {
+  width: 80px;
+  height: 80px;
+}
 @media screen and (max-width: 700px) {
-  .transportation.details .paralax .titles h1 br {
-    display: block;
-  }
   .transportation .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 500px) {
-  .transportation.details .paralax .titles p br {
-    display: block;
-  }
   .transportation .cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -674,43 +674,13 @@ header .content nav ul li a.active:hover {
   width: 48%;
 }
 .social .flex .gallery {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
   margin-top: 10px;
-}
-.social .flex .gallery .imgs-wrapper {
-  width: 100%;
-  overflow: hidden;
-}
-.social .flex .gallery .imgs-wrapper .imgs {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition-duration: 0.5s;
-}
-.social .flex .gallery .imgs-wrapper .imgs img {
-  width: 100%;
-  height: auto;
-}
-.social .flex .gallery button {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  margin-top: -15px;
 }
 .social .flex .gallery button.next {
   right: -15px;
 }
-.social .flex .gallery button.next svg {
-  transform: rotateZ(90deg);
-}
 .social .flex .gallery button.back {
   left: -15px;
-}
-.social .flex .gallery button.back svg {
-  transform: rotateZ(-90deg);
 }
 @media screen and (max-width: 800px) {
   .social .flex {
@@ -816,6 +786,40 @@ header .content nav ul li a.active:hover {
   .why-us .cards .card {
     width: 90%;
   }
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.gallery .imgs-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.gallery .imgs-wrapper .imgs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition-duration: 0.5s;
+}
+.gallery .imgs-wrapper .imgs img {
+  width: 100%;
+  height: auto;
+}
+.gallery button {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  margin-top: -15px;
+}
+.gallery button.next svg {
+  transform: rotateZ(90deg);
+}
+.gallery button.back svg {
+  transform: rotateZ(-90deg);
 }
 
 /*# sourceMappingURL=styles.css.map */

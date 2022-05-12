@@ -18,49 +18,48 @@
             flex-direction: column
             text-align: center
 
-    &.details
-
-        .paralax
-            background-image: url("../imgs/transportation-details.jpg")
-
-            .titles 
-                display: flex
-                flex-direction: column
-                align-items: flex-end
-                justify-content: center
-                padding-top: 100px
-
-                h1, p
-                    text-align: right
-                    background-color: $color_b
-                    display: inline-block
-                    padding: 10px 20px
-
-                h1
-                    font-size: 35px
-                    margin-bottom: 0
-
-                    br
-                        display: none
-
-                p
-                    font-style: italic
-                    margin-top: 0
-                    font-size: 28px
-
-                    br
-                        display: none
-
-        .cards
-            .card
-                svg
-                    width: 80px
-                    height: 80px
-
     &.transport
 
-        .paralax
-            background-image: url("../imgs/transportation-transport.jpg")
+        .gallery
+            width: 100%
+            position: relative
+
+            .titles
+                position: absolute
+                left: 0
+                right: 0
+                text-align: center
+
+                h1, p
+                    background-color: $color_b
+                    padding: 15px 40px
+                    display: inline-block
+
+                h1
+                    font-size: 50px
+                    margin-bottom: 0
+
+                p
+                    font-size: 40px
+                    margin-top: 0
+
+            .imgs-wrapper
+
+                .imgs
+                    width: 300%
+
+                    img
+                        width: 33.33%
+
+            button
+
+                &.next
+                    right: 0
+                    margin-right: 15px
+
+                &.back
+                    left: 0
+                    margin-left: 15px
 
         .cards
             .card
@@ -87,27 +86,25 @@
                 img
                     width: 100%
                     height: auto
+
+    &.details
+
+        .paralax
+            background-image: url("../imgs/transportation-transport.jpg")
+
+        .cards
+            .card
+                svg
+                    width: 80px
+                    height: 80px
+
     
     @media screen and (max-width: 700px)
-        &.details
-            .paralax
-                .titles
-                    h1
-                        br
-                            display: block 
-
         .cards
             grid-template-columns: repeat(2, 1fr)
 
 
     @media screen and (max-width: 500px)
-        &.details
-            .paralax
-                .titles
-                    p
-                        br
-                            display: block 
-
         .cards
             grid-template-columns: repeat(1, 1fr)
 
