@@ -557,6 +557,7 @@ header .content nav ul li a.active:hover {
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
   margin-bottom: 100px;
+  align-items: flex-start;
 }
 .transportation .cards .card {
   display: flex;
@@ -624,9 +625,6 @@ header .content nav ul li a.active:hover {
 .transportation.transport .cards .card img {
   width: 100%;
   height: auto;
-}
-.transportation.details .paralax {
-  background-image: url("../imgs/transportation-transport.jpg");
 }
 .transportation.details .cards .card svg {
   width: 80px;
