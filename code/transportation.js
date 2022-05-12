@@ -17,3 +17,6 @@ for (let transport_card of transport_cards) {
     // Set link to anchors
     link.setAttribute("href", whatsapp_link)
 }
+
+// Percentage to slide gallery
+var move_value = 33.333
