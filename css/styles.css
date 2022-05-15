@@ -181,12 +181,14 @@ header .content nav ul li a.active:hover {
   background-color: #ffffff;
   padding: 5px 20px;
 }
+.hero h2 {
+  margin-top: 100px;
+}
 .hero .info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  margin-top: 100px;
   margin-bottom: 100px;
 }
 .hero .info img {
@@ -705,6 +707,7 @@ header .content nav ul li a.active:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
+  margin-bottom: 25px;
 }
 .wrapper-testimonials .testimonials article {
   display: flex;
@@ -718,10 +721,14 @@ header .content nav ul li a.active:hover {
   width: 40%;
   height: auto;
 }
-.wrapper-testimonials .testimonials article cite {
-  display: block;
+.wrapper-testimonials .testimonials article .cites {
+  margin-top: 20px;
 }
-.wrapper-testimonials .testimonials article cite:nth-child(1) {
+.wrapper-testimonials .testimonials article .cites cite {
+  display: block;
+  text-align: center;
+}
+.wrapper-testimonials .testimonials article .cites cite:nth-child(1) {
   font-weight: bold;
 }
 @media screen and (max-width: 850px) {

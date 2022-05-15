@@ -10,6 +10,7 @@
         display: grid
         grid-template-columns: repeat(3, 1fr)
         gap: 50px
+        margin-bottom: 25px
 
         article
             display: flex
@@ -23,11 +24,16 @@
                 width: 40%
                 height: auto
 
-            cite
-                display: block
+
+            .cites
+                margin-top: 20px
                 
-                &:nth-child(1)
-                    font-weight: bold
+                cite
+                    display: block
+                    text-align: center
+                    
+                    &:nth-child(1)
+                        font-weight: bold
     
     @media screen and (max-width: 850px)
         .testimonials
