@@ -549,6 +549,34 @@ header .content nav ul li a.active:hover {
   }
 }
 
+.transportation {
+  position: relative;
+}
+.transportation .titles {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 55.5555555556vw;
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.transportation .titles h1, .transportation .titles p {
+  background-color: #ffffff;
+  padding: 15px 40px;
+  display: inline-block;
+}
+.transportation .titles h1 {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+.transportation .titles p {
+  font-size: 40px;
+  margin-top: 0;
+}
 .transportation h2 {
   text-align: center;
   margin-top: 100px;
@@ -571,25 +599,6 @@ header .content nav ul li a.active:hover {
 .transportation.transport .gallery {
   width: 100%;
   position: relative;
-}
-.transportation.transport .gallery .titles {
-  position: absolute;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-.transportation.transport .gallery .titles h1, .transportation.transport .gallery .titles p {
-  background-color: #ffffff;
-  padding: 15px 40px;
-  display: inline-block;
-}
-.transportation.transport .gallery .titles h1 {
-  font-size: 50px;
-  margin-bottom: 0;
-}
-.transportation.transport .gallery .titles p {
-  font-size: 40px;
-  margin-top: 0;
 }
 .transportation.transport .gallery .imgs-wrapper .imgs {
   width: 300%;
@@ -632,9 +641,29 @@ header .content nav ul li a.active:hover {
   width: 80px;
   height: 80px;
 }
+@media screen and (max-width: 900px) {
+  .transportation .titles h1 {
+    font-size: 30px;
+  }
+  .transportation .titles p {
+    font-size: 20px;
+  }
+  .transportation .titles h1, .transportation .titles p {
+    padding: 10px 20px;
+  }
+}
 @media screen and (max-width: 700px) {
   .transportation .cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .transportation .titles h1 {
+    font-size: 20px;
+  }
+  .transportation .titles p {
+    font-size: 10px;
+  }
+  .transportation .titles h1, .transportation .titles p {
+    padding: 5px 10px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -643,6 +672,12 @@ header .content nav ul li a.active:hover {
   }
   .transportation .cards .card {
     margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .transportation .titles {
+    position: initial;
+    height: auto;
   }
 }
 

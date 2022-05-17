@@ -1,4 +1,31 @@
 .transportation
+    position: relative
+
+    .titles
+        position: absolute
+        left: 0
+        right: 0
+        height: calc(100vw / 1.8)
+        text-align: center
+        z-index: 1
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+
+
+        h1, p
+            background-color: $color_b
+            padding: 15px 40px
+            display: inline-block
+
+        h1
+            font-size: 50px
+            margin-bottom: 0
+
+        p
+            font-size: 40px
+            margin-top: 0
 
     h2
         text-align: center
@@ -24,25 +51,6 @@
         .gallery
             width: 100%
             position: relative
-
-            .titles
-                position: absolute
-                left: 0
-                right: 0
-                text-align: center
-
-                h1, p
-                    background-color: $color_b
-                    padding: 15px 40px
-                    display: inline-block
-
-                h1
-                    font-size: 50px
-                    margin-bottom: 0
-
-                p
-                    font-size: 40px
-                    margin-top: 0
 
             .imgs-wrapper
 
@@ -99,10 +107,32 @@
                     width: 80px
                     height: 80px
 
-    
+    @media screen and (max-width: 900px)
+        .titles
+
+            h1
+                font-size: 30px
+
+            p
+                font-size: 20px
+
+            h1, p
+                padding: 10px 20px
+
     @media screen and (max-width: 700px)
         .cards
             grid-template-columns: repeat(2, 1fr)
+
+        .titles
+
+            h1
+                font-size: 20px
+
+            p
+                font-size: 10px
+
+            h1, p
+                padding: 5px 10px
 
 
     @media screen and (max-width: 500px)
@@ -111,4 +141,9 @@
 
             .card
                 margin-bottom: 50px
+
+    @media screen and (max-width: 500px)
+        .titles
+            position: initial
+            height: auto
 
