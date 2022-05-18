@@ -89,8 +89,13 @@ header .content {
   justify-content: space-between;
 }
 header .content .logo {
-  height: 50px;
+  height: auto;
+  width: auto;
   margin: 20px 0;
+}
+header .content .logo img {
+  width: 160px;
+  height: auto;
 }
 header .content .btn.menu {
   display: none;
