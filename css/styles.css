@@ -720,10 +720,10 @@ header .content nav ul li:last-child {
   margin-top: 10px;
 }
 .social .flex .gallery button.next {
-  right: -15px;
+  right: 0px;
 }
 .social .flex .gallery button.back {
-  left: -15px;
+  left: 0px;
 }
 @media screen and (max-width: 800px) {
   .social .flex {
