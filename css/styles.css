@@ -884,9 +884,10 @@ section.menu-of-services h1 {
   font-weight: bold;
   text-align: center;
   color: #4F6A9E;
-  margin-bottom: 60px;
+  margin-bottom: -90px;
 }
 section.menu-of-services article.service {
+  margin-top: 150px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -900,6 +901,7 @@ section.menu-of-services article.service .main .gallery {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin: 50px 0;
+  overflow: visible;
 }
 section.menu-of-services article.service .main .gallery img {
   width: 100%;
@@ -922,6 +924,7 @@ section.menu-of-services article.service .bar h3 {
   color: #C8B568;
   font-weight: bold;
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 section.menu-of-services article.service .bar p {
   font-size: 14px;
@@ -930,6 +933,9 @@ section.menu-of-services article.service .bar img {
   width: 100%;
   height: auto;
   margin-top: 50px;
+}
+section.menu-of-services article.service:nth-child(odd) .bar {
+  order: -1;
 }
 
 /*# sourceMappingURL=styles.css.map */

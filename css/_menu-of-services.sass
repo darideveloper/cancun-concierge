@@ -2,6 +2,7 @@ section.menu-of-services
     margin-top: 80px
     margin-bottom: 80px
 
+    // Images animations
     img
         transition-duration: 0.5s
 
@@ -12,9 +13,10 @@ section.menu-of-services
         font-weight: bold
         text-align: center
         color: $color-d
-        margin-bottom: 60px
+        margin-bottom: -90px
 
     article.service
+        margin-top: 150px
         display: flex
         align-items: flex-start
         justify-content: space-between
@@ -29,6 +31,7 @@ section.menu-of-services
                 grid-template-columns: repeat(3, 1fr)
                 gap: 20px
                 margin: 50px 0
+                overflow: visible
 
                 img
                     width: 100%
@@ -52,6 +55,7 @@ section.menu-of-services
                 color: $color-c
                 font-weight: bold
                 margin-bottom: 30px
+                text-transform: uppercase
 
             p
                 font-size: 14px
@@ -60,5 +64,10 @@ section.menu-of-services
                 width: 100%
                 height: auto
                 margin-top: 50px
+
+        // Change position of the bar in odd elements
+        &:nth-child(odd)
+            .bar
+                order: -1
             
 
