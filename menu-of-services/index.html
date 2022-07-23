@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
-    <title>Transportación | Cancún Concierge</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Menu of Services | Cancún Concierge</title>
+
 </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -133,12 +135,12 @@
                         <p>Come and enjoy a wonderful sailing experience in the turquoise waters of the Mexican Caribbean. Snorkel in the second largest reef in the world. Admire the beauty of the coral formations and colorful fish, definitely one of the best ways to see the amazing underwater world.  </p>
                     </div>
                     <div class="gallery">
-                        <img src="../imgs/menu-of-services/catamaran-&-reef-snorkel-expeditions-1.png" alt="Airport Transfers image">
-                        <img src="../imgs/menu-of-services/catamaran-&-reef-snorkel-expeditions-2.png" alt="Airport Transfers image">
-                        <img src="../imgs/menu-of-services/catamaran-&-reef-snorkel-expeditions-3.png" alt="Airport Transfers image">
-                        <img src="../imgs/menu-of-services/catamaran-&-reef-snorkel-expeditions-4.png" alt="Airport Transfers image">
-                        <img src="../imgs/menu-of-services/catamaran-&-reef-snorkel-expeditions-5.png" alt="Airport Transfers image">
-                        <img src="../imgs/menu-of-services/catamaran-&-reef-snorkel-expeditions-6.png" alt="Airport Transfers image">
+                        <img src="../imgs/menu-of-services/catamaran-&-reef-snorkel-expeditions-1.png" alt="Airport Transfers image" data-aos="fade-up" data-aos-delay="100">
+                        <img src="../imgs/menu-of-services/catamaran-&-reef-snorkel-expeditions-2.png" alt="Airport Transfers image" data-aos="fade-up" data-aos-delay="200">
+                        <img src="../imgs/menu-of-services/catamaran-&-reef-snorkel-expeditions-3.png" alt="Airport Transfers image" data-aos="fade-up" data-aos-delay="300">
+                        <img src="../imgs/menu-of-services/catamaran-&-reef-snorkel-expeditions-4.png" alt="Airport Transfers image" data-aos="fade-up" data-aos-delay="100">
+                        <img src="../imgs/menu-of-services/catamaran-&-reef-snorkel-expeditions-5.png" alt="Airport Transfers image" data-aos="fade-up" data-aos-delay="200">
+                        <img id="sample" src="../imgs/menu-of-services/catamaran-&-reef-snorkel-expeditions-6.png" alt="Airport Transfers image" data-aos="fade-up" data-aos-delay="300">
                     </div>
                     <div class="bottom-details">
                         <div class="details-card">
@@ -180,7 +182,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bar">
+                <div class="bar" data-aos="flip-left">
                     <h3>Recomendations:</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum urna mauris, vitae placerat arcu mattis vitae. Integer vitae ultrices tellus. Sed urna justo, condimentum non feugiat vel, efficitur vitae eros. Aliquam at magna vitae metus blandit gravida id ac dolor. In lectus tortor, molestie id vestibulum non.</p>
                     <p>Finibus sed odio. Quisque sit amet ante ex. Phasellus pretium iaculis ex, eu pellentesque ligula egestas a. Donec nunc ipsum, imperdiet eu tincidunt a, tristique.</p>
@@ -255,7 +257,13 @@
     </footer>
    
     <script src="../code/header.js"></script>
-    <script src="../code/transportation.js"></script>
-    <script src="../code/gallery.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script>
+        const elem = document.querySelector ("#sample")
+        elem.setAttribute ("data-aos-delay", "0")
+    </script> -->
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
