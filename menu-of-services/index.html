@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../imgs/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+    <title>Transportación | Cancún Concierge</title>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="svg-arrow-menu" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z"/>
+        </symbol>
+        <symbol id="svg-arrow-footer" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z"/>
+        </symbol>
+        <symbol id="svg-phone" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/>
+        </symbol>
+        <symbol id="svg-email" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M22 5v14h-20v-14h20zm2-2h-24v18h24v-18zm-2 16l-6.526-6.618-3.445 3.483-3.418-3.525-6.611 6.66 5.051-8-5.051-6 10.029 7.446 9.971-7.446-4.998 6.01 4.998 7.99z"/>
+        </symbol>
+        <symbol id="svg-location" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+        </symbol>
+        <symbol id="svg-facebook" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+        </symbol>
+        <symbol id="svg-instagram" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </symbol>
+
+        <symbol id="svg-lock" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M10 16c0-1.104.896-2 2-2s2 .896 2 2c0 .738-.404 1.376-1 1.723v2.277h-2v-2.277c-.596-.347-1-.985-1-1.723zm11-6v14h-18v-14h3v-4c0-3.313 2.687-6 6-6s6 2.687 6 6v4h3zm-13 0h8v-4c0-2.206-1.795-4-4-4s-4 1.794-4 4v4zm11 2h-14v10h14v-10z"/>
+        </symbol>
+        <symbol id="svg-award" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M11.383 15.941l-3.758 8.059-.967-2.658-2.658.968 3.517-7.541c.678.216 1.137.162 1.849.162.744.513 1.072.844 2.017 1.01zm3.252-1.009c-.738.506-1.049.831-1.994 1.004l3.759 8.064.967-2.658 2.633.968-3.495-7.549c-.686.222-1.146.171-1.87.171zm-2.635-11.932c-2.205 0-4 1.795-4 4s1.795 4 4 4c2.206 0 4-1.794 4-4s-1.794-4-4-4zm6.926 5.278c.051.146.074.296.074.445 0 .449-.222.883-.615 1.156-1.256.87-1.09.651-1.562 2.067-.198.591-.77.99-1.414.99h-.004c-1.549-.005-1.279-.088-2.528.789-.262.183-.569.275-.877.275s-.615-.092-.876-.275c-1.249-.878-.98-.794-2.528-.789h-.004c-.645 0-1.216-.399-1.413-.99-.473-1.417-.311-1.198-1.562-2.067-.395-.274-.617-.708-.617-1.157 0-.148.024-.298.074-.444.483-1.411.484-1.139 0-2.555-.05-.147-.074-.297-.074-.445 0-.45.222-.883.616-1.157 1.251-.868 1.089-.648 1.562-2.067.197-.591.769-.99 1.413-.99h.004c1.545.005 1.271.095 2.528-.79.262-.182.569-.274.877-.274s.615.091.876.274c1.249.878.98.795 2.528.79h.004c.645 0 1.216.399 1.414.99.473 1.416.307 1.197 1.562 2.067.394.274.616.707.616 1.156 0 .148-.023.299-.074.445-.483 1.411-.485 1.139 0 2.556zm-1.926-1.278c0-2.761-2.238-5-5-5-2.761 0-5 2.239-5 5s2.239 5 5 5c2.762 0 5-2.238 5-5z"/>
+        </symbol>
+        <symbol id="svg-crown" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M5 19h14v3h-14v-3zm18-11c-.729 0-1.295.79-.832 1.521-1.229 1.474-3.371 2.971-4.355 2.438-1.201-.65-.277-3.302.451-4.982.958.15 1.736-.591 1.736-1.477 0-.829-.672-1.5-1.5-1.5s-1.5.671-1.5 1.5c0 .452.204.853.52 1.127-.645 1.643-2.325 3.807-3.41 3.591-1.347-.268-1.69-3.448-1.685-5.287.62-.183 1.075-.751 1.075-1.431 0-.829-.672-1.5-1.5-1.5s-1.5.671-1.5 1.5c0 .68.455 1.248 1.075 1.432.006 1.839-.338 5.019-1.685 5.287-1.084.216-2.765-1.949-3.41-3.592.316-.274.52-.675.52-1.127 0-.829-.672-1.5-1.5-1.5s-1.5.671-1.5 1.5c0 .886.778 1.627 1.736 1.476.729 1.681 1.652 4.333.451 4.982-.984.533-3.127-.964-4.355-2.438.463-.73-.103-1.52-.832-1.52-.553 0-1 .448-1 1 0 .704.726 1.221 1.413.905 1.134 1.264 3.335 4.242 3.587 7.095h14c.252-2.853 2.453-5.831 3.587-7.095.687.316 1.413-.201 1.413-.905 0-.552-.447-1-1-1z"/>
+        </symbol>
+        <symbol id="svg-magic" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M4.908 2.081l-2.828 2.828 19.092 19.091 2.828-2.828-19.092-19.091zm2.121 6.363l-3.535-3.535 1.414-1.414 3.535 3.535-1.414 1.414zm1.731-5.845c1.232.376 2.197 1.341 2.572 2.573.377-1.232 1.342-2.197 2.573-2.573-1.231-.376-2.196-1.34-2.573-2.573-.375 1.232-1.34 2.197-2.572 2.573zm-5.348 6.954c-.498 1.635-1.777 2.914-3.412 3.413 1.635.499 2.914 1.777 3.412 3.411.499-1.634 1.778-2.913 3.412-3.411-1.634-.5-2.913-1.778-3.412-3.413zm9.553-3.165c.872.266 1.553.948 1.819 1.82.266-.872.948-1.554 1.819-1.82-.871-.266-1.553-.948-1.819-1.82-.266.871-.948 1.554-1.819 1.82zm4.426-6.388c-.303.994-1.082 1.772-2.075 2.076.995.304 1.772 1.082 2.077 2.077.303-.994 1.082-1.772 2.074-2.077-.992-.303-1.772-1.082-2.076-2.076z"/>            
+        </symbol>
+        <symbol id="svg-heart" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M6.28 3c3.236.001 4.973 3.491 5.72 5.031.75-1.547 2.469-5.021 5.726-5.021 2.058 0 4.274 1.309 4.274 4.182 0 3.442-4.744 7.851-10 13-5.258-5.151-10-9.559-10-13 0-2.676 1.965-4.193 4.28-4.192zm.001-2c-3.183 0-6.281 2.187-6.281 6.192 0 4.661 5.57 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-4.011-3.097-6.182-6.274-6.182-2.204 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248z"/>            
+        </symbol>
+        <symbol id="svg-people" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M17.997 18h-11.995l-.002-.623c0-1.259.1-1.986 1.588-2.33 1.684-.389 3.344-.736 2.545-2.209-2.366-4.363-.674-6.838 1.866-6.838 2.491 0 4.226 2.383 1.866 6.839-.775 1.464.826 1.812 2.545 2.209 1.49.344 1.589 1.072 1.589 2.333l-.002.619zm4.811-2.214c-1.29-.298-2.49-.559-1.909-1.657 1.769-3.342.469-5.129-1.4-5.129-1.265 0-2.248.817-2.248 2.324 0 3.903 2.268 1.77 2.246 6.676h4.501l.002-.463c0-.946-.074-1.493-1.192-1.751zm-22.806 2.214h4.501c-.021-4.906 2.246-2.772 2.246-6.676 0-1.507-.983-2.324-2.248-2.324-1.869 0-3.169 1.787-1.399 5.129.581 1.099-.619 1.359-1.909 1.657-1.119.258-1.193.805-1.193 1.751l.002.463z"/>
+        </symbol>
+    </svg>
+
+    <header id="header">
+        <div class="content max-width">
+            <div class="logo wrapper-img">
+                <img src="../imgs/logo.png" alt="Cancún Concierge Logo">
+            </div>
+            <nav class="collapsed">
+                <ul>
+                    <li class="menu-of-services"><a href=".." class="title">Home page</a></li>
+                    <li class="menu-of-services"><a href="#airport-transfers" class="title">Airport Transfers</a></li>
+                    <li class="menu-of-services"><a href="#catamaran-&-reef-snorkel-expeditions" class="title">Catamaran & Reef Snorkel Expedition</a></li>
+                </ul>
+            </nav>
+            <button class="btn menu">
+                <svg>
+                    <use xlink:href="#svg-arrow-menu"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="menu-of-services regular-width">
+            <h1>Menu of Services</h1>
+            <article class="service" id="airport-transfers">
+                <div class="main">
+                    <h2>Airport Transfers</h2>
+                    <div class="top-details">
+                        <p>Professional and friendly staff, deluxe vehicles, superb service.</p>
+                        <p>Our staff will be waiting for all your guests just outside the airport terminal in front to the main exit doors holding a sign with the name and logo of your company. As we contact your guests, we will escort them to the awaiting vehicles, immediately after, your guests will be transfer to your resort. </p>
+                    </div>
+                    <div class="gallery">
+                        <img src="../imgs/menu-of-services/airport-transfers-1.png" alt="Airport Transfers image">
+                        <img src="../imgs/menu-of-services/airport-transfers-2.png" alt="Airport Transfers image">
+                        <img src="../imgs/menu-of-services/airport-transfers-3.png" alt="Airport Transfers image">
+                        <img src="../imgs/menu-of-services/airport-transfers-4.png" alt="Airport Transfers image">
+                        <img src="../imgs/menu-of-services/airport-transfers-5.png" alt="Airport Transfers image">
+                        <img src="../imgs/menu-of-services/airport-transfers-6.png" alt="Airport Transfers image">
+                    </div>
+                    <div class="bottom-details">
+                        <div class="details-card">
+                            <h3>VEHICLE OPTIONS</h3>
+                            <ul>
+                                <li>Deluxe SUVs (4 passengers)</li>
+                                <li>Vans (8 passengers)</li>
+                                <li>Sprinters (14 passengers)</li>
+                                <li>Buses (50 passengers)</li>
+                            </ul>
+                        </div>
+                        <div class="details-card">
+                            <h3>OUR SERVICES INCLUDE</h3>
+                            <ul>
+                                <li>One-way private transportation</li>
+                                <li>Meet & greet staff</li>
+                                <li>Airport signage</li>
+                                <li>Bottled waters</li>
+                                <li>Fresh facial towels</li>
+                                <li>Driver gratuities</li>
+                                <li>Airport taxes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bar">
+                    <h3>Recomendations:</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum urna mauris, vitae placerat arcu mattis vitae. Integer vitae ultrices tellus. Sed urna justo, condimentum non feugiat vel, efficitur vitae eros. Aliquam at magna vitae metus blandit gravida id ac dolor. In lectus tortor, molestie id vestibulum non.</p>
+                    <p>Finibus sed odio. Quisque sit amet ante ex. Phasellus pretium iaculis ex, eu pellentesque ligula egestas a. Donec nunc ipsum, imperdiet eu tincidunt a, tristique.</p>
+                    <p>Nam condimentum quis enim nec pellentesque. Maecenas sed malesuada urna. Morbi cursus libero nibh, at hendrerit mi efficitur ac. Praesent malesuada mauris a leo convallis, cursus ultrices libero hendrerit. Curabitur sit amet felis at sem condimentum suscipit.</p>
+                    <img src="../imgs/menu-of-services/airport-transfers-7.png" alt="Airport Transfers recomendations image">
+                </div>
+            </article>
+
+            <article class="service" id="catamaran-&-reef-snorkel-expeditions">
+                <div class="main">
+                    <h2>Catamaran & Reef Snorkel Expedition</h2>
+                    <div class="top-details">
+                        <p>Professional and friendly staff, deluxe vehicles, superb service.</p>
+                        <p>Our staff will be waiting for all your guests just outside the airport terminal in front to the main exit doors holding a sign with the name and logo of your company. As we contact your guests, we will escort them to the awaiting vehicles, immediately after, your guests will be transfer to your resort. </p>
+                    </div>
+                    <div class="gallery">
+                        <img src="../imgs/menu-of-services/airport-transfers-1.png" alt="Airport Transfers image">
+                        <img src="../imgs/menu-of-services/airport-transfers-2.png" alt="Airport Transfers image">
+                        <img src="../imgs/menu-of-services/airport-transfers-3.png" alt="Airport Transfers image">
+                        <img src="../imgs/menu-of-services/airport-transfers-4.png" alt="Airport Transfers image">
+                        <img src="../imgs/menu-of-services/airport-transfers-5.png" alt="Airport Transfers image">
+                        <img src="../imgs/menu-of-services/airport-transfers-6.png" alt="Airport Transfers image">
+                    </div>
+                    <div class="bottom-details">
+                        <div class="details-card">
+                            <h3>VEHICLE OPTIONS</h3>
+                            <ul>
+                                <li>Deluxe SUVs (4 passengers)</li>
+                                <li>Vans (8 passengers)</li>
+                                <li>Sprinters (14 passengers)</li>
+                                <li>Buses (50 passengers)</li>
+                            </ul>
+                        </div>
+                        <div class="details-card">
+                            <h3>OUR SERVICES INCLUDE</h3>
+                            <ul>
+                                <li>One-way private transportation</li>
+                                <li>Meet & greet staff</li>
+                                <li>Airport signage</li>
+                                <li>Bottled waters</li>
+                                <li>Fresh facial towels</li>
+                                <li>Driver gratuities</li>
+                                <li>Airport taxes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bar">
+                    <h3>Recomendations:</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum urna mauris, vitae placerat arcu mattis vitae. Integer vitae ultrices tellus. Sed urna justo, condimentum non feugiat vel, efficitur vitae eros. Aliquam at magna vitae metus blandit gravida id ac dolor. In lectus tortor, molestie id vestibulum non.</p>
+                    <p>Finibus sed odio. Quisque sit amet ante ex. Phasellus pretium iaculis ex, eu pellentesque ligula egestas a. Donec nunc ipsum, imperdiet eu tincidunt a, tristique.</p>
+                    <p>Nam condimentum quis enim nec pellentesque. Maecenas sed malesuada urna. Morbi cursus libero nibh, at hendrerit mi efficitur ac. Praesent malesuada mauris a leo convallis, cursus ultrices libero hendrerit. Curabitur sit amet felis at sem condimentum suscipit.</p>
+                    <img src="../imgs/menu-of-services/airport-transfers-7.png" alt="Airport Transfers recomendations image">
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="content max-width">
+            <div class="wrapper-btn">
+                <a class="btn footer white" href="#header">
+                    <svg>
+                        <use xlink:href="#svg-arrow-footer"></use>
+                    </svg>
+                    TOP
+                </a>
+            </div>
+    
+            <section class="widgets regular-width">
+                <article class="widget">
+                    <h2>MEXICAN CARIBBEAN</h2>
+                    <p>
+                        At Cancun Concierge we plan and carry out airport transportation services, water activities, tours, golf, restaurant reservations and basically any need you may have during your stay in Cancun and the Riviera Maya.
+                    </p>
+                </article>
+                <article class="widget">
+                    <h2>Contact</h2>
+                    <address class="socials">
+                        <a href="tel:9982391978" target="_blank" >
+                            <svg>
+                                <use xlink:href="#svg-phone"></use>
+                            </svg>
+                            (998) 239 1978
+                        </a>
+                        <a href="mailto:info@cancunconciergedmc.com" target="_blank" >
+                            <svg>
+                                <use xlink:href="#svg-email"></use>
+                            </svg>
+                            info@cancunconciergedmc.com
+                        </a>
+                        <p>
+                            <svg>
+                                <use xlink:href="#svg-location"></use>
+                            </svg>
+                            Cancún Quintana Roo, México.
+                        </p>
+                    </address>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/cancunconciergemx" target="_blank" class="social">
+                            <svg>
+                                <use xlink:href="#svg-facebook"></use>
+                            </svg>
+                            Facebook
+                        </a>
+                        <a href="https://www.instagram.com/cancunconcierge/" target="_blank" class="social">
+                            <svg>
+                                <use xlink:href="#svg-instagram"></use>
+                            </svg>
+                            Instagram
+                        </a>
+                    </div>
+                </article>
+            </section>
+            
+            <small class="copyright">
+                2022 - All Rights Reserved Cancun Concierge | Powered by <a href="http://www.darideveloper.com/">Dari Developer</a>
+            </small>
+        </div>
+    </footer>
+   
+    <script src="../code/header.js"></script>
+    <script src="../code/transportation.js"></script>
+    <script src="../code/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+section.menu-of-services
+    margin-top: 80px
+    margin-bottom: 80px
+
+    img
+        transition-duration: 0.5s
+
+        &:hover
+            transform: translateX(-5px) translateY(-5px)
+
+    h1
+        font-weight: bold
+        text-align: center
+        color: $color-d
+        margin-bottom: 60px
+
+    article.service
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+
+
+        .main
+            width: 65%
+
+            .gallery
+                width: 100%
+                display: grid
+                grid-template-columns: repeat(3, 1fr)
+                gap: 20px
+                margin: 50px 0
+
+                img
+                    width: 100%
+                    height: auto
+                    border-radius: 20px
+
+            .bottom-details
+                display: grid
+                grid-template-columns: repeat(2, 1fr)
+                gap: 30px
+
+
+        .bar
+            width: calc(30% - 40px)
+            background-color: $color-d
+            color: $color-b
+            padding: 40px 20px
+            overflow: visible
+
+            h3
+                color: $color-c
+                font-weight: bold
+                margin-bottom: 30px
+
+            p
+                font-size: 14px
+
+            img
+                width: 100%
+                height: auto
+                margin-top: 50px
+            
+

@@ -129,7 +129,7 @@ header .content nav ul li a.active {
 header .content nav ul li a.active:hover {
   color: #ffffff;
 }
-header .content nav ul li:last-child {
+header .content nav ul li:last-child:not(.menu-of-services) {
   opacity: 0.4;
 }
 @media screen and (max-width: 970px) {
@@ -868,6 +868,68 @@ header .content nav ul li:last-child {
 }
 .gallery button.back svg {
   transform: rotateZ(-90deg);
+}
+
+section.menu-of-services {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+section.menu-of-services img {
+  transition-duration: 0.5s;
+}
+section.menu-of-services img:hover {
+  transform: translateX(-5px) translateY(-5px);
+}
+section.menu-of-services h1 {
+  font-weight: bold;
+  text-align: center;
+  color: #4F6A9E;
+  margin-bottom: 60px;
+}
+section.menu-of-services article.service {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+section.menu-of-services article.service .main {
+  width: 65%;
+}
+section.menu-of-services article.service .main .gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 50px 0;
+}
+section.menu-of-services article.service .main .gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+section.menu-of-services article.service .main .bottom-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+section.menu-of-services article.service .bar {
+  width: calc(30% - 40px);
+  background-color: #4F6A9E;
+  color: #ffffff;
+  padding: 40px 20px;
+  overflow: visible;
+}
+section.menu-of-services article.service .bar h3 {
+  color: #C8B568;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+section.menu-of-services article.service .bar p {
+  font-size: 14px;
+}
+section.menu-of-services article.service .bar img {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */
