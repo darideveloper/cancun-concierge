@@ -1,8 +1,6 @@
 section.menu-of-services
     margin-top: 80px
     margin-bottom: 80px
-    display: none
-
 
     // Images animations
     img
@@ -71,5 +69,83 @@ section.menu-of-services
         &:nth-child(odd)
             .bar
                 order: -1
+
+    @media screen and (max-width: 1050px)
+
+        article.service
+            flex-direction: column
+            
+            h2
+                text-align: center
+
+            .content
+                width: 100%
+
+            .bar
+                width: calc(100% - 40px)
+                margin-top: 50px
+                padding: 0 20px
+                min-height: 320px
+                display: flex
+                align-items: center
+                justify-content: space-between
+
+                .text
+                    width: calc(100% - 350px)
+
+                .img
+                    width: 320px
+
+                    img
+                        margin: 0
+
+            // Positon all recomendations bards un bottom
+            &:nth-child(odd)
+                .bar
+                    order: 0
+
+    @media screen and (max-width: 800px)
+        article.service
+            .content
+                .gallery
+                    grid-template-columns: repeat(2, 1fr)
+
+            .bar
+                position: relative
+                justify-content: flex-start
+
+                .text
+                    width: calc(100% - 50px)
+
+                .img
+                    top: 0
+                    right: 20px
+                    position: absolute
+                    opacity: 0.2
+
+    @media screen and (max-width: 500px)
+        article.service
+            .content
+                .gallery
+                    grid-template-columns: repeat(1, 1fr)
+
+                    img:nth-child(4), img:nth-child(5), img:nth-child(6)
+                        display: none
+                
+                .bottom-details
+                    grid-template-columns: repeat(1, 1fr)
+                    margin-left: 30px
+
+            .bar
+                padding: 20px
+
+                .text
+                    width: 100%
+
+                .img
+                    display: none
+
+
+
             
 

@@ -939,7 +939,6 @@ header .content nav ul li:last-child:not(.menu-of-services) {
 section.menu-of-services {
   margin-top: 80px;
   margin-bottom: 80px;
-  display: none;
 }
 section.menu-of-services img {
   transition-duration: 0.5s;
@@ -1003,6 +1002,77 @@ section.menu-of-services article.service .bar img {
 }
 section.menu-of-services article.service:nth-child(odd) .bar {
   order: -1;
+}
+@media screen and (max-width: 1050px) {
+  section.menu-of-services article.service {
+    flex-direction: column;
+  }
+  section.menu-of-services article.service h2 {
+    text-align: center;
+  }
+  section.menu-of-services article.service .content {
+    width: 100%;
+  }
+  section.menu-of-services article.service .bar {
+    width: calc(100% - 40px);
+    margin-top: 50px;
+    padding: 0 20px;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  section.menu-of-services article.service .bar .text {
+    width: calc(100% - 350px);
+  }
+  section.menu-of-services article.service .bar .img {
+    width: 320px;
+  }
+  section.menu-of-services article.service .bar .img img {
+    margin: 0;
+  }
+  section.menu-of-services article.service:nth-child(odd) .bar {
+    order: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  section.menu-of-services article.service .content .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.menu-of-services article.service .bar {
+    position: relative;
+    justify-content: flex-start;
+  }
+  section.menu-of-services article.service .bar .text {
+    width: calc(100% - 50px);
+  }
+  section.menu-of-services article.service .bar .img {
+    top: 0;
+    right: 20px;
+    position: absolute;
+    opacity: 0.2;
+  }
+}
+@media screen and (max-width: 500px) {
+  section.menu-of-services article.service .content .gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section.menu-of-services article.service .content .gallery img:nth-child(4), section.menu-of-services article.service .content .gallery img:nth-child(5), section.menu-of-services article.service .content .gallery img:nth-child(6) {
+    display: none;
+  }
+  section.menu-of-services article.service .content .bottom-details {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 30px;
+  }
+  section.menu-of-services article.service .bar {
+    padding: 20px;
+  }
+  section.menu-of-services article.service .bar .text {
+    width: 100%;
+  }
+  section.menu-of-services article.service .bar .img {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
