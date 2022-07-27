@@ -118,6 +118,8 @@ header .content nav ul li a {
   padding: 15px;
   font-size: 12px;
   color: #ffffff;
+  display: inline-block;
+  text-align: center;
 }
 header .content nav ul li a:hover {
   color: #C8B568;
@@ -133,38 +135,102 @@ header .content nav ul li:last-child:not(.menu-of-services) {
   opacity: 0.4;
 }
 @media screen and (max-width: 970px) {
-  header .content {
+  header:not(.menu-of-services) .content {
     flex-direction: column;
   }
-  header .content .logo {
+  header:not(.menu-of-services) .content .logo {
     margin-bottom: 10px;
   }
-  header .content nav {
+  header:not(.menu-of-services) .content nav {
     margin: 20px 0;
   }
 }
 @media screen and (max-width: 790px) {
-  header .content .btn.menu {
+  header:not(.menu-of-services) .content .btn.menu {
     display: block;
   }
-  header .content nav {
+  header:not(.menu-of-services) .content nav {
     transition-duration: 0.5s;
     height: 230px;
     overflow: hidden;
     margin: 0;
   }
-  header .content nav.collapsed {
+  header:not(.menu-of-services) .content nav.collapsed {
     height: 0;
   }
-  header .content nav ul {
+  header:not(.menu-of-services) .content nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
-  header .content nav ul li {
+  header:not(.menu-of-services) .content nav ul li {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  header.menu-of-services .content {
+    flex-direction: column;
+  }
+  header.menu-of-services .content .logo {
+    margin-bottom: 10px;
+  }
+  header.menu-of-services .content nav {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header.menu-of-services .content .btn.menu {
+    display: block;
+  }
+  header.menu-of-services .content nav {
+    transition-duration: 0.5s;
+    height: 230px;
+    overflow: hidden;
+    margin: 0;
+  }
+  header.menu-of-services .content nav.collapsed {
+    height: 0;
+  }
+  header.menu-of-services .content nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  header.menu-of-services .content nav ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  header.menu-of-services a br {
+    display: none;
+  }
+  header.menu-of-services .content nav {
+    height: 180px;
+  }
+  header.menu-of-services .content nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 650px) {
+  header.menu-of-services .content nav {
+    height: 300px;
+  }
+  header.menu-of-services .content nav ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  header.menu-of-services .content nav {
+    height: 600px;
+  }
+  header.menu-of-services .content nav ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  header.menu-of-services .content nav ul a {
+    display: block;
   }
 }
 
@@ -873,6 +939,7 @@ header .content nav ul li:last-child:not(.menu-of-services) {
 section.menu-of-services {
   margin-top: 80px;
   margin-bottom: 80px;
+  display: none;
 }
 section.menu-of-services img {
   transition-duration: 0.5s;
@@ -892,10 +959,10 @@ section.menu-of-services article.service {
   align-items: flex-start;
   justify-content: space-between;
 }
-section.menu-of-services article.service .main {
+section.menu-of-services article.service .content {
   width: 65%;
 }
-section.menu-of-services article.service .main .gallery {
+section.menu-of-services article.service .content .gallery {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -903,12 +970,12 @@ section.menu-of-services article.service .main .gallery {
   margin: 50px 0;
   overflow: visible;
 }
-section.menu-of-services article.service .main .gallery img {
+section.menu-of-services article.service .content .gallery img {
   width: 100%;
   height: auto;
   border-radius: 20px;
 }
-section.menu-of-services article.service .main .bottom-details {
+section.menu-of-services article.service .content .bottom-details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;

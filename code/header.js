@@ -1,6 +1,8 @@
 // Disable current link
 const active_menu_option = document.querySelector ("header nav ul li a.active")
-active_menu_option.setAttribute ("href", "#")
+if (active_menu_option) {
+    active_menu_option.setAttribute ("href", "#")
+}
 
 // Active or deactive menu
 const menu_btn = document.querySelector ("header .btn.menu")
