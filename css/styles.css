@@ -950,10 +950,12 @@ section.menu-of-services h1 {
   font-weight: bold;
   text-align: center;
   color: #4F6A9E;
-  margin-bottom: -90px;
+}
+section.menu-of-services h2 {
+  margin-top: 100px;
 }
 section.menu-of-services article.service {
-  margin-top: 150px;
+  margin-top: 80px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
