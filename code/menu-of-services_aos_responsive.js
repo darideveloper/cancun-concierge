@@ -24,7 +24,7 @@ function aos_responsive () {
     if (window.matchMedia("(max-width: 1050px)").matches) {
 
         // Add animation for the bar in the first article
-        const first_bar = document.querySelector("article:nth-child(2) .bar");
+        const first_bar = document.querySelector("#airport-transfers .bar");
         first_bar.setAttribute ("data-aos", "flip-left")
     } 
 }
