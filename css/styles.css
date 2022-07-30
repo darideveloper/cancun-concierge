@@ -131,7 +131,7 @@ header .content nav ul li a.active {
 header .content nav ul li a.active:hover {
   color: #ffffff;
 }
-header .content nav ul li:last-child:not(.menu-of-services) {
+header .content nav ul li a.language {
   opacity: 0.4;
 }
 @media screen and (max-width: 970px) {
@@ -169,7 +169,34 @@ header .content nav ul li:last-child:not(.menu-of-services) {
     padding-bottom: 10px;
   }
 }
-@media screen and (max-width: 1200px) {
+header.menu-of-services nav > ul > li {
+  position: relative;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header.menu-of-services nav > ul > li .submenu {
+  display: none;
+  width: 200px;
+}
+header.menu-of-services nav > ul > li:hover .submenu {
+  position: absolute;
+  top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #4F6A9E;
+}
+header.menu-of-services nav > ul > li .submenu:hover {
+  display: flex;
+}
+@media screen and (max-width: 900px) {
   header.menu-of-services .content {
     flex-direction: column;
   }
@@ -180,7 +207,7 @@ header .content nav ul li:last-child:not(.menu-of-services) {
     margin: 20px 0;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 650px) {
   header.menu-of-services .content .btn.menu {
     display: block;
   }
@@ -207,30 +234,17 @@ header .content nav ul li:last-child:not(.menu-of-services) {
     display: none;
   }
   header.menu-of-services .content nav {
-    height: 180px;
+    height: 400px;
   }
   header.menu-of-services .content nav ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (max-width: 650px) {
-  header.menu-of-services .content nav {
-    height: 300px;
-  }
-  header.menu-of-services .content nav ul {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 450px) {
-  header.menu-of-services .content nav {
-    height: 600px;
-  }
-  header.menu-of-services .content nav ul {
     grid-template-columns: repeat(1, 1fr);
   }
-  header.menu-of-services .content nav ul a {
-    display: block;
+  header.menu-of-services .content nav ul li {
+    height: auto;
+  }
+  header.menu-of-services .content nav ul li .submenu {
+    display: none !important;
   }
 }
 

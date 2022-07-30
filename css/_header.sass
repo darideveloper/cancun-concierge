@@ -82,7 +82,7 @@ header
                             &:hover
                                 color: $color_b
                         
-                    &:last-child:not(.menu-of-services)
+                    & a.language
                         opacity: 0.4
     
     // Responsive por regular header
@@ -93,12 +93,43 @@ header
         @media screen and (max-width: 790px)
             @include mobile_2
     
-    // Repsonsive for menu or services headers
     &.menu-of-services
-        @media screen and (max-width: 1200px)
+
+        nav > ul > li
+            position: relative
+            height: 100px
+            display: flex
+            align-items: center
+            justify-content: center
+
+            .submenu
+                display: none
+                width: 200px
+
+            &:hover
+
+                .submenu
+                    // display: none
+                    position: absolute
+                    top: 80px
+                    margin-left: auto
+                    margin-right: auto
+                    left: 50%
+                    transform: translate(-50%, 0%)
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    background-color: $color-d
+
+            .submenu:hover
+                display: flex
+
+        // Repsonsive for menu or services headers
+        @media screen and (max-width: 900px)
             @include mobile_1
 
-        @media screen and (max-width: 1000px)
+        @media screen and (max-width: 650px)
             @include mobile_2
 
             a br
@@ -106,26 +137,14 @@ header
 
             .content
                 nav
-                    height: 180px
+                    height: 400px
                     ul
                         display: grid
-                        grid-template-columns: repeat(3, 1fr)
-
-        @media screen and (max-width: 650px)
-            .content
-                nav
-                    height: 300px
-                    ul
-                        grid-template-columns: repeat(2, 1fr)
-
-        @media screen and (max-width: 450px)
-            .content
-                nav
-                    height: 600px
-                    ul
                         grid-template-columns: repeat(1, 1fr)
-                        a
-                            display: block
 
+                        li
+                            height: auto
 
+                            .submenu
+                                display: none !important
         
