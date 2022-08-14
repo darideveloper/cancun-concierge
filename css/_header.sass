@@ -8,14 +8,14 @@
         nav
             margin: 20px 0
 
-@mixin mobile_2
+@mixin mobile_2 ($nav-height)
     .content
         .btn.menu
             display: block
 
         nav
             transition-duration: $transition-duration
-            height: 230px
+            height: $nav-height
             overflow: hidden
             margin: 0
 
@@ -87,11 +87,20 @@ header
     
     // Responsive por regular header
     &:not(.menu-of-services)
-        @media screen and (max-width: 970px)
-            @include mobile_1
+        &:not(.en)
+            @media screen and (max-width: 970px)
+                @include mobile_1
 
-        @media screen and (max-width: 790px)
-            @include mobile_2
+            @media screen and (max-width: 790px)
+                @include mobile_2(385px)
+
+        &.en
+            @media screen and (max-width: 1120px)
+                @include mobile_1
+
+            @media screen and (max-width: 940px)
+                @include mobile_2(450px)
+
     
     &.menu-of-services
 
@@ -130,14 +139,13 @@ header
             @include mobile_1
 
         @media screen and (max-width: 650px)
-            @include mobile_2
+            @include mobile_2(400px)
 
             a br
                 display: none
 
             .content
                 nav
-                    height: 400px
                     ul
                         display: grid
                         grid-template-columns: repeat(1, 1fr)

@@ -135,36 +135,71 @@ header .content nav ul li a.language {
   opacity: 0.4;
 }
 @media screen and (max-width: 970px) {
-  header:not(.menu-of-services) .content {
+  header:not(.menu-of-services):not(.en) .content {
     flex-direction: column;
   }
-  header:not(.menu-of-services) .content .logo {
+  header:not(.menu-of-services):not(.en) .content .logo {
     margin-bottom: 10px;
   }
-  header:not(.menu-of-services) .content nav {
+  header:not(.menu-of-services):not(.en) .content nav {
     margin: 20px 0;
   }
 }
 @media screen and (max-width: 790px) {
-  header:not(.menu-of-services) .content .btn.menu {
+  header:not(.menu-of-services):not(.en) .content .btn.menu {
     display: block;
   }
-  header:not(.menu-of-services) .content nav {
+  header:not(.menu-of-services):not(.en) .content nav {
     transition-duration: 0.5s;
-    height: 230px;
+    height: 385px;
     overflow: hidden;
     margin: 0;
   }
-  header:not(.menu-of-services) .content nav.collapsed {
+  header:not(.menu-of-services):not(.en) .content nav.collapsed {
     height: 0;
   }
-  header:not(.menu-of-services) .content nav ul {
+  header:not(.menu-of-services):not(.en) .content nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
-  header:not(.menu-of-services) .content nav ul li {
+  header:not(.menu-of-services):not(.en) .content nav ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  header:not(.menu-of-services).en .content {
+    flex-direction: column;
+  }
+  header:not(.menu-of-services).en .content .logo {
+    margin-bottom: 10px;
+  }
+  header:not(.menu-of-services).en .content nav {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 940px) {
+  header:not(.menu-of-services).en .content .btn.menu {
+    display: block;
+  }
+  header:not(.menu-of-services).en .content nav {
+    transition-duration: 0.5s;
+    height: 450px;
+    overflow: hidden;
+    margin: 0;
+  }
+  header:not(.menu-of-services).en .content nav.collapsed {
+    height: 0;
+  }
+  header:not(.menu-of-services).en .content nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  header:not(.menu-of-services).en .content nav ul li {
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -213,7 +248,7 @@ header.menu-of-services nav > ul > li .submenu:hover {
   }
   header.menu-of-services .content nav {
     transition-duration: 0.5s;
-    height: 230px;
+    height: 400px;
     overflow: hidden;
     margin: 0;
   }
@@ -232,9 +267,6 @@ header.menu-of-services nav > ul > li .submenu:hover {
   }
   header.menu-of-services a br {
     display: none;
-  }
-  header.menu-of-services .content nav {
-    height: 400px;
   }
   header.menu-of-services .content nav ul {
     display: grid;
@@ -315,6 +347,20 @@ header.menu-of-services nav > ul > li .submenu:hover {
 }
 #footer a {
   color: #ffffff;
+}
+#footer.menu-of-services .wrapper-btn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  justify-content: flex-end;
+}
+#footer.menu-of-services .wrapper-btn .btn.footer.white {
+  margin-top: -65px;
+  margin-right: 20px;
+  box-shadow: 0px 0px 10px rgba(79, 106, 158, 0.6);
+}
+#footer.menu-of-services .widgets {
+  padding-top: 40px;
 }
 #footer .wrapper-btn {
   width: 100%;
@@ -1002,6 +1048,9 @@ section.menu-of-services article.service .bar {
   color: #ffffff;
   padding: 40px 20px;
   overflow: visible;
+}
+section.menu-of-services article.service .bar .text {
+  margin-bottom: 50px;
 }
 section.menu-of-services article.service .bar h3 {
   color: #C8B568;
