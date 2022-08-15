@@ -135,71 +135,36 @@ header .content nav ul li a.language {
   opacity: 0.4;
 }
 @media screen and (max-width: 970px) {
-  header:not(.menu-of-services):not(.en) .content {
+  header:not(.menu-of-services) .content {
     flex-direction: column;
   }
-  header:not(.menu-of-services):not(.en) .content .logo {
+  header:not(.menu-of-services) .content .logo {
     margin-bottom: 10px;
   }
-  header:not(.menu-of-services):not(.en) .content nav {
+  header:not(.menu-of-services) .content nav {
     margin: 20px 0;
   }
 }
 @media screen and (max-width: 790px) {
-  header:not(.menu-of-services):not(.en) .content .btn.menu {
+  header:not(.menu-of-services) .content .btn.menu {
     display: block;
   }
-  header:not(.menu-of-services):not(.en) .content nav {
+  header:not(.menu-of-services) .content nav {
     transition-duration: 0.5s;
     height: 385px;
     overflow: hidden;
     margin: 0;
   }
-  header:not(.menu-of-services):not(.en) .content nav.collapsed {
+  header:not(.menu-of-services) .content nav.collapsed {
     height: 0;
   }
-  header:not(.menu-of-services):not(.en) .content nav ul {
+  header:not(.menu-of-services) .content nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
-  header:not(.menu-of-services):not(.en) .content nav ul li {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}
-@media screen and (max-width: 1120px) {
-  header:not(.menu-of-services).en .content {
-    flex-direction: column;
-  }
-  header:not(.menu-of-services).en .content .logo {
-    margin-bottom: 10px;
-  }
-  header:not(.menu-of-services).en .content nav {
-    margin: 20px 0;
-  }
-}
-@media screen and (max-width: 940px) {
-  header:not(.menu-of-services).en .content .btn.menu {
-    display: block;
-  }
-  header:not(.menu-of-services).en .content nav {
-    transition-duration: 0.5s;
-    height: 450px;
-    overflow: hidden;
-    margin: 0;
-  }
-  header:not(.menu-of-services).en .content nav.collapsed {
-    height: 0;
-  }
-  header:not(.menu-of-services).en .content nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  header:not(.menu-of-services).en .content nav ul li {
+  header:not(.menu-of-services) .content nav ul li {
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -1020,6 +985,14 @@ section.menu-of-services article.service {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+section.menu-of-services article.service#xel-ha .content .bottom-details .details-card:nth-child(2) {
+  grid-row: 1/3;
+  grid-column: 2/2;
+}
+section.menu-of-services article.service#xplor .content .bottom-details .details-card:nth-child(2) {
+  grid-row: 1/3;
+  grid-column: 2/2;
 }
 section.menu-of-services article.service .content {
   width: 65%;

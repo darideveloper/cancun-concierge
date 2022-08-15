@@ -87,20 +87,11 @@ header
     
     // Responsive por regular header
     &:not(.menu-of-services)
-        &:not(.en)
-            @media screen and (max-width: 970px)
-                @include mobile_1
+        @media screen and (max-width: 970px)
+            @include mobile_1
 
-            @media screen and (max-width: 790px)
-                @include mobile_2(385px)
-
-        &.en
-            @media screen and (max-width: 1120px)
-                @include mobile_1
-
-            @media screen and (max-width: 940px)
-                @include mobile_2(450px)
-
+        @media screen and (max-width: 790px)
+            @include mobile_2(385px)
     
     &.menu-of-services
 
