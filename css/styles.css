@@ -1154,5 +1154,25 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   text-transform: uppercase;
   text-align: center;
 }
+.rivera-getaway .activities #tulum .bottom-details .details-card:nth-child(1) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.rivera-getaway .activities #cenotes .bottom-details .details-card:nth-child(1) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.rivera-getaway .activities #xelha .bottom-details .details-card:nth-child(1) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.rivera-getaway .activities #xenses .bottom-details .details-card:nth-child(3) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.rivera-getaway .activities #xplore .bottom-details .details-card:nth-child(2) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
 
 /*# sourceMappingURL=styles.css.map */
