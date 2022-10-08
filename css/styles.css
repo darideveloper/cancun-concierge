@@ -1114,25 +1114,45 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   }
 }
 
-.big-logo {
+.rivera-getaway .big-logo {
   width: 250px;
   height: auto;
   margin: 0 auto;
   display: block;
   margin-top: 50px;
 }
-
-table {
+.rivera-getaway .table.activities table {
   width: 90%;
   max-width: 600px;
   margin: 0 auto;
 }
-table td, table th {
+.rivera-getaway .table.activities table td, .rivera-getaway .table.activities table th {
   padding: 20px;
   text-align: center;
 }
-table td > *, table th > * {
+.rivera-getaway .table.activities table td > *, .rivera-getaway .table.activities table th > * {
   display: block;
+}
+.rivera-getaway .table.prices table {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.rivera-getaway .table.prices table td, .rivera-getaway .table.prices table th {
+  text-align: center;
+  padding: 5px 10px;
+}
+.rivera-getaway .table.prices table td.price, .rivera-getaway .table.prices table th.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rivera-getaway .table.prices table td:first-child:not(th), .rivera-getaway .table.prices table th:first-child:not(th) {
+  text-align: left;
+}
+.rivera-getaway h2 {
+  text-transform: uppercase;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

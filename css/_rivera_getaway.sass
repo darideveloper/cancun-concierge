@@ -1,18 +1,42 @@
-.big-logo
-    width: 250px
-    height: auto
-    margin: 0 auto
-    display: block
-    margin-top: 50px
+.rivera-getaway    
+    .big-logo
+        width: 250px
+        height: auto
+        margin: 0 auto
+        display: block
+        margin-top: 50px
 
-table
-    width: 90%
-    max-width: 600px
-    margin: 0 auto
+    .table.activities
+        table
+            width: 90%
+            max-width: 600px
+            margin: 0 auto
 
-    td, th
-        padding: 20px
+            td, th
+                padding: 20px
+                text-align: center
+
+                > *
+                    display: block
+
+    .table.prices
+        table
+            width: 90%
+            max-width: 750px
+            margin: 0 auto
+
+            td, th
+                text-align: center
+                padding: 5px 10px
+
+                &.price
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+
+                &:first-child:not(th)
+                    text-align: left
+
+    h2
+        text-transform: uppercase
         text-align: center
-
-        > *
-            display: block
