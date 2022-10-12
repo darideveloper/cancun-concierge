@@ -1115,6 +1115,28 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   }
 }
 
+.buy-cart {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+}
+.buy-cart .icon {
+  cursor: pointer;
+}
+.buy-cart .icon svg {
+  width: 20px;
+  height: 20px;
+}
+.buy-cart .counter {
+  color: #4F6A9E;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .rivera-getaway .big-logo {
   width: 250px;
   height: auto;

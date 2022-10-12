@@ -1,12 +1,15 @@
-// get buy forms
+// get elements
 const buy_forms = document.querySelectorAll ("article.service .buy form")
+const buy_cart = document.querySelector (".buy-cart")
+
 
 // Lements in the shopping cart
 let cart_elems = []
 
 function render_cart () {
-    // TODO: Render again card in the html of the page
-    console.log ("cart rendered")
+    // Update cart counter
+    const card_counter = buy_cart.querySelector (".counter")
+    card_counter.innerHTML = String(cart_elems.length)
 }
 
 function manage_froms () {
