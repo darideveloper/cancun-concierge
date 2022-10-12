@@ -1132,9 +1132,38 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   color: #4F6A9E;
   position: absolute;
   top: 5px;
-  right: 5px;
+  left: 35px;
   font-size: 12px;
   font-weight: bold;
+}
+.buy-cart .content {
+  background-color: #4F6A9E;
+  color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px -2px rgb(0, 0, 0);
+  padding: 20px;
+}
+.buy-cart .content .services .service {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #ffffff;
+}
+.buy-cart .content .services .service .close {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.buy-cart .content .services .service .close svg {
+  fill: #ffffff;
+}
+.buy-cart .content .services .service .close:hover svg {
+  opacity: 0.5;
+}
+.buy-cart .content .btn.cta.buy-all:hover {
+  background-color: #4F6A9E;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 .rivera-getaway .big-logo {

@@ -15,13 +15,40 @@
         color: $color-d
         position: absolute
         top: 5px
-        right: 5px
+        left: 35px
         font-size: 12px
         font-weight: bold
 
+    .content
+        background-color: $color-d
+        color: $color-a
+        border-radius: 10px
+        box-shadow: 2px 2px 5px -2px rgba(0,0,0)
+        padding: 20px
 
+        .services
+            .service
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                color: $color-b
 
+                .close
+                    background: none
+                    border: none
+                    cursor: pointer
 
+                    svg
+                        fill: $color-b
+
+                    &:hover
+                        svg
+                            opacity: 0.5
+
+        .btn.cta.buy-all:hover
+            background-color: $color-d
+            color: $color-b
+            border-color: $color-b
 
 // Services layout
 .rivera-getaway    
