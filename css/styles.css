@@ -1126,10 +1126,9 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
 }
 .buy-cart.active .content {
   opacity: 1;
-  max-height: 400px;
+  max-height: 420px;
   height: auto;
   padding: 20px;
-  overflow-y: scroll;
 }
 .buy-cart .icon {
   cursor: pointer;
@@ -1156,16 +1155,6 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   border-bottom-left-radius: 10px;
   box-shadow: 2px 2px 5px -2px rgb(0, 0, 0);
   padding: 0;
-}
-.buy-cart .content::-webkit-scrollbar {
-  width: 2px;
-}
-.buy-cart .content::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0);
-}
-.buy-cart .content::-webkit-scrollbar-thumb {
-  background: #C8B568;
-  padding: 10px;
 }
 .buy-cart .content .services .service {
   display: flex;
