@@ -1123,6 +1123,7 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   bottom: 20px;
   left: 20px;
   z-index: 2;
+  max-width: 90%;
 }
 .buy-cart.active .content {
   opacity: 1;
