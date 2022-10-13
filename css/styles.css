@@ -489,6 +489,9 @@ header.menu-of-services nav > ul > li .submenu:hover {
   }
 }
 
+.btn {
+  cursor: pointer;
+}
 .btn.menu {
   margin: 0;
   padding: 10px;
@@ -1121,6 +1124,13 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   left: 20px;
   z-index: 2;
 }
+.buy-cart.active .content {
+  opacity: 1;
+  max-height: 400px;
+  height: auto;
+  padding: 20px;
+  overflow-y: scroll;
+}
 .buy-cart .icon {
   cursor: pointer;
 }
@@ -1137,11 +1147,25 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   font-weight: bold;
 }
 .buy-cart .content {
+  transition-duration: 0.5s;
+  opacity: 0;
+  height: 0;
   background-color: #4F6A9E;
   color: #1a1a1a;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   box-shadow: 2px 2px 5px -2px rgb(0, 0, 0);
-  padding: 20px;
+  padding: 0;
+}
+.buy-cart .content::-webkit-scrollbar {
+  width: 2px;
+}
+.buy-cart .content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+.buy-cart .content::-webkit-scrollbar-thumb {
+  background: #C8B568;
+  padding: 10px;
 }
 .buy-cart .content .services .service {
   display: flex;
@@ -1159,6 +1183,9 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
 }
 .buy-cart .content .services .service .close:hover svg {
   opacity: 0.5;
+}
+.buy-cart .content .btn.cta.buy-all {
+  margin-top: 20px;
 }
 .buy-cart .content .btn.cta.buy-all:hover {
   background-color: #4F6A9E;

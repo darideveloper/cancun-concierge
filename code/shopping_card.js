@@ -6,6 +6,14 @@ const buy_cart = document.querySelector (".buy-cart")
 // Lements in the shopping cart
 let cart_elems = []
 
+function hide_show_details_cart () {
+    // Show or hide details when click button
+    const cart_button = buy_cart.querySelector("button.icon")
+    cart_button.addEventListener ("click", () => {
+        buy_cart.classList.toggle ("active")
+    })
+}
+
 function render_cart () {
     // Update cart counter
     const card_counter = buy_cart.querySelector (".counter")
@@ -68,3 +76,4 @@ function manage_froms () {
 }
 
 manage_froms ()
+hide_show_details_cart ()
