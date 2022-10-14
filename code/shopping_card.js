@@ -1,10 +1,51 @@
 // get elements
-const buy_forms = document.querySelectorAll ("article.service .buy form")
+const buy_forms = document.querySelectorAll ("article.service .buy-section form")
 const buy_cart = document.querySelector (".buy-cart")
 
+// Page url
+const current_url = window.location.href
 
 // Lements in the shopping cart
 let cart_elems = {}
+
+// Services prices
+const services_prices = {
+    "CATAMARAN & REEF SNORKEL EXPEDITION": 180,
+    "TULUM - TANKAH EXPEDITION": 156,
+    "CENOTES & PARADISE LAGOON": 125,
+    "XEL-HA PARK": 150,
+    "XENSES PARK": 108,
+    "XPLOR PARK": 192
+}
+
+function get_service_image (buy_form) {
+
+    // Get imafe
+    const image_elem = buy_form.parentNode.parentNode.parentNode.querySelector (".content .gallery img")
+
+    // Format image url
+    let image_url = `${current_url}${image_elem.getAttribute ("src")}`
+    image_url = image_url.replace ("index.html../", "").replace("/rivera-getaway/..", "")
+
+    return image_url
+
+}
+
+
+function get_service_info (date_selected, buy_form) {
+
+    // Create service name and service date
+    const service_date = `Feb ${date_selected}`
+    let service_name = buy_form.parentNode.parentNode.parentNode.querySelector ("h3").innerHTML
+
+    // Clean service name
+    service_name = service_name.replace ("&amp;", "&")
+
+    // Format and return
+    const service_name_date = `${service_date} - ${service_name}`
+
+    return [service_name_date, service_name]
+}
 
 function hide_show_details_cart () {
     // Show or hide details when click button
@@ -21,7 +62,7 @@ function render_cart () {
     const card_counter = buy_cart.querySelector (".counter")
     total_services = 0
     for (const cart_elem in cart_elems) {
-        cart_num = cart_elems[cart_elem]
+        cart_num = cart_elems[cart_elem]["amount"]
         total_services += cart_num
     }
     card_counter.innerHTML = String(total_services)
@@ -29,7 +70,7 @@ function render_cart () {
     // Update services in cart
     services = ""
     for (const cart_name in cart_elems) {
-        card_number = cart_elems[cart_name]
+        card_number = cart_elems[cart_name]["amount"]
         service = `
             <div class="service">
                 <button class="btn close">
@@ -55,10 +96,10 @@ function render_cart () {
             service = service.substring(0, service_delimiter)
 
             // reduce dcounter of the elemnt
-            cart_elems[service]--
+            cart_elems[service]["amount"]--
 
             // Delete element if is required
-            if (cart_elems[service] == 0) {
+            if (cart_elems[service]["amount"] == 0) {
                 delete cart_elems[service]
             }
 
@@ -102,10 +143,28 @@ function manage_froms () {
         const buy_button = buy_form.querySelector ("button.buy-now")
         const add_button = buy_form.querySelector ("button.add-cart")
     
-        buy_button.addEventListener ("click", () => {
+        buy_button.addEventListener ("click", async function (e) {
             if (date_selected) {
-                // TODO: Submit to payments platform
-                console.log ("to payments")
+                // Get service and image
+                const [service_name_date, service_name] = get_service_info (date_selected, buy_form)
+                const image_url = get_service_image (buy_form)
+
+                // Get service price
+                const price = services_prices[service_name]
+
+                // Format service
+                const service_obj = {}
+                service_obj[service_name_date] = {
+                    "amount": 1, 
+                    image_url, 
+                    price, 
+                    "description": "TOURS & WATER ACTIVITIES, Rivera Getaway, Cancun Concierge"}
+
+                console.log (service_obj)
+                
+                // Redirect to stripe
+                await redirect_stripe (service_obj, current_url)
+
             }
         })
     
@@ -113,18 +172,29 @@ function manage_froms () {
             if (date_selected) {
                 
                 // Get service
-                const service_date = `Feb ${date_selected}`
-                let service_name = buy_form.parentNode.parentNode.parentNode.querySelector ("h3").innerHTML
-                service_name = service_name.replace ("&amp;", "&")
-                const service = `${service_date} - ${service_name}`
+                const [service_name_date, service_name] = get_service_info (date_selected, buy_form)
+
+                // Get service price
+                const price = services_prices[service_name]
     
                 // save service
-                if (Object.keys(cart_elems).includes (service)) {
-                    cart_elems[service]++
+                if (Object.keys(cart_elems).includes (service_name_date)) {
+                    // Incress amount
+                    cart_elems[service_name_date]["amount"]++
                 } else {
-                    cart_elems[service] = 1
+                    // get service image
+                    const image_url = get_service_image (buy_form)
 
+                    // save service details
+                    cart_elems[service_name_date] = {
+                        "amount": 1, 
+                        "image_url": 
+                        image_url, 
+                        price,
+                        "description": "TOURS & WATER ACTIVITIES, Rivera Getaway, Cancun Concierge"}
                 }
+
+                console.log (cart_elems)
 
                 // Update cart
                 render_cart()
