@@ -564,6 +564,18 @@ header.menu-of-services nav > ul > li .submenu:hover {
 .btn.cta:active {
   background: rgba(26, 26, 26, 0.3);
 }
+.btn.cta.buy {
+  border: 2px solid #4F6A9E;
+  background: #4F6A9E;
+  color: #C8B568;
+}
+.btn.cta.buy:hover {
+  background: #ffffff;
+  color: #4F6A9E;
+}
+.btn.cta.buy:active {
+  background: rgba(79, 106, 158, 0.3);
+}
 
 .services h1 {
   margin-top: 50px;
@@ -1183,16 +1195,45 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   border-color: #ffffff;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 2;
+}
+header .content .logo img {
+  width: 100px;
+}
+header .content nav > ul > li {
+  height: 60px;
+}
+
 .rivera-getaway .big-logo {
-  width: 250px;
+  width: 450px;
   height: auto;
   margin: 0 auto;
   display: block;
   margin-top: 50px;
+  margin-top: 150px;
+}
+@media screen and (max-width: 900px) {
+  .rivera-getaway .big-logo {
+    margin-top: 200px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .rivera-getaway .big-logo {
+    margin-top: 150px;
+    width: 80%;
+  }
 }
 .rivera-getaway h2 {
   text-transform: uppercase;
   text-align: center;
+}
+.rivera-getaway .activities h4 {
+  font-weight: bold;
 }
 .rivera-getaway .activities #tulum .bottom-details .details-card:nth-child(1) {
   grid-row-start: 1;
@@ -1210,27 +1251,28 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   grid-row-start: 1;
   grid-row-end: 3;
 }
-.rivera-getaway .buy {
+.rivera-getaway .buy-section {
   width: 100%;
+  margin-bottom: 50px;
 }
-.rivera-getaway .buy h4 {
+.rivera-getaway .buy-section h4 {
   font-weight: bold;
 }
-.rivera-getaway .buy span {
+.rivera-getaway .buy-section span {
   margin-left: 20px;
 }
-.rivera-getaway .buy form label {
+.rivera-getaway .buy-section form label {
   display: block;
   margin-bottom: 10px;
 }
-.rivera-getaway .buy form button {
+.rivera-getaway .buy-section form button {
   margin-top: 20px;
 }
-.rivera-getaway .buy form button:last-child {
+.rivera-getaway .buy-section form button:last-child {
   margin-left: 20px;
 }
 @media screen and (max-width: 475px) {
-  .rivera-getaway .buy form button, .rivera-getaway .buy form button:last-child {
+  .rivera-getaway .buy-section form button, .rivera-getaway .buy-section form button:last-child {
     display: block;
     margin: 0 auto;
     margin-top: 20px;

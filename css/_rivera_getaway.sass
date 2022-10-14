@@ -66,21 +66,48 @@
                 color: $color-b
                 border-color: $color-b
 
+// Header layout
+header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    z-index: 2
+
+    .content 
+        .logo img
+            width: 100px
+
+        nav > ul > li
+            height: 60px
+
 // Services layout
 .rivera-getaway
 
     .big-logo
-        width: 250px
+        width: 450px
         height: auto
         margin: 0 auto
         display: block
         margin-top: 50px
+        margin-top: 150px
+
+        @media screen and (max-width: 900px)
+            margin-top: 200px
+
+        @media screen and (max-width: 650px)
+            margin-top: 150px
+            width: 80%
+
 
     h2
         text-transform: uppercase
         text-align: center
 
     .activities
+
+        h4
+            font-weight: bold
 
         #tulum .bottom-details .details-card:nth-child(1)
             grid-row-start: 1
@@ -99,8 +126,9 @@
             grid-row-end: 3
 
     // Layout of buy section
-    .buy
+    .buy-section
         width: 100%
+        margin-bottom: 50px
 
         h4
             font-weight: bold

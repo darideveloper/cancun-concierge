@@ -58,8 +58,8 @@
         font-size: 20px
         text-transform: upper
         display: inline-block
-        background: $color-a
-        color: $color-b
+        background: $color_a
+        color: $color_b
         font-weight: bold
         padding: 10px 30px
         transition-duration: $transition-duration
@@ -68,8 +68,22 @@
 
         &:hover
             border-radius: 30px
-            background: $color-b
-            color: $color-a
+            background: $color_b
+            color: $color_a
 
         &:active
-            background: rgba($color-a, 0.3)
+            background: rgba($color_a, 0.3)
+
+        &.buy
+            border: 2px solid $color_d
+            background: $color_d
+            color: $color_c
+
+            &:hover
+                background: $color_b
+                color: $color_d
+
+            &:active
+                background: rgba($color_d, 0.3)
+            
+
