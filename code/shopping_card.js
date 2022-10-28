@@ -55,6 +55,13 @@ function hide_show_details_cart () {
             buy_cart.classList.toggle ("active")
         }
     })
+
+    // Add event to buy button
+    const buy_button = buy_cart.querySelector("button.buy-all")
+    console.log (buy_button)
+    buy_button.addEventListener ("click", async function () {
+        await redirect_stripe (cart_elems, current_url)
+    })
 }
 
 function render_cart () {
@@ -159,8 +166,6 @@ function manage_froms () {
                     image_url, 
                     price, 
                     "description": "TOURS & WATER ACTIVITIES, Rivera Getaway, Cancun Concierge"}
-
-                console.log (service_obj)
                 
                 // Redirect to stripe
                 await redirect_stripe (service_obj, current_url)
