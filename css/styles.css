@@ -80,6 +80,23 @@ h2 {
   font-size: 30px;
 }
 
+.loading-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4F6A9E;
+  z-index: 3;
+}
+.loading-modal img {
+  width: 100px;
+  height: 100px;
+}
+
 header {
   background-color: #4F6A9E;
 }

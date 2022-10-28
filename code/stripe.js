@@ -1,10 +1,21 @@
 const stripe_api_url = "http://localhost:5000"
 
 function alert_error () {
+    // Alert error for api call
     alert ("An error occurred. Try again later.")
 }
 
+function toggle_loading () {
+    // Hide and show loading modal
+    modal = document.querySelector (".loading-modal")
+    modal.classList.toggle ("hide")
+}
+
 async function redirect_stripe (buy_data, current_url) {
+
+    toggle_loading ()
+
+
     try {
         const response = await fetch (stripe_api_url, {
             method: 'POST',
@@ -28,5 +39,7 @@ async function redirect_stripe (buy_data, current_url) {
         }
     } catch {
         alert_error ()
+        toggle_loading ()
     }
+
 }
