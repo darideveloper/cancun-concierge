@@ -1,4 +1,4 @@
-const stripe_api_url = "http://localhost:5000"
+const stripe_api_url = "https://stripe-api.onrender.com/"
 
 function alert_error () {
     // Alert error for api call
