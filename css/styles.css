@@ -1212,17 +1212,17 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   border-color: #ffffff;
 }
 
-header {
+header.fixed {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   z-index: 2;
 }
-header .content .logo img {
+header.fixed .content .logo img {
   width: 100px;
 }
-header .content nav > ul > li {
+header.fixed .content nav > ul > li {
   height: 60px;
 }
 
