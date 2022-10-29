@@ -67,26 +67,35 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Full website with multiple pages, multilanguaje and payments with stripe. Pages: 
+Full website with multiple pages, multilanguaje and payments with stripe. 
+The page its only vanilla js, but use an flask api for generate stripe payment page
+Pages: 
 
 ### Home
+(wait for the image to load)
 [![home](screenshots/home.gif)](https://darideveloper.github.io/cancun-concierge/en/)
 
 ### Services
+(wait for the image to load)
 [![home](screenshots/services.gif)](https://darideveloper.github.io/cancun-concierge/en/services/)
 
 
 ### Transportation
+(wait for the image to load)
 [![home](screenshots/transportation.gif)](https://darideveloper.github.io/cancun-concierge/en/transportation/)
 
 
 ### Social responsability
+(wait for the image to load)
 [![home](screenshots/social-responsability.gif)](https://darideveloper.github.io/cancun-concierge/en/social/)
 
 ### Menu of services
+(wait for the image to load)
 [![home](screenshots/menu-of-services.gif)](https://darideveloper.github.io/cancun-concierge/menu-of-services/)
 
 ### Rivera getaway
+Payments
+(wait for the image to load)
 [![home](screenshots/rivera-getaway.gif)](https://darideveloper.github.io/cancun-concierge/rivera-getaway/)
 
 
@@ -98,9 +107,6 @@ Full website with multiple pages, multilanguaje and payments with stripe. Pages:
 
 
 <div>
-<a href="https://flask.palletsprojects.com/en/2.2.x/">
-  <img src="https://cdn.svgporn.com/logos/flask.svg" width="50" alt="flask" title="flask">
-</a>
 <a href="https://developer.mozilla.org/es/docs/Web/HTML">
   <img src="https://cdn.svgporn.com/logos/html-5.svg" width="50" alt="html5" title="html5">
 </a>
