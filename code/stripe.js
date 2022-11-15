@@ -1,4 +1,5 @@
-const stripe_api_url = "https://stripe-api.onrender.com/"
+const stripe_api_url = "https://flask-env.eba-n2a3nfec.us-east-2.elasticbeanstalk.com/"
+console.log (stripe_api_url)
 
 function alert_error () {
     // Alert error for api call
@@ -27,7 +28,8 @@ async function redirect_stripe (buy_data, current_url) {
                 "user": "cancunconcier",
                 "url": current_url,
                 "products": buy_data
-            })
+            }),
+            mode: "cors",
         })
         const response_json = await response.json ()
 
