@@ -1,4 +1,4 @@
-const stripe_api_url = "https://flask-env.eba-n2a3nfec.us-east-2.elasticbeanstalk.com/"
+const stripe_api_url = "https://daridev2.pythonanywhere.com/"
 console.log (stripe_api_url)
 
 function alert_error () {
