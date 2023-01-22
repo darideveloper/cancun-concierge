@@ -65,8 +65,12 @@
         transition-duration: $transition-duration
         margin-bottom: 0
         border: 2px solid black
+        
+        &.disabled
+            cursor: not-allowed
+            opacity: 0.3
 
-        &:hover
+        &:hover:not(.disabled)
             border-radius: 30px
             background: $color_b
             color: $color_a
@@ -79,7 +83,7 @@
             background: $color_d
             color: $color_c
 
-            &:hover
+            &:hover:not(.disabled)
                 background: $color_b
                 color: $color_d
 
