@@ -17,13 +17,14 @@
             transition-duration: $transition-duration
             border-radius: 20px
             padding: 15px
+            background-color: rgba($color-d, 0.1)
 
             img
                 transform: scale(0.9)
                 transition-duration: $transition-duration
 
             &:hover
-                box-shadow: 0px 0px 20px 0px rgba($color-d, 0.7)
+                box-shadow: 0px 0px 20px 0px rgba($color-d, 0.5)
 
                 img
                     transform: scale(1)
@@ -46,29 +47,52 @@
             flex-direction: column
             align-items: flex-start
             justify-content: flex-start
+            width: 100%
 
-        p
-            font-size: 12px
-            opacity: 0.5
+            p
+                font-size: 12px
+                opacity: 0.5
 
-        label
-            padding: 10px 0
-            
-            input, select
-                margin-top: 5px
-                display: block
-                font-size: 18px
+            label
+                padding: 10px 0
                 width: 100%
-                padding: 5px 10px
-                border: 1px solid $color-d
-                border-radius: 5px
-                transition-duration: $transition-duration
+                
+                input, select
+                    margin-top: 5px
+                    display: block
+                    font-size: 18px
+                    width: calc(100% - 20px)
+                    padding: 5px 10px
+                    border: 1px solid $color-d
+                    border-radius: 5px
+                    transition-duration: $transition-duration
 
-                &:disabled, .disabled
-                    cursor: not-allowed
-                    opacity: 0.3
+                    &:disabled, .disabled
+                        cursor: not-allowed
+                        opacity: 0.3
 
-                &:focus:not(:disabled), &:hover:not(:disabled)
-                    outline: none
-                    box-shadow: 0px 0px 8px 0px $color-d
-        
+                    &:focus:not(:disabled), &:hover:not(:disabled)
+                        outline: none
+                        box-shadow: 0px 0px 8px 0px $color-d
+
+    @media screen and (max-width: 900px)
+
+        .cards.transport
+            width: 50%
+            grid-template-columns: repeat(1, 1fr)  
+
+        .buy-form
+            width: 80%
+            grid-template-columns: repeat(1, 1fr)
+
+            fieldset:nth-child(1)
+                grid-row-start: 3
+                grid-row-end: 4
+
+    @media screen and (max-width: 500px)
+
+        .cards.transport
+            width: 70%
+
+        .buy-form
+            width: 90%
