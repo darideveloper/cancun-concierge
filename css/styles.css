@@ -1314,27 +1314,27 @@ header.fixed .content nav > ul > li {
   text-align: center;
   margin-bottom: 50px;
 }
-.frini-chen-airport-transfers .cards {
+.frini-chen-airport-transfers .cards.transport {
   gap: 25px;
   margin-bottom: 20px;
 }
-.frini-chen-airport-transfers .cards .card {
+.frini-chen-airport-transfers .cards.transport .card {
   cursor: pointer;
   transition-duration: 0.5s;
   border-radius: 20px;
   padding: 15px;
 }
-.frini-chen-airport-transfers .cards .card img {
+.frini-chen-airport-transfers .cards.transport .card img {
   transform: scale(0.9);
   transition-duration: 0.5s;
 }
-.frini-chen-airport-transfers .cards .card:hover {
+.frini-chen-airport-transfers .cards.transport .card:hover {
   box-shadow: 0px 0px 20px 0px rgba(79, 106, 158, 0.7);
 }
-.frini-chen-airport-transfers .cards .card:hover img {
+.frini-chen-airport-transfers .cards.transport .card:hover img {
   transform: scale(1);
 }
-.frini-chen-airport-transfers .cards .card.active {
+.frini-chen-airport-transfers .cards.transport .card.active {
   box-shadow: 0px 0px 20px 0px #4F6A9E;
 }
 .frini-chen-airport-transfers .buy-form {
