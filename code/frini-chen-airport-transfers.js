@@ -5,19 +5,27 @@ const stripe_api = "https://daridev2.pythonanywhere.com/"
 
 function activete_form(transport_types) {
 
+  transport_types.push ("general")
+
+  // Activate submit button
+  document.querySelector("#submit").classList.remove("hide")
+
   // Enable submit button and form
   document.querySelector("#submit").classList.remove("disabled")
   document.querySelector("form").disabled = false
 
-  // Disabled all form inputs
-  all_inputs = document.querySelectorAll("input:not(.hide), select")
+  // Disabled all form sections and inputs
+  const all_inputs = document.querySelectorAll("fieldset, fieldset input, fieldset select")
   all_inputs.forEach(input => {
+    input.classList.add ("hide")
     input.disabled = true
   })
 
-  // Activate general form inputs
-  general_inputs = document.querySelectorAll(".general input:not(.hide), .general select")
-  general_inputs.forEach(input => {
+  // Activate current form sections
+  const selector = transport_types.map(transport_type => `fieldset.${transport_type}, fieldset.${transport_type} input:not([id*="hotel-other"]), fieldset.${transport_type} select`).join (", ")
+  const fielsets = document.querySelectorAll(selector)
+  fielsets.forEach(input => {
+    input.classList.remove ("hide")
     input.disabled = false
   })
 
@@ -28,12 +36,15 @@ function activete_form(transport_types) {
     price = 220
   }
 
-  // Activate other form inputs
-  selector_inputs = transport_types.map(transport_type => `.${transport_type} input:not(.hide), .${transport_type} select`).join(", ")
-  transport_inputs = document.querySelectorAll(selector_inputs)
-  transport_inputs.forEach(input => {
-    input.disabled = false
-  })
+  // Update form grid style
+  const form = document.querySelector("form .wrapper-fieldsets")
+  if (transport_types.length == 2) {
+    form.classList.add ("two-columns")
+    form.classList.remove ("three-columns")
+  } else if (transport_types.length == 3) {
+    form.classList.remove ("two-columns")
+    form.classList.add ("three-columns")
+  }
 }
 
 // Select transport card
@@ -69,13 +80,18 @@ hotel_inputs.forEach(hotel_input => {
   hotel_input.addEventListener("change", (e) => {
 
     // Show or hide input for custom hotel
-    const input_custom_hotel = e.target.nextElementSibling
+    const input_custom_hotel = e.target.parentNode.querySelector ("input")
+    const input_wrapper = input_custom_hotel.parentNode
+    console.log (input_custom_hotel)
+    console.log (input_wrapper)
     if (e.target.value == "Other") {
       input_custom_hotel.classList.remove("hide")
       input_custom_hotel.disabled = false
+      input_wrapper.classList.remove ("hide")
     } else {
       input_custom_hotel.classList.add("hide")
       input_custom_hotel.disabled = true
+      input_wrapper.classList.add ("hide")
     }
   })
 })
@@ -94,7 +110,7 @@ form.addEventListener("submit", (e) => {
   // Create form text
   let form_data = []
   for (const input of inputs) {
-    const input_name = input.getAttribute("name").replace("-", " ")
+    const input_name = input.getAttribute("name").replaceAll("-", " ")
     const input_value = input.value
     form_data.push (`${input_name}: ${input_value}`)
   }

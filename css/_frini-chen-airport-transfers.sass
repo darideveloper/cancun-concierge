@@ -8,6 +8,12 @@
         text-align: center
         margin-bottom: 50px
 
+    .logo-frini-chen
+        width: 200px
+        display: block
+        margin: 0 auto
+        margin-top: 100px
+
     .cards.transport
         gap: 25px
         margin-bottom: 20px
@@ -17,63 +23,101 @@
             transition-duration: $transition-duration
             border-radius: 20px
             padding: 15px
-            background-color: rgba($color-d, 0.1)
+            flex-direction: row
 
-            img
-                transform: scale(0.9)
-                transition-duration: $transition-duration
+            .text
+                display: flex
+                align-items: flex-start
+                flex-direction: column
+                margin-left: 10px
+
+                h3, p.price
+                    text-align: left
+                    width: 100%
+
+                h3
+                    margin-bottom: 0
+
+                p.price
+                    font-weight: bold
+                    font-size: 1rem
+
+            .checkbox
+                border: 2px solid rgba($color-d, 0.8)
+                width: 40px
+                height: 20px
+                margin-right: 10px
+                display: flex
+                align-items: center
+                justify-content: center
+
+                .inside
+                    width: 35px
+                    height: 15px
 
             &:hover
-                box-shadow: 0px 0px 20px 0px rgba($color-d, 0.5)
-
-                img
-                    transform: scale(1)
+                .checkbox 
+                    .inside
+                        background-color: rgba($color-d, 0.6)
 
             &.active
-                box-shadow: 0px 0px 20px 0px $color-d
+                .checkbox
+                    .inside
+                        background-color: rgba($color-d, 0.8)
+                    
+    .buy-form 
+        .wrapper-fieldsets
+            display: grid
+            gap: 25px
+            margin: 0 auto
+            
+            &.two-columns
+                grid-template-columns: repeat(2, 1fr)
+                    
+            &.three-columns
+                grid-template-columns: repeat(3, 1fr)
 
+            .btn.cta
+                margin-top: 15px
 
-    .buy-form
-        display: grid
-        grid-template-columns: repeat(3, 1fr)
-        gap: 25px
+            fieldset
+                border: none
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                justify-content: flex-start
+                width: 100%
+
+                p
+                    font-size: 12px
+                    opacity: 1
+
+                label
+                    padding: 10px 0
+                    width: 100%
+                    
+                    input, select
+                        margin-top: 5px
+                        display: block
+                        font-size: 18px
+                        width: calc(100% - 20px)
+                        padding: 5px 10px
+                        border: 1px solid $color-d
+                        border-radius: 5px
+                        transition-duration: $transition-duration
+
+                        &:disabled, .disabled
+                            cursor: not-allowed
+                            opacity: 0.3
+
+                        &:focus:not(:disabled), &:hover:not(:disabled)
+                            outline: none
+                            box-shadow: 0px 0px 8px 0px $color-d
 
         .btn.cta
-            margin-top: 15px
-
-        fieldset
-            border: none
-            display: flex
-            flex-direction: column
-            align-items: flex-start
-            justify-content: flex-start
-            width: 100%
-
-            p
-                font-size: 12px
-                opacity: 0.5
-
-            label
-                padding: 10px 0
-                width: 100%
-                
-                input, select
-                    margin-top: 5px
-                    display: block
-                    font-size: 18px
-                    width: calc(100% - 20px)
-                    padding: 5px 10px
-                    border: 1px solid $color-d
-                    border-radius: 5px
-                    transition-duration: $transition-duration
-
-                    &:disabled, .disabled
-                        cursor: not-allowed
-                        opacity: 0.3
-
-                    &:focus:not(:disabled), &:hover:not(:disabled)
-                        outline: none
-                        box-shadow: 0px 0px 8px 0px $color-d
+            margin: 0 auto
+            margin-top: 20px
+            display: block
 
     @media screen and (max-width: 900px)
 
@@ -81,18 +125,16 @@
             width: 50%
             grid-template-columns: repeat(1, 1fr)  
 
-        .buy-form
-            width: 80%
-            grid-template-columns: repeat(1, 1fr)
-
-            fieldset:nth-child(1)
-                grid-row-start: 3
-                grid-row-end: 4
+        .buy-form 
+            .wrapper-fieldsets
+                &.two-columns, &.three-columns
+                    width: 80%
+                    grid-template-columns: repeat(1, 1fr) !important
 
     @media screen and (max-width: 500px)
 
         .cards.transport
             width: 70%
 
-        .buy-form
+        .buy-form .wrapper-fieldsets
             width: 90%

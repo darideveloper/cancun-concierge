@@ -772,7 +772,6 @@ header.menu-of-services nav > ul > li .submenu:hover {
 .transportation.transport .cards .card p.price {
   color: #C8B568;
   font-size: 16px;
-  font-stretch: italic;
 }
 .transportation.transport .cards .card img {
   width: 100%;
@@ -1324,6 +1323,12 @@ header.fixed .content nav > ul > li {
   text-align: center;
   margin-bottom: 50px;
 }
+.frini-chen-airport-transfers .logo-frini-chen {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+}
 .frini-chen-airport-transfers .cards.transport {
   gap: 25px;
   margin-bottom: 20px;
@@ -1333,30 +1338,59 @@ header.fixed .content nav > ul > li {
   transition-duration: 0.5s;
   border-radius: 20px;
   padding: 15px;
-  background-color: rgba(79, 106, 158, 0.1);
+  flex-direction: row;
 }
-.frini-chen-airport-transfers .cards.transport .card img {
-  transform: scale(0.9);
-  transition-duration: 0.5s;
+.frini-chen-airport-transfers .cards.transport .card .text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
 }
-.frini-chen-airport-transfers .cards.transport .card:hover {
-  box-shadow: 0px 0px 20px 0px rgba(79, 106, 158, 0.5);
+.frini-chen-airport-transfers .cards.transport .card .text h3, .frini-chen-airport-transfers .cards.transport .card .text p.price {
+  text-align: left;
+  width: 100%;
 }
-.frini-chen-airport-transfers .cards.transport .card:hover img {
-  transform: scale(1);
+.frini-chen-airport-transfers .cards.transport .card .text h3 {
+  margin-bottom: 0;
 }
-.frini-chen-airport-transfers .cards.transport .card.active {
-  box-shadow: 0px 0px 20px 0px #4F6A9E;
+.frini-chen-airport-transfers .cards.transport .card .text p.price {
+  font-weight: bold;
+  font-size: 1rem;
 }
-.frini-chen-airport-transfers .buy-form {
+.frini-chen-airport-transfers .cards.transport .card .checkbox {
+  border: 2px solid rgba(79, 106, 158, 0.8);
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frini-chen-airport-transfers .cards.transport .card .checkbox .inside {
+  width: 35px;
+  height: 15px;
+}
+.frini-chen-airport-transfers .cards.transport .card:hover .checkbox .inside {
+  background-color: rgba(79, 106, 158, 0.6);
+}
+.frini-chen-airport-transfers .cards.transport .card.active .checkbox .inside {
+  background-color: rgba(79, 106, 158, 0.8);
+}
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+  margin: 0 auto;
 }
-.frini-chen-airport-transfers .buy-form .btn.cta {
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets .btn.cta {
   margin-top: 15px;
 }
-.frini-chen-airport-transfers .buy-form fieldset {
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset {
   border: none;
   display: flex;
   flex-direction: column;
@@ -1364,15 +1398,15 @@ header.fixed .content nav > ul > li {
   justify-content: flex-start;
   width: 100%;
 }
-.frini-chen-airport-transfers .buy-form fieldset p {
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset p {
   font-size: 12px;
-  opacity: 0.5;
+  opacity: 1;
 }
-.frini-chen-airport-transfers .buy-form fieldset label {
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label {
   padding: 10px 0;
   width: 100%;
 }
-.frini-chen-airport-transfers .buy-form fieldset label input, .frini-chen-airport-transfers .buy-form fieldset label select {
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label input, .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label select {
   margin-top: 5px;
   display: block;
   font-size: 18px;
@@ -1382,33 +1416,34 @@ header.fixed .content nav > ul > li {
   border-radius: 5px;
   transition-duration: 0.5s;
 }
-.frini-chen-airport-transfers .buy-form fieldset label input:disabled, .frini-chen-airport-transfers .buy-form fieldset label input .disabled, .frini-chen-airport-transfers .buy-form fieldset label select:disabled, .frini-chen-airport-transfers .buy-form fieldset label select .disabled {
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:disabled, .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label input .disabled, .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:disabled, .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label select .disabled {
   cursor: not-allowed;
   opacity: 0.3;
 }
-.frini-chen-airport-transfers .buy-form fieldset label input:focus:not(:disabled), .frini-chen-airport-transfers .buy-form fieldset label input:hover:not(:disabled), .frini-chen-airport-transfers .buy-form fieldset label select:focus:not(:disabled), .frini-chen-airport-transfers .buy-form fieldset label select:hover:not(:disabled) {
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:focus:not(:disabled), .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:hover:not(:disabled), .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:focus:not(:disabled), .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:hover:not(:disabled) {
   outline: none;
   box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+.frini-chen-airport-transfers .buy-form .btn.cta {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
 }
 @media screen and (max-width: 900px) {
   .frini-chen-airport-transfers .cards.transport {
     width: 50%;
     grid-template-columns: repeat(1, 1fr);
   }
-  .frini-chen-airport-transfers .buy-form {
+  .frini-chen-airport-transfers .buy-form .wrapper-fieldsets.two-columns, .frini-chen-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
     width: 80%;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .frini-chen-airport-transfers .buy-form fieldset:nth-child(1) {
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 @media screen and (max-width: 500px) {
   .frini-chen-airport-transfers .cards.transport {
     width: 70%;
   }
-  .frini-chen-airport-transfers .buy-form {
+  .frini-chen-airport-transfers .buy-form .wrapper-fieldsets {
     width: 90%;
   }
 }

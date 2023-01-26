@@ -82,10 +82,10 @@
         <section class="transportation transport">                
             <div class="titles regular-width">
                 <h1 class="small">
-                    We will be happy to arrange your transfers.
+                    PLEASE BOOK NOW AND SECURE YOUR AIRPORT TRANSFER TO YOUR HOTEL
                 </h1>
                 <p class="small">
-                    Please provide us with the following flight details and we will be happy to make the arrangements for you:
+                    We will be happy to provide Airport Transportation
                 </p>
             </div>
             <div class="gallery">
@@ -95,118 +95,142 @@
                     </div>
                 </div>
             </div>
+            
+            <img src="../imgs/frini-chen-logo.jpg" alt="Logo Frini Chen" class="logo-frini-chen">
 
-            <h2>HIRE TRANSPORTATION</h2>
-            <p>Select a transport type:</p>
+            <h2>TRANSPORTATION OPTIONS</h2>
             <section class="cards transport regular-width">
                 <article class="card" data-transport-type="arriving">
-                    <h3>Airport - Hotel Transfer</h3>
-                    <img src="../imgs/transportation-car-regular.png" alt="vehículo de transporte">
+                    <div class="checkbox">
+                        <div class="inside"></div>
+                    </div>
+                    <div class="text">
+                        <h3>Airport - Hotel Transfer</h3>
+                        <p class="price">114.00 USD</p>
+                    </div>
                 </article>
 
                 <article class="card" data-transport-type="departing">
-                    <h3>Hotel - Airport Transfer</h3>
-                    <img src="../imgs/transportation-car-regular.png" alt="vehículo de transporte">
+                    <div class="checkbox">
+                        <div class="inside"></div>
+                    </div>
+                    <div class="text">
+                        <h3>Hotel - Airport Transfer</h3>
+                        <p class="price">114.00 USD</p>
+                    </div>
                 </article>
 
                 <article class="card" data-transport-type="arriving departing">
-                    <h3>Round Trip<br>Transfer</h3>
-                    <img src="../imgs/transportation-car-regular.png" alt="vehículo de transporte">
+                    <div class="checkbox">
+                        <div class="inside"></div>
+                    </div>
+                    <div class="text">
+                        <h3>Round Trip<br>Transfer</h3>
+                        <p class="price">220.00 USD</p>
+                    </div>
                 </article>
 
             </section>
             
         </section>
 
-        <form class="buy-form regular-width" method="post" action="#" disabled>
-            <fieldset class="general">
-                <h3>General</h3>
-                <label>
-                    Name
-                    <input type="text" name="name" id="name" placeholder="John" disabled required>
-                </label>
-                <label>
-                    Last name
-                    <input type="text" name="last-name" id="last-name" placeholder="Doe" disabled required>
-                </label>
-                <label>
-                    Number of passengers
-                    <select name="passengers" id="passengers" disabled required>
-                        <option value="1">1 passenger</option>
-                        <option value="2">2 passengers</option>
-                        <option value="3">3 passengers</option>
-                        <option value="4">4 passengers</option>
-                        <option value="5">5 passengers</option>
-                        <option value="6">6 passengers</option>
-                        <option value="7">7 passengers</option>
-                        <option value="8">8 passengers</option>
-                    </select>
-                </label>
-                <input id="submit" type="submit" class="btn cta buy disabled" disabled value="Buy Now">
-            </fieldset>
-            <fieldset class="arriving">
-                <h3>Arraiving</h3>
-                <label>
-                    Arriving date
-                    <input type="date" name="arraiving-date" id="arraiving-date" required disabled>
-                </label>
-                <label>
-                    Arriving time
-                    <input type="time" name="arraiving-time" id="arraiving-time" required disabled>
-                </label>
-                <label>
-                    Airline
-                    <input type="text" name="arraiving-airline" id="arraiving-airline" required disabled>
-                </label>
-                <label>
-                    Flight number
-                    <input type="text" name="arraiving-flight-number" id="arraiving-flight-number" required disabled>
-                </label>
-                <label>
-                    Hotel
-                    <select name="arriving-hotel" id="arriving-hotel" required disabled>
-                        <option value="Banyan Tree MayaKoba">Banyan Tree MayaKoba</option>
-                        <option value="Grand Luxxe Vidanta">Grand Luxxe Vidanta</option>
-                        <option value="Other">Other hotel in Playa del Carmen area</option>
-                    </select>
-                    <input type="text" id="arriving-hotel-other" name="arriving-hotel-other" required disabled class="hide hotel">
-                </label>
-                <p>*In case you have connecting flights, please make sure you provide the info for your actual flight landing in Cancun</p>
-            </fieldset>
-            <fieldset class="departing">
-                <h3>Departing</h3>
-                <label>
-                    Departing date
-                    <input type="date" name="departing-date" id="departing-date" required disabled>
-                </label>
-                <label>
-                    Departing time
-                    <input type="time" name="departing-time" id="departing-time" required disabled>
-                </label>
-                <label>
-                    Airline
-                    <input type="text" name="departing-airline" id="departing-airline" required disabled>
-                </label>
-                <label>
-                    Flight number
-                    <input type="text" name="departing-flight-number" id="departing-flight-number" required disabled>
-                </label>
-                <label>
-                    Hotel
-                    <select name="departing-hotel" id="departing-hotel" required disabled>
-                        <option value="Banyan Tree MayaKoba">Banyan Tree MayaKoba</option>
-                        <option value="Grand Luxxe Vidanta">Grand Luxxe Vidanta</option>
-                        <option value="Other">Other hotel in Playa del Carmen area</option>
-                    </select>
-                    <input type="text" id="departing-hotel-other" name="departing-hotel-other" required disabled class="hide hotel">
-                </label>
-                <p>*In case you have connecting flights, please make sure you provide the info for your actual flight departing from Cancun</p>
-            </fieldset>
+        <form class="buy-form regular-width" method="post" action="#">
+            <div class="wrapper-fieldsets">
+                <fieldset class="general hide">
+                    <h3>General</h3>
+                    <label>
+                        Name
+                        <input type="text" name="name" id="name" placeholder="John" required>
+                    </label>
+                    <label>
+                        Last name
+                        <input type="text" name="last-name" id="last-name" placeholder="Doe" required>
+                    </label>
+                    <label>
+                        Number of passengers
+                        <select name="passengers" id="passengers" required>
+                            <option value="1">1 passenger</option>
+                            <option value="2">2 passengers</option>
+                            <option value="3">3 passengers</option>
+                            <option value="4">4 passengers</option>
+                            <option value="5">5 passengers</option>
+                            <option value="6">6 passengers</option>
+                            <option value="7">7 passengers</option>
+                            <option value="8">8 passengers</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <fieldset class="arriving hide">
+                    <h3>Arriving</h3>
+                    <label>
+                        Arriving date
+                        <input type="date" name="arriving-date" id="arriving-date" required>
+                    </label>
+                    <label>
+                        Arriving time in Cancun
+                        <input type="time" name="arriving-time" id="arriving-time" required>
+                    </label>
+                    <label>
+                        Airline
+                        <input type="text" name="arriving-airline" id="arriving-airline" required>
+                        <p class="warning">*In case you have connecting flights, please make sure you provide the info for your actual flight arriving to Cancun</p>
+                    </label>
+                    <label>
+                        Flight number
+                        <input type="text" name="arriving-flight-number" id="arriving-flight-number" required>
+                    </label>
+                    <label>
+                        Hotel
+                        <select name="arriving-hotel" id="arriving-hotel" required>
+                            <option value="Banyan Tree MayaKoba">Banyan Tree MayaKoba</option>
+                            <option value="Grand Luxxe Vidanta">Grand Luxxe Vidanta</option>
+                            <option value="Other">Other hotel in Playa del Carmen area</option>
+                        </select>
+                        <div class="hotel-other-wrapper hide">
+                            <input type="text" id="arriving-hotel-other" name="arriving-hotel-other" required class="hide hotel" disabled>
+                            <p>Transfer rates apply to hotels located in Playa del Carmen area only</p>
+                        </div>
+                    </label>
+                </fieldset>
+                <fieldset class="departing hide">
+                    <h3>Departing</h3>
+                    <label>
+                        Departing date
+                        <input type="date" name="departing-date" id="departing-date" required>
+                    </label>
+                    <label>
+                        Departing time from Cancun
+                        <input type="time" name="departing-time" id="departing-time" required>
+                    </label>
+                    <label>
+                        Airline
+                        <input type="text" name="departing-airline" id="departing-airline" required>
+                        <p class="warning">*In case you have connecting flights, please make sure you provide the info for your actual flight departing from Cancun</p>
+                    </label>
+                    <label>
+                        Flight number
+                        <input type="text" name="departing-flight-number" id="departing-flight-number" required>
+                    </label>
+                    <label>
+                        Hotel
+                        <select name="departing-hotel" id="departing-hotel" required>
+                            <option value="Banyan Tree MayaKoba">Banyan Tree MayaKoba</option>
+                            <option value="Grand Luxxe Vidanta">Grand Luxxe Vidanta</option>
+                            <option value="Other">Other hotel in Playa del Carmen area</option>
+                        </select>
+                        <div class="hotel-other-wrapper hide">
+                            <input type="text" id="departing-hotel-other" name="departing-hotel-other" required class="hide hotel" disabled>
+                            <p>Transfer rates apply to hotels located in Playa del Carmen area only</p>
+                        </div>
+                    </label>
+                </fieldset>
+            </div>
+            <input id="submit" type="submit" class="btn cta buy hide" value="Buy Now">
         </form>
 
         <section class="transportation details">
 
-            <h2>OUR SERVICE</h2>
+            <h2>OUR SERVICES INCLUDE</h2>
             <section class="cards regular-width">
                 <article class="card">
                     <svg>
