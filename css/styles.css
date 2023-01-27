@@ -1344,6 +1344,7 @@ header.fixed .content nav > ul > li {
   align-items: flex-start;
   flex-direction: column;
   margin-left: 10px;
+  width: calc(100% - 44px);
 }
 .frini-chen-airport-transfers .cards.transport .card .text h3, .frini-chen-airport-transfers .cards.transport .card .text p.price {
   text-align: left;
@@ -1366,8 +1367,8 @@ header.fixed .content nav > ul > li {
   justify-content: center;
 }
 .frini-chen-airport-transfers .cards.transport .card .checkbox .inside {
-  width: 35px;
-  height: 15px;
+  width: 30px;
+  height: 12px;
 }
 .frini-chen-airport-transfers .cards.transport .card:hover .checkbox .inside {
   background-color: rgba(79, 106, 158, 0.6);
