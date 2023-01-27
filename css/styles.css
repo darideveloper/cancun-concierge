@@ -1324,10 +1324,9 @@ header.fixed .content nav > ul > li {
   margin-bottom: 50px;
 }
 .frini-chen-airport-transfers .logo-frini-chen {
-  width: 200px;
+  width: 300px;
   display: block;
   margin: 0 auto;
-  margin-top: 100px;
 }
 .frini-chen-airport-transfers .cards.transport {
   gap: 25px;
@@ -1400,7 +1399,7 @@ header.fixed .content nav > ul > li {
 }
 .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset p {
   font-size: 12px;
-  opacity: 1;
+  margin-bottom: 0;
 }
 .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label {
   padding: 10px 0;
@@ -1433,6 +1432,14 @@ header.fixed .content nav > ul > li {
   .frini-chen-airport-transfers .cards.transport {
     width: 50%;
     grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  .frini-chen-airport-transfers .cards.transport .card {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .frini-chen-airport-transfers .cards.transport .card br {
+    display: none;
   }
   .frini-chen-airport-transfers .buy-form .wrapper-fieldsets.two-columns, .frini-chen-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
     width: 80%;

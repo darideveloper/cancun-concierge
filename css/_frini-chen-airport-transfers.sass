@@ -9,10 +9,9 @@
         margin-bottom: 50px
 
     .logo-frini-chen
-        width: 200px
+        width: 300px
         display: block
         margin: 0 auto
-        margin-top: 100px
 
     .cards.transport
         gap: 25px
@@ -90,7 +89,7 @@
 
                 p
                     font-size: 12px
-                    opacity: 1
+                    margin-bottom: 0
 
                 label
                     padding: 10px 0
@@ -123,7 +122,16 @@
 
         .cards.transport
             width: 50%
-            grid-template-columns: repeat(1, 1fr)  
+            grid-template-columns: repeat(1, 1fr)
+            gap: 0
+
+            .card
+                justify-content: flex-start
+                padding: 0
+
+                br
+                    display: none
+                
 
         .buy-form 
             .wrapper-fieldsets
