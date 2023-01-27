@@ -1,5 +1,5 @@
 let price = 110
-const stripe_user = "cancun_concierge_consolidated_supply"
+const stripe_user = "fini-chen"
 const stripe_api = "https://daridev2.pythonanywhere.com/"
 
 
@@ -30,11 +30,12 @@ function activete_form(transport_types) {
   })
 
   // Update transportation price
-  if (transport_types.length == 1) {
+  if (transport_types.length == 2) {
     price = 110
   } else {
     price = 220
   }
+  console.log ({price, transport_types})
 
   // Update form grid style
   const form = document.querySelector("form .wrapper-fieldsets")
