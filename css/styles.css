@@ -1353,9 +1353,27 @@ header.fixed .content nav > ul > li {
 .frini-chen-airport-transfers .cards.transport .card .text h3 {
   margin-bottom: 0;
 }
-.frini-chen-airport-transfers .cards.transport .card .text p.price {
+.frini-chen-airport-transfers .cards.transport .card .text p {
+  text-align: left;
+}
+.frini-chen-airport-transfers .cards.transport .card .text p span {
   font-weight: bold;
+  font-size: 1.1em;
+}
+.frini-chen-airport-transfers .cards.transport .card .text p.price {
+  font-size: 1.3rem;
+}
+.frini-chen-airport-transfers .cards.transport .card .text p.price span {
+  display: block;
+}
+.frini-chen-airport-transfers .cards.transport .card .text p.regular-price {
   font-size: 1rem;
+  margin: 10px 0;
+  opacity: 0.4;
+}
+.frini-chen-airport-transfers .cards.transport .card .text p.regular-price span {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
 }
 .frini-chen-airport-transfers .cards.transport .card .checkbox {
   border: 2px solid rgba(79, 106, 158, 0.8);
