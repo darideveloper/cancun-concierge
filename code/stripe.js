@@ -1,4 +1,4 @@
-const stripe_api_url = "https://daridev2.pythonanywhere.com/"
+const stripe_api_url = "https://stripe-api-flask.herokuapp.com/"
 console.log (stripe_api_url)
 
 function alert_error () {
