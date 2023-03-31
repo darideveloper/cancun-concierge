@@ -1,6 +1,7 @@
 let price = 110
-const stripe_user = "fini-chen"
+const stripe_user = "sphere-rocket"
 const stripe_api = "https://stripe-api-flask.herokuapp.com/"
+let transport_name = ""
 
 
 function activete_form(transport_types) {
@@ -35,7 +36,6 @@ function activete_form(transport_types) {
   } else {
     price = 137.00
   }
-  console.log ({price, transport_types})
 
   // Update form grid style
   const form = document.querySelector("form .wrapper-fieldsets")
@@ -83,8 +83,6 @@ hotel_inputs.forEach(hotel_input => {
     // Show or hide input for custom hotel
     const input_custom_hotel = e.target.parentNode.querySelector ("input")
     const input_wrapper = input_custom_hotel.parentNode
-    console.log (input_custom_hotel)
-    console.log (input_wrapper)
     if (e.target.value == "Other") {
       input_custom_hotel.classList.remove("hide")
       input_custom_hotel.disabled = false
@@ -118,17 +116,17 @@ form.addEventListener("submit", (e) => {
   form_text = form_data.join (", ")
 
   // Stripe data
-  const stripe_data = {
+  let stripe_data = {
     "user": stripe_user,
     "url": window.location.href,
-    "products": {
-      transport_name: {
-        "amount": 1,
-        "price": price,
-        "description": form_text,
-        "image_url": "https://cancunconciergedmc.com/imgs/transportation-car-regular.png"
-      }
-    }
+    "products": {}
+  }
+
+  stripe_data["products"][transport_name] = {
+    "amount": 1,
+    "price": price,
+    "description": form_text,
+    "image_url": "https://cancunconciergedmc.com/imgs/transportation-car-regular.png"
   }
 
   // Get stripe link
@@ -140,7 +138,9 @@ form.addEventListener("submit", (e) => {
     },
     body: JSON.stringify(stripe_data)
   })
-  .then (response => response.json ())
+  .then (response => {
+    return response.json ()
+  })
   .then (data => {
     // Go to stripe page
     window.location.href = data.stripe_url
