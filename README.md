@@ -56,36 +56,36 @@ Project type: **client's project**
 
 # Details
 
-Full website with multiple pages, multilanguaje and payments with stripe. The page its  vanilla js, and it use an flask api for generate stripe payment page. It has too multilenguaje. \r
-\r
-\r
-The project have the following pages and sections:\r
-\r
-* General\r
-\t* Header (with change languaje button)\r
-\t* Footer (width contact data)\r
-* Home\r
-\t* Hero\r
-\t* About us\r
-\t* Why hire us\r
-\t* About our services\r
-\t* About Omar Guzman\r
-\t* Testimonials\r
-* Services\r
-\t* Services cards\r
-* Transportation\r
-\t* Buy transport cards\r
-* Social responsibility\r
+Full website with multiple pages, multilanguaje and payments with stripe. The page its  vanilla js, and it use an flask api for generate stripe payment page. It has too multilenguaje. 
+
+
+The project have the following pages and sections:
+
+* General
+\t* Header (with change languaje button)
+\t* Footer (width contact data)
+* Home
+\t* Hero
+\t* About us
+\t* Why hire us
+\t* About our services
+\t* About Omar Guzman
+\t* Testimonials
+* Services
+\t* Services cards
+* Transportation
+\t* Buy transport cards
+* Social responsibility
 \t* Colonia Chiapaneca Siglo XXI
 
 # Roadmap
 
-- [x] Multi pages\r
-- [x] Multilanguaje\r
-  - [x] English\r
-  - [x] Spanish\r
-- [x] Stripe payments\r
-    - [x] Single service payment\r
+- [x] Multi pages
+- [x] Multilanguaje
+  - [x] English
+  - [x] Spanish
+- [x] Stripe payments
+    - [x] Single service payment
     - [x] Multi service payment
 
 
