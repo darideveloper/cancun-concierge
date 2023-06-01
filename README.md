@@ -62,21 +62,21 @@ Full website with multiple pages, multilanguaje and payments with stripe. The pa
 The project have the following pages and sections:
 
 * General
-\t* Header (with change languaje button)
-\t* Footer (width contact data)
+t* Header (with change languaje button)
+t* Footer (width contact data)
 * Home
-\t* Hero
-\t* About us
-\t* Why hire us
-\t* About our services
-\t* About Omar Guzman
-\t* Testimonials
+t* Hero
+t* About us
+t* Why hire us
+t* About our services
+t* About Omar Guzman
+t* Testimonials
 * Services
-\t* Services cards
+t* Services cards
 * Transportation
-\t* Buy transport cards
+t* Buy transport cards
 * Social responsibility
-\t* Colonia Chiapaneca Siglo XXI
+t* Colonia Chiapaneca Siglo XXI
 
 # Roadmap
 
