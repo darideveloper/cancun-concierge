@@ -1271,22 +1271,6 @@ header.fixed .content nav > ul > li {
 .rivera-getaway .activities h4 {
   font-weight: bold;
 }
-.rivera-getaway .activities #tulum .bottom-details .details-card:nth-child(1) {
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
-.rivera-getaway .activities #cenotes .bottom-details .details-card:nth-child(1) {
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
-.rivera-getaway .activities #xelha .bottom-details .details-card:nth-child(1) {
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
-.rivera-getaway .activities #xplore .bottom-details .details-card:nth-child(2) {
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
 .rivera-getaway .buy-section {
   width: 100%;
   margin-bottom: 50px;

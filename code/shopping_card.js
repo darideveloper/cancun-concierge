@@ -10,12 +10,14 @@ let cart_elems = {}
 
 // Services prices
 const services_prices = {
-    "CATAMARAN & REEF SNORKEL EXPEDITION": 180,
-    "TULUM - TANKAH EXPEDITION": 156,
-    "CENOTES & PARADISE LAGOON": 125,
-    "XEL-HA PARK": 150,
-    "XENSES PARK": 108,
-    "XPLOR PARK": 192
+    "LUXURY YACHT & SNORKELING": 179,
+    "WHALE WATCHING IN PUERTO VALLARTA": 135,
+    "OUTDOOR ZIP LINE ADVENTURE": 180,
+    "EXTREME ZIP LINE ADVENTURE": 199,
+    "ISLAS MARIETAS ECO DISCOVERY": 144,
+    "SEA SAFARI": 180,
+    "YELAPA & MAJAHUITAS TOUR": 135,
+    "PUEBLOS CULTURAL TOUR": 156
 }
 
 function get_service_image (buy_form) {
@@ -193,8 +195,7 @@ function manage_froms () {
                     // save service details
                     cart_elems[service_name_date] = {
                         "amount": 1, 
-                        "image_url": 
-                        image_url, 
+                        "image_url": image_url, 
                         price,
                         "description": "TOURS & WATER ACTIVITIES, Rivera Getaway, Cancun Concierge"}
                 }
