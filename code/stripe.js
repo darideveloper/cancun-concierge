@@ -13,7 +13,7 @@ function toggle_loading () {
 }
 
 async function redirect_stripe (buy_data, current_url) {
-
+  
     toggle_loading ()
 
 
