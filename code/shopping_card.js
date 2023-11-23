@@ -17,7 +17,8 @@ const services_prices = {
     "ISLAS MARIETAS ECO DISCOVERY": 144,
     "SEA SAFARI": 180,
     "YELAPA & MAJAHUITAS TOUR": 135,
-    "PUEBLOS CULTURAL TOUR": 156
+    "PUEBLOS CULTURAL TOUR": 156,
+    "RHYTHMS OF THE NIGHT": 188,
 }
 
 function get_service_image (buy_form) {
