@@ -19,6 +19,7 @@ const services_prices = {
     "YELAPA & MAJAHUITAS TOUR": 135,
     "PUEBLOS CULTURAL TOUR": 156,
     "RHYTHMS OF THE NIGHT": 188,
+    "HIDDEN BEACH ISLAND DISCOVERY": 198.00,
 }
 
 function get_service_image (buy_form) {
