@@ -29,8 +29,17 @@ function get_service_image (buy_form) {
 
     // Format image url
     let image_url = `${current_url}${image_elem.getAttribute ("src")}`
-    image_url = image_url.replace ("index.html../", "").replace("/riviera-getaway/..", "")
 
+    replace_urls = [
+      "index.html../",
+      "riviera-getaway/..",
+      "waterworks-customers-activities/..",
+      "plumbing-customers-activities/..",
+    ]
+
+    for (const replace_url of replace_urls) {
+      image_url = image_url.replace (replace_url, "")
+    }
     console.log ({image_url})
 
     return image_url
