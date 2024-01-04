@@ -1621,4 +1621,201 @@ header.fixed .content nav > ul > li {
   }
 }
 
+header.ella-james, #footer.ella-james {
+  background-color: #1a262e;
+  font-family: "Montserrat", sans-serif;
+}
+header.ella-james h2, #footer.ella-james h2 {
+  font-family: "Vast Shadow", serif;
+}
+
+header.ella-james .content nav ul li a:hover {
+  color: #9ebccc;
+}
+
+#footer .widgets .widget:nth-child(2) {
+  width: 235px;
+}
+
+.ella-james-airport-transfers {
+  color: #212529;
+  font-family: "Montserrat", sans-serif;
+}
+.ella-james-airport-transfers h1 {
+  font-family: "Vampiro One", system;
+  color: white;
+}
+.ella-james-airport-transfers .transportation .titles h1, .ella-james-airport-transfers .transportation .titles p {
+  background-color: #9ebccc;
+}
+.ella-james-airport-transfers h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.ella-james-airport-transfers h2 + p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.ella-james-airport-transfers .logo-event {
+  width: 500px;
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+.ella-james-airport-transfers .cards.transport {
+  gap: 25px;
+  margin-bottom: 20px;
+}
+.ella-james-airport-transfers .cards.transport .card {
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 20px;
+  padding: 15px;
+  flex-direction: row;
+}
+.ella-james-airport-transfers .cards.transport .card .text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  width: calc(100% - 44px);
+}
+.ella-james-airport-transfers .cards.transport .card .text h3, .ella-james-airport-transfers .cards.transport .card .text p.price {
+  text-align: left;
+  width: 100%;
+}
+.ella-james-airport-transfers .cards.transport .card .text h3 {
+  margin-bottom: 0;
+}
+.ella-james-airport-transfers .cards.transport .card .text p {
+  text-align: left;
+}
+.ella-james-airport-transfers .cards.transport .card .text p span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.ella-james-airport-transfers .cards.transport .card .text p.price {
+  font-size: 1.3rem;
+  color: #9ebccc;
+}
+.ella-james-airport-transfers .cards.transport .card .text p.price span {
+  display: block;
+}
+.ella-james-airport-transfers .cards.transport .card .text p.regular-price {
+  font-size: 1rem;
+  margin: 10px 0;
+  opacity: 0.4;
+}
+.ella-james-airport-transfers .cards.transport .card .text p.regular-price span {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+.ella-james-airport-transfers .cards.transport .card .checkbox {
+  border: 2px solid rgba(158, 188, 204, 0.8);
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ella-james-airport-transfers .cards.transport .card .checkbox .inside {
+  width: 30px;
+  height: 12px;
+}
+.ella-james-airport-transfers .cards.transport .card:hover .checkbox .inside {
+  background-color: rgba(158, 188, 204, 0.6);
+}
+.ella-james-airport-transfers .cards.transport .card.active .checkbox .inside {
+  background-color: rgba(158, 188, 204, 0.8);
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets {
+  display: grid;
+  gap: 25px;
+  margin: 0 auto;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets .btn.cta {
+  margin-top: 15px;
+  color: white;
+  background-color: #1a262e;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label {
+  padding: 10px 0;
+  width: 100%;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label input, .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label select {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  border: 1px solid #4F6A9E;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:disabled, .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label input .disabled, .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:disabled, .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label select .disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:focus:not(:disabled), .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:hover:not(:disabled), .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:focus:not(:disabled), .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:hover:not(:disabled) {
+  outline: none;
+  box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+.ella-james-airport-transfers .buy-form .btn.cta {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  color: white;
+  background-color: #1a262e;
+  border: 2px solid #1a262e;
+}
+.ella-james-airport-transfers .buy-form .btn.cta:hover {
+  color: #1a262e;
+  background-color: white;
+}
+@media screen and (max-width: 900px) {
+  .ella-james-airport-transfers .cards.transport {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  .ella-james-airport-transfers .cards.transport .card {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .ella-james-airport-transfers .cards.transport .card br {
+    display: none;
+  }
+  .ella-james-airport-transfers .buy-form .wrapper-fieldsets.two-columns, .ella-james-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .ella-james-airport-transfers .cards.transport {
+    width: 70%;
+  }
+  .ella-james-airport-transfers .buy-form .wrapper-fieldsets {
+    width: 90%;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
