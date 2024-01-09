@@ -1622,23 +1622,37 @@ header.fixed .content nav > ul > li {
 }
 
 header.ella-james, #footer.ella-james {
-  background-color: #1a262e;
+  background-color: #bca078;
   font-family: "Montserrat", sans-serif;
+}
+header.ella-james .content nav ul li a, #footer.ella-james .content nav ul li a {
+  color: #010101;
+}
+header.ella-james .content nav ul li a:hover, #footer.ella-james .content nav ul li a:hover {
+  color: white;
 }
 header.ella-james h2, #footer.ella-james h2 {
   font-family: "Vast Shadow", serif;
 }
 
-header.ella-james .content nav ul li a:hover {
-  color: #9ebccc;
+#footer .widgets .widget a, #footer .widgets .widget p {
+  color: #010101;
 }
-
-#footer .widgets .widget:nth-child(2) {
+#footer .widgets .widget a svg, #footer .widgets .widget p svg {
+  fill: #010101;
+}
+#footer .widgets .widget a:hover {
+  color: white;
+}
+#footer .widgets .widget h2 {
+  color: white;
+}
+#footer:nth-child(2) {
   width: 235px;
 }
 
 .ella-james-airport-transfers {
-  color: #212529;
+  color: #010101;
   font-family: "Montserrat", sans-serif;
 }
 .ella-james-airport-transfers h1 {
@@ -1646,7 +1660,7 @@ header.ella-james .content nav ul li a:hover {
   color: white;
 }
 .ella-james-airport-transfers .transportation .titles h1, .ella-james-airport-transfers .transportation .titles p {
-  background-color: #9ebccc;
+  background-color: #bca078;
 }
 .ella-james-airport-transfers h2 {
   text-align: center;
@@ -1696,7 +1710,7 @@ header.ella-james .content nav ul li a:hover {
 }
 .ella-james-airport-transfers .cards.transport .card .text p.price {
   font-size: 1.3rem;
-  color: #9ebccc;
+  color: #bca078;
 }
 .ella-james-airport-transfers .cards.transport .card .text p.price span {
   display: block;
@@ -1711,7 +1725,7 @@ header.ella-james .content nav ul li a:hover {
   text-decoration-thickness: 2px;
 }
 .ella-james-airport-transfers .cards.transport .card .checkbox {
-  border: 2px solid rgba(158, 188, 204, 0.8);
+  border: 2px solid rgba(188, 160, 120, 0.8);
   width: 40px;
   height: 20px;
   margin-right: 10px;
@@ -1724,10 +1738,10 @@ header.ella-james .content nav ul li a:hover {
   height: 12px;
 }
 .ella-james-airport-transfers .cards.transport .card:hover .checkbox .inside {
-  background-color: rgba(158, 188, 204, 0.6);
+  background-color: rgba(188, 160, 120, 0.6);
 }
 .ella-james-airport-transfers .cards.transport .card.active .checkbox .inside {
-  background-color: rgba(158, 188, 204, 0.8);
+  background-color: rgba(188, 160, 120, 0.8);
 }
 .ella-james-airport-transfers .buy-form .wrapper-fieldsets {
   display: grid;
@@ -1743,7 +1757,7 @@ header.ella-james .content nav ul li a:hover {
 .ella-james-airport-transfers .buy-form .wrapper-fieldsets .btn.cta {
   margin-top: 15px;
   color: white;
-  background-color: #1a262e;
+  background-color: #bca078;
 }
 .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset {
   border: none;
@@ -1784,11 +1798,11 @@ header.ella-james .content nav ul li a:hover {
   margin-top: 20px;
   display: block;
   color: white;
-  background-color: #1a262e;
-  border: 2px solid #1a262e;
+  background-color: #bca078;
+  border: 2px solid #bca078;
 }
 .ella-james-airport-transfers .buy-form .btn.cta:hover {
-  color: #1a262e;
+  color: #bca078;
   background-color: white;
 }
 @media screen and (max-width: 900px) {

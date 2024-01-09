@@ -1,6 +1,6 @@
-$color-blue-dark: #1a262e
-$color-blue: #9ebccc
-$color-black: #212529
+$color-dark: #bca078
+$color-primary: #bca078
+$color-black: #010101
 $color-white: white
 $font-regular: 'Montserrat', sans-serif
 $font-title: 'Vast Shadow', serif
@@ -8,16 +8,34 @@ $font-highlight: 'Vampiro One', system
 
 
 header.ella-james, #footer.ella-james
-    background-color: $color-blue-dark
+    background-color: $color-dark
+
+    .content nav ul li a 
+        color: $color-black
+        &:hover
+            color: $color-white
+
     font-family: $font-regular
     h2
         font-family: $font-title
 
-header.ella-james .content nav ul li a:hover
-    color: $color-blue
+#footer 
+    
+    .widgets .widget 
+        a, & p
+            color: $color-black
 
-#footer .widgets .widget:nth-child(2)
-    width: 235px
+            svg
+                fill: $color-black
+
+        a:hover
+            color: $color-white
+
+        h2
+            color: $color-white
+
+    &:nth-child(2)
+        width: 235px
 
 .ella-james-airport-transfers
 
@@ -29,7 +47,7 @@ header.ella-james .content nav ul li a:hover
         color: $color-white
 
     .transportation .titles h1, .transportation .titles p
-        background-color: $color-blue
+        background-color: $color-primary
 
     h2
         text-align: center
@@ -79,7 +97,7 @@ header.ella-james .content nav ul li a:hover
 
                 p.price
                     font-size: 1.3rem
-                    color: $color-blue
+                    color: $color-primary
 
                     span
                         display: block
@@ -94,7 +112,7 @@ header.ella-james .content nav ul li a:hover
                         text-decoration-thickness: 2px
 
             .checkbox
-                border: 2px solid rgba($color-blue, 0.8)
+                border: 2px solid rgba($color-primary, 0.8)
                 width: 40px
                 height: 20px
                 margin-right: 10px
@@ -109,12 +127,12 @@ header.ella-james .content nav ul li a:hover
             &:hover
                 .checkbox 
                     .inside
-                        background-color: rgba($color-blue, 0.6)
+                        background-color: rgba($color-primary, 0.6)
 
             &.active
                 .checkbox
                     .inside
-                        background-color: rgba($color-blue, 0.8)
+                        background-color: rgba($color-primary, 0.8)
                     
     .buy-form 
         .wrapper-fieldsets
@@ -131,7 +149,7 @@ header.ella-james .content nav ul li a:hover
             .btn.cta
                 margin-top: 15px
                 color: $color-white
-                background-color: $color-blue-dark
+                background-color: $color-dark
 
             fieldset
                 border: none
@@ -172,11 +190,11 @@ header.ella-james .content nav ul li a:hover
             margin-top: 20px
             display: block
             color: $color-white
-            background-color: $color-blue-dark
-            border: 2px solid $color-blue-dark
+            background-color: $color-dark
+            border: 2px solid $color-dark
 
             &:hover
-                color: $color-blue-dark
+                color: $color-dark
                 background-color: $color-white
 
     @media screen and (max-width: 900px)
