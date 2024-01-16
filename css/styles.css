@@ -1743,6 +1743,12 @@ header.ella-james h2, #footer.ella-james h2 {
 .ella-james-airport-transfers .cards.transport .card.active .checkbox .inside {
   background-color: rgba(188, 160, 120, 0.8);
 }
+.ella-james-airport-transfers .info {
+  text-align: center;
+  font-weight: bold;
+  max-width: 90%;
+  margin: 0 auto;
+}
 .ella-james-airport-transfers .buy-form .wrapper-fieldsets {
   display: grid;
   gap: 25px;

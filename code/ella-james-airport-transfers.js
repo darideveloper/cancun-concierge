@@ -144,3 +144,8 @@ form.addEventListener("submit", (e) => {
   })
 
 })
+
+// Run script when page loads
+self.addEventListener('load', (e) => {
+  document.querySelector('[data-transport-type="arriving departing"]').click()
+})
