@@ -1811,6 +1811,9 @@ header.ella-james h2, #footer.ella-james h2 {
   color: #bca078;
   background-color: white;
 }
+.ella-james-airport-transfers .buy-form .btn.cta[disabled] {
+  cursor: not-allowed;
+}
 @media screen and (max-width: 900px) {
   .ella-james-airport-transfers .cards.transport {
     width: 50%;
