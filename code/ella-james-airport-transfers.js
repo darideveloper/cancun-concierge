@@ -96,6 +96,13 @@ hotel_inputs.forEach(hotel_input => {
 
 const form = document.querySelector("form")
 form.addEventListener("submit", (e) => {
+
+  // Disable submit button
+
+  // Show alert
+  alert("Not available")
+  return 
+
   e.preventDefault ()
 
   // Set submit button to loading
