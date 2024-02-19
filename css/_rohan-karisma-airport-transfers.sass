@@ -1,50 +1,65 @@
-$color-dark: #bca078
-$color-primary: #bca078
-$color-black: #010101
+// Load local fonts
+@font-face
+    font-family: 'Kinfolk'
+    src: url('../fonts/Kinfolk-Bold.otf') format('opentype')
+
+// Variables
+$color-dark: #283224
+$color-primary: #4a5e43
+$color-black: #202020
 $color-white: white
-$font-regular: 'Montserrat', sans-serif
-$font-title: 'Vast Shadow', serif
+$font-regular: 'Libre Baskerville', sans-serif
+$font-title: 'Kinfolk', serif
 $font-highlight: 'Vampiro One', system
 
 
-header.ella-james, #footer.ella-james
-    background-color: $color-dark
+header.rohan-karisma, #footer.rohan-karisma
+    background-color: $color-primary
+    font-family: $font-regular
+
+    a
+        font-family: $font-regular
 
     .content nav ul li a 
-        color: $color-black
+        color: $color-white
         &:hover
-            color: $color-white
+            color: rgba($color-white, 0.6)
 
-    font-family: $font-regular
     h2
         font-family: $font-title
 
-#footer.ella-james
+#footer.rohan-karisma
     
     .widgets .widget 
-        a, & p
-            color: $color-black
 
-            svg
-                fill: $color-black
+        &:nth-child(2)
+            width: 250px
 
         a:hover
+            opacity: 0.6
             color: $color-white
 
         h2
             color: $color-white
 
-.ella-james-airport-transfers
+
+.rohan-karisma-airport-transfers
 
     color: $color-black
     font-family: $font-regular
 
+    h1, h2, h3, h4, h5, h6
+        font-family: $font-title
+
+    p, a, span, label, input, select, button
+        font-family: $font-regular
+
     h1
-        font-family: $font-highlight
         color: $color-white
 
     .transportation .titles h1, .transportation .titles p
         background-color: $color-primary
+        color: $color-white
 
     h2
         text-align: center
@@ -53,6 +68,7 @@ header.ella-james, #footer.ella-james
     h2 + p
         text-align: center
         margin-bottom: 50px
+        border: 1px solid red !important
 
     .logo-event
         width: 500px
