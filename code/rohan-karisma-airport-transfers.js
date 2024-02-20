@@ -1,3 +1,6 @@
+// Percentage to slide gallery
+var move_value = 50
+
 let price = 68
 const stripe_user = "fini-chen"
 const stripe_api = "https://stripe-api-flask.herokuapp.com/"

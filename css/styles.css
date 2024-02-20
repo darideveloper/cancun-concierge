@@ -1902,6 +1902,12 @@ header.rohan-karisma h2, #footer.rohan-karisma h2 {
   display: block;
   margin: 0 auto;
 }
+.rohan-karisma-airport-transfers .gallery .imgs {
+  width: 200% !important;
+}
+.rohan-karisma-airport-transfers .gallery .imgs img {
+  width: 50% !important;
+}
 .rohan-karisma-airport-transfers .cards.transport {
   gap: 25px;
   margin-bottom: 20px;
