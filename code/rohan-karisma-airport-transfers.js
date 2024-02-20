@@ -28,7 +28,6 @@ const prices = {
     "arriving departing": 410.00,
   },
 }
-let current_vehicle = ""
 let current_transport_type = ""
 let current_price = 0
 
@@ -90,6 +89,8 @@ transport_cards.forEach(transport_card => {
 
     // Update price
     current_price = prices[current_transport_type][transport_type_value]
+
+    console.log({current_transport_type, current_price})
   }))
 })
 
