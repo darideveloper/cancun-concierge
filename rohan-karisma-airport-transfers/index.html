@@ -113,7 +113,37 @@
             
 
             <h2>TRANSPORTATION OPTIONS</h2>
-            <section class="cards transport regular-width">
+            <section class="cards transport regular-width vehicle">
+                <article class="card" data-transport-type="deluxe">
+                    <div class="checkbox">
+                        <div class="inside"></div>
+                    </div>
+                    <div class="text">
+                        <h3>Deluxe SUV (1-4 passengers)</h3>
+                    </div>
+                </article>
+
+                <article class="card" data-transport-type="van">
+                    <div class="checkbox">
+                        <div class="inside"></div>
+                    </div>
+                    <div class="text">
+                        <h3>Van (1-6 passengers)</h3>
+                    </div>
+                </article>
+
+                <article class="card" data-transport-type="sprinter">
+                    <div class="checkbox">
+                        <div class="inside"></div>
+                    </div>
+                    <div class="text">
+                        <h3>Sprinter (7-12 passengers)</h3>
+                    </div>
+                </article>
+
+            </section>
+
+            <section class="cards transport regular-width translate hide">
                 <article class="card" data-transport-type="arriving">
                     <div class="checkbox">
                         <div class="inside"></div>
@@ -163,7 +193,7 @@
             Each van can transfer up to six passengers comfortably with luggage
         </div>
 
-        <form class="buy-form regular-width" method="post" action="#">
+        <form class="buy-form regular-width hide" method="post" action="#">
             <div class="wrapper-fieldsets">
                 <fieldset class="general hide">
                     <h3>General</h3>
@@ -253,7 +283,7 @@
                     </label>
                 </fieldset>
             </div>
-            <input id="submit" type="submit" class="btn cta buy hide" value="Not available" disabled>
+            <input id="submit" type="submit" class="btn cta buy" value="Buy now">
         </form>
 
         <section class="transportation details">

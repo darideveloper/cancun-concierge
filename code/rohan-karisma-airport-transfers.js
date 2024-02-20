@@ -1,21 +1,43 @@
 // Percentage to slide gallery
 var move_value = 50
 
-let price = 68
 const stripe_user = "fini-chen"
 const stripe_api = "https://stripe-api-flask.herokuapp.com/"
 
+// Global elements
+const form_elem = document.querySelector("form")
+const transport_cards_wrapper = document.querySelector(".cards.translate")
+const transport_cards = document.querySelectorAll(".cards.translate > .card")
+const transport_vehicles = document.querySelectorAll(".cards.vehicle > .card")
+
+// Prices
+const prices = {
+  "deluxe": {
+    "arriving": 170.00,
+    "departing": 170.00,
+    "arriving departing": 340,
+  },
+  "van": {
+    "arriving": 130.00,
+    "departing": 130.00,
+    "arriving departing": 260.00,
+  },
+  "sprinter": {
+    "arriving": 205.00,
+    "departing": 205.00,
+    "arriving departing": 410.00,
+  },
+}
+let current_vehicle = ""
+let current_transport_type = ""
+let current_price = 0
 
 function activete_form(transport_types) {
 
   transport_types.push ("general")
 
-  // Activate submit button
-  document.querySelector("#submit").classList.remove("hide")
-
-  // Enable submit button and form
-  document.querySelector("#submit").classList.remove("disabled")
-  document.querySelector("form").disabled = false
+  // Show form
+  form_elem.classList.remove("hide")
 
   // Disabled all form sections and inputs
   const all_inputs = document.querySelectorAll("fieldset, fieldset input, fieldset select")
@@ -32,13 +54,6 @@ function activete_form(transport_types) {
     input.disabled = false
   })
 
-  // Update transportation price
-  if (transport_types.length == 2) {
-    price = price
-  } else {
-    price = price*2
-  }
-
   // Update form grid style
   const form = document.querySelector("form .wrapper-fieldsets")
   if (transport_types.length == 2) {
@@ -51,7 +66,6 @@ function activete_form(transport_types) {
 }
 
 // Select transport card
-const transport_cards = document.querySelectorAll(".cards > .card")
 transport_cards.forEach(transport_card => {
   // Add click event
   transport_card.addEventListener("click", ((e) => {
@@ -65,6 +79,7 @@ transport_cards.forEach(transport_card => {
     transport_card.classList.add("active")
 
     // Get transport type
+    const transport_type_value = transport_card.getAttribute("data-transport-type")
     const transport_types = transport_card.getAttribute("data-transport-type").split(" ")
 
     // Activate form fieldsets
@@ -72,6 +87,9 @@ transport_cards.forEach(transport_card => {
 
     // Get product title
     transport_name = transport_card.querySelector("h3").innerText
+
+    // Update price
+    current_price = prices[current_transport_type][transport_type_value]
   }))
 })
 
@@ -97,14 +115,38 @@ hotel_inputs.forEach(hotel_input => {
   })
 })
 
+// Show transport translate options, after select vehicleç
+transport_vehicles.forEach(transport_vehicle => {
+  // Add click event
+  transport_vehicle.addEventListener("click", ((e) => {
+
+    // Deactive other cards
+    transport_vehicles.forEach(transport_vehicle => {
+      transport_vehicle.classList.remove("active")
+    })
+
+    // Active current card
+    transport_vehicle.classList.add("active")
+
+    // Activate transport options
+    transport_cards_wrapper.classList.remove("hide")
+
+    // Get product title
+    current_transport_type = transport_vehicle.getAttribute("data-transport-type")
+
+    // Update prices
+    let prices_vehicule = prices[current_transport_type]
+    transport_cards.forEach(transport_card => {
+      const transport_type = transport_card.getAttribute("data-transport-type")
+      const price_elem = transport_card.querySelector(".price > span")
+      const price_clean = prices_vehicule[transport_type].toFixed(2)
+      price_elem.innerText = `${price_clean} USD`
+    })
+  }))
+})
+
 const form = document.querySelector("form")
 form.addEventListener("submit", (e) => {
-
-  // Disable submit button
-
-  // Show alert
-  alert("Not available")
-  return 
 
   e.preventDefault ()
 
@@ -122,6 +164,7 @@ form.addEventListener("submit", (e) => {
     const input_value = input.value
     form_data.push (`${input_name}: ${input_value}`)
   }
+  form_data.push (`Transport vehicle: ${current_transport_type}`)
   form_text = form_data.join (", ")
 
   // Stripe data
@@ -133,7 +176,7 @@ form.addEventListener("submit", (e) => {
 
   stripe_data["products"][transport_name] = {
     "amount": 1,
-    "price": price,
+    "price": current_price,
     "description": form_text,
     "image_url": "https://cancunconciergedmc.com/imgs/transportation-car-regular.png"
   }
@@ -155,7 +198,7 @@ form.addEventListener("submit", (e) => {
 
 })
 
-// Run script when page loads
-self.addEventListener('load', (e) => {
-  document.querySelector('[data-transport-type="arriving departing"]').click()
-})
+// // Run script when page loads
+// self.addEventListener('load', (e) => {
+//   document.querySelector('[data-transport-type="arriving departing"]').click()
+// })
