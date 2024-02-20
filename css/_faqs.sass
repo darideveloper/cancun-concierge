@@ -1,0 +1,46 @@
+.faqs
+    margin-bottom: 100px
+
+    .questions-wrapper
+        text-align: center
+
+        .question
+            margin-bottom: 30px
+
+            .title
+                border-radius: 5px
+                padding: 20px 30px
+                color: $color-white
+                background-color: $color-primary
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 20px
+                cursor: pointer
+                transition-duration: 0.3s
+
+                &:hover
+                    opacity: 0.8
+
+                h3
+                    width: calc(100% - 30px)
+
+
+                svg
+                    width: 30px
+                    fill: $color-white
+                    transition-duration: 0.3s
+
+            p
+                width: 90%
+                margin: 20px auto
+                display: none
+
+            &.active
+
+                .title
+                    svg
+                        transform: rotate(180deg)
+
+                p
+                    display: block

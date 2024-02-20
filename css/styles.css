@@ -2073,4 +2073,48 @@ header.rohan-karisma h2, #footer.rohan-karisma h2 {
   }
 }
 
+.faqs {
+  margin-bottom: 100px;
+}
+.faqs .questions-wrapper {
+  text-align: center;
+}
+.faqs .questions-wrapper .question {
+  margin-bottom: 30px;
+}
+.faqs .questions-wrapper .question .title {
+  border-radius: 5px;
+  padding: 20px 30px;
+  color: white;
+  background-color: #4a5e43;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.faqs .questions-wrapper .question .title:hover {
+  opacity: 0.8;
+}
+.faqs .questions-wrapper .question .title h3 {
+  width: calc(100% - 30px);
+}
+.faqs .questions-wrapper .question .title svg {
+  width: 30px;
+  fill: white;
+  transition-duration: 0.3s;
+}
+.faqs .questions-wrapper .question p {
+  width: 90%;
+  margin: 20px auto;
+  display: none;
+}
+.faqs .questions-wrapper .question.active .title svg {
+  transform: rotate(180deg);
+}
+.faqs .questions-wrapper .question.active p {
+  display: block;
+}
+
 /*# sourceMappingURL=styles.css.map */
