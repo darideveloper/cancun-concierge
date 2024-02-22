@@ -16,19 +16,19 @@ const button_back = document.querySelector(".buttons .back")
 // Prices
 const prices = {
   "deluxe": {
-    "arriving": 170.00,
-    "departing": 170.00,
-    "arriving departing": 340,
+    "arriving": [195.00, 170.00],
+    "departing": [195.00, 170.00],
+    "arriving departing": [390, 340],
   },
   "van": {
-    "arriving": 130.00,
-    "departing": 130.00,
-    "arriving departing": 260.00,
+    "arriving": [155.00, 130.00],
+    "departing": [155.00, 130.00],
+    "arriving departing": [310.00, 260.00],
   },
   "sprinter": {
-    "arriving": 205.00,
-    "departing": 205.00,
-    "arriving departing": 410.00,
+    "arriving": [235.00, 205.00],
+    "departing": [235.00, 205.00],
+    "arriving departing": [470.00, 410.00],
   },
 }
 let current_transport_type = ""
@@ -142,8 +142,15 @@ transport_vehicles.forEach(transport_vehicle => {
     let prices_vehicule = prices[current_transport_type]
     transport_cards.forEach(transport_card => {
       const transport_type = transport_card.getAttribute("data-transport-type")
-      const price_elem = transport_card.querySelector(".price > span")
-      const price_clean = prices_vehicule[transport_type].toFixed(2)
+
+      // Update current price
+      let price_elem = transport_card.querySelector(".price > span")
+      let price_clean = prices_vehicule[transport_type][1].toFixed(2)
+      price_elem.innerText = `${price_clean} USD`
+
+      // Update regylar price
+      price_elem = transport_card.querySelector(".regular-price > span")
+      price_clean = prices_vehicule[transport_type][0].toFixed(2)
       price_elem.innerText = `${price_clean} USD`
     })
 
