@@ -8,7 +8,10 @@ const stripe_api = "https://stripe-api-flask.herokuapp.com/"
 const form_elem = document.querySelector("form")
 const transport_cards_wrapper = document.querySelector(".cards.translate")
 const transport_cards = document.querySelectorAll(".cards.translate > .card")
+const transport_vehicles_wrapper = document.querySelector(".cards.vehicle")
 const transport_vehicles = document.querySelectorAll(".cards.vehicle > .card")
+const buttons_wrapper = document.querySelector(".buttons")
+const button_back = document.querySelector(".buttons .back")
 
 // Prices
 const prices = {
@@ -143,6 +146,12 @@ transport_vehicles.forEach(transport_vehicle => {
       const price_clean = prices_vehicule[transport_type].toFixed(2)
       price_elem.innerText = `${price_clean} USD`
     })
+
+    // Show back button
+    buttons_wrapper.classList.remove("hide")
+
+    // Hide vehicle options
+    transport_vehicles_wrapper.classList.add("hide")
   }))
 })
 
@@ -197,6 +206,20 @@ form.addEventListener("submit", (e) => {
     window.location.href = data.stripe_url
   })
 
+})
+
+button_back.addEventListener("click", (e) => {
+  // Hide transport options
+  transport_cards_wrapper.classList.add("hide")
+
+  // Show vehicle options
+  transport_vehicles_wrapper.classList.remove("hide")
+
+  // Hide back button
+  buttons_wrapper.classList.add("hide")
+
+  // Hide form
+  form_elem.classList.add("hide")
 })
 
 // // Run script when page loads
