@@ -193,7 +193,7 @@ form.addEventListener("submit", (e) => {
 
   stripe_data["products"][transport_name] = {
     "amount": 1,
-    "price": current_price,
+    "price": current_price[1],
     "description": form_text,
     "image_url": "https://cancunconciergedmc.com/imgs/transportation-car-regular.png"
   }
