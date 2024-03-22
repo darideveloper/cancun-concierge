@@ -2118,15 +2118,16 @@ header.rohan-karisma h2, #footer.rohan-karisma h2 {
   fill: white;
   transition-duration: 0.3s;
 }
-.faqs .questions-wrapper .question p {
+.faqs .questions-wrapper .question p, .faqs .questions-wrapper .question ul {
   width: 90%;
   margin: 20px auto;
   display: none;
+  text-align: left;
 }
 .faqs .questions-wrapper .question.active .title svg {
   transform: rotate(180deg);
 }
-.faqs .questions-wrapper .question.active p {
+.faqs .questions-wrapper .question.active p, .faqs .questions-wrapper .question.active ul {
   display: block;
 }
 
