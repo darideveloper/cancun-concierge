@@ -31,6 +31,28 @@ const prices = {
     "arriving departing": [470.00, 410.00],
   },
 }
+
+// Array from 2 to 4
+const passengers = {
+  "deluxe": [1,2,3,4],
+  "van": [1,2,3,4,5,6],
+  "sprinter": [7,8,9,10,11,12]
+}
+const passengersText = [
+  "zero",
+  "one",
+  "two",
+  "three",
+  "four",
+  "five",
+  "six",
+  "seven",
+  "eight",
+  "nine",
+  "ten",
+  "eleven",
+  "twelve",
+]
 let current_transport_type = ""
 let current_price = 0
 
@@ -65,6 +87,23 @@ function activete_form(transport_types) {
     form.classList.remove ("two-columns")
     form.classList.add ("three-columns")
   }
+
+  // Update passengers
+  const passengersNums = passengers[current_transport_type]
+  const maxPassengers = Math.max(...passengersNums)
+  const maxPassengersText = passengersText[maxPassengers]
+  const passagersTextElem = document.querySelector('#passengers + p')
+  passagersTextElem.innerHTML = `Maximum ${maxPassengersText} passengers`
+
+  // Opdate passengers options
+  const selectElem = document.querySelector('#passengers')
+  options = ""
+  for (const passenger of passengersNums) {
+    const plural = passenger > 1 ? "s" : ""
+    options += `<option value="${passenger}">${passenger} passenger${plural}</option>`
+  }
+  selectElem.innerHTML = options
+
 }
 
 // Select transport card
