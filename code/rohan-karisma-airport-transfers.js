@@ -1,7 +1,7 @@
 // Percentage to slide gallery
 var move_value = 50
 
-const stripe_user = "fini-chen"
+const stripe_user = "rohan-karisma"
 const stripe_api = "https://stripe-api-flask.herokuapp.com/"
 
 // Global elements
@@ -12,6 +12,15 @@ const transport_vehicles_wrapper = document.querySelector(".cards.vehicle")
 const transport_vehicles = document.querySelectorAll(".cards.vehicle > .card")
 const buttons_wrapper = document.querySelector(".buttons")
 const button_back = document.querySelector(".buttons .back")
+
+// Sweet alert when done query
+const queryString = window.location.search
+const urlParams = new URLSearchParams(queryString)
+const done = urlParams.get('done')
+if (done) {
+  alert("Payment saved. Check the receipt in your email")
+
+}
 
 // Prices
 const prices = {

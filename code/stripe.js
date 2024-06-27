@@ -1,5 +1,4 @@
 const stripe_api_url = "https://stripe-api-flask.herokuapp.com/"
-console.log (stripe_api_url)
 
 function alert_error () {
     // Alert error for api call
