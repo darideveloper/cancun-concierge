@@ -1,5 +1,5 @@
 // Percentage to slide gallery
-var move_value = 50
+var move_value = 33.33
 
 const stripe_user = "rohan-karisma-test"
 // const stripe_api = "https://stripe-api-flask.herokuapp.com/"
