@@ -2,7 +2,8 @@
 var move_value = 50
 
 const stripe_user = "rohan-karisma"
-const stripe_api = "https://stripe-api-flask.herokuapp.com/"
+// const stripe_api = "https://stripe-api-flask.herokuapp.com/"
+const stripe_api = "http://127.0.0.1:8000/rohan-karisma/sale/"
 
 // Global elements
 const form_elem = document.querySelector("form")
@@ -140,8 +141,6 @@ transport_cards.forEach(transport_card => {
 
     // Update price
     current_price = prices[current_transport_type][transport_type_value]
-
-    console.log({current_transport_type, current_price})
   }))
 })
 
@@ -223,14 +222,13 @@ form.addEventListener("submit", (e) => {
   const inputs = document.querySelectorAll (input_selector)
 
   // Create form text
-  let form_data = []
+  let form_data = {}
   for (const input of inputs) {
     const input_name = input.getAttribute("name").replaceAll("-", " ")
     const input_value = input.value
-    form_data.push (`${input_name}: ${input_value}`)
+    form_data[input_name] = input_value
   }
-  form_data.push (`Transport vehicle: ${current_transport_type}`)
-  form_text = form_data.join (", ")
+  form_data['transport_vehicle'] = current_transport_type
 
   // Stripe data
   let stripe_data = {
@@ -242,7 +240,7 @@ form.addEventListener("submit", (e) => {
   stripe_data["products"][transport_name] = {
     "amount": 1,
     "price": current_price[1],
-    "description": form_text,
+    "description": form_data,
     "image_url": "https://cancunconciergedmc.com/imgs/transportation-car-regular.png"
   }
 
@@ -255,11 +253,11 @@ form.addEventListener("submit", (e) => {
     },
     body: JSON.stringify(stripe_data)
   })
-  .then (response => response.json ())
-  .then (data => {
-    // Go to stripe page
-    window.location.href = data.stripe_url
-  })
+  // .then (response => response.json ())
+  // .then (data => {
+  //   // Go to stripe page
+  //   window.location.href = data.stripe_url
+  // })
 
 })
 

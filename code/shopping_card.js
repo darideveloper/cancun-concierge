@@ -40,7 +40,6 @@ function get_service_image (buy_form) {
     for (const replace_url of replace_urls) {
       image_url = image_url.replace (replace_url, "")
     }
-    console.log ({image_url})
 
     return image_url
 
@@ -73,7 +72,6 @@ function hide_show_details_cart () {
 
     // Add event to buy button
     const buy_button = buy_cart.querySelector("button.buy-all")
-    console.log (buy_button)
     buy_button.addEventListener ("click", async function () {
         await redirect_stripe (cart_elems, current_url)
     })
@@ -112,7 +110,6 @@ function render_cart () {
     for (const service_button of service_buttons) {
         service_button.addEventListener ("click", (e) => {
             // Get service text
-            console.log (service_button.parentNode)
             service = service_button.parentNode.querySelector ("p").innerHTML.replace ("&amp;", "&")
             service_delimiter = service.indexOf ("(") - 1
             service = service.substring(0, service_delimiter)
@@ -213,7 +210,6 @@ function manage_froms () {
                         "description": "TOURS & WATER ACTIVITIES, Rivera Getaway, Cancun Concierge"}
                 }
 
-                console.log (cart_elems)
 
                 // Update cart
                 render_cart()
