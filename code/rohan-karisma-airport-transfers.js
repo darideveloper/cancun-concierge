@@ -3,7 +3,8 @@ var move_value = 33.33
 
 const stripe_user = "rohan-karisma-test"
 // const stripe_api = "https://stripe-api-flask.herokuapp.com/"
-const stripe_api = "https://ezbookingtours-store.herokuapp.com/rohan-karisma/sale/"
+// const stripe_api = "https://ezbookingtours-store.herokuapp.com/rohan-karisma/sale/"
+const stripe_api = "http://127.0.0.1:8000/rohan-karisma/sale/"
 
 // Global elements
 const form_elem = document.querySelector("form")
