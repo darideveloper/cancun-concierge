@@ -2131,49 +2131,55 @@ header.rohan-karisma h2, #footer.rohan-karisma h2 {
   display: block;
 }
 
-.the-honey-pot h1 {
+@media screen and (max-width: 650px) {
+  header.the-honey-pot-header nav:not(.collapsed) {
+    height: 320px;
+  }
+}
+
+main.the-honey-pot h1 {
   font-size: 50px;
   padding: 0;
   padding-top: 50px;
   margin-bottom: 10px;
 }
-.the-honey-pot h1 + p {
+main.the-honey-pot h1 + p {
   text-align: center;
   margin-bottom: 50px;
 }
-.the-honey-pot h2 {
+main.the-honey-pot h2 {
   text-transform: uppercase;
   text-align: center;
 }
-.the-honey-pot .activities h4 {
+main.the-honey-pot .activities h4 {
   font-weight: bold;
 }
-.the-honey-pot .buy-section {
+main.the-honey-pot .buy-section {
   width: 100%;
   margin-bottom: 50px;
 }
-.the-honey-pot .buy-section h4 {
+main.the-honey-pot .buy-section h4 {
   font-weight: bold;
 }
-.the-honey-pot .buy-section span {
+main.the-honey-pot .buy-section span {
   margin-left: 20px;
 }
-.the-honey-pot .buy-section form label {
+main.the-honey-pot .buy-section form label {
   display: block;
   margin-bottom: 10px;
 }
-.the-honey-pot .buy-section form label .note {
+main.the-honey-pot .buy-section form label .note {
   font-size: 12px;
   font-weight: bold;
 }
-.the-honey-pot .buy-section form button {
+main.the-honey-pot .buy-section form button {
   margin-top: 20px;
 }
-.the-honey-pot .buy-section form button:last-child {
+main.the-honey-pot .buy-section form button:last-child {
   margin-left: 20px;
 }
 @media screen and (max-width: 475px) {
-  .the-honey-pot .buy-section form button, .the-honey-pot .buy-section form button:last-child {
+  main.the-honey-pot .buy-section form button, main.the-honey-pot .buy-section form button:last-child {
     display: block;
     margin: 0 auto;
     margin-top: 20px;
