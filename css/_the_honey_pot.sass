@@ -1,0 +1,56 @@
+// Services layout
+.the-honey-pot
+
+    h1 
+        font-size: 50px
+        padding: 0
+        padding-top: 50px
+        margin-bottom: 10px
+
+        + p
+            text-align: center
+            margin-bottom: 50px
+
+
+    h2
+        text-transform: uppercase
+        text-align: center
+
+    .activities
+
+        h4
+            font-weight: bold
+
+    // Layout of buy section
+    .buy-section
+        width: 100%
+        margin-bottom: 50px
+
+        h4
+            font-weight: bold
+
+        span
+            margin-left: 20px
+
+        form
+            label
+                display: block
+                margin-bottom: 10px
+
+                .note
+                    font-size: 12px
+                    font-weight: bold
+
+            button
+                margin-top: 20px
+
+                &:last-child
+                    margin-left: 20px
+
+        @media screen and (max-width: 475px)
+            form
+                button, button:last-child
+
+                    display: block
+                    margin: 0 auto
+                    margin-top: 20px

@@ -1012,44 +1012,44 @@ header.menu-of-services nav > ul > li .submenu:hover {
   transform: rotateZ(-90deg);
 }
 
-section.menu-of-services, .rivera-getaway {
+section.menu-of-services, .rivera-getaway, .the-honey-pot {
   margin-top: 80px;
   margin-bottom: 80px;
 }
-section.menu-of-services img, .rivera-getaway img {
+section.menu-of-services img, .rivera-getaway img, .the-honey-pot img {
   transition-duration: 0.5s;
 }
-section.menu-of-services img:hover, .rivera-getaway img:hover {
+section.menu-of-services img:hover, .rivera-getaway img:hover, .the-honey-pot img:hover {
   transform: translateX(-5px) translateY(-5px);
 }
-section.menu-of-services h1, .rivera-getaway h1 {
+section.menu-of-services h1, .rivera-getaway h1, .the-honey-pot h1 {
   font-weight: bold;
   text-align: center;
   color: #4F6A9E;
   font-size: 35px;
 }
-section.menu-of-services h2, .rivera-getaway h2 {
+section.menu-of-services h2, .rivera-getaway h2, .the-honey-pot h2 {
   margin-top: 100px;
 }
-section.menu-of-services article.service, .rivera-getaway article.service {
+section.menu-of-services article.service, .rivera-getaway article.service, .the-honey-pot article.service {
   margin-top: 80px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-section.menu-of-services article.service#xel-ha .content .bottom-details .details-card:nth-child(2), .rivera-getaway article.service#xel-ha .content .bottom-details .details-card:nth-child(2) {
+section.menu-of-services article.service#xel-ha .content .bottom-details .details-card:nth-child(2), .rivera-getaway article.service#xel-ha .content .bottom-details .details-card:nth-child(2), .the-honey-pot article.service#xel-ha .content .bottom-details .details-card:nth-child(2) {
   grid-row: 1/3;
   grid-column: 2/2;
 }
-section.menu-of-services article.service#xplor .content .bottom-details .details-card:nth-child(2), .rivera-getaway article.service#xplor .content .bottom-details .details-card:nth-child(2) {
+section.menu-of-services article.service#xplor .content .bottom-details .details-card:nth-child(2), .rivera-getaway article.service#xplor .content .bottom-details .details-card:nth-child(2), .the-honey-pot article.service#xplor .content .bottom-details .details-card:nth-child(2) {
   grid-row: 1/3;
   grid-column: 2/2;
 }
-section.menu-of-services article.service .content, .rivera-getaway article.service .content {
+section.menu-of-services article.service .content, .rivera-getaway article.service .content, .the-honey-pot article.service .content {
   width: 65%;
 }
-section.menu-of-services article.service .content .gallery, .rivera-getaway article.service .content .gallery {
+section.menu-of-services article.service .content .gallery, .rivera-getaway article.service .content .gallery, .the-honey-pot article.service .content .gallery {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1057,54 +1057,54 @@ section.menu-of-services article.service .content .gallery, .rivera-getaway arti
   margin: 50px 0;
   overflow: visible;
 }
-section.menu-of-services article.service .content .gallery img, .rivera-getaway article.service .content .gallery img {
+section.menu-of-services article.service .content .gallery img, .rivera-getaway article.service .content .gallery img, .the-honey-pot article.service .content .gallery img {
   width: 100%;
   height: auto;
   border-radius: 20px;
 }
-section.menu-of-services article.service .content .bottom-details, .rivera-getaway article.service .content .bottom-details {
+section.menu-of-services article.service .content .bottom-details, .rivera-getaway article.service .content .bottom-details, .the-honey-pot article.service .content .bottom-details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
-section.menu-of-services article.service .bar, .rivera-getaway article.service .bar {
+section.menu-of-services article.service .bar, .rivera-getaway article.service .bar, .the-honey-pot article.service .bar {
   width: calc(30% - 40px);
   background-color: #4F6A9E;
   color: #ffffff;
   padding: 40px 20px;
   overflow: visible;
 }
-section.menu-of-services article.service .bar .text, .rivera-getaway article.service .bar .text {
+section.menu-of-services article.service .bar .text, .rivera-getaway article.service .bar .text, .the-honey-pot article.service .bar .text {
   margin-bottom: 50px;
 }
-section.menu-of-services article.service .bar h3, .rivera-getaway article.service .bar h3 {
+section.menu-of-services article.service .bar h3, .rivera-getaway article.service .bar h3, .the-honey-pot article.service .bar h3 {
   color: #C8B568;
   font-weight: bold;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
-section.menu-of-services article.service .bar p, .rivera-getaway article.service .bar p {
+section.menu-of-services article.service .bar p, .rivera-getaway article.service .bar p, .the-honey-pot article.service .bar p {
   font-size: 14px;
 }
-section.menu-of-services article.service .bar img, .rivera-getaway article.service .bar img {
+section.menu-of-services article.service .bar img, .rivera-getaway article.service .bar img, .the-honey-pot article.service .bar img {
   width: 100%;
   height: auto;
   margin-top: 50px;
 }
-section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway article.service:nth-child(odd) .bar {
+section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway article.service:nth-child(odd) .bar, .the-honey-pot article.service:nth-child(odd) .bar {
   order: -1;
 }
 @media screen and (max-width: 1050px) {
-  section.menu-of-services article.service, .rivera-getaway article.service {
+  section.menu-of-services article.service, .rivera-getaway article.service, .the-honey-pot article.service {
     flex-direction: column;
   }
-  section.menu-of-services article.service h2, .rivera-getaway article.service h2 {
+  section.menu-of-services article.service h2, .rivera-getaway article.service h2, .the-honey-pot article.service h2 {
     text-align: center;
   }
-  section.menu-of-services article.service .content, .rivera-getaway article.service .content {
+  section.menu-of-services article.service .content, .rivera-getaway article.service .content, .the-honey-pot article.service .content {
     width: 100%;
   }
-  section.menu-of-services article.service .bar, .rivera-getaway article.service .bar {
+  section.menu-of-services article.service .bar, .rivera-getaway article.service .bar, .the-honey-pot article.service .bar {
     width: calc(100% - 40px);
     margin-top: 50px;
     padding: 0 20px;
@@ -1113,31 +1113,31 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
     align-items: center;
     justify-content: space-between;
   }
-  section.menu-of-services article.service .bar .text, .rivera-getaway article.service .bar .text {
+  section.menu-of-services article.service .bar .text, .rivera-getaway article.service .bar .text, .the-honey-pot article.service .bar .text {
     width: calc(100% - 350px);
   }
-  section.menu-of-services article.service .bar .img, .rivera-getaway article.service .bar .img {
+  section.menu-of-services article.service .bar .img, .rivera-getaway article.service .bar .img, .the-honey-pot article.service .bar .img {
     width: 320px;
   }
-  section.menu-of-services article.service .bar .img img, .rivera-getaway article.service .bar .img img {
+  section.menu-of-services article.service .bar .img img, .rivera-getaway article.service .bar .img img, .the-honey-pot article.service .bar .img img {
     margin: 0;
   }
-  section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway article.service:nth-child(odd) .bar {
+  section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway article.service:nth-child(odd) .bar, .the-honey-pot article.service:nth-child(odd) .bar {
     order: 0;
   }
 }
 @media screen and (max-width: 800px) {
-  section.menu-of-services article.service .content .gallery, .rivera-getaway article.service .content .gallery {
+  section.menu-of-services article.service .content .gallery, .rivera-getaway article.service .content .gallery, .the-honey-pot article.service .content .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
-  section.menu-of-services article.service .bar, .rivera-getaway article.service .bar {
+  section.menu-of-services article.service .bar, .rivera-getaway article.service .bar, .the-honey-pot article.service .bar {
     position: relative;
     justify-content: flex-start;
   }
-  section.menu-of-services article.service .bar .text, .rivera-getaway article.service .bar .text {
+  section.menu-of-services article.service .bar .text, .rivera-getaway article.service .bar .text, .the-honey-pot article.service .bar .text {
     width: calc(100% - 50px);
   }
-  section.menu-of-services article.service .bar .img, .rivera-getaway article.service .bar .img {
+  section.menu-of-services article.service .bar .img, .rivera-getaway article.service .bar .img, .the-honey-pot article.service .bar .img {
     top: 0;
     right: 20px;
     position: absolute;
@@ -1145,23 +1145,23 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   }
 }
 @media screen and (max-width: 500px) {
-  section.menu-of-services article.service .content .gallery, .rivera-getaway article.service .content .gallery {
+  section.menu-of-services article.service .content .gallery, .rivera-getaway article.service .content .gallery, .the-honey-pot article.service .content .gallery {
     grid-template-columns: repeat(1, 1fr);
   }
-  section.menu-of-services article.service .content .gallery img:nth-child(4), section.menu-of-services article.service .content .gallery img:nth-child(5), section.menu-of-services article.service .content .gallery img:nth-child(6), .rivera-getaway article.service .content .gallery img:nth-child(4), .rivera-getaway article.service .content .gallery img:nth-child(5), .rivera-getaway article.service .content .gallery img:nth-child(6) {
+  section.menu-of-services article.service .content .gallery img:nth-child(4), section.menu-of-services article.service .content .gallery img:nth-child(5), section.menu-of-services article.service .content .gallery img:nth-child(6), .rivera-getaway article.service .content .gallery img:nth-child(4), .rivera-getaway article.service .content .gallery img:nth-child(5), .rivera-getaway article.service .content .gallery img:nth-child(6), .the-honey-pot article.service .content .gallery img:nth-child(4), .the-honey-pot article.service .content .gallery img:nth-child(5), .the-honey-pot article.service .content .gallery img:nth-child(6) {
     display: none;
   }
-  section.menu-of-services article.service .content .bottom-details, .rivera-getaway article.service .content .bottom-details {
+  section.menu-of-services article.service .content .bottom-details, .rivera-getaway article.service .content .bottom-details, .the-honey-pot article.service .content .bottom-details {
     grid-template-columns: repeat(1, 1fr);
     margin-left: 30px;
   }
-  section.menu-of-services article.service .bar, .rivera-getaway article.service .bar {
+  section.menu-of-services article.service .bar, .rivera-getaway article.service .bar, .the-honey-pot article.service .bar {
     padding: 20px;
   }
-  section.menu-of-services article.service .bar .text, .rivera-getaway article.service .bar .text {
+  section.menu-of-services article.service .bar .text, .rivera-getaway article.service .bar .text, .the-honey-pot article.service .bar .text {
     width: 100%;
   }
-  section.menu-of-services article.service .bar .img, .rivera-getaway article.service .bar .img {
+  section.menu-of-services article.service .bar .img, .rivera-getaway article.service .bar .img, .the-honey-pot article.service .bar .img {
     display: none;
   }
 }
@@ -2131,4 +2131,51 @@ header.rohan-karisma h2, #footer.rohan-karisma h2 {
   display: block;
 }
 
-/*# sourceMappingURL=styles.css.map */
+.the-honey-pot h1 {
+  font-size: 50px;
+  padding: 0;
+  padding-top: 50px;
+  margin-bottom: 10px;
+}
+.the-honey-pot h1 + p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.the-honey-pot h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+.the-honey-pot .activities h4 {
+  font-weight: bold;
+}
+.the-honey-pot .buy-section {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.the-honey-pot .buy-section h4 {
+  font-weight: bold;
+}
+.the-honey-pot .buy-section span {
+  margin-left: 20px;
+}
+.the-honey-pot .buy-section form label {
+  display: block;
+  margin-bottom: 10px;
+}
+.the-honey-pot .buy-section form label .note {
+  font-size: 12px;
+  font-weight: bold;
+}
+.the-honey-pot .buy-section form button {
+  margin-top: 20px;
+}
+.the-honey-pot .buy-section form button:last-child {
+  margin-left: 20px;
+}
+@media screen and (max-width: 475px) {
+  .the-honey-pot .buy-section form button, .the-honey-pot .buy-section form button:last-child {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}/*# sourceMappingURL=styles.css.map */

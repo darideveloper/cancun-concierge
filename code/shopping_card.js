@@ -35,6 +35,7 @@ function get_service_image (buy_form) {
       "riviera-getaway/..",
       "waterworks-customers-activities/..",
       "plumbing-customers-activities/..",
+      "the-honey-pot/.."
     ]
 
     for (const replace_url of replace_urls) {
