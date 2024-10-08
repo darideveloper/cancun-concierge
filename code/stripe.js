@@ -1,5 +1,4 @@
-const stripe_api_url = "https://stripe-api-flask.herokuapp.com/"
-// const stripe_api_url = "http://127.0.0.1:5000/"
+const stripe_api_url = "https://services.darideveloper.com/stripe-api/"
 
 function alert_error() {
   // Alert error for api call
