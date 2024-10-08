@@ -1,46 +1,48 @@
 const stripe_api_url = "https://stripe-api-flask.herokuapp.com/"
+// const stripe_api_url = "http://127.0.0.1:5000/"
 
-function alert_error () {
-    // Alert error for api call
-    alert ("An error occurred. Try again later.")
+function alert_error() {
+  // Alert error for api call
+  alert("An error occurred. Try again later.")
 }
 
-function toggle_loading () {
-    // Hide and show loading modal
-    modal = document.querySelector (".loading-modal")
-    modal.classList.toggle ("hide")
+function toggle_loading() {
+  // Hide and show loading modal
+  modal = document.querySelector(".loading-modal")
+  modal.classList.toggle("hide")
 }
 
-async function redirect_stripe (buy_data, current_url) {
-  
-    toggle_loading ()
+async function redirect_stripe(buy_data, current_url) {
+
+  toggle_loading()
 
 
-    try {
-        const response = await fetch (stripe_api_url, {
-            method: 'POST',
-            headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                "user": "cancunconcier",
-                "url": current_url,
-                "products": buy_data
-            }),
-            mode: "cors",
-        })
-        const response_json = await response.json ()
+  try {
+    const response = await fetch(stripe_api_url, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        "user": "cancunconcier",
+        "url": current_url,
+        "products": buy_data
+      }),
+      mode: "cors",
+    })
+    const response_json = await response.json()
+    console.log(response_json)
 
-        // Validate api response for redirect
-        if (Object.keys(response_json).includes ("stripe_url")) {
-            window.location.href = response_json.stripe_url
-        } else {
-            alert_error ()
-        }
-    } catch {
-        alert_error ()
-        toggle_loading ()
+    // Validate api response for redirect
+    if (Object.keys(response_json).includes("stripe_url")) {
+      window.location.href = response_json.stripe_url
+    } else {
+      alert_error()
     }
+  } catch {
+    alert_error()
+    toggle_loading()
+  }
 
 }
