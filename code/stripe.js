@@ -15,6 +15,18 @@ async function redirect_stripe(buy_data, current_url) {
 
   toggle_loading()
 
+  // stripe user based on page
+  let stripeUser = "cancunconcier"
+  const url = window.location.href
+  const currentPage = url.split("/")[3]
+  console.log({ currentPage, url })
+  const validUsers = [
+    "the-honey-pot",
+  ]
+  if (validUsers.includes(currentPage)) {
+    stripeUser = currentPage
+  }
+
 
   try {
     const response = await fetch(stripe_api_url, {
@@ -24,14 +36,13 @@ async function redirect_stripe(buy_data, current_url) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        "user": "cancunconcier",
+        "user": stripeUser,
         "url": current_url,
         "products": buy_data
       }),
       mode: "cors",
     })
     const response_json = await response.json()
-    console.log(response_json)
 
     // Validate api response for redirect
     if (Object.keys(response_json).includes("stripe_url")) {

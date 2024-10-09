@@ -170,7 +170,7 @@ function manage_froms() {
 
     // Get title of the current page 
     const title = document.querySelector("title").innerHTML
-    console.log({ title})
+    console.log({ title })
 
     buy_button.addEventListener("click", async function (e) {
       if (date_selected) {
