@@ -1,6 +1,6 @@
 let price = 110
 const stripe_user = "sphere-rocket"
-const stripe_api = "https://stripe-api-flask.herokuapp.com/"
+const stripe_api = "https://services.darideveloper.com/stripe-api/"
 let transport_name = ""
 
 

@@ -1,6 +1,6 @@
 let price = 110
 const stripe_user = "fini-chen"
-const stripe_api = "https://stripe-api-flask.herokuapp.com/"
+const stripe_api = "https://services.darideveloper.com/stripe-api/"
 
 
 function activete_form(transport_types) {
