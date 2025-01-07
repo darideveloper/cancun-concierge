@@ -1,5 +1,5 @@
 let price = 68
-const stripe_user = "fini-chen"
+const stripe_user = "ella-james"
 const stripe_api = "https://services.darideveloper.com/stripe-api/"
 
 
@@ -96,12 +96,6 @@ hotel_inputs.forEach(hotel_input => {
 
 const form = document.querySelector("form")
 form.addEventListener("submit", (e) => {
-
-  // Disable submit button
-
-  // Show alert
-  alert("Not available")
-  return 
 
   e.preventDefault ()
 
