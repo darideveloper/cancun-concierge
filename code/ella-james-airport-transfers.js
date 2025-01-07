@@ -1,4 +1,5 @@
-let price = 68
+let intiialPrice = 68
+let price = intiialPrice
 const stripe_user = "ella-james"
 const stripe_api = "https://services.darideveloper.com/stripe-api/"
 
@@ -31,9 +32,9 @@ function activete_form(transport_types) {
 
   // Update transportation price
   if (transport_types.length == 2) {
-    price = price
+    price = intiialPrice
   } else {
-    price = price*2
+    price = intiialPrice*2
   }
 
   // Update form grid style
