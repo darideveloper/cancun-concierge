@@ -2287,6 +2287,10 @@ header.serena-gabriel .btn.menu svg, #footer.serena-gabriel .btn.menu svg {
 .serena-gabriel-airport-transfers .cards.transport .card .text h3, .serena-gabriel-airport-transfers .cards.transport .card .text p.price {
   text-align: left;
   width: 100%;
+  color: rgba(80, 73, 63, 0.8) !important;
+}
+.serena-gabriel-airport-transfers .cards.transport .card .text h3 span, .serena-gabriel-airport-transfers .cards.transport .card .text p.price span {
+  color: #50493f;
 }
 .serena-gabriel-airport-transfers .cards.transport .card .text h3 {
   margin-bottom: 0;
