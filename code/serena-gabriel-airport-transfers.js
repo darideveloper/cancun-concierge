@@ -31,7 +31,7 @@ const prices = {
     "departing": [75.00, 60.00],
     "arriving departing": [150, 120],
   },
-  "Mercedes-Benz": {
+  "Sprinter": {
     "arriving": [160.00, 148.00],
     "departing": [160.00, 148.00],
     "arriving departing": [320.00, 296.00],
@@ -46,7 +46,7 @@ const prices = {
 // Array from 2 to 4
 const passengers = {
   "Van": [1,2,3,4,5,6],
-  "Mercedes-Benz": [1,2,3,4,5,6,7,8,9,10,11,12],
+  "Sprinter": [1,2,3,4,5,6,7,8,9,10,11,12],
   "Suburban": [1,2,3,4]
 }
 const passengersText = [
