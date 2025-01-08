@@ -27,27 +27,27 @@ if (done) {
 // Prices
 const prices = {
   "Van": {
-    "arriving": [90.00, 60.00],
-    "departing": [60.00, 60.00],
+    "arriving": [75.00, 60.00],
+    "departing": [75.00, 60.00],
     "arriving departing": [150, 120],
   },
   "Mercedes-Benz": {
-    "arriving": [188.00, 148.00],
-    "departing": [188.00, 148.00],
-    "arriving departing": [346.00, 296.00],
+    "arriving": [160.00, 148.00],
+    "departing": [160.00, 148.00],
+    "arriving departing": [320.00, 296.00],
   },
   "Suburban": {
-    "arriving": [135.00, 105.00],
-    "departing": [135.00, 105.00],
-    "arriving departing": [245.00, 210.00],
+    "arriving": [115.00, 105.00],
+    "departing": [115.00, 105.00],
+    "arriving departing": [230.00, 210.00],
   },
 }
 
 // Array from 2 to 4
 const passengers = {
-  "Van": [1,2,3,4],
-  "Mercedes-Benz": [1,2,3,4,5,6],
-  "Suburban": [7,8,9,10,11,12]
+  "Van": [1,2,3,4,5,6],
+  "Mercedes-Benz": [1,2,3,4,5,6,7,8,9,10,11,12],
+  "Suburban": [1,2,3,4]
 }
 const passengersText = [
   "zero",
