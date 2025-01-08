@@ -1,10 +1,9 @@
 // Percentage to slide gallery
 var move_value = 33.33
 
-const stripe_user = "rohan-karisma"
-// const stripe_api = "https://services.darideveloper.com/stripe-api/"
-const stripe_api = "https://omar.apps.darideveloper.com/rohan-karisma/sale/"
-// const stripe_api = "http://127.0.0.1:8000/rohan-karisma/sale/"
+const stripe_user = "serena-gabriel"
+const stripe_api = "https://services.darideveloper.com/stripe-api/"
+
 
 // Global elements
 const form_elem = document.querySelector("form")
@@ -223,13 +222,13 @@ form.addEventListener("submit", (e) => {
   const inputs = document.querySelectorAll (input_selector)
 
   // Create form text
-  let form_data = {}
+  let form_data = []
   for (const input of inputs) {
-    const input_name = input.getAttribute("name").replaceAll("-", "_")
+    const input_name = input.getAttribute("name").replaceAll("-", " ")
     const input_value = input.value
-    form_data[input_name] = input_value
+    form_data.push (`${input_name}: ${input_value}`)
   }
-  form_data['transport_vehicle'] = current_transport_type
+  form_text = form_data.join (", ")
 
   // Stripe data
   let stripe_data = {
@@ -241,7 +240,7 @@ form.addEventListener("submit", (e) => {
   stripe_data["products"][transport_name] = {
     "amount": 1,
     "price": current_price[1],
-    "description": form_data,
+    "description": form_text,
     "image_url": "https://github.com/darideveloper/cancun-concierge/blob/master/imgs/transports.png?raw=true"
   }
 
