@@ -2444,6 +2444,11 @@ header.serena-gabriel .btn.menu svg, #footer.serena-gabriel .btn.menu svg {
     width: 80%;
     grid-template-columns: repeat(1, 1fr) !important;
   }
+  .serena-gabriel-airport-transfers .paralax {
+    background-attachment: scroll !important;
+    height: 400px;
+    background-image: url("../imgs/serena-gabriel-logo-mobile.webp");
+  }
 }
 @media screen and (max-width: 500px) {
   .serena-gabriel-airport-transfers .cards.transport {
