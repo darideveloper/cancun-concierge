@@ -14,6 +14,7 @@ const transport_vehicles = document.querySelectorAll(".cards.vehicle > .card")
 const buttons_wrapper = document.querySelector(".buttons")
 const button_back = document.querySelector(".buttons .back")
 const airport_select = document.querySelector("#airport")
+const info_elem = document.querySelector(".info")
 
 // Global data
 let airport_name = ""
@@ -233,6 +234,9 @@ transport_vehicles.forEach(transport_vehicle => {
 
     // Hide airport select
     airport_select.parentElement.classList.add("hide")
+
+    // Show info
+    info_elem.classList.remove("hide")
   }))
 })
 
@@ -303,6 +307,9 @@ button_back.addEventListener("click", (e) => {
 
   // Show airport select
   airport_select.parentElement.classList.remove("hide")
+
+  // Hide info
+  info_elem.classList.add("hide")
 })
 
 
