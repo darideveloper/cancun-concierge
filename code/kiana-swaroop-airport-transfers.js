@@ -13,6 +13,10 @@ const transport_vehicles_wrapper = document.querySelector(".cards.vehicle")
 const transport_vehicles = document.querySelectorAll(".cards.vehicle > .card")
 const buttons_wrapper = document.querySelector(".buttons")
 const button_back = document.querySelector(".buttons .back")
+const airport_select = document.querySelector("#airport")
+
+// Global data
+let airport_name = "CUN"
 
 // Sweet alert when done query
 const queryString = window.location.search
@@ -25,24 +29,43 @@ if (done) {
 
 // Prices
 const prices = {
-  "Van": {
-    "arriving": [75.00, 60.00],
-    "departing": [75.00, 60.00],
-    "arriving departing": [150, 120],
+  "CUN": {
+    "Van": {
+      "arriving": [75.00, 60.00],
+      "departing": [75.00, 60.00],
+      "arriving departing": [150, 120],
+    },
+    "Sprinter": {
+      "arriving": [160.00, 148.00],
+      "departing": [160.00, 148.00],
+      "arriving departing": [320.00, 296.00],
+    },
+    "Suburban": {
+      "arriving": [115.00, 105.00],
+      "departing": [115.00, 105.00],
+      "arriving departing": [230.00, 210.00],
+    },
   },
-  "Sprinter": {
-    "arriving": [160.00, 148.00],
-    "departing": [160.00, 148.00],
-    "arriving departing": [320.00, 296.00],
-  },
-  "Suburban": {
-    "arriving": [115.00, 105.00],
-    "departing": [115.00, 105.00],
-    "arriving departing": [230.00, 210.00],
-  },
+  "TQO": {
+    "Van": {
+      "arriving": [10.00, 0.00],
+      "departing": [10.00, 0.00],
+      "arriving departing": [10, 0.00],
+    },
+    "Sprinter": {
+      "arriving": [10.00, 0.00],
+      "departing": [10.00, 0.00],
+      "arriving departing": [10.00, 0.00],
+    },
+    "Suburban": {
+      "arriving": [10.00, 0.00],
+      "departing": [10.00, 0.00],
+      "arriving departing": [10.00, 0.00],
+    },
+  }
 }
 
-// Array from 2 to 4
+// Passengers data
 const passengers = {
   "Van": [1,2,3,4,5,6],
   "Sprinter": [1,2,3,4,5,6,7,8,9,10,11,12],
@@ -140,7 +163,7 @@ transport_cards.forEach(transport_card => {
     transport_name = transport_card.querySelector("h3").innerText
 
     // Update price
-    current_price = prices[current_transport_type][transport_type_value]
+    current_price = prices[airport_name][current_transport_type][transport_type_value]
   }))
 })
 
@@ -186,7 +209,7 @@ transport_vehicles.forEach(transport_vehicle => {
     current_transport_type = transport_vehicle.getAttribute("data-transport-type")
 
     // Update prices
-    let prices_vehicule = prices[current_transport_type]
+    let prices_vehicule = prices[airport_name][current_transport_type]
     transport_cards.forEach(transport_card => {
       const transport_type = transport_card.getAttribute("data-transport-type")
 
@@ -206,6 +229,9 @@ transport_vehicles.forEach(transport_vehicle => {
 
     // Hide vehicle options
     transport_vehicles_wrapper.classList.add("hide")
+
+    // Hide airport select
+    airport_select.parentElement.classList.add("hide")
   }))
 })
 
@@ -273,9 +299,14 @@ button_back.addEventListener("click", (e) => {
 
   // Hide form
   form_elem.classList.add("hide")
+
+  // Show airport select
+  airport_select.parentElement.classList.remove("hide")
 })
 
-// // Run script when page loads
-// self.addEventListener('load', (e) => {
-//   document.querySelector('[data-transport-type="arriving departing"]').click()
-// })
+
+// Save changes in airport
+airport_select.addEventListener("change", (e) => {
+  airport_name = e.target.value
+  console.log({airport_name})
+})

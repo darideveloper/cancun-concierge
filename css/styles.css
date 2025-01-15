@@ -2501,6 +2501,28 @@ main.kiana-swaroop {
   color: #50493f;
   font-family: "Quicksand", sans-serif;
 }
+main.kiana-swaroop label {
+  padding: 10px 0;
+  width: 100%;
+}
+main.kiana-swaroop label input, main.kiana-swaroop label select {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  border: 1px solid #4F6A9E;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+main.kiana-swaroop label input:disabled, main.kiana-swaroop label input .disabled, main.kiana-swaroop label select:disabled, main.kiana-swaroop label select .disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+main.kiana-swaroop label input:focus:not(:disabled), main.kiana-swaroop label input:hover:not(:disabled), main.kiana-swaroop label select:focus:not(:disabled), main.kiana-swaroop label select:hover:not(:disabled) {
+  outline: none;
+  box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
 main.kiana-swaroop h2, main.kiana-swaroop h3, main.kiana-swaroop h4, main.kiana-swaroop h5, main.kiana-swaroop h6 {
   font-family: "Libre Baskerville", sans-serif;
   color: #50493f;
@@ -2556,6 +2578,9 @@ main.kiana-swaroop .gallery .imgs {
 }
 main.kiana-swaroop .gallery .imgs img {
   width: 33.33% !important;
+}
+main.kiana-swaroop .airport {
+  max-width: 400px;
 }
 main.kiana-swaroop .cards.transport {
   gap: 25px;
@@ -2661,28 +2686,6 @@ main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset {
 main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset p {
   font-size: 12px;
   margin-bottom: 0;
-}
-main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset label {
-  padding: 10px 0;
-  width: 100%;
-}
-main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset label input, main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset label select {
-  margin-top: 5px;
-  display: block;
-  font-size: 18px;
-  width: calc(100% - 20px);
-  padding: 5px 10px;
-  border: 1px solid #4F6A9E;
-  border-radius: 5px;
-  transition-duration: 0.5s;
-}
-main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset label input:disabled, main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset label input .disabled, main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset label select:disabled, main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset label select .disabled {
-  cursor: not-allowed;
-  opacity: 0.3;
-}
-main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset label input:focus:not(:disabled), main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset label input:hover:not(:disabled), main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset label select:focus:not(:disabled), main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset label select:hover:not(:disabled) {
-  outline: none;
-  box-shadow: 0px 0px 8px 0px #4F6A9E;
 }
 main.kiana-swaroop .buy-form .btn.cta {
   margin: 0 auto;
