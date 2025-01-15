@@ -31,36 +31,36 @@ if (done) {
 const prices = {
   "CUN": {
     "Van": {
-      "arriving": [75.00, 60.00],
-      "departing": [75.00, 60.00],
-      "arriving departing": [150, 120],
+      "arriving": [0.00, 196.00],
+      "departing": [0.00, 196.00],
+      "arriving departing": [0.00, 392.00],
     },
     "Sprinter": {
-      "arriving": [160.00, 148.00],
-      "departing": [160.00, 148.00],
-      "arriving departing": [320.00, 296.00],
+      "arriving": [0.00, 279.00],
+      "departing": [0.00, 279.00],
+      "arriving departing": [0.00, 558],
     },
     "Suburban": {
-      "arriving": [115.00, 105.00],
-      "departing": [115.00, 105.00],
-      "arriving departing": [230.00, 210.00],
+      "arriving": [0.00, 287.00],
+      "departing": [0.00, 287.00],
+      "arriving departing": [0.00, 574],
     },
   },
   "TQO": {
     "Van": {
-      "arriving": [10.00, 0.00],
-      "departing": [10.00, 0.00],
-      "arriving departing": [10, 0.00],
+      "arriving": [0.00, 236.00],
+      "departing": [0.00, 236.00],
+      "arriving departing": [0.00, 472],
     },
     "Sprinter": {
-      "arriving": [10.00, 0.00],
-      "departing": [10.00, 0.00],
-      "arriving departing": [10.00, 0.00],
+      "arriving": [0.00, 285.00],
+      "departing": [0.00, 285.00],
+      "arriving departing": [0.00, 570],
     },
     "Suburban": {
-      "arriving": [10.00, 0.00],
-      "departing": [10.00, 0.00],
-      "arriving departing": [10.00, 0.00],
+      "arriving": [0.00, 305.00],
+      "departing": [0.00, 305.00],
+      "arriving departing": [0.00, 610],
     },
   }
 }
@@ -218,10 +218,11 @@ transport_vehicles.forEach(transport_vehicle => {
       let price_clean = prices_vehicule[transport_type][1].toFixed(2)
       price_elem.innerText = `${price_clean} USD`
 
-      // Update regylar price
-      price_elem = transport_card.querySelector(".regular-price > span")
-      price_clean = prices_vehicule[transport_type][0].toFixed(2)
-      price_elem.innerText = `${price_clean} USD`
+      // Skip regular price
+      // // Update regylar price
+      // price_elem = transport_card.querySelector(".regular-price > span")
+      // price_clean = prices_vehicule[transport_type][0].toFixed(2)
+      // price_elem.innerText = `${price_clean} USD`
     })
 
     // Show back button
