@@ -16,7 +16,7 @@ const button_back = document.querySelector(".buttons .back")
 const airport_select = document.querySelector("#airport")
 
 // Global data
-let airport_name = "CUN"
+let airport_name = ""
 
 // Sweet alert when done query
 const queryString = window.location.search
@@ -310,4 +310,10 @@ button_back.addEventListener("click", (e) => {
 airport_select.addEventListener("change", (e) => {
   airport_name = e.target.value
   console.log({airport_name})
+
+  if (airport_name == "") {
+    transport_vehicles_wrapper.classList.add("hide")
+  } else {
+    transport_vehicles_wrapper.classList.remove("hide")
+  }
 })
