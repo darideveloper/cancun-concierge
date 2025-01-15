@@ -46,6 +46,11 @@ header.kiana-swaroop, #footer.kiana-swaroop
     small
         color: $color-white
 
+    @media screen and (max-width: 750px)
+
+        .widgets 
+            align-items: flex-start
+
 main.kiana-swaroop
 
     // Global inputs
@@ -133,7 +138,12 @@ main.kiana-swaroop
                 width: 33.33% !important
 
     .airport
+        width: 90%
+        margin: 0 auto
         max-width: 400px
+
+        select
+            width: 100%
 
     .cards.transport
         gap: 25px
@@ -305,8 +315,9 @@ main.kiana-swaroop
         .paralax
             background-attachment: scroll !important
             height: 400px
-            background-image: url("../imgs/kiana-swaroop-logo-mobile.webp")
 
+            p
+                font-size: 2.2rem
 
     @media screen and (max-width: 500px)
 
@@ -315,3 +326,8 @@ main.kiana-swaroop
 
         .buy-form .wrapper-fieldsets
             width: 90%
+
+        .paralax
+            p
+                font-size: 1.6rem
+
