@@ -1,7 +1,7 @@
 // Percentage to slide gallery
 var move_value = 33.33
 
-const stripe_user = "serena-gabriel"
+const stripe_user = "kiana-swaroop"
 const stripe_api = "https://services.darideveloper.com/stripe-api/"
 
 
