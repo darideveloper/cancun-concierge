@@ -32,26 +32,26 @@ if (done) {
 const prices = {
   "CUN": {
     "Van": {
-      "arriving": [0.00, 196.00],
-      "departing": [0.00, 196.00],
-      "arriving departing": [0.00, 392.00],
+      "arriving": [0.00, 184.00],
+      "departing": [0.00, 184.00],
+      "arriving departing": [0.00, 368],
     },
     "Sprinter": {
-      "arriving": [0.00, 279.00],
-      "departing": [0.00, 279.00],
-      "arriving departing": [0.00, 558],
+      "arriving": [0.00, 274],
+      "departing": [0.00, 274],
+      "arriving departing": [0.00, 548],
     },
     "Suburban": {
-      "arriving": [0.00, 287.00],
-      "departing": [0.00, 287.00],
-      "arriving departing": [0.00, 574],
+      "arriving": [0.00, 260.00],
+      "departing": [0.00, 260.00],
+      "arriving departing": [0.00, 520],
     },
   },
   "TQO": {
     "Van": {
-      "arriving": [0.00, 236.00],
-      "departing": [0.00, 236.00],
-      "arriving departing": [0.00, 472],
+      "arriving": [0.00, 204],
+      "departing": [0.00, 204],
+      "arriving departing": [0.00, 408],
     },
     "Sprinter": {
       "arriving": [0.00, 285.00],
@@ -59,9 +59,9 @@ const prices = {
       "arriving departing": [0.00, 570],
     },
     "Suburban": {
-      "arriving": [0.00, 305.00],
-      "departing": [0.00, 305.00],
-      "arriving departing": [0.00, 610],
+      "arriving": [0.00, 255],
+      "departing": [0.00, 255],
+      "arriving departing": [0.00, 510],
     },
   }
 }
