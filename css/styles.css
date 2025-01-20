@@ -2557,6 +2557,7 @@ main.kiana-swaroop .paralax {
   background-image: url("../imgs/kiana-swaroop-logo.webp");
   height: 700px;
   position: relative;
+  background-color: #305941;
 }
 main.kiana-swaroop .paralax p {
   position: absolute;
