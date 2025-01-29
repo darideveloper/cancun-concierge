@@ -316,11 +316,26 @@ button_back.addEventListener("click", (e) => {
 // Save changes in airport
 airport_select.addEventListener("change", (e) => {
   airport_name = e.target.value
-  console.log({airport_name})
 
   if (airport_name == "") {
     transport_vehicles_wrapper.classList.add("hide")
   } else {
     transport_vehicles_wrapper.classList.remove("hide")
+  }
+
+  // Update cancun texts
+  const selectors = [
+    "#arriving-time span",
+    "#departing-time span",
+    '[name="arriving-airline"] + p',
+    '[name="departing-airline"] + p',
+  ]
+  const cancunTextsElemns = document.querySelectorAll(selectors.join(", "))
+  console.log({cancunTextsElemns})
+  if (airport_name != "CUN") {
+    cancunTextsElemns.forEach(elem => {
+      const text = elem.innerText
+      elem.innerText = text.replace("Cancun", "Tulum")
+    })
   }
 })
