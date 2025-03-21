@@ -2767,4 +2767,8 @@ main.kiana-swaroop .faqs .questions-wrapper .question .title h3 {
   main.kiana-swaroop .paralax p {
     font-size: 1.6rem;
   }
+}
+
+main.service-master-restore p {
+  border: none;
 }/*# sourceMappingURL=styles.css.map */
