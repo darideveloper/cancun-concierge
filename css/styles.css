@@ -77,7 +77,13 @@ h1, h2, h3, h4, h5, h6, .title {
 }
 
 h2 {
+  font-size: 40px;
+}
+h3{
   font-size: 30px;
+}
+h4{
+  font-size: 25px;
 }
 
 .loading-modal {
@@ -98,7 +104,7 @@ h2 {
 }
 
 header {
-  background-color: #4F6A9E;
+  background-color: #000000;
 }
 header .content {
   display: flex;
@@ -130,6 +136,7 @@ header .content nav ul {
 }
 header .content nav ul li {
   list-style: none;
+
 }
 header .content nav ul li a {
   padding: 15px;
@@ -227,6 +234,7 @@ header.menu-of-services nav > ul > li .submenu:hover {
 @media screen and (max-width: 650px) {
   header.menu-of-services .content .btn.menu {
     display: block;
+    
   }
   header.menu-of-services .content nav {
     transition-duration: 0.5s;
@@ -244,8 +252,8 @@ header.menu-of-services nav > ul > li .submenu:hover {
     flex-direction: column;
   }
   header.menu-of-services .content nav ul li {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: -15px;
+    padding-bottom: -15px;
   }
   header.menu-of-services a br {
     display: none;
@@ -324,11 +332,11 @@ header.menu-of-services nav > ul > li .submenu:hover {
 #footer {
   width: 100%;
   background-color: #4F6A9E;
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: "Maven Pro", sans-serif;
 }
 #footer a {
-  color: #ffffff;
+  color: #000000;
 }
 #footer.menu-of-services .wrapper-btn {
   position: fixed;
@@ -339,7 +347,7 @@ header.menu-of-services nav > ul > li .submenu:hover {
 #footer.menu-of-services .wrapper-btn .btn.footer.white {
   margin-top: -65px;
   margin-right: 20px;
-  box-shadow: 0px 0px 10px rgba(79, 106, 158, 0.6);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 #footer.menu-of-services .widgets {
   padding-top: 40px;
@@ -372,8 +380,9 @@ header.menu-of-services nav > ul > li .submenu:hover {
   width: 205px;
 }
 #footer .widgets .widget h2 {
+  font-family: "Maven Pro", sans-serif;
   font-size: 18px;
-  color: #C8B568;
+  color: #000000;
 }
 #footer .widgets .widget a, #footer .widgets .widget p {
   font-style: normal;
@@ -388,10 +397,11 @@ header.menu-of-services nav > ul > li .submenu:hover {
   margin-right: 20px;
   width: 15px;
   height: 20px;
-  fill: #ffffff;
+  fill: #000000;
 }
 #footer .widgets .widget a:hover {
   color: #C8B568;
+  color: rgb(0, 0, 0, 0.7);
 }
 #footer .copyright {
   padding-top: 20px;
@@ -586,13 +596,13 @@ header.menu-of-services nav > ul > li .submenu:hover {
   background: rgba(26, 26, 26, 0.3);
 }
 .btn.cta.buy {
-  border: 2px solid #4F6A9E;
-  background: #4F6A9E;
+  border: 2px solid #000000;
+  background: #000000;
   color: #C8B568;
 }
 .btn.cta.buy:hover:not(.disabled) {
   background: #ffffff;
-  color: #4F6A9E;
+  color: #000000;
 }
 .btn.cta.buy:active {
   background: rgba(79, 106, 158, 0.3);
@@ -1049,6 +1059,19 @@ section.menu-of-services article.service#xplor .content .bottom-details .details
 section.menu-of-services article.service .content, .rivera-getaway article.service .content, .the-honey-pot article.service .content {
   width: 65%;
 }
+.details-card{
+  background-color: #ffffff99;
+  border: solid 2px #000000;
+  margin: 3px;
+  padding: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+}
+.details-card span p {
+  font-size: 0.7em; 
+  margin-left: 17px;
+}
 section.menu-of-services article.service .content .gallery, .rivera-getaway article.service .content .gallery, .the-honey-pot article.service .content .gallery {
   width: 100%;
   display: grid;
@@ -1172,12 +1195,14 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   left: 20px;
   z-index: 2;
   max-width: 90%;
+
 }
 .buy-cart.active .content {
   opacity: 1;
   max-height: 420px;
   height: auto;
   padding: 20px;
+  
 }
 .buy-cart .icon {
   cursor: pointer;
@@ -1193,12 +1218,13 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   left: 35px;
   font-size: 12px;
   font-weight: bold;
+
 }
 .buy-cart .content {
   transition-duration: 0.5s;
   opacity: 0;
   height: 0;
-  background-color: #4F6A9E;
+  background-color: #000000;
   color: #1a1a1a;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -1209,7 +1235,7 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  color: #ffffff;
+  color: #C8B568;
 }
 .buy-cart .content .services .service .close {
   background: none;
@@ -1217,17 +1243,18 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   cursor: pointer;
 }
 .buy-cart .content .services .service .close svg {
-  fill: #ffffff;
+  fill: #C8B568;
 }
 .buy-cart .content .services .service .close:hover svg {
   opacity: 0.5;
 }
 .buy-cart .content .btn.cta.buy-all {
   margin-top: 20px;
+  border-color: #C8B568;
 }
 .buy-cart .content .btn.cta.buy-all:hover {
-  background-color: #4F6A9E;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   border-color: #ffffff;
 }
 
