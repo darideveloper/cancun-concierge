@@ -1,31 +1,102 @@
+// Variables de color
 $color-smr-black: #000000
 $color-smr-yellow: #feee50
 $color-smr-white: #ffffff
 
+// Font-face
+@font-face
+    font-family: 'D-DIN'
+    src: url('../fonts/D-DIN.otf') format('opentype')
+    font-weight: normal
+    font-style: normal
+    font-family: ''
+
 // Header
 #header.service-master-restore
+    background-color: $color-smr-black
+
+    nav > ul > li
+        height: 35px
+
+        a:hover
+            color: $color-smr-yellow
+
     .title
-        font-family: "Sofia Sans Extra Condensed", sans-serif
+        font-family: "D-DIN", sans-serif
         font-weight: bold
+    
+    svg
+        fill: $color-smr-yellow
+        
 
 // Main section
 main.service-master-restore
-
     h1, h2, h3, h4, h5, h6, .title
         font-family: "Sofia Sans Extra Condensed", sans-serif
         font-weight: bold
 
     h1
-        color: $color-black
+        color: $color-smr-black
+        font-size: 50px
 
     .activities
         .service
             .bar
                 background-color: $color-smr-yellow
                 color: $color-smr-black
+        .buy-section
+            .details-card
+                span
+                    p
+                        font-size: 10px
+                        margin-left: 17px
+                .btn
+                    background-color: $color-smr-black
+                    border-color: $color-smr-black
+                    color: $color-smr-yellow
+                    &:hover
+                        background-color: $color-smr-white
+                        border-color: $color-smr-black
+                        color: $color-smr-black
 
 // Footer
 #footer.service-master-restore
     background-color: $color-smr-yellow
+    color: $color-smr-black  
+    
+    .widgets .widget h2
+        color: $color-smr-black  
 
-// Header: TODO
+    .socials a
+        color: $color-smr-black 
+        text-decoration: none
+
+        svg
+            fill: $color-smr-black 
+
+        &:hover
+            color: darken($color-smr-yellow, 30%) 
+            svg
+                fill: darken($color-smr-yellow, 30%)  
+
+    // Estilos para el icono de dirección
+    .socials p svg
+        fill: $color-smr-black 
+
+    .socials p:hover svg
+        fill: darken($color-smr-yellow, 30%)  
+
+    .copyright
+        color: $color-smr-black  
+
+        a
+            color: $color-smr-black  
+            text-decoration: none
+
+            &:hover
+                color: darken($color-smr-black, 30%)  
+                svg
+                    fill: darken($color-smr-black, 30%)  
+
+
+
