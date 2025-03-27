@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
-  font-family: "TREBUC", sans-serif;
+  font-family: "Urbanist", sans-serif;
 }
 
 .wrapper-img {
@@ -77,13 +77,7 @@ h1, h2, h3, h4, h5, h6, .title {
 }
 
 h2 {
-  font-size: 40px;
-}
-h3{
   font-size: 30px;
-}
-h4{
-  font-size: 25px;
 }
 
 .loading-modal {
@@ -104,7 +98,7 @@ h4{
 }
 
 header {
-  background-color: #000000;
+  background-color: #4F6A9E;
 }
 header .content {
   display: flex;
@@ -136,7 +130,6 @@ header .content nav ul {
 }
 header .content nav ul li {
   list-style: none;
-
 }
 header .content nav ul li a {
   padding: 15px;
@@ -146,7 +139,7 @@ header .content nav ul li a {
   text-align: center;
 }
 header .content nav ul li a:hover {
-  color: #feee50;
+  color: #C8B568;
 }
 header .content nav ul li a.active {
   font-weight: bold;
@@ -234,7 +227,6 @@ header.menu-of-services nav > ul > li .submenu:hover {
 @media screen and (max-width: 650px) {
   header.menu-of-services .content .btn.menu {
     display: block;
-    
   }
   header.menu-of-services .content nav {
     transition-duration: 0.5s;
@@ -252,8 +244,8 @@ header.menu-of-services nav > ul > li .submenu:hover {
     flex-direction: column;
   }
   header.menu-of-services .content nav ul li {
-    padding-top: -15px;
-    padding-bottom: -15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   header.menu-of-services a br {
     display: none;
@@ -332,11 +324,11 @@ header.menu-of-services nav > ul > li .submenu:hover {
 #footer {
   width: 100%;
   background-color: #4F6A9E;
-  color: rgb(0, 0, 0);
-  font-family: "D-DIN", sans-serif;
+  color: white;
+  font-family: "Maven Pro", sans-serif;
 }
 #footer a {
-  color: #000000;
+  color: #ffffff;
 }
 #footer.menu-of-services .wrapper-btn {
   position: fixed;
@@ -347,7 +339,7 @@ header.menu-of-services nav > ul > li .submenu:hover {
 #footer.menu-of-services .wrapper-btn .btn.footer.white {
   margin-top: -65px;
   margin-right: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 10px rgba(79, 106, 158, 0.6);
 }
 #footer.menu-of-services .widgets {
   padding-top: 40px;
@@ -380,9 +372,8 @@ header.menu-of-services nav > ul > li .submenu:hover {
   width: 205px;
 }
 #footer .widgets .widget h2 {
-  font-family: "D-DIN", sans-serif;
   font-size: 18px;
-  color: #000000;
+  color: #C8B568;
 }
 #footer .widgets .widget a, #footer .widgets .widget p {
   font-style: normal;
@@ -397,11 +388,10 @@ header.menu-of-services nav > ul > li .submenu:hover {
   margin-right: 20px;
   width: 15px;
   height: 20px;
-  fill: #000000;
+  fill: #ffffff;
 }
 #footer .widgets .widget a:hover {
-  color: #feee50;
-  color: rgb(0, 0, 0, 0.7);
+  color: #C8B568;
 }
 #footer .copyright {
   padding-top: 20px;
@@ -529,7 +519,7 @@ header.menu-of-services nav > ul > li .submenu:hover {
 .btn.menu svg {
   width: 30px;
   height: 30px;
-  fill: #feee50;
+  fill: #C8B568;
 }
 .btn.menu.active {
   transform: rotateZ(180deg);
@@ -596,13 +586,13 @@ header.menu-of-services nav > ul > li .submenu:hover {
   background: rgba(26, 26, 26, 0.3);
 }
 .btn.cta.buy {
-  border: 2px solid #000000;
-  background: #000000;
-  color: #feee50;
+  border: 2px solid #4F6A9E;
+  background: #4F6A9E;
+  color: #C8B568;
 }
 .btn.cta.buy:hover:not(.disabled) {
   background: #ffffff;
-  color: #000000;
+  color: #4F6A9E;
 }
 .btn.cta.buy:active {
   background: rgba(79, 106, 158, 0.3);
@@ -610,7 +600,7 @@ header.menu-of-services nav > ul > li .submenu:hover {
 
 .services h1 {
   margin-top: 50px;
-  font-size: 50px;
+  font-size: 35px;
   margin-bottom: 50px;
 }
 .services .services-cards {
@@ -780,7 +770,7 @@ header.menu-of-services nav > ul > li .submenu:hover {
   background-repeat: no-repeat;
 }
 .transportation.transport .cards .card p.price {
-  color: #feee50;
+  color: #C8B568;
   font-size: 16px;
 }
 .transportation.transport .cards .card img {
@@ -1035,8 +1025,8 @@ section.menu-of-services img:hover, .rivera-getaway img:hover, .the-honey-pot im
 section.menu-of-services h1, .rivera-getaway h1, .the-honey-pot h1 {
   font-weight: bold;
   text-align: center;
-  color: #000000;
-  font-size: 50px;
+  color: #4F6A9E;
+  font-size: 35px;
 }
 section.menu-of-services h2, .rivera-getaway h2, .the-honey-pot h2 {
   margin-top: 100px;
@@ -1058,18 +1048,6 @@ section.menu-of-services article.service#xplor .content .bottom-details .details
 }
 section.menu-of-services article.service .content, .rivera-getaway article.service .content, .the-honey-pot article.service .content {
   width: 65%;
-}
-.details-card{
-  background-color: #ffffff99;
-  margin: 3px;
-  padding: 7px;
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 20px;
-}
-.details-card span p {
-  font-size: 0.7em; 
-  margin-left: 17px;
 }
 section.menu-of-services article.service .content .gallery, .rivera-getaway article.service .content .gallery, .the-honey-pot article.service .content .gallery {
   width: 100%;
@@ -1100,7 +1078,7 @@ section.menu-of-services article.service .bar .text, .rivera-getaway article.ser
   margin-bottom: 50px;
 }
 section.menu-of-services article.service .bar h3, .rivera-getaway article.service .bar h3, .the-honey-pot article.service .bar h3 {
-  color: #feee50;
+  color: #C8B568;
   font-weight: bold;
   margin-bottom: 30px;
   text-transform: uppercase;
@@ -1194,14 +1172,12 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   left: 20px;
   z-index: 2;
   max-width: 90%;
-
 }
 .buy-cart.active .content {
   opacity: 1;
   max-height: 420px;
   height: auto;
   padding: 20px;
-  
 }
 .buy-cart .icon {
   cursor: pointer;
@@ -1217,13 +1193,12 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   left: 35px;
   font-size: 12px;
   font-weight: bold;
-
 }
 .buy-cart .content {
   transition-duration: 0.5s;
   opacity: 0;
   height: 0;
-  background-color: #000000;
+  background-color: #4F6A9E;
   color: #1a1a1a;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -1234,7 +1209,7 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  color: #feee50;
+  color: #ffffff;
 }
 .buy-cart .content .services .service .close {
   background: none;
@@ -1242,18 +1217,17 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   cursor: pointer;
 }
 .buy-cart .content .services .service .close svg {
-  fill: #feee50;
+  fill: #ffffff;
 }
 .buy-cart .content .services .service .close:hover svg {
   opacity: 0.5;
 }
 .buy-cart .content .btn.cta.buy-all {
   margin-top: 20px;
-  border-color: #feee50;
 }
 .buy-cart .content .btn.cta.buy-all:hover {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #4F6A9E;
+  color: #ffffff;
   border-color: #ffffff;
 }
 
@@ -2215,10 +2189,6 @@ main.the-honey-pot .buy-section form button:last-child {
 @font-face {
   font-family: "Kinfolk";
   src: url("../fonts/Kinfolk-Bold.otf") format("opentype");
-  font-family: "D-DIN";
-  src: url("../fonts/D-DIN.otf") format("opentype");
-  font-family: "TREBUC";
-  src: url("../fonts/trebuc.ttf") format("opentype");  
 }
 header.serena-gabriel, #footer.serena-gabriel {
   background-color: #efeeec;
@@ -2800,7 +2770,7 @@ main.kiana-swaroop .faqs .questions-wrapper .question .title h3 {
 }
 
 #header.service-master-restore .title {
-  font-family: "D-DIN", sans-serif;
+  font-family: "Sofia Sans Extra Condensed", sans-serif;
   font-weight: bold;
 }
 
@@ -2809,7 +2779,7 @@ main.service-master-restore h1, main.service-master-restore h2, main.service-mas
   font-weight: bold;
 }
 main.service-master-restore h1 {
-  color: #000000;
+  color: #50493f;
 }
 main.service-master-restore .activities .service .bar {
   background-color: #feee50;
