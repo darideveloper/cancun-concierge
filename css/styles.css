@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
-  font-family: "Urbanist", sans-serif;
+  font-family: "TREBUC", sans-serif;
 }
 
 .wrapper-img {
@@ -333,7 +333,7 @@ header.menu-of-services nav > ul > li .submenu:hover {
   width: 100%;
   background-color: #4F6A9E;
   color: rgb(0, 0, 0);
-  font-family: "Maven Pro", sans-serif;
+  font-family: "D-DIN", sans-serif;
 }
 #footer a {
   color: #000000;
@@ -380,7 +380,7 @@ header.menu-of-services nav > ul > li .submenu:hover {
   width: 205px;
 }
 #footer .widgets .widget h2 {
-  font-family: "Maven Pro", sans-serif;
+  font-family: "D-DIN", sans-serif;
   font-size: 18px;
   color: #000000;
 }
@@ -2215,6 +2215,10 @@ main.the-honey-pot .buy-section form button:last-child {
 @font-face {
   font-family: "Kinfolk";
   src: url("../fonts/Kinfolk-Bold.otf") format("opentype");
+  font-family: "D-DIN";
+  src: url("../fonts/D-DIN.otf") format("opentype");
+  font-family: "TREBUC";
+  src: url("../fonts/trebuc.ttf") format("opentype");  
 }
 header.serena-gabriel, #footer.serena-gabriel {
   background-color: #efeeec;
@@ -2796,7 +2800,7 @@ main.kiana-swaroop .faqs .questions-wrapper .question .title h3 {
 }
 
 #header.service-master-restore .title {
-  font-family: "Sofia Sans Extra Condensed", sans-serif;
+  font-family: "D-DIN", sans-serif;
   font-weight: bold;
 }
 
