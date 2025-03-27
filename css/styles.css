@@ -1061,7 +1061,7 @@ section.menu-of-services article.service .content, .rivera-getaway article.servi
 }
 .details-card{
   background-color: #ffffff99;
-  border: solid 03px #000000;
+  border: solid 2px #000000;
   margin: 3px;
   padding: 7px;
   padding-left: 15px;
@@ -1195,12 +1195,14 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   left: 20px;
   z-index: 2;
   max-width: 90%;
+
 }
 .buy-cart.active .content {
   opacity: 1;
   max-height: 420px;
   height: auto;
   padding: 20px;
+  
 }
 .buy-cart .icon {
   cursor: pointer;
@@ -1216,12 +1218,13 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   left: 35px;
   font-size: 12px;
   font-weight: bold;
+
 }
 .buy-cart .content {
   transition-duration: 0.5s;
   opacity: 0;
   height: 0;
-  background-color: #4F6A9E;
+  background-color: #000000;
   color: #1a1a1a;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -1232,7 +1235,7 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  color: #ffffff;
+  color: #C8B568;
 }
 .buy-cart .content .services .service .close {
   background: none;
@@ -1240,17 +1243,18 @@ section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway ar
   cursor: pointer;
 }
 .buy-cart .content .services .service .close svg {
-  fill: #ffffff;
+  fill: #C8B568;
 }
 .buy-cart .content .services .service .close:hover svg {
   opacity: 0.5;
 }
 .buy-cart .content .btn.cta.buy-all {
   margin-top: 20px;
+  border-color: #C8B568;
 }
 .buy-cart .content .btn.cta.buy-all:hover {
-  background-color: #4F6A9E;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   border-color: #ffffff;
 }
 
