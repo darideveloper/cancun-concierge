@@ -2820,6 +2820,29 @@ main.service-master-restore .activities .buy-section .details-card .btn:hover {
   color: #000000;
 }
 
+.buy-cart .content {
+  background-color: #000000;
+  color: #feee50 !important;
+}
+.buy-cart .content .services {
+  background-color: #000000;
+}
+.buy-cart .content .service .btn close svg {
+  color: #feee50;
+}
+.buy-cart .content .service .details {
+  color: #feee50;
+}
+.buy-cart .content .buy-all {
+  color: #feee50;
+  background-color: #000000;
+  border-color: #feee50;
+}
+.buy-cart .content .buy-all:hover {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
 #footer.service-master-restore {
   background-color: #feee50;
   color: #000000;
