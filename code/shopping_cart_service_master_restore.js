@@ -14,7 +14,7 @@ const services_prices = {
   "CENOTES & PARADISE LAGOON": 141,
   "CHICHEN ITZA": 198,
   "DEEP SEA FISHING": 1375,
-  "EL CAMALEON GOLF COURSE": 411,
+  "EL CAMALEON GOLF COURSE": 317,
   "TULUM - TANKAH EXPEDITION": 192,
   "XEL-HA PARK": 162,
   "XPLOR PARK": 190,
@@ -73,6 +73,7 @@ function hide_show_details_cart() {
   // Add event to buy button
   const buy_button = buy_cart.querySelector("button.buy-all")
   buy_button.addEventListener("click", async function () {
+    // await redirect_stripe(cart_elems, current_url, "service-master-restore")
     await redirect_stripe(cart_elems, current_url)
   })
 }

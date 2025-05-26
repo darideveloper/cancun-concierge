@@ -11,12 +11,11 @@ function toggle_loading() {
   modal.classList.toggle("hide")
 }
 
-async function redirect_stripe(buy_data, current_url) {
+async function redirect_stripe(buy_data, current_url, stripeUser = "cancunconcier") {
 
   toggle_loading()
 
   // stripe user based on page
-  let stripeUser = "cancunconcier"
   const url = window.location.href
   const currentPage = url.split("/")[3]
   console.log({ currentPage, url })
