@@ -73,8 +73,7 @@ function hide_show_details_cart() {
   // Add event to buy button
   const buy_button = buy_cart.querySelector("button.buy-all")
   buy_button.addEventListener("click", async function () {
-    // await redirect_stripe(cart_elems, current_url, "service-master-restore")
-    await redirect_stripe(cart_elems, current_url)
+    await redirect_stripe(cart_elems, current_url, "service-master-restore")
   })
 }
 
@@ -186,7 +185,7 @@ function manage_froms() {
         }
 
         // Redirect to stripe
-        await redirect_stripe(service_obj, current_url)
+        await redirect_stripe(service_obj, current_url, "service-master-restore")
 
       }
     })

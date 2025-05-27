@@ -15,18 +15,6 @@ async function redirect_stripe(buy_data, current_url, stripeUser = "cancunconcie
 
   toggle_loading()
 
-  // stripe user based on page
-  const url = window.location.href
-  const currentPage = url.split("/")[3]
-  console.log({ currentPage, url })
-  const validUsers = [
-    "the-honey-pot",
-  ]
-  if (validUsers.includes(currentPage)) {
-    stripeUser = currentPage
-  }
-
-
   try {
     const response = await fetch(stripe_api_url, {
       method: 'POST',
