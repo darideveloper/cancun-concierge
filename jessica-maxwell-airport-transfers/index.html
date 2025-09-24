@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../imgs/favicon.png">
+    
+    <!-- Custom google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Transportation | Cancún Concierge</title>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="svg-arrow-menu" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z"/>
+        </symbol>
+        <symbol id="svg-arrow-footer" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z"/>
+        </symbol>
+        <symbol id="svg-phone" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/>
+        </symbol>
+        <symbol id="svg-email" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M22 5v14h-20v-14h20zm2-2h-24v18h24v-18zm-2 16l-6.526-6.618-3.445 3.483-3.418-3.525-6.611 6.66 5.051-8-5.051-6 10.029 7.446 9.971-7.446-4.998 6.01 4.998 7.99z"/>
+        </symbol>
+        <symbol id="svg-location" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+        </symbol>
+        <symbol id="svg-facebook" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+        </symbol>
+        <symbol id="svg-instagram" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </symbol>
+
+        <symbol id="svg-lock" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M10 16c0-1.104.896-2 2-2s2 .896 2 2c0 .738-.404 1.376-1 1.723v2.277h-2v-2.277c-.596-.347-1-.985-1-1.723zm11-6v14h-18v-14h3v-4c0-3.313 2.687-6 6-6s6 2.687 6 6v4h3zm-13 0h8v-4c0-2.206-1.795-4-4-4s-4 1.794-4 4v4zm11 2h-14v10h14v-10z"/>
+        </symbol>
+        <symbol id="svg-award" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M11.383 15.941l-3.758 8.059-.967-2.658-2.658.968 3.517-7.541c.678.216 1.137.162 1.849.162.744.513 1.072.844 2.017 1.01zm3.252-1.009c-.738.506-1.049.831-1.994 1.004l3.759 8.064.967-2.658 2.633.968-3.495-7.549c-.686.222-1.146.171-1.87.171zm-2.635-11.932c-2.205 0-4 1.795-4 4s1.795 4 4 4c2.206 0 4-1.794 4-4s-1.794-4-4-4zm6.926 5.278c.051.146.074.296.074.445 0 .449-.222.883-.615 1.156-1.256.87-1.09.651-1.562 2.067-.198.591-.77.99-1.414.99h-.004c-1.549-.005-1.279-.088-2.528.789-.262.183-.569.275-.877.275s-.615-.092-.876-.275c-1.249-.878-.98-.794-2.528-.789h-.004c-.645 0-1.216-.399-1.413-.99-.473-1.417-.311-1.198-1.562-2.067-.395-.274-.617-.708-.617-1.157 0-.148.024-.298.074-.444.483-1.411.484-1.139 0-2.555-.05-.147-.074-.297-.074-.445 0-.45.222-.883.616-1.157 1.251-.868 1.089-.648 1.562-2.067.197-.591.769-.99 1.413-.99h.004c1.545.005 1.271.095 2.528-.79.262-.182.569-.274.877-.274s.615.091.876.274c1.249.878.98.795 2.528.79h.004c.645 0 1.216.399 1.414.99.473 1.416.307 1.197 1.562 2.067.394.274.616.707.616 1.156 0 .148-.023.299-.074.445-.483 1.411-.485 1.139 0 2.556zm-1.926-1.278c0-2.761-2.238-5-5-5-2.761 0-5 2.239-5 5s2.239 5 5 5c2.762 0 5-2.238 5-5z"/>
+        </symbol>
+        <symbol id="svg-heart" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M6.28 3c3.236.001 4.973 3.491 5.72 5.031.75-1.547 2.469-5.021 5.726-5.021 2.058 0 4.274 1.309 4.274 4.182 0 3.442-4.744 7.851-10 13-5.258-5.151-10-9.559-10-13 0-2.676 1.965-4.193 4.28-4.192zm.001-2c-3.183 0-6.281 2.187-6.281 6.192 0 4.661 5.57 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-4.011-3.097-6.182-6.274-6.182-2.204 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248z"/>            
+        </symbol>
+
+        <symbol id="svg-taxes" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M7 21h-4v-11h4v11zm7-11h-4v11h4v-11zm7 0h-4v11h4v-11zm2 12h-22v2h22v-2zm-23-13h24l-12-9-12 9z"/>
+        </symbol>
+        <symbol id="svg-insurance" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M12 0c-3.371 2.866-5.485 3-9 3v11.535c0 4.603 3.203 5.804 9 9.465 5.797-3.661 9-4.862 9-9.465v-11.535c-3.516 0-5.629-.134-9-3zm0 6.5c3.036 0 5.5 2.464 5.5 5.5s-2.464 5.5-5.5 5.5-5.5-2.464-5.5-5.5 2.464-5.5 5.5-5.5zm1 2.5v2h2v2h-2v2h-2v-2h-2v-2h2v-2h2z"/>
+        </symbol>
+        <symbol id="svg-water" class="svg_elem" viewBox="0 0 24 24">
+            <path d="M11 14.699v6.256c-.667.014-1.5-.064-2-.183v-6.205c0-2.76 1.367-1.888 2.504-5.243-.283 1.753-.504 2.652-.504 5.375zm1 9.301c-3.741 0-6 0-6-2.299v-8.154c0-2.897 1.78-3.36 2.25-4.36.434-.924.937-4.585.954-5.049l-.048-.078c-.452-.687-.578-1.372.057-3.02.184-.483.669-1.04 2.787-1.04s2.603.557 2.788 1.042c.576 1.495.589 2.258.049 3.023-.024.535.479 4.196.913 5.121.471 1 2.25 1.464 2.25 4.36v8.154c0 2.3-2.259 2.3-6 2.3zm-1.039-21.917c-.211.619-.184.801-.182.81.292.374.425.809.425 1.257 0 .387-.51 4.534-1.144 5.886-.688 1.466-2.06 1.541-2.06 3.511v8.154c.458.426 7.544.401 8.042.023l-.042-8.177c0-1.968-1.372-2.046-2.061-3.51-.634-1.353-1.144-5.499-1.144-5.886 0-.661.265-1.037.407-1.238.028-.036.046-.225-.163-.829-.207-.042-.56-.084-1.039-.084-.479 0-.831.042-1.039.083z"/>
+        </symbol>
+    </svg>
+
+    <header id="header" class="jessica-maxwell">
+        <div class="content max-width">
+            <div class="logo wrapper-img">
+                <img src="../imgs/logo-white.png" alt="Cancún Concierge Logo">
+            </div>
+            <nav class="collapsed">
+                <ul>
+                    <li><a href="../en/" class="title">Home</a></li>
+                    <li><a href="../en/services" class="title">Services</a></li>
+                    <li><a href="../en/transportation" class="title">Transportation</a></li>
+                    <li><a href="../en/social" class="title">Social responsability</a></li>
+                    <li><a href="https://loscabosconcierge.com/" class="title" target="_blank">Los cabos</a></li>
+                </ul>
+            </nav>
+            <button class="btn menu">
+                <svg>
+                    <use xlink:href="#svg-arrow-menu"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="jessica-maxwell">
+        <div class="paralax">
+            <p>
+                Jessica & Maxwell
+            </p>
+        </div>
+        <section class="transportation transport">                
+            <div class="titles regular-width">
+                <h1 class="small">
+                    PLEASE BOOK NOW AND SECURE YOUR TRANSFER FROM CANCUN INTERNATIONAL AIRPORT TO Hilton Tulum Riviera Maya
+                </h1>
+            </div>
+            <div class="gallery">
+                <button class="next slide btn white">
+                    <svg>
+                        <use xlink:href="#svg-arrow-footer"></use>
+                    </svg>
+                </button>
+                <button class="back slide btn white">
+                    <svg>
+                        <use xlink:href="#svg-arrow-footer"></use>
+                    </svg>
+                </button>
+                <div class="imgs-wrapper">
+                    <div class="imgs">
+                        <img src="../imgs/transportation-gallery-4.jpg" alt="imagen 2 de transporte">
+                        <img src="../imgs/transportation-gallery-1.png" alt="imagen 1 de transporte">
+                        <img src="../imgs/transportation-gallery-2.png" alt="imagen 2 de transporte">
+                    </div>
+                </div>
+            </div>
+            
+
+            <h2>TRANSPORTATION OPTIONS</h2>
+            <section class="regular-width airport">
+                <label>
+                    Airport
+                    <select name="airport" id="airport" required>
+                        <option value="">Select an airport</option>
+                        <option value="CUN">Cancun Airport (CUN)</option>
+                        <option value="TQO">Tulum Airport (TQO)</option>
+                    </select>
+                </label>
+            </section>
+            <section class="cards transport regular-width vehicle hide">
+                <article class="card" data-transport-type="Van">
+                    <div class="checkbox">
+                        <div class="inside"></div>
+                    </div>
+                    <div class="text">
+                        <h3>Van (1 - 6 passengers)</h3>
+                    </div>
+                </article>
+
+                <article class="card" data-transport-type="Sprinter">
+                    <div class="checkbox">
+                        <div class="inside"></div>
+                    </div>
+                    <div class="text">
+                        <h3>Sprinter (1 - 12 passengers)</h3>
+                    </div>
+                </article>
+
+                <article class="card" data-transport-type="Suburban">
+                    <div class="checkbox">
+                        <div class="inside"></div>
+                    </div>
+                    <div class="text">
+                        <h3>Suburban (1 - 4 passengers)</h3>
+                    </div>
+                </article>
+
+            </section>
+
+            <section class="buttons regular-width hide">
+                <button class="back">
+                    <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24">
+                        <path d="m10.978 14.999v3.251c0 .412-.335.75-.752.75-.188 0-.375-.071-.518-.206-1.775-1.685-4.945-4.692-6.396-6.069-.2-.189-.312-.452-.312-.725 0-.274.112-.536.312-.725 1.451-1.377 4.621-4.385 6.396-6.068.143-.136.33-.207.518-.207.417 0 .752.337.752.75v3.251h9.02c.531 0 1.002.47 1.002 1v3.998c0 .53-.471 1-1.002 1z" fill-rule="nonzero"/>
+                    </svg>
+                </button>
+            </section>
+
+            <section class="cards transport regular-width translate hide">
+                <article class="card" data-transport-type="arriving">
+                    <div class="checkbox">
+                        <div class="inside"></div>
+                    </div>
+                    <div class="text">
+                        <h3>Airport - Hotel Transfer</h3>
+                        <!-- <p class="regular-price">
+                            Regular price:
+                            <span>0 USD</span>
+                        </p> -->
+                        <p class="price">
+                            <!-- Jessica & Maxwell Price:  -->
+                            <span>0 USD</span>
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card" data-transport-type="departing">
+                    <div class="checkbox">
+                        <div class="inside"></div>
+                    </div>
+                    <div class="text">
+                        <h3>Hotel - Airport Transfer</h3>
+                        <!-- <p class="regular-price">
+                            Regular price:
+                            <span>0 USD</span>
+                        </p> -->
+                        <p class="price">
+                            <!-- Jessica & Maxwell Price:  -->
+                            <span>0 USD</span>
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card" data-transport-type="arriving departing">
+                    <div class="checkbox">
+                        <div class="inside"></div>
+                    </div>
+                    <div class="text">
+                        <h3>Round Trip<br> Transfer</h3>
+                        <!-- <p class="regular-price">
+                            Regular price:
+                            <span>0 USD</span>
+                        </p> -->
+                        <p class="price">
+                            <!-- Jessica & Maxwell Price:  -->
+                            <span>0 USD</span>
+                        </p>
+                    </div>
+                </article>
+
+            </section>
+            
+        </section>
+
+        <div class="info hide">
+            Price is per vehicle (not per person).
+        </div>
+
+        <form class="buy-form regular-width hide" method="post" action="#">
+            <div class="wrapper-fieldsets">
+                <fieldset class="general hide">
+                    <h3>General</h3>
+                    <label>
+                        Name
+                        <input type="text" name="name" id="name" placeholder="John" required>
+                    </label>
+                    <label>
+                        Last name
+                        <input type="text" name="last-name" id="last-name" placeholder="Doe" required>
+                    </label>
+                    <label>
+                        Email
+                        <input type="Email" name="email" id="email" placeholder="example@gmail.com" required>
+                        <p>
+                            It will required again in the pament page
+                        </p>
+                    </label>
+                    <label>
+                        Number of passengers
+                        <select name="passengers" id="passengers" required>
+                            <option value="1">1 passenger</option>
+                            <option value="2">2 passengers</option>
+                            <option value="3">3 passengers</option>
+                            <option value="4">4 passengers</option>
+                            <option value="5">5 passengers</option>
+                            <option value="6">6 passengers</option>
+                            <option value="7">7 passengers</option>
+                            <option value="8">8 passengers</option>
+                        </select>
+                        <p>Maximum eight passengers per van</p>
+                    </label>
+                </fieldset>
+                <fieldset class="arriving hide">
+                    <h3>Arriving</h3>
+                    <label>
+                        Arriving date
+                        <input type="date" name="arriving-date" id="arriving-date" required>
+                    </label>
+                    <label id="arriving-time">
+                        <span>
+                            Arriving time in Cancun
+                        </span>
+                        <input type="time" name="arriving-time" id="arriving-time" required>
+                    </label>
+                    <label>
+                        Airline
+                        <input type="text" name="arriving-airline" id="arriving-airline" required>
+                        <p class="warning">*In case you have connecting flights, please make sure you provide the info for your actual flight arriving to Cancun</p>
+                    </label>
+                    <label>
+                        Flight number
+                        <input type="text" name="arriving-flight-number" id="arriving-flight-number" required>
+                    </label>
+                    <label>
+                        Hotel
+                        <select name="arriving-hotel" id="arriving-hotel" required>
+                            <option value="Hilton Tulum Riviera Maya">Hilton Tulum Riviera Maya</option>
+                            <option value="Conrad Tulum Riviera Maya">Conrad Tulum Riviera Maya</option>
+                        </select>
+                        <div class="hotel-other-wrapper hide">
+                            <input type="text" id="arriving-hotel-other" name="arriving-hotel-other" required class="hide hotel" disabled>
+                            <p>Transfer rates apply to hotels located in Playa del Carmen area only</p>
+                        </div>
+                    </label>
+                </fieldset>
+                <fieldset class="departing hide">
+                    <h3>Departing</h3>
+                    <label>
+                        Departing date
+                        <input type="date" name="departing-date" id="departing-date" required>
+                    </label>
+                    <label id="departing-time">
+                        <span>
+                            Departing time from Cancun
+                        </span>
+                        <input type="time" name="departing-time" id="departing-time" required>
+                    </label>
+                    <label>
+                        Airline
+                        <input type="text" name="departing-airline" id="departing-airline" required>
+                        <p class="warning">*In case you have connecting flights, please make sure you provide the info for your actual flight departing from Cancun</p>
+                    </label>
+                    <label>
+                        Flight number
+                        <input type="text" name="departing-flight-number" id="departing-flight-number" required>
+                    </label>
+                    <label>
+                        Hotel
+                        <select name="departing-hotel" id="departing-hotel" required>
+                            <option value="Hilton Tulum Riviera Maya">Hilton Tulum Riviera Maya</option>
+                            <option value="Conrad Tulum Riviera Maya">Conrad Tulum Riviera Maya</option>
+                        </select>
+                        <div class="hotel-other-wrapper hide">
+                            <input type="text" id="departing-hotel-other" name="departing-hotel-other" required class="hide hotel" disabled>
+                            <p>Transfer rates apply to hotels located in Playa del Carmen area only</p>
+                        </div>
+                    </label>
+                </fieldset>
+            </div>
+            <input id="submit" type="submit" class="btn cta buy" value="Buy now">
+        </form>
+
+        <section class="transportation details">
+
+            <h2>OUR SERVICES INCLUDE</h2>
+            <section class="cards regular-width">
+                <article class="card">
+                    <svg>
+                        <use xlink:href="#svg-lock"></use>
+                    </svg>    
+                    <h3>Private tranfers</h3>
+                </article>
+                <article class="card">
+                    <svg>
+                        <use xlink:href="#svg-award"></use>
+                    </svg>    
+                    <h3>Welcome greeters</h3>
+                </article>
+                <article class="card">
+                    <svg>
+                        <use xlink:href="#svg-water"></use>
+                    </svg>    
+                    <h3>Refreshments</h3>
+                </article>
+                <article class="card">
+                    <svg>
+                        <use xlink:href="#svg-insurance"></use>
+                    </svg>    
+                    <h3>Travel Insurance</h3>
+                </article>
+                <article class="card">
+                    <svg>
+                        <use xlink:href="#svg-heart"></use>
+                    </svg>    
+                    <h3>Gratuities</h3>
+                </article>
+                <article class="card">
+                    <svg>
+                        <use xlink:href="#svg-taxes"></use>
+                    </svg>    
+                    <h3>Federal taxes</h3>
+                </article>
+            </section>
+
+        </section>
+        
+        <section class="faqs">
+
+            <h2>FAQS</h2>
+            <section class="questions-wrapper regular-width">
+
+                <article class="question">
+                    <div class="title">
+                        <h3>
+                            WHY SHOULD I BOOK WITH CANCUN CONCIERGE? I AM SEEING CHEAPER TRANSPORTATION RATES ONLINE.                        </h3>
+                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24">
+                            <path d="m16.843 10.211c.108-.141.157-.3.157-.456 0-.389-.306-.755-.749-.755h-8.501c-.445 0-.75.367-.75.755 0 .157.05.316.159.457 1.203 1.554 3.252 4.199 4.258 5.498.142.184.36.29.592.29.23 0 .449-.107.591-.291 1.002-1.299 3.044-3.945 4.243-5.498z"/>
+                        </svg>
+                    </div>
+                    <p>
+                        Booking with Cancun Concierge ensures more than just transportation. We offer personalized service, local expertise, and seamless coordination for your entire trip. Our commitment to quality, reliability, and customer satisfaction sets us apart from cheaper options online. With us, you're not just booking a ride, you're investing in a stress-free, safe and unforgettable experience tailored to your needs.
+                    </p>
+                </article>
+
+                <article class="question">
+                    <div class="title">
+                        <h3>
+                            WHAT IS INCLUDED WITH CANCUN CONCIERGE'S TRANSPORTATION SERVICE?
+                        </h3>
+                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24">
+                            <path d="m16.843 10.211c.108-.141.157-.3.157-.456 0-.389-.306-.755-.749-.755h-8.501c-.445 0-.75.367-.75.755 0 .157.05.316.159.457 1.203 1.554 3.252 4.199 4.258 5.498.142.184.36.29.592.29.23 0 .449-.107.591-.291 1.002-1.299 3.044-3.945 4.243-5.498z"/>
+                        </svg>
+                    </div>
+                    <ul>
+                        <li>Personalized email transportation confirmation</li>
+                        <li>Meet & greet staff at the airport dedicated for Jessica & Maxwell's wedding</li>
+                        <li>Refreshments</li>
+                        <li>Professional and trusted drivers</li>
+                        <li>A single rate inclusive of all taxes and fees</li>
+                    </ul>
+                </article>
+
+                <article class="question">
+                    <div class="title">
+                        <h3>
+                            HOW DO I FIND CANCUN CONCIERGE ONCE I'M READY TO LEAVE THE AIRPORT?
+                        </h3>
+                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24">
+                            <path d="m16.843 10.211c.108-.141.157-.3.157-.456 0-.389-.306-.755-.749-.755h-8.501c-.445 0-.75.367-.75.755 0 .157.05.316.159.457 1.203 1.554 3.252 4.199 4.258 5.498.142.184.36.29.592.29.23 0 .449-.107.591-.291 1.002-1.299 3.044-3.945 4.243-5.498z"/>
+                        </svg>
+                    </div>
+                    <p>
+                        Our staff will be wearing white polo shirts and khaki pants and holding a sign with Jessica & Maxwell's wedding. The staff will be waiting right outside the airport terminal by the pre-arranged transportation area. Our staff will escort you to your awaiting vehicle to safely and quickly get you over to the Hilton Tulum Riviera Maya
+                    </p>
+                </article>
+                
+                <article class="question">
+                    <div class="title">
+                        <h3>
+                            HOW DO I PAY FOR MY TRANSPORTATION?
+                        </h3>
+                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24">
+                            <path d="m16.843 10.211c.108-.141.157-.3.157-.456 0-.389-.306-.755-.749-.755h-8.501c-.445 0-.75.367-.75.755 0 .157.05.316.159.457 1.203 1.554 3.252 4.199 4.258 5.498.142.184.36.29.592.29.23 0 .449-.107.591-.291 1.002-1.299 3.044-3.945 4.243-5.498z"/>
+                        </svg>
+                    </div>
+                    <p>
+                        You can pay right here! Use your credit or debit card to finish the purchase of your transportation between the Cancun Airport and the Hilton Tulum Riviera Maya resort.
+                    </p>
+                </article>
+
+                <article class="question">
+                    <div class="title">
+                        <h3>
+                            WHAT DO I NEED TO DO IF MY FLIGHT IS DELAYED OR CANCELLED?
+                        </h3>
+                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24">
+                            <path d="m16.843 10.211c.108-.141.157-.3.157-.456 0-.389-.306-.755-.749-.755h-8.501c-.445 0-.75.367-.75.755 0 .157.05.316.159.457 1.203 1.554 3.252 4.199 4.258 5.498.142.184.36.29.592.29.23 0 .449-.107.591-.291 1.002-1.299 3.044-3.945 4.243-5.498z"/>
+                        </svg>
+                    </div>
+                    <p>
+                        If your flight is delayed, no action is needed on your part as we will monitor each flight and schedule your transportation based on the real time arrival of your flight.
+                    </p>
+                    <p>
+                        If your flight is cancelled, please notify us immediately via WhatsApp to the following number: +52 9982931099 and share your new flight information so that we can reschedule your transportation accordingly without any penalties. Please note that no shows or last minute cancellations are not refundable.
+                    </p>
+                </article>
+
+            </section>
+
+        </section>
+        
+    </main>
+
+    <footer id="footer" class="jessica-maxwell">
+        <div class="content max-width">
+            <div class="wrapper-btn">
+                <a class="btn footer white" href="#header">
+                    <svg>
+                        <use xlink:href="#svg-arrow-footer"></use>
+                    </svg>
+                    TOP
+                </a>
+            </div>
+    
+            <section class="widgets regular-width">
+                <article class="widget">
+                    <h2>MEXICAN CARIBBEAN</h2>
+                    <p>
+                        At Cancun Concierge we plan and carry out airport transportation services, water activities, tours, golf, restaurant reservations and basically any need you may have during your stay in Cancun and the Riviera Maya.
+                    </p>
+                </article>
+                <article class="widget">
+                    <h2>Contact</h2>
+                    <address class="socials">
+                        <a href="tel:+529982391978" target="_blank" >
+                            <svg>
+                                <use xlink:href="#svg-phone"></use>
+                            </svg>
+                            +52 (998) 239 1978
+                        </a>
+                        <a href="mailto:info@cancunconciergedmc.com" target="_blank" >
+                            <svg>
+                                <use xlink:href="#svg-email"></use>
+                            </svg>
+                            info@cancunconciergedmc.com
+                        </a>
+                        <p>
+                            <svg>
+                                <use xlink:href="#svg-location"></use>
+                            </svg>
+                            Cancún Quintana Roo, México.
+                        </p>
+                    </address>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/cancunconciergemx" target="_blank" class="social">
+                            <svg>
+                                <use xlink:href="#svg-facebook"></use>
+                            </svg>
+                            Facebook
+                        </a>
+                        <a href="https://www.instagram.com/cancunconcierge/" target="_blank" class="social">
+                            <svg>
+                                <use xlink:href="#svg-instagram"></use>
+                            </svg>
+                            Instagram
+                        </a>
+                    </div>
+                </article>
+            </section>
+            
+            <small class="copyright">
+                2022 - All Rights Reserved Cancun Concierge | Powered by <a href="https://api.whatsapp.com/send?phone=5214493402622">Dari Developer</a>
+            </small>
+        </div>
+    </footer>
+   
+    <script src="../code/header.js"></script>
+    <script src="../code/gallery.js"></script>
+    <script src="../code/faqs.js"></script>
+    <script src="../code/jessica-maxwell-airport-transfers.js"></script>
+</body>
+</html>
