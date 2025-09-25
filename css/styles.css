@@ -2895,11 +2895,11 @@ main.service-master-restore .activities .buy-section .details-card .btn:hover {
 }
 header.jessica-maxwell, #footer.jessica-maxwell {
   background-color: #305941;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Kinfolk Thin", sans-serif;
   color: #50493f;
 }
 header.jessica-maxwell a, #footer.jessica-maxwell a {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Kinfolk Thin", sans-serif;
 }
 header.jessica-maxwell .content nav ul li a, #footer.jessica-maxwell .content nav ul li a {
   color: white;
@@ -2938,7 +2938,7 @@ header.jessica-maxwell .btn.menu svg, #footer.jessica-maxwell .btn.menu svg {
 
 main.jessica-maxwell {
   color: #50493f;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Kinfolk Thin", sans-serif;
 }
 main.jessica-maxwell label {
   padding: 10px 0;
@@ -2974,9 +2974,18 @@ main.jessica-maxwell p, main.jessica-maxwell a, main.jessica-maxwell span, main.
   font-family: "Kinfolk", sans-serif;
   color: #50493f;
 }
-main.jessica-maxwell .transportation .titles h1, main.jessica-maxwell .transportation .titles p {
+main.jessica-maxwell .transportation .titles {
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+main.jessica-maxwell .transportation .titles p, main.jessica-maxwell .transportation .titles h1 {
   background-color: #305941;
   color: #50493f;
+  font-size: 30px;
+  padding: 30px 60px;
+  width: 100%;
+  display: inline-block;
+  width: calc(100% - 120px);
 }
 main.jessica-maxwell h2 {
   text-align: center;
@@ -3165,6 +3174,22 @@ main.jessica-maxwell .faqs .questions-wrapper .question .title {
 }
 main.jessica-maxwell .faqs .questions-wrapper .question .title h3 {
   color: white !important;
+}
+@media screen and (max-width: 1000px) {
+  main.jessica-maxwell .transportation .content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  main.jessica-maxwell .transportation .content .titles {
+    position: initial;
+    margin-top: 0;
+    height: auto;
+  }
+  main.jessica-maxwell .transportation .content .titles h1, main.jessica-maxwell .transportation .content .titles p {
+    margin-top: 0;
+  }
 }
 @media screen and (max-width: 900px) {
   main.jessica-maxwell .cards.transport {
