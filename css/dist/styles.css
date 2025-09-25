@@ -1,0 +1,3204 @@
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: "Urbanist", sans-serif;
+}
+
+.wrapper-img {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper-img img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  font-size: 18px;
+}
+p.small {
+  font-size: 16px;
+}
+
+.hide {
+  display: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.max-width {
+  width: calc(100% - 100px);
+  margin: 0 auto;
+}
+@media screen and (max-width: 1150px) {
+  .max-width {
+    width: 95%;
+  }
+}
+
+.regular-width {
+  width: 95%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.full-width, .paralax {
+  width: 100%;
+}
+
+.paralax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: "Maven Pro", sans-serif;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.loading-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4F6A9E;
+  z-index: 3;
+}
+.loading-modal img {
+  width: 100px;
+  height: 100px;
+}
+
+header {
+  background-color: #4F6A9E;
+}
+header .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .content .logo {
+  height: auto;
+  width: auto;
+  margin: 20px 0;
+}
+header .content .logo img {
+  width: 160px;
+  height: auto;
+}
+header .content .btn.menu {
+  display: none;
+}
+header .content nav {
+  margin: 0;
+  padding: 0;
+}
+header .content nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+header .content nav ul li {
+  list-style: none;
+}
+header .content nav ul li a {
+  padding: 15px;
+  font-size: 12px;
+  color: #ffffff;
+  display: inline-block;
+  text-align: center;
+}
+header .content nav ul li a:hover {
+  color: #C8B568;
+}
+header .content nav ul li a.active {
+  font-weight: bold;
+  cursor: default;
+}
+header .content nav ul li a.active:hover {
+  color: #ffffff;
+}
+header .content nav ul li a.language {
+  opacity: 0.4;
+}
+@media screen and (max-width: 970px) {
+  header:not(.menu-of-services) .content {
+    flex-direction: column;
+  }
+  header:not(.menu-of-services) .content .logo {
+    margin-bottom: 10px;
+  }
+  header:not(.menu-of-services) .content nav {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 790px) {
+  header:not(.menu-of-services) .content .btn.menu {
+    display: block;
+  }
+  header:not(.menu-of-services) .content nav {
+    transition-duration: 0.5s;
+    height: 385px;
+    overflow: hidden;
+    margin: 0;
+  }
+  header:not(.menu-of-services) .content nav.collapsed {
+    height: 0;
+  }
+  header:not(.menu-of-services) .content nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  header:not(.menu-of-services) .content nav ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+header.menu-of-services nav > ul > li {
+  position: relative;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header.menu-of-services nav > ul > li .submenu {
+  display: none;
+  width: 200px;
+}
+header.menu-of-services nav > ul > li:hover .submenu {
+  position: absolute;
+  top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #4F6A9E;
+}
+header.menu-of-services nav > ul > li .submenu:hover {
+  display: flex;
+}
+@media screen and (max-width: 900px) {
+  header.menu-of-services .content {
+    flex-direction: column;
+  }
+  header.menu-of-services .content .logo {
+    margin-bottom: 10px;
+  }
+  header.menu-of-services .content nav {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  header.menu-of-services .content .btn.menu {
+    display: block;
+  }
+  header.menu-of-services .content nav {
+    transition-duration: 0.5s;
+    height: 400px;
+    overflow: hidden;
+    margin: 0;
+  }
+  header.menu-of-services .content nav.collapsed {
+    height: 0;
+  }
+  header.menu-of-services .content nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  header.menu-of-services .content nav ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  header.menu-of-services a br {
+    display: none;
+  }
+  header.menu-of-services .content nav ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  header.menu-of-services .content nav ul li {
+    height: auto;
+  }
+  header.menu-of-services .content nav ul li .submenu {
+    display: none !important;
+  }
+}
+
+.hero {
+  position: relative;
+}
+.hero h2 {
+  text-align: center;
+}
+.hero .paralax {
+  background-image: url("../imgs/hero-1.png");
+}
+.hero .text-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  top: 150px;
+}
+.hero .text-wrapper .paralax-text {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 5px 20px;
+}
+.hero h2 {
+  margin-top: 100px;
+}
+.hero .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.hero .info img {
+  width: 55%;
+}
+.hero .info .text {
+  width: 40%;
+}
+@media screen and (max-width: 1100px) {
+  .hero .info {
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+  .hero .info img {
+    display: none;
+  }
+  .hero .info .text {
+    width: 100%;
+    order: -1;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .hero .text-wrapper .paralax-text {
+    text-align: center;
+  }
+}
+
+#footer {
+  width: 100%;
+  background-color: #4F6A9E;
+  color: white;
+  font-family: "Maven Pro", sans-serif;
+}
+#footer a {
+  color: #ffffff;
+}
+#footer.menu-of-services .wrapper-btn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  justify-content: flex-end;
+}
+#footer.menu-of-services .wrapper-btn .btn.footer.white {
+  margin-top: -65px;
+  margin-right: 20px;
+  box-shadow: 0px 0px 10px rgba(79, 106, 158, 0.6);
+}
+#footer.menu-of-services .widgets {
+  padding-top: 40px;
+}
+#footer .wrapper-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#footer .wrapper-btn .btn.footer {
+  margin-top: -25px;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  color: #1a1a1a;
+}
+#footer .widgets {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+#footer .widgets .widget:nth-child(1) {
+  width: 400px;
+}
+#footer .widgets .widget:nth-child(2) {
+  width: 205px;
+}
+#footer .widgets .widget h2 {
+  font-size: 18px;
+  color: #C8B568;
+}
+#footer .widgets .widget a, #footer .widgets .widget p {
+  font-style: normal;
+  line-height: 20px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+#footer .widgets .widget a svg, #footer .widgets .widget p svg {
+  margin-right: 20px;
+  width: 15px;
+  height: 20px;
+  fill: #ffffff;
+}
+#footer .widgets .widget a:hover {
+  color: #C8B568;
+}
+#footer .copyright {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  display: block;
+  text-align: center;
+  font-size: 10px;
+}
+@media screen and (max-width: 750px) {
+  #footer .widgets {
+    flex-direction: column;
+  }
+  #footer .widgets .widget:nth-child(1), #footer .widgets .widget:nth-child(2) {
+    width: 400px;
+  }
+  #footer .widgets .widget:nth-child(2) {
+    order: -1;
+  }
+}
+@media screen and (max-width: 450px) {
+  #footer .widgets .widget:nth-child(1), #footer .widgets .widget:nth-child(2) {
+    width: 95%;
+  }
+}
+
+.about .paralax {
+  margin-top: 100px;
+  height: 400px;
+}
+.about > .paralax {
+  background-image: url("../imgs/about-1.png");
+}
+.about > .paralax .wrapper-text h2 {
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 5px 20px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.about .details .imgs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.about .details .imgs img {
+  width: 31%;
+  height: auto;
+}
+.about .details p {
+  font-size: 15px;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+.about .omar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+.about .omar .paralax {
+  background-image: url("../imgs/about-2.png");
+}
+.about .omar .paralax h2 {
+  margin-top: 100px;
+}
+.about .omar .paralax h2 span {
+  background-color: #ffffff;
+  display: inline-block;
+}
+.about .omar .paralax h2 span:last-child {
+  font-size: 20px;
+}
+.about .omar .details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.about .omar .details img {
+  width: 200px;
+  height: auto;
+  margin-right: 50px;
+}
+@media screen and (max-width: 600px) {
+  .about .omar .details {
+    flex-direction: column;
+  }
+  .about .omar .details img {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .about .details .imgs {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about .details .imgs img {
+    width: 60%;
+    margin-bottom: 50px;
+  }
+  .about .details .imgs img:last-child {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .about .details .imgs img {
+    width: 90%;
+  }
+}
+
+.btn {
+  cursor: pointer;
+}
+.btn.menu {
+  margin: 0;
+  padding: 10px;
+  background: none;
+  border: none;
+  transition-duration: 0.5s;
+}
+.btn.menu svg {
+  width: 30px;
+  height: 30px;
+  fill: #C8B568;
+}
+.btn.menu.active {
+  transform: rotateZ(180deg);
+}
+.btn.white {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  transition-duration: 0.5s;
+  box-shadow: 0px 0px 10px rgba(79, 106, 158, 0.2);
+  text-align: center;
+  color: #4F6A9E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.btn.white:hover {
+  transform: scale(1.1);
+}
+.btn.slide {
+  width: 40px;
+  height: 40px;
+}
+.btn.slide svg {
+  width: 50%;
+  height: 50%;
+}
+.btn.footer {
+  width: 50px;
+  height: 50px;
+}
+.btn.footer svg {
+  width: 15px;
+  height: 15px;
+}
+.btn.cta {
+  background: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  text-transform: upper;
+  display: inline-block;
+  background: #1a1a1a;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 30px;
+  transition-duration: 0.5s;
+  margin-bottom: 0;
+  border: 2px solid black;
+}
+.btn.cta.disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.btn.cta:hover:not(.disabled) {
+  border-radius: 30px;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+.btn.cta:active {
+  background: rgba(26, 26, 26, 0.3);
+}
+.btn.cta.buy {
+  border: 2px solid #4F6A9E;
+  background: #4F6A9E;
+  color: #C8B568;
+}
+.btn.cta.buy:hover:not(.disabled) {
+  background: #ffffff;
+  color: #4F6A9E;
+}
+.btn.cta.buy:active {
+  background: rgba(79, 106, 158, 0.3);
+}
+
+.services h1 {
+  margin-top: 50px;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+.services .services-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.services .services-cards .service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.services .services-cards .service:hover .wrapper-img {
+  opacity: 0.05;
+}
+.services .services-cards .service .wrapper-img {
+  border-radius: 20px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 230px;
+  opacity: 1;
+  transition-duration: 0.5s;
+  top: 0;
+}
+.services .services-cards .service .wrapper-img img {
+  width: auto;
+  height: 110%;
+}
+.services .services-cards .service h2 {
+  order: 3;
+  height: 75px;
+  text-align: center;
+  margin-top: 15px;
+}
+.services .services-cards .service .wrapper-text {
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4F6A9E;
+  border-radius: 20px;
+}
+.services .services-cards .service .wrapper-text p {
+  font-size: 15px;
+  width: 85%;
+  color: #ffffff;
+  text-align: center;
+}
+@media screen and (max-width: 850px) {
+  .services .services-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 650px) {
+  .services .services-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .services .services-cards .service .wrapper-img {
+    width: 100%;
+  }
+  .services .services-cards .service .wrapper-img img {
+    width: 110%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 420px) {
+  .services .services-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .services .services-cards .service .wrapper-img {
+    width: 100%;
+    height: 230px;
+  }
+  .services .services-cards .service .wrapper-img img {
+    width: auto;
+    height: 110%;
+  }
+}
+
+.transportation {
+  position: relative;
+}
+.transportation .titles {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: calc(100vw / 1.8);
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.transportation .titles h1, .transportation .titles p {
+  background-color: #ffffff;
+  padding: 15px 40px;
+  display: inline-block;
+}
+.transportation .titles h1 {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+.transportation .titles h1.small {
+  font-size: 40px;
+}
+.transportation .titles p {
+  font-size: 40px;
+  margin-top: 0;
+}
+.transportation .titles p.small {
+  font-size: 20px;
+}
+.transportation h2 {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.transportation .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-bottom: 100px;
+  align-items: flex-start;
+}
+.transportation .cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.transportation.transport .gallery {
+  width: 100%;
+  position: relative;
+}
+.transportation.transport .gallery .imgs-wrapper .imgs {
+  width: 300%;
+}
+.transportation.transport .gallery .imgs-wrapper .imgs img {
+  width: 33.33%;
+}
+.transportation.transport .gallery button.next {
+  right: 0;
+  margin-right: 15px;
+}
+.transportation.transport .gallery button.back {
+  left: 0;
+  margin-left: 15px;
+}
+.transportation.transport .cards .card p {
+  line-height: 25px;
+  margin-top: 0;
+}
+.transportation.transport .cards .card p.people:before {
+  content: "a";
+  width: 30px;
+  height: 25px;
+  color: rgba(0, 0, 0, 0);
+  display: inline-block;
+  background-image: url("../imgs/svg-people.svg");
+  background-fill: cover;
+  background-repeat: no-repeat;
+}
+.transportation.transport .cards .card p.price {
+  color: #C8B568;
+  font-size: 16px;
+}
+.transportation.transport .cards .card img {
+  width: 100%;
+  height: auto;
+}
+.transportation.details .cards .card svg {
+  width: 80px;
+  height: 80px;
+}
+@media screen and (max-width: 900px) {
+  .transportation .titles h1 {
+    font-size: 30px;
+  }
+  .transportation .titles h1.small {
+    font-size: 30px;
+  }
+  .transportation .titles p {
+    font-size: 20px;
+  }
+  .transportation .titles p.small {
+    font-size: 15px;
+  }
+  .transportation .titles h1, .transportation .titles p {
+    padding: 10px 20px;
+  }
+  .transportation .titles h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .transportation .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .transportation .titles h1 {
+    font-size: 20px;
+  }
+  .transportation .titles p {
+    font-size: 10px;
+  }
+  .transportation .titles h1, .transportation .titles p {
+    padding: 5px 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .transportation .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .transportation .cards .card {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .transportation .titles {
+    position: initial;
+    height: auto;
+  }
+}
+
+.social h1 {
+  font-size: 35px;
+}
+.social p span {
+  font-weight: bold;
+}
+.social .paralax.top {
+  background-image: url("../imgs/social-1.jpg");
+}
+.social .paralax.bottom {
+  background-image: url("../imgs/social-2.png");
+}
+.social .text.top {
+  margin-bottom: 50px;
+}
+.social .text.bottom {
+  margin: 50px auto;
+}
+.social .flex {
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.social .flex .info, .social .flex .gallery {
+  width: 48%;
+}
+.social .flex .gallery {
+  margin-top: 10px;
+}
+.social .flex .gallery button.next {
+  right: 0px;
+}
+.social .flex .gallery button.back {
+  left: 0px;
+}
+@media screen and (max-width: 800px) {
+  .social .flex {
+    flex-direction: column;
+  }
+  .social .flex .info {
+    width: 100%;
+  }
+  .social .flex .gallery {
+    width: 90%;
+    max-width: 491px;
+  }
+}
+
+.wrapper-testimonials {
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.wrapper-testimonials h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.wrapper-testimonials .testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-bottom: 25px;
+}
+.wrapper-testimonials .testimonials article {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.wrapper-testimonials .testimonials article img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 40%;
+  height: auto;
+}
+.wrapper-testimonials .testimonials article .cites {
+  margin-top: 20px;
+}
+.wrapper-testimonials .testimonials article .cites cite {
+  display: block;
+  text-align: center;
+}
+.wrapper-testimonials .testimonials article .cites cite:nth-child(1) {
+  font-weight: bold;
+}
+@media screen and (max-width: 850px) {
+  .wrapper-testimonials .testimonials {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .wrapper-testimonials .testimonials article {
+    margin-bottom: 50px;
+  }
+  .wrapper-testimonials .testimonials article:last-child {
+    margin-bottom: 0;
+  }
+  .wrapper-testimonials .testimonials article img {
+    max-width: 150px;
+  }
+}
+
+.why-us h2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.why-us .cards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.why-us .cards .card {
+  width: 30%;
+}
+.why-us .cards .card img {
+  width: 100%;
+  height: auto;
+}
+.why-us .cards .card p {
+  font-weight: bold;
+  font-size: 16px;
+}
+.why-us h3 {
+  font-weight: bold;
+  text-align: center;
+  width: 80%;
+  margin: 50px auto;
+}
+@media screen and (max-width: 750px) {
+  .why-us .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .why-us .cards .card {
+    width: 60%;
+    margin-bottom: 50px;
+  }
+  .why-us .cards .card:last-child {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .why-us .cards .card {
+    width: 90%;
+  }
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.gallery .imgs-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.gallery .imgs-wrapper .imgs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition-duration: 0.5s;
+}
+.gallery .imgs-wrapper .imgs img {
+  width: 100%;
+  height: auto;
+}
+.gallery button {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  margin-top: -15px;
+}
+.gallery button.next svg {
+  transform: rotateZ(90deg);
+}
+.gallery button.back svg {
+  transform: rotateZ(-90deg);
+}
+
+section.menu-of-services, .rivera-getaway, .the-honey-pot {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+section.menu-of-services img, .rivera-getaway img, .the-honey-pot img {
+  transition-duration: 0.5s;
+}
+section.menu-of-services img:hover, .rivera-getaway img:hover, .the-honey-pot img:hover {
+  transform: translateX(-5px) translateY(-5px);
+}
+section.menu-of-services h1, .rivera-getaway h1, .the-honey-pot h1 {
+  font-weight: bold;
+  text-align: center;
+  color: #4F6A9E;
+  font-size: 35px;
+}
+section.menu-of-services h2, .rivera-getaway h2, .the-honey-pot h2 {
+  margin-top: 100px;
+}
+section.menu-of-services article.service, .rivera-getaway article.service, .the-honey-pot article.service {
+  margin-top: 80px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+section.menu-of-services article.service#xel-ha .content .bottom-details .details-card:nth-child(2), .rivera-getaway article.service#xel-ha .content .bottom-details .details-card:nth-child(2), .the-honey-pot article.service#xel-ha .content .bottom-details .details-card:nth-child(2) {
+  grid-row: 1/3;
+  grid-column: 2/2;
+}
+section.menu-of-services article.service#xplor .content .bottom-details .details-card:nth-child(2), .rivera-getaway article.service#xplor .content .bottom-details .details-card:nth-child(2), .the-honey-pot article.service#xplor .content .bottom-details .details-card:nth-child(2) {
+  grid-row: 1/3;
+  grid-column: 2/2;
+}
+section.menu-of-services article.service .content, .rivera-getaway article.service .content, .the-honey-pot article.service .content {
+  width: 65%;
+}
+section.menu-of-services article.service .content .gallery, .rivera-getaway article.service .content .gallery, .the-honey-pot article.service .content .gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 50px 0;
+  overflow: visible;
+}
+section.menu-of-services article.service .content .gallery img, .rivera-getaway article.service .content .gallery img, .the-honey-pot article.service .content .gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+section.menu-of-services article.service .content .bottom-details, .rivera-getaway article.service .content .bottom-details, .the-honey-pot article.service .content .bottom-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+section.menu-of-services article.service .bar, .rivera-getaway article.service .bar, .the-honey-pot article.service .bar {
+  width: calc(30% - 40px);
+  background-color: #4F6A9E;
+  color: #ffffff;
+  padding: 40px 20px;
+  overflow: visible;
+}
+section.menu-of-services article.service .bar .text, .rivera-getaway article.service .bar .text, .the-honey-pot article.service .bar .text {
+  margin-bottom: 50px;
+}
+section.menu-of-services article.service .bar h3, .rivera-getaway article.service .bar h3, .the-honey-pot article.service .bar h3 {
+  color: #C8B568;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+section.menu-of-services article.service .bar p, .rivera-getaway article.service .bar p, .the-honey-pot article.service .bar p {
+  font-size: 14px;
+}
+section.menu-of-services article.service .bar img, .rivera-getaway article.service .bar img, .the-honey-pot article.service .bar img {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway article.service:nth-child(odd) .bar, .the-honey-pot article.service:nth-child(odd) .bar {
+  order: -1;
+}
+@media screen and (max-width: 1050px) {
+  section.menu-of-services article.service, .rivera-getaway article.service, .the-honey-pot article.service {
+    flex-direction: column;
+  }
+  section.menu-of-services article.service h2, .rivera-getaway article.service h2, .the-honey-pot article.service h2 {
+    text-align: center;
+  }
+  section.menu-of-services article.service .content, .rivera-getaway article.service .content, .the-honey-pot article.service .content {
+    width: 100%;
+  }
+  section.menu-of-services article.service .bar, .rivera-getaway article.service .bar, .the-honey-pot article.service .bar {
+    width: calc(100% - 40px);
+    margin-top: 50px;
+    padding: 0 20px;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  section.menu-of-services article.service .bar .text, .rivera-getaway article.service .bar .text, .the-honey-pot article.service .bar .text {
+    width: calc(100% - 350px);
+  }
+  section.menu-of-services article.service .bar .img, .rivera-getaway article.service .bar .img, .the-honey-pot article.service .bar .img {
+    width: 320px;
+  }
+  section.menu-of-services article.service .bar .img img, .rivera-getaway article.service .bar .img img, .the-honey-pot article.service .bar .img img {
+    margin: 0;
+  }
+  section.menu-of-services article.service:nth-child(odd) .bar, .rivera-getaway article.service:nth-child(odd) .bar, .the-honey-pot article.service:nth-child(odd) .bar {
+    order: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  section.menu-of-services article.service .content .gallery, .rivera-getaway article.service .content .gallery, .the-honey-pot article.service .content .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.menu-of-services article.service .bar, .rivera-getaway article.service .bar, .the-honey-pot article.service .bar {
+    position: relative;
+    justify-content: flex-start;
+  }
+  section.menu-of-services article.service .bar .text, .rivera-getaway article.service .bar .text, .the-honey-pot article.service .bar .text {
+    width: calc(100% - 50px);
+  }
+  section.menu-of-services article.service .bar .img, .rivera-getaway article.service .bar .img, .the-honey-pot article.service .bar .img {
+    top: 0;
+    right: 20px;
+    position: absolute;
+    opacity: 0.2;
+  }
+}
+@media screen and (max-width: 500px) {
+  section.menu-of-services article.service .content .gallery, .rivera-getaway article.service .content .gallery, .the-honey-pot article.service .content .gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section.menu-of-services article.service .content .gallery img:nth-child(4), section.menu-of-services article.service .content .gallery img:nth-child(5), section.menu-of-services article.service .content .gallery img:nth-child(6), .rivera-getaway article.service .content .gallery img:nth-child(4), .rivera-getaway article.service .content .gallery img:nth-child(5), .rivera-getaway article.service .content .gallery img:nth-child(6), .the-honey-pot article.service .content .gallery img:nth-child(4), .the-honey-pot article.service .content .gallery img:nth-child(5), .the-honey-pot article.service .content .gallery img:nth-child(6) {
+    display: none;
+  }
+  section.menu-of-services article.service .content .bottom-details, .rivera-getaway article.service .content .bottom-details, .the-honey-pot article.service .content .bottom-details {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 30px;
+  }
+  section.menu-of-services article.service .bar, .rivera-getaway article.service .bar, .the-honey-pot article.service .bar {
+    padding: 20px;
+  }
+  section.menu-of-services article.service .bar .text, .rivera-getaway article.service .bar .text, .the-honey-pot article.service .bar .text {
+    width: 100%;
+  }
+  section.menu-of-services article.service .bar .img, .rivera-getaway article.service .bar .img, .the-honey-pot article.service .bar .img {
+    display: none;
+  }
+}
+
+.buy-cart {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  max-width: 90%;
+}
+.buy-cart.active .content {
+  opacity: 1;
+  max-height: 420px;
+  height: auto;
+  padding: 20px;
+}
+.buy-cart .icon {
+  cursor: pointer;
+}
+.buy-cart .icon svg {
+  width: 20px;
+  height: 20px;
+}
+.buy-cart .counter {
+  color: #4F6A9E;
+  position: absolute;
+  top: 5px;
+  left: 35px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.buy-cart .content {
+  transition-duration: 0.5s;
+  opacity: 0;
+  height: 0;
+  background-color: #4F6A9E;
+  color: #1a1a1a;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 2px 2px 5px -2px black;
+  padding: 0;
+}
+.buy-cart .content .services .service {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #ffffff;
+}
+.buy-cart .content .services .service .close {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.buy-cart .content .services .service .close svg {
+  fill: #ffffff;
+}
+.buy-cart .content .services .service .close:hover svg {
+  opacity: 0.5;
+}
+.buy-cart .content .btn.cta.buy-all {
+  margin-top: 20px;
+}
+.buy-cart .content .btn.cta.buy-all:hover {
+  background-color: #4F6A9E;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 2;
+}
+header.fixed .content .logo img {
+  width: 100px;
+}
+header.fixed .content nav > ul > li {
+  height: 60px;
+}
+
+.rivera-getaway .big-logo {
+  width: 450px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+  margin-top: 150px;
+}
+@media screen and (max-width: 900px) {
+  .rivera-getaway .big-logo {
+    margin-top: 200px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .rivera-getaway .big-logo {
+    margin-top: 150px;
+    width: 80%;
+  }
+}
+.rivera-getaway h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+.rivera-getaway .activities h4 {
+  font-weight: bold;
+}
+.rivera-getaway .buy-section {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.rivera-getaway .buy-section h4 {
+  font-weight: bold;
+}
+.rivera-getaway .buy-section span {
+  margin-left: 20px;
+}
+.rivera-getaway .buy-section form label {
+  display: block;
+  margin-bottom: 10px;
+}
+.rivera-getaway .buy-section form label .note {
+  font-size: 12px;
+  font-weight: bold;
+}
+.rivera-getaway .buy-section form button {
+  margin-top: 20px;
+}
+.rivera-getaway .buy-section form button:last-child {
+  margin-left: 20px;
+}
+@media screen and (max-width: 475px) {
+  .rivera-getaway .buy-section form button, .rivera-getaway .buy-section form button:last-child {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+
+.frini-chen-airport-transfers h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.frini-chen-airport-transfers h2 + p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.frini-chen-airport-transfers .logo-frini-chen {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+.frini-chen-airport-transfers .cards.transport {
+  gap: 25px;
+  margin-bottom: 20px;
+}
+.frini-chen-airport-transfers .cards.transport .card {
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 20px;
+  padding: 15px;
+  flex-direction: row;
+}
+.frini-chen-airport-transfers .cards.transport .card .text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  width: calc(100% - 44px);
+}
+.frini-chen-airport-transfers .cards.transport .card .text h3, .frini-chen-airport-transfers .cards.transport .card .text p.price {
+  text-align: left;
+  width: 100%;
+}
+.frini-chen-airport-transfers .cards.transport .card .text h3 {
+  margin-bottom: 0;
+}
+.frini-chen-airport-transfers .cards.transport .card .text p {
+  text-align: left;
+}
+.frini-chen-airport-transfers .cards.transport .card .text p span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.frini-chen-airport-transfers .cards.transport .card .text p.price {
+  font-size: 1.3rem;
+}
+.frini-chen-airport-transfers .cards.transport .card .text p.price span {
+  display: block;
+}
+.frini-chen-airport-transfers .cards.transport .card .text p.regular-price {
+  font-size: 1rem;
+  margin: 10px 0;
+  opacity: 0.4;
+}
+.frini-chen-airport-transfers .cards.transport .card .text p.regular-price span {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+.frini-chen-airport-transfers .cards.transport .card .checkbox {
+  border: 2px solid rgba(79, 106, 158, 0.8);
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frini-chen-airport-transfers .cards.transport .card .checkbox .inside {
+  width: 30px;
+  height: 12px;
+}
+.frini-chen-airport-transfers .cards.transport .card:hover .checkbox .inside {
+  background-color: rgba(79, 106, 158, 0.6);
+}
+.frini-chen-airport-transfers .cards.transport .card.active .checkbox .inside {
+  background-color: rgba(79, 106, 158, 0.8);
+}
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets {
+  display: grid;
+  gap: 25px;
+  margin: 0 auto;
+}
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets .btn.cta {
+  margin-top: 15px;
+}
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label {
+  padding: 10px 0;
+  width: 100%;
+}
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label input, .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label select {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  border: 1px solid #4F6A9E;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:disabled, .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label input .disabled, .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:disabled, .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label select .disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:focus:not(:disabled), .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:hover:not(:disabled), .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:focus:not(:disabled), .frini-chen-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:hover:not(:disabled) {
+  outline: none;
+  box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+.frini-chen-airport-transfers .buy-form .btn.cta {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+}
+@media screen and (max-width: 900px) {
+  .frini-chen-airport-transfers .cards.transport {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  .frini-chen-airport-transfers .cards.transport .card {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .frini-chen-airport-transfers .cards.transport .card br {
+    display: none;
+  }
+  .frini-chen-airport-transfers .buy-form .wrapper-fieldsets.two-columns, .frini-chen-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .frini-chen-airport-transfers .cards.transport {
+    width: 70%;
+  }
+  .frini-chen-airport-transfers .buy-form .wrapper-fieldsets {
+    width: 90%;
+  }
+}
+
+.sphere-rocket h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.sphere-rocket h2 + p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.sphere-rocket .logo-frini-chen {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+.sphere-rocket .cards.transport {
+  gap: 25px;
+  margin-bottom: 20px;
+}
+.sphere-rocket .cards.transport .card {
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 20px;
+  padding: 15px;
+  flex-direction: row;
+}
+.sphere-rocket .cards.transport .card .text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  width: calc(100% - 44px);
+}
+.sphere-rocket .cards.transport .card .text h3, .sphere-rocket .cards.transport .card .text p.price {
+  text-align: left;
+  width: 100%;
+}
+.sphere-rocket .cards.transport .card .text h3 {
+  margin-bottom: 0;
+}
+.sphere-rocket .cards.transport .card .text p {
+  text-align: left;
+}
+.sphere-rocket .cards.transport .card .text p span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.sphere-rocket .cards.transport .card .text p.price {
+  font-size: 1.3rem;
+}
+.sphere-rocket .cards.transport .card .text p.price span {
+  display: block;
+}
+.sphere-rocket .cards.transport .card .text p.regular-price {
+  font-size: 1rem;
+  margin: 10px 0;
+  opacity: 0.4;
+}
+.sphere-rocket .cards.transport .card .text p.regular-price span {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+.sphere-rocket .cards.transport .card .checkbox {
+  border: 2px solid rgba(79, 106, 158, 0.8);
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sphere-rocket .cards.transport .card .checkbox .inside {
+  width: 30px;
+  height: 12px;
+}
+.sphere-rocket .cards.transport .card:hover .checkbox .inside {
+  background-color: rgba(79, 106, 158, 0.6);
+}
+.sphere-rocket .cards.transport .card.active .checkbox .inside {
+  background-color: rgba(79, 106, 158, 0.8);
+}
+.sphere-rocket .buy-form .wrapper-fieldsets {
+  display: grid;
+  gap: 25px;
+  margin: 0 auto;
+}
+.sphere-rocket .buy-form .wrapper-fieldsets.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+.sphere-rocket .buy-form .wrapper-fieldsets.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+.sphere-rocket .buy-form .wrapper-fieldsets .btn.cta {
+  margin-top: 15px;
+}
+.sphere-rocket .buy-form .wrapper-fieldsets fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.sphere-rocket .buy-form .wrapper-fieldsets fieldset p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.sphere-rocket .buy-form .wrapper-fieldsets fieldset label {
+  padding: 10px 0;
+  width: 100%;
+}
+.sphere-rocket .buy-form .wrapper-fieldsets fieldset label input, .sphere-rocket .buy-form .wrapper-fieldsets fieldset label select {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  border: 1px solid #4F6A9E;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+.sphere-rocket .buy-form .wrapper-fieldsets fieldset label input:disabled, .sphere-rocket .buy-form .wrapper-fieldsets fieldset label input .disabled, .sphere-rocket .buy-form .wrapper-fieldsets fieldset label select:disabled, .sphere-rocket .buy-form .wrapper-fieldsets fieldset label select .disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.sphere-rocket .buy-form .wrapper-fieldsets fieldset label input:focus:not(:disabled), .sphere-rocket .buy-form .wrapper-fieldsets fieldset label input:hover:not(:disabled), .sphere-rocket .buy-form .wrapper-fieldsets fieldset label select:focus:not(:disabled), .sphere-rocket .buy-form .wrapper-fieldsets fieldset label select:hover:not(:disabled) {
+  outline: none;
+  box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+.sphere-rocket .buy-form .btn.cta {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+}
+@media screen and (max-width: 900px) {
+  .sphere-rocket .cards.transport {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  .sphere-rocket .cards.transport .card {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .sphere-rocket .cards.transport .card br {
+    display: none;
+  }
+  .sphere-rocket .buy-form .wrapper-fieldsets.two-columns, .sphere-rocket .buy-form .wrapper-fieldsets.three-columns {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sphere-rocket .cards.transport {
+    width: 70%;
+  }
+  .sphere-rocket .buy-form .wrapper-fieldsets {
+    width: 90%;
+  }
+}
+
+header.ella-james, #footer.ella-james {
+  background-color: #bca078;
+  font-family: "Montserrat", sans-serif;
+}
+header.ella-james .content nav ul li a, #footer.ella-james .content nav ul li a {
+  color: #010101;
+}
+header.ella-james .content nav ul li a:hover, #footer.ella-james .content nav ul li a:hover {
+  color: white;
+}
+header.ella-james h2, #footer.ella-james h2 {
+  font-family: "Vast Shadow", serif;
+}
+
+#footer.ella-james .widgets .widget a, #footer.ella-james .widgets .widget p {
+  color: #010101;
+}
+#footer.ella-james .widgets .widget a svg, #footer.ella-james .widgets .widget p svg {
+  fill: #010101;
+}
+#footer.ella-james .widgets .widget a:hover {
+  color: white;
+}
+#footer.ella-james .widgets .widget h2 {
+  color: white;
+}
+
+.ella-james-airport-transfers {
+  color: #010101;
+  font-family: "Montserrat", sans-serif;
+}
+.ella-james-airport-transfers h1 {
+  font-family: "Vampiro One", system;
+  color: white;
+}
+.ella-james-airport-transfers .transportation .titles h1, .ella-james-airport-transfers .transportation .titles p {
+  background-color: #bca078;
+}
+.ella-james-airport-transfers h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.ella-james-airport-transfers h2 + p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.ella-james-airport-transfers .logo-event {
+  width: 500px;
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+.ella-james-airport-transfers .cards.transport {
+  gap: 25px;
+  margin-bottom: 20px;
+}
+.ella-james-airport-transfers .cards.transport .card {
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 20px;
+  padding: 15px;
+  flex-direction: row;
+}
+.ella-james-airport-transfers .cards.transport .card .text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  width: calc(100% - 44px);
+}
+.ella-james-airport-transfers .cards.transport .card .text h3, .ella-james-airport-transfers .cards.transport .card .text p.price {
+  text-align: left;
+  width: 100%;
+}
+.ella-james-airport-transfers .cards.transport .card .text h3 {
+  margin-bottom: 0;
+}
+.ella-james-airport-transfers .cards.transport .card .text p {
+  text-align: left;
+}
+.ella-james-airport-transfers .cards.transport .card .text p span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.ella-james-airport-transfers .cards.transport .card .text p.price {
+  font-size: 1.3rem;
+  color: #bca078;
+}
+.ella-james-airport-transfers .cards.transport .card .text p.price span {
+  display: block;
+}
+.ella-james-airport-transfers .cards.transport .card .text p.regular-price {
+  font-size: 1rem;
+  margin: 10px 0;
+  opacity: 0.4;
+}
+.ella-james-airport-transfers .cards.transport .card .text p.regular-price span {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+.ella-james-airport-transfers .cards.transport .card .checkbox {
+  border: 2px solid rgba(188, 160, 120, 0.8);
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ella-james-airport-transfers .cards.transport .card .checkbox .inside {
+  width: 30px;
+  height: 12px;
+}
+.ella-james-airport-transfers .cards.transport .card:hover .checkbox .inside {
+  background-color: rgba(188, 160, 120, 0.6);
+}
+.ella-james-airport-transfers .cards.transport .card.active .checkbox .inside {
+  background-color: rgba(188, 160, 120, 0.8);
+}
+.ella-james-airport-transfers .info {
+  text-align: center;
+  font-weight: bold;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets {
+  display: grid;
+  gap: 25px;
+  margin: 0 auto;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets .btn.cta {
+  margin-top: 15px;
+  color: white;
+  background-color: #bca078;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label {
+  padding: 10px 0;
+  width: 100%;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label input, .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label select {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  border: 1px solid #4F6A9E;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:disabled, .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label input .disabled, .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:disabled, .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label select .disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:focus:not(:disabled), .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:hover:not(:disabled), .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:focus:not(:disabled), .ella-james-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:hover:not(:disabled) {
+  outline: none;
+  box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+.ella-james-airport-transfers .buy-form .btn.cta {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  color: white;
+  background-color: #bca078;
+  border: 2px solid #bca078;
+}
+.ella-james-airport-transfers .buy-form .btn.cta:hover {
+  color: #bca078;
+  background-color: white;
+}
+.ella-james-airport-transfers .buy-form .btn.cta[disabled] {
+  cursor: not-allowed;
+}
+@media screen and (max-width: 900px) {
+  .ella-james-airport-transfers .cards.transport {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  .ella-james-airport-transfers .cards.transport .card {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .ella-james-airport-transfers .cards.transport .card br {
+    display: none;
+  }
+  .ella-james-airport-transfers .buy-form .wrapper-fieldsets.two-columns, .ella-james-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .ella-james-airport-transfers .cards.transport {
+    width: 70%;
+  }
+  .ella-james-airport-transfers .buy-form .wrapper-fieldsets {
+    width: 90%;
+  }
+}
+
+@font-face {
+  font-family: "Kinfolk";
+  src: url("../fonts/Kinfolk-Bold.otf") format("opentype");
+}
+header.rohan-karisma, #footer.rohan-karisma {
+  background-color: #4a5e43;
+  font-family: "Libre Baskerville", sans-serif;
+}
+header.rohan-karisma a, #footer.rohan-karisma a {
+  font-family: "Libre Baskerville", sans-serif;
+}
+header.rohan-karisma .content nav ul li a, #footer.rohan-karisma .content nav ul li a {
+  color: white;
+}
+header.rohan-karisma .content nav ul li a:hover, #footer.rohan-karisma .content nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+header.rohan-karisma h2, #footer.rohan-karisma h2 {
+  font-family: "Kinfolk", serif;
+}
+
+#footer.rohan-karisma .widgets .widget:nth-child(2) {
+  width: 250px;
+}
+#footer.rohan-karisma .widgets .widget a:hover {
+  opacity: 0.6;
+  color: white;
+}
+#footer.rohan-karisma .widgets .widget h2 {
+  color: white;
+}
+
+.rohan-karisma-airport-transfers {
+  color: #202020;
+  font-family: "Libre Baskerville", sans-serif;
+}
+.rohan-karisma-airport-transfers h1, .rohan-karisma-airport-transfers h2, .rohan-karisma-airport-transfers h3, .rohan-karisma-airport-transfers h4, .rohan-karisma-airport-transfers h5, .rohan-karisma-airport-transfers h6 {
+  font-family: "Kinfolk", serif;
+}
+.rohan-karisma-airport-transfers p, .rohan-karisma-airport-transfers a, .rohan-karisma-airport-transfers span, .rohan-karisma-airport-transfers label, .rohan-karisma-airport-transfers input, .rohan-karisma-airport-transfers select, .rohan-karisma-airport-transfers button {
+  font-family: "Libre Baskerville", sans-serif;
+}
+.rohan-karisma-airport-transfers h1 {
+  color: white;
+}
+.rohan-karisma-airport-transfers .transportation .titles h1, .rohan-karisma-airport-transfers .transportation .titles p {
+  background-color: #4a5e43;
+  color: white;
+}
+.rohan-karisma-airport-transfers h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.rohan-karisma-airport-transfers h2 + p {
+  text-align: center;
+  margin-bottom: 50px;
+  border: 1px solid red !important;
+}
+.rohan-karisma-airport-transfers .logo-event {
+  width: 500px;
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+.rohan-karisma-airport-transfers .gallery .imgs {
+  width: 300% !important;
+}
+.rohan-karisma-airport-transfers .gallery .imgs img {
+  width: 33.33% !important;
+}
+.rohan-karisma-airport-transfers .cards.transport {
+  gap: 25px;
+  margin-bottom: 20px;
+}
+.rohan-karisma-airport-transfers .cards.transport .card {
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 20px;
+  padding: 15px;
+  flex-direction: row;
+}
+.rohan-karisma-airport-transfers .cards.transport .card .text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  width: calc(100% - 44px);
+}
+.rohan-karisma-airport-transfers .cards.transport .card .text h3, .rohan-karisma-airport-transfers .cards.transport .card .text p.price {
+  text-align: left;
+  width: 100%;
+}
+.rohan-karisma-airport-transfers .cards.transport .card .text h3 {
+  margin-bottom: 0;
+}
+.rohan-karisma-airport-transfers .cards.transport .card .text p {
+  text-align: left;
+}
+.rohan-karisma-airport-transfers .cards.transport .card .text p span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.rohan-karisma-airport-transfers .cards.transport .card .text p.price {
+  font-size: 1.3rem;
+  color: #4a5e43;
+}
+.rohan-karisma-airport-transfers .cards.transport .card .text p.price span {
+  display: block;
+}
+.rohan-karisma-airport-transfers .cards.transport .card .text p.regular-price {
+  font-size: 1rem;
+  margin: 10px 0;
+  opacity: 0.4;
+}
+.rohan-karisma-airport-transfers .cards.transport .card .text p.regular-price span {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+.rohan-karisma-airport-transfers .cards.transport .card .checkbox {
+  border: 2px solid rgba(74, 94, 67, 0.8);
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rohan-karisma-airport-transfers .cards.transport .card .checkbox .inside {
+  width: 30px;
+  height: 12px;
+}
+.rohan-karisma-airport-transfers .cards.transport .card:hover .checkbox .inside {
+  background-color: rgba(74, 94, 67, 0.6);
+}
+.rohan-karisma-airport-transfers .cards.transport .card.active .checkbox .inside {
+  background-color: rgba(74, 94, 67, 0.8);
+}
+.rohan-karisma-airport-transfers .info {
+  text-align: center;
+  font-weight: bold;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets {
+  display: grid;
+  gap: 25px;
+  margin: 0 auto;
+}
+.rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+.rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+.rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets .btn.cta {
+  margin-top: 15px;
+  color: white;
+  background-color: #283224;
+}
+.rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets fieldset p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets fieldset label {
+  padding: 10px 0;
+  width: 100%;
+}
+.rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets fieldset label input, .rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets fieldset label select {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  border: 1px solid #4F6A9E;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+.rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:disabled, .rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets fieldset label input .disabled, .rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:disabled, .rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets fieldset label select .disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:focus:not(:disabled), .rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:hover:not(:disabled), .rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:focus:not(:disabled), .rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:hover:not(:disabled) {
+  outline: none;
+  box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+.rohan-karisma-airport-transfers .buy-form .btn.cta {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  color: white;
+  background-color: #283224;
+  border: 2px solid #283224;
+}
+.rohan-karisma-airport-transfers .buy-form .btn.cta:hover {
+  color: #283224;
+  background-color: white;
+}
+.rohan-karisma-airport-transfers .buy-form .btn.cta[disabled] {
+  cursor: not-allowed;
+}
+.rohan-karisma-airport-transfers .buttons button.back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.rohan-karisma-airport-transfers .buttons button.back:hover {
+  opacity: 0.7;
+}
+.rohan-karisma-airport-transfers .buttons button.back svg {
+  width: 50px;
+  fill: #4a5e43;
+}
+@media screen and (max-width: 900px) {
+  .rohan-karisma-airport-transfers .cards.transport {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  .rohan-karisma-airport-transfers .cards.transport .card {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .rohan-karisma-airport-transfers .cards.transport .card br {
+    display: none;
+  }
+  .rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets.two-columns, .rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .rohan-karisma-airport-transfers .cards.transport {
+    width: 70%;
+  }
+  .rohan-karisma-airport-transfers .buy-form .wrapper-fieldsets {
+    width: 90%;
+  }
+}
+
+.faqs {
+  margin-bottom: 100px;
+}
+.faqs .questions-wrapper {
+  text-align: center;
+}
+.faqs .questions-wrapper .question {
+  margin-bottom: 30px;
+}
+.faqs .questions-wrapper .question .title {
+  border-radius: 5px;
+  padding: 20px 30px;
+  color: white;
+  background-color: #4a5e43;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.faqs .questions-wrapper .question .title:hover {
+  opacity: 0.8;
+}
+.faqs .questions-wrapper .question .title h3 {
+  width: calc(100% - 30px);
+}
+.faqs .questions-wrapper .question .title svg {
+  width: 30px;
+  fill: white;
+  transition-duration: 0.3s;
+}
+.faqs .questions-wrapper .question p, .faqs .questions-wrapper .question ul {
+  width: 90%;
+  margin: 20px auto;
+  display: none;
+  text-align: left;
+}
+.faqs .questions-wrapper .question.active .title svg {
+  transform: rotate(180deg);
+}
+.faqs .questions-wrapper .question.active p, .faqs .questions-wrapper .question.active ul {
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+  header.the-honey-pot-header nav:not(.collapsed) {
+    height: 320px;
+  }
+}
+
+main.the-honey-pot h1 {
+  font-size: 50px;
+  padding: 0;
+  padding-top: 50px;
+  margin-bottom: 10px;
+}
+main.the-honey-pot h1 + p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+main.the-honey-pot h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+main.the-honey-pot .activities h4 {
+  font-weight: bold;
+}
+main.the-honey-pot .buy-section {
+  width: 100%;
+  margin-bottom: 50px;
+}
+main.the-honey-pot .buy-section h4 {
+  font-weight: bold;
+}
+main.the-honey-pot .buy-section span {
+  margin-left: 20px;
+}
+main.the-honey-pot .buy-section form label {
+  display: block;
+  margin-bottom: 10px;
+}
+main.the-honey-pot .buy-section form label .note {
+  font-size: 12px;
+  font-weight: bold;
+}
+main.the-honey-pot .buy-section form button {
+  margin-top: 20px;
+}
+main.the-honey-pot .buy-section form button:last-child {
+  margin-left: 20px;
+}
+@media screen and (max-width: 475px) {
+  main.the-honey-pot .buy-section form button, main.the-honey-pot .buy-section form button:last-child {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+
+@font-face {
+  font-family: "Kinfolk";
+  src: url("../fonts/Kinfolk-Bold.otf") format("opentype");
+}
+header.serena-gabriel, #footer.serena-gabriel {
+  background-color: #efeeec;
+  font-family: "Libre Baskerville", sans-serif;
+  color: #50493f;
+}
+header.serena-gabriel a, #footer.serena-gabriel a {
+  font-family: "Libre Baskerville", sans-serif;
+  color: #50493f !important;
+}
+header.serena-gabriel .content nav ul li a, #footer.serena-gabriel .content nav ul li a {
+  color: white;
+}
+header.serena-gabriel .content nav ul li a:hover, #footer.serena-gabriel .content nav ul li a:hover {
+  color: rgba(80, 73, 63, 0.6);
+}
+header.serena-gabriel h2, #footer.serena-gabriel h2 {
+  font-family: "Kinfolk", serif;
+}
+header.serena-gabriel .btn.menu svg, #footer.serena-gabriel .btn.menu svg {
+  fill: #50493f;
+}
+
+#footer.serena-gabriel .widgets .widget:nth-child(2) {
+  width: 250px;
+}
+#footer.serena-gabriel .widgets .widget a:hover {
+  opacity: 0.6;
+  color: white;
+}
+#footer.serena-gabriel .widgets .widget h2 {
+  color: #50493f;
+}
+#footer.serena-gabriel .widgets .widget a svg, #footer.serena-gabriel .widgets .widget p svg {
+  fill: #50493f;
+}
+
+.serena-gabriel-airport-transfers {
+  color: #50493f;
+  font-family: "Libre Baskerville", sans-serif;
+}
+.serena-gabriel-airport-transfers h1, .serena-gabriel-airport-transfers h2, .serena-gabriel-airport-transfers h3, .serena-gabriel-airport-transfers h4, .serena-gabriel-airport-transfers h5, .serena-gabriel-airport-transfers h6 {
+  font-family: "Kinfolk", serif;
+  color: #50493f;
+}
+.serena-gabriel-airport-transfers p, .serena-gabriel-airport-transfers a, .serena-gabriel-airport-transfers span, .serena-gabriel-airport-transfers label, .serena-gabriel-airport-transfers input, .serena-gabriel-airport-transfers select, .serena-gabriel-airport-transfers button {
+  font-family: "Libre Baskerville", sans-serif;
+  color: #50493f;
+}
+.serena-gabriel-airport-transfers .transportation .titles h1, .serena-gabriel-airport-transfers .transportation .titles p {
+  background-color: #efeeec;
+  color: #50493f;
+}
+.serena-gabriel-airport-transfers h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.serena-gabriel-airport-transfers h2 + p {
+  text-align: center;
+  margin-bottom: 50px;
+  border: 1px solid red !important;
+}
+.serena-gabriel-airport-transfers .paralax {
+  background-image: url("../imgs/serena-gabriel-logo.webp");
+  height: 700px;
+}
+.serena-gabriel-airport-transfers .logo-event {
+  width: 100%;
+  display: block;
+  margin: 0;
+}
+.serena-gabriel-airport-transfers .gallery .imgs {
+  width: 300% !important;
+}
+.serena-gabriel-airport-transfers .gallery .imgs img {
+  width: 33.33% !important;
+}
+.serena-gabriel-airport-transfers .cards.transport {
+  gap: 25px;
+  margin-bottom: 20px;
+}
+.serena-gabriel-airport-transfers .cards.transport .card {
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 20px;
+  padding: 15px;
+  flex-direction: row;
+}
+.serena-gabriel-airport-transfers .cards.transport .card .text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  width: calc(100% - 44px);
+}
+.serena-gabriel-airport-transfers .cards.transport .card .text h3, .serena-gabriel-airport-transfers .cards.transport .card .text p.price {
+  text-align: left;
+  width: 100%;
+  color: rgba(80, 73, 63, 0.8) !important;
+}
+.serena-gabriel-airport-transfers .cards.transport .card .text h3 span, .serena-gabriel-airport-transfers .cards.transport .card .text p.price span {
+  color: #50493f;
+}
+.serena-gabriel-airport-transfers .cards.transport .card .text h3 {
+  margin-bottom: 0;
+}
+.serena-gabriel-airport-transfers .cards.transport .card .text p {
+  text-align: left;
+}
+.serena-gabriel-airport-transfers .cards.transport .card .text p span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.serena-gabriel-airport-transfers .cards.transport .card .text p.price {
+  font-size: 1.3rem;
+  color: #efeeec;
+}
+.serena-gabriel-airport-transfers .cards.transport .card .text p.price span {
+  display: block;
+}
+.serena-gabriel-airport-transfers .cards.transport .card .text p.regular-price {
+  font-size: 1rem;
+  margin: 10px 0;
+  opacity: 0.4;
+}
+.serena-gabriel-airport-transfers .cards.transport .card .text p.regular-price span {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+.serena-gabriel-airport-transfers .cards.transport .card .checkbox {
+  border: 2px solid rgba(80, 73, 63, 0.8);
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.serena-gabriel-airport-transfers .cards.transport .card .checkbox .inside {
+  width: 30px;
+  height: 12px;
+}
+.serena-gabriel-airport-transfers .cards.transport .card:hover .checkbox .inside {
+  background-color: rgba(80, 73, 63, 0.6);
+}
+.serena-gabriel-airport-transfers .cards.transport .card.active .checkbox .inside {
+  background-color: rgba(80, 73, 63, 0.8);
+}
+.serena-gabriel-airport-transfers .info {
+  text-align: center;
+  font-weight: bold;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets {
+  display: grid;
+  gap: 25px;
+  margin: 0 auto;
+}
+.serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+.serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+.serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets .btn.cta {
+  margin-top: 15px;
+  color: white;
+  background-color: #50493f;
+}
+.serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets fieldset p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets fieldset label {
+  padding: 10px 0;
+  width: 100%;
+}
+.serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets fieldset label input, .serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets fieldset label select {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  border: 1px solid #4F6A9E;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+.serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:disabled, .serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets fieldset label input .disabled, .serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:disabled, .serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets fieldset label select .disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:focus:not(:disabled), .serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:hover:not(:disabled), .serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:focus:not(:disabled), .serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:hover:not(:disabled) {
+  outline: none;
+  box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+.serena-gabriel-airport-transfers .buy-form .btn.cta {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  color: white;
+  background-color: #50493f;
+  border: 2px solid #50493f;
+}
+.serena-gabriel-airport-transfers .buy-form .btn.cta:hover {
+  color: #50493f;
+  background-color: white;
+}
+.serena-gabriel-airport-transfers .buy-form .btn.cta[disabled] {
+  cursor: not-allowed;
+}
+.serena-gabriel-airport-transfers .buttons button.back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.serena-gabriel-airport-transfers .buttons button.back:hover {
+  opacity: 0.7;
+}
+.serena-gabriel-airport-transfers .buttons button.back svg {
+  width: 50px;
+  fill: #50493f;
+}
+.serena-gabriel-airport-transfers .faqs .questions-wrapper .question .title {
+  background-color: #50493f;
+}
+.serena-gabriel-airport-transfers .faqs .questions-wrapper .question .title h3 {
+  color: white !important;
+}
+@media screen and (max-width: 900px) {
+  .serena-gabriel-airport-transfers .cards.transport {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  .serena-gabriel-airport-transfers .cards.transport .card {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .serena-gabriel-airport-transfers .cards.transport .card br {
+    display: none;
+  }
+  .serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets.two-columns, .serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .serena-gabriel-airport-transfers .paralax {
+    background-attachment: scroll !important;
+    height: 400px;
+    background-image: url("../imgs/serena-gabriel-logo-mobile.webp");
+  }
+}
+@media screen and (max-width: 500px) {
+  .serena-gabriel-airport-transfers .cards.transport {
+    width: 70%;
+  }
+  .serena-gabriel-airport-transfers .buy-form .wrapper-fieldsets {
+    width: 90%;
+  }
+}
+
+header.kiana-swaroop, #footer.kiana-swaroop {
+  background-color: #305941;
+  font-family: "Quicksand", sans-serif;
+  color: #50493f;
+}
+header.kiana-swaroop a, #footer.kiana-swaroop a {
+  font-family: "Quicksand", sans-serif;
+}
+header.kiana-swaroop .content nav ul li a, #footer.kiana-swaroop .content nav ul li a {
+  color: white;
+}
+header.kiana-swaroop .content nav ul li a:hover, #footer.kiana-swaroop .content nav ul li a:hover {
+  color: rgba(80, 73, 63, 0.6);
+}
+header.kiana-swaroop h2, #footer.kiana-swaroop h2 {
+  font-family: "Libre Baskerville", sans-serif;
+}
+header.kiana-swaroop .btn.menu svg, #footer.kiana-swaroop .btn.menu svg {
+  fill: white;
+}
+
+#footer.kiana-swaroop .widgets .widget p, #footer.kiana-swaroop .widgets .widget a, #footer.kiana-swaroop .widgets .widget span, #footer.kiana-swaroop .widgets .widget h2 {
+  color: white;
+}
+#footer.kiana-swaroop .widgets .widget:nth-child(2) {
+  width: 250px;
+}
+#footer.kiana-swaroop .widgets .widget a:hover {
+  opacity: 0.6;
+  color: white;
+}
+#footer.kiana-swaroop .widgets .widget a svg, #footer.kiana-swaroop .widgets .widget p svg {
+  fill: white;
+}
+#footer.kiana-swaroop small {
+  color: white;
+}
+@media screen and (max-width: 750px) {
+  #footer.kiana-swaroop .widgets {
+    align-items: flex-start;
+  }
+}
+
+main.kiana-swaroop {
+  color: #50493f;
+  font-family: "Quicksand", sans-serif;
+}
+main.kiana-swaroop label {
+  padding: 10px 0;
+  width: 100%;
+}
+main.kiana-swaroop label input, main.kiana-swaroop label select {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  border: 1px solid #4F6A9E;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+main.kiana-swaroop label input:disabled, main.kiana-swaroop label input .disabled, main.kiana-swaroop label select:disabled, main.kiana-swaroop label select .disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+main.kiana-swaroop label input:focus:not(:disabled), main.kiana-swaroop label input:hover:not(:disabled), main.kiana-swaroop label select:focus:not(:disabled), main.kiana-swaroop label select:hover:not(:disabled) {
+  outline: none;
+  box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+main.kiana-swaroop h2, main.kiana-swaroop h3, main.kiana-swaroop h4, main.kiana-swaroop h5, main.kiana-swaroop h6 {
+  font-family: "Libre Baskerville", sans-serif;
+  color: #50493f;
+}
+main.kiana-swaroop h1 {
+  font-family: "Libre Baskerville", sans-serif;
+  color: white !important;
+}
+main.kiana-swaroop p, main.kiana-swaroop a, main.kiana-swaroop span, main.kiana-swaroop label, main.kiana-swaroop input, main.kiana-swaroop select, main.kiana-swaroop button {
+  font-family: "Quicksand", sans-serif;
+  color: #50493f;
+}
+main.kiana-swaroop .transportation .titles h1, main.kiana-swaroop .transportation .titles p {
+  background-color: #305941;
+  color: #50493f;
+}
+main.kiana-swaroop h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+main.kiana-swaroop h2 + p {
+  text-align: center;
+  margin-bottom: 50px;
+  border: 1px solid red !important;
+}
+main.kiana-swaroop .paralax {
+  background-image: url("../imgs/kiana-swaroop-logo.webp");
+  height: 700px;
+  position: relative;
+  background-color: #305941;
+}
+main.kiana-swaroop .paralax p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  font-family: "Libre Baskerville", sans-serif;
+  letter-spacing: 1.1rem;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(80, 73, 63, 0.6);
+}
+main.kiana-swaroop .logo-event {
+  width: 100%;
+  display: block;
+  margin: 0;
+}
+main.kiana-swaroop .gallery .imgs {
+  width: 300% !important;
+}
+main.kiana-swaroop .gallery .imgs img {
+  width: 33.33% !important;
+}
+main.kiana-swaroop .airport {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 400px;
+}
+main.kiana-swaroop .airport select {
+  width: 100%;
+}
+main.kiana-swaroop .cards.transport {
+  gap: 25px;
+  margin-bottom: 20px;
+}
+main.kiana-swaroop .cards.transport .card {
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 20px;
+  padding: 15px;
+  flex-direction: row;
+}
+main.kiana-swaroop .cards.transport .card .text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  width: calc(100% - 44px);
+}
+main.kiana-swaroop .cards.transport .card .text h3, main.kiana-swaroop .cards.transport .card .text p.price {
+  text-align: left;
+  width: 100%;
+  color: rgba(80, 73, 63, 0.8) !important;
+}
+main.kiana-swaroop .cards.transport .card .text h3 span, main.kiana-swaroop .cards.transport .card .text p.price span {
+  color: #50493f;
+}
+main.kiana-swaroop .cards.transport .card .text h3 {
+  margin-bottom: 0;
+}
+main.kiana-swaroop .cards.transport .card .text p {
+  text-align: left;
+}
+main.kiana-swaroop .cards.transport .card .text p span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+main.kiana-swaroop .cards.transport .card .text p.price {
+  font-size: 1.3rem;
+  color: #305941;
+}
+main.kiana-swaroop .cards.transport .card .text p.price span {
+  display: block;
+}
+main.kiana-swaroop .cards.transport .card .text p.regular-price {
+  font-size: 1rem;
+  margin: 10px 0;
+  opacity: 0.4;
+}
+main.kiana-swaroop .cards.transport .card .text p.regular-price span {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+main.kiana-swaroop .cards.transport .card .checkbox {
+  border: 2px solid rgba(80, 73, 63, 0.8);
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.kiana-swaroop .cards.transport .card .checkbox .inside {
+  width: 30px;
+  height: 12px;
+}
+main.kiana-swaroop .cards.transport .card:hover .checkbox .inside {
+  background-color: rgba(80, 73, 63, 0.6);
+}
+main.kiana-swaroop .cards.transport .card.active .checkbox .inside {
+  background-color: rgba(80, 73, 63, 0.8);
+}
+main.kiana-swaroop .info {
+  text-align: center;
+  font-weight: bold;
+  max-width: 90%;
+  margin: 0 auto;
+}
+main.kiana-swaroop .buy-form .wrapper-fieldsets {
+  display: grid;
+  gap: 25px;
+  margin: 0 auto;
+}
+main.kiana-swaroop .buy-form .wrapper-fieldsets.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+main.kiana-swaroop .buy-form .wrapper-fieldsets.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+main.kiana-swaroop .buy-form .wrapper-fieldsets .btn.cta {
+  margin-top: 15px;
+  color: white;
+  background-color: #333333;
+}
+main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+main.kiana-swaroop .buy-form .wrapper-fieldsets fieldset p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+main.kiana-swaroop .buy-form .btn.cta {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  color: white;
+  background-color: #333333;
+  border: 2px solid #333333;
+}
+main.kiana-swaroop .buy-form .btn.cta:hover {
+  color: #333333;
+  background-color: white;
+}
+main.kiana-swaroop .buy-form .btn.cta[disabled] {
+  cursor: not-allowed;
+}
+main.kiana-swaroop .buttons button.back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+main.kiana-swaroop .buttons button.back:hover {
+  opacity: 0.7;
+}
+main.kiana-swaroop .buttons button.back svg {
+  width: 50px;
+  fill: #50493f;
+}
+main.kiana-swaroop .faqs .questions-wrapper .question .title {
+  background-color: #305941;
+}
+main.kiana-swaroop .faqs .questions-wrapper .question .title h3 {
+  color: white !important;
+}
+@media screen and (max-width: 900px) {
+  main.kiana-swaroop .cards.transport {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  main.kiana-swaroop .cards.transport .card {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  main.kiana-swaroop .cards.transport .card br {
+    display: none;
+  }
+  main.kiana-swaroop .buy-form .wrapper-fieldsets.two-columns, main.kiana-swaroop .buy-form .wrapper-fieldsets.three-columns {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  main.kiana-swaroop .paralax {
+    background-attachment: scroll !important;
+    height: 400px;
+  }
+  main.kiana-swaroop .paralax p {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  main.kiana-swaroop .cards.transport {
+    width: 70%;
+  }
+  main.kiana-swaroop .buy-form .wrapper-fieldsets {
+    width: 90%;
+  }
+  main.kiana-swaroop .paralax p {
+    font-size: 1.6rem;
+  }
+}
+
+@font-face {
+  font-family: "D-DIN";
+  src: url("../fonts/D-DIN.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-family: "";
+}
+#header.service-master-restore {
+  background-color: #000000;
+}
+#header.service-master-restore nav > ul > li {
+  height: 35px;
+}
+#header.service-master-restore nav > ul > li a:hover {
+  color: #feee50;
+}
+#header.service-master-restore .title {
+  font-family: "D-DIN", sans-serif;
+  font-weight: bold;
+}
+#header.service-master-restore svg {
+  fill: #feee50;
+}
+
+main.service-master-restore h1, main.service-master-restore h2, main.service-master-restore h3, main.service-master-restore h4, main.service-master-restore h5, main.service-master-restore h6, main.service-master-restore .title {
+  font-family: "Sofia Sans Extra Condensed", sans-serif;
+  font-weight: bold;
+}
+main.service-master-restore h1 {
+  color: #000000;
+  font-size: 50px;
+}
+main.service-master-restore .activities .service .bar {
+  background-color: #feee50;
+  color: #000000;
+}
+main.service-master-restore .activities .buy-section .details-card span p {
+  font-size: 10px;
+  margin-left: 17px;
+}
+main.service-master-restore .activities .buy-section .details-card .btn {
+  background-color: #000000;
+  border-color: #000000;
+  color: #feee50;
+}
+main.service-master-restore .activities .buy-section .details-card .btn:hover {
+  background-color: #ffffff;
+  border-color: #000000;
+  color: #000000;
+}
+
+.buy-cart .content {
+  background-color: #000000;
+  color: #feee50 !important;
+}
+.buy-cart .content .services {
+  background-color: #000000;
+}
+.buy-cart .content .service .btn close svg {
+  color: #feee50;
+}
+.buy-cart .content .service .details {
+  color: #feee50;
+}
+.buy-cart .content .buy-all {
+  color: #feee50;
+  background-color: #000000;
+  border-color: #feee50;
+}
+.buy-cart .content .buy-all:hover {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
+#footer.service-master-restore {
+  background-color: #feee50;
+  color: #000000;
+}
+#footer.service-master-restore .widgets .widget h2 {
+  color: #000000;
+}
+#footer.service-master-restore .socials a {
+  color: #000000;
+  text-decoration: none;
+}
+#footer.service-master-restore .socials a svg {
+  fill: #000000;
+}
+#footer.service-master-restore .socials a:hover {
+  color: #b4a401;
+}
+#footer.service-master-restore .socials a:hover svg {
+  fill: #b4a401;
+}
+#footer.service-master-restore .socials p svg {
+  fill: #000000;
+}
+#footer.service-master-restore .socials p:hover svg {
+  fill: #b4a401;
+}
+#footer.service-master-restore .copyright {
+  color: #000000;
+}
+#footer.service-master-restore .copyright a {
+  color: #000000;
+  text-decoration: none;
+}
+#footer.service-master-restore .copyright a:hover {
+  color: black;
+}
+#footer.service-master-restore .copyright a:hover svg {
+  fill: black;
+}
+
+@font-face {
+  font-family: "Kinfolk";
+  src: url("../fonts/Kinfolk-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Kinfolk Thin";
+  src: url("../fonts/Kinfolk-thin.otf") format("opentype");
+}
+header.jessica-maxwell, #footer.jessica-maxwell {
+  background-color: #305941;
+  font-family: "Kinfolk Thin", sans-serif;
+  color: #50493f;
+}
+header.jessica-maxwell a, #footer.jessica-maxwell a {
+  font-family: "Kinfolk Thin", sans-serif;
+}
+header.jessica-maxwell .content nav ul li a, #footer.jessica-maxwell .content nav ul li a {
+  color: white;
+}
+header.jessica-maxwell .content nav ul li a:hover, #footer.jessica-maxwell .content nav ul li a:hover {
+  color: rgba(80, 73, 63, 0.6);
+}
+header.jessica-maxwell h2, #footer.jessica-maxwell h2 {
+  font-family: "Kinfolk", sans-serif;
+}
+header.jessica-maxwell .btn.menu svg, #footer.jessica-maxwell .btn.menu svg {
+  fill: white;
+}
+
+#footer.jessica-maxwell .widgets .widget p, #footer.jessica-maxwell .widgets .widget a, #footer.jessica-maxwell .widgets .widget span, #footer.jessica-maxwell .widgets .widget h2 {
+  color: white;
+}
+#footer.jessica-maxwell .widgets .widget:nth-child(2) {
+  width: 250px;
+}
+#footer.jessica-maxwell .widgets .widget a:hover {
+  opacity: 0.6;
+  color: white;
+}
+#footer.jessica-maxwell .widgets .widget a svg, #footer.jessica-maxwell .widgets .widget p svg {
+  fill: white;
+}
+#footer.jessica-maxwell small {
+  color: white;
+}
+@media screen and (max-width: 750px) {
+  #footer.jessica-maxwell .widgets {
+    align-items: flex-start;
+  }
+}
+
+main.jessica-maxwell {
+  color: #50493f;
+  font-family: "Kinfolk Thin", sans-serif;
+}
+main.jessica-maxwell label {
+  padding: 10px 0;
+  width: 100%;
+}
+main.jessica-maxwell label input, main.jessica-maxwell label select {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  border: 1px solid #4F6A9E;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+main.jessica-maxwell label input:disabled, main.jessica-maxwell label input .disabled, main.jessica-maxwell label select:disabled, main.jessica-maxwell label select .disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+main.jessica-maxwell label input:focus:not(:disabled), main.jessica-maxwell label input:hover:not(:disabled), main.jessica-maxwell label select:focus:not(:disabled), main.jessica-maxwell label select:hover:not(:disabled) {
+  outline: none;
+  box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+main.jessica-maxwell h2, main.jessica-maxwell h3, main.jessica-maxwell h4, main.jessica-maxwell h5, main.jessica-maxwell h6 {
+  font-family: "Kinfolk", sans-serif;
+  color: #50493f;
+}
+main.jessica-maxwell h1 {
+  font-family: "Kinfolk", sans-serif;
+  color: white !important;
+}
+main.jessica-maxwell p, main.jessica-maxwell a, main.jessica-maxwell span, main.jessica-maxwell label, main.jessica-maxwell input, main.jessica-maxwell select, main.jessica-maxwell button {
+  font-family: "Kinfolk", sans-serif;
+  color: #50493f;
+}
+main.jessica-maxwell .transportation .titles h1, main.jessica-maxwell .transportation .titles p {
+  background-color: #305941;
+  color: #50493f;
+}
+main.jessica-maxwell h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+main.jessica-maxwell h2 + p {
+  text-align: center;
+  margin-bottom: 50px;
+  border: 1px solid red !important;
+}
+main.jessica-maxwell .paralax {
+  background-image: url("../imgs/kiana-swaroop-logo.webp");
+  height: 700px;
+  position: relative;
+  background-color: #305941;
+}
+main.jessica-maxwell .paralax p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  font-weight: 100;
+  font-family: "Kinfolk Thin", sans-serif;
+  letter-spacing: 1.1rem;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(80, 73, 63, 0.6);
+}
+main.jessica-maxwell .logo-event {
+  width: 100%;
+  display: block;
+  margin: 0;
+}
+main.jessica-maxwell .gallery .imgs {
+  width: 300% !important;
+}
+main.jessica-maxwell .gallery .imgs img {
+  width: 33.33% !important;
+}
+main.jessica-maxwell .airport {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 400px;
+}
+main.jessica-maxwell .airport select {
+  width: 100%;
+}
+main.jessica-maxwell .cards.transport {
+  gap: 25px;
+  margin-bottom: 20px;
+}
+main.jessica-maxwell .cards.transport .card {
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 20px;
+  padding: 15px;
+  flex-direction: row;
+}
+main.jessica-maxwell .cards.transport .card .text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  width: calc(100% - 44px);
+}
+main.jessica-maxwell .cards.transport .card .text h3, main.jessica-maxwell .cards.transport .card .text p.price {
+  text-align: left;
+  width: 100%;
+  color: rgba(80, 73, 63, 0.8) !important;
+}
+main.jessica-maxwell .cards.transport .card .text h3 span, main.jessica-maxwell .cards.transport .card .text p.price span {
+  color: #50493f;
+}
+main.jessica-maxwell .cards.transport .card .text h3 {
+  margin-bottom: 0;
+}
+main.jessica-maxwell .cards.transport .card .text p {
+  text-align: left;
+}
+main.jessica-maxwell .cards.transport .card .text p span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+main.jessica-maxwell .cards.transport .card .text p.price {
+  font-size: 1.3rem;
+  color: #305941;
+}
+main.jessica-maxwell .cards.transport .card .text p.price span {
+  display: block;
+}
+main.jessica-maxwell .cards.transport .card .text p.regular-price {
+  font-size: 1rem;
+  margin: 10px 0;
+  opacity: 0.4;
+}
+main.jessica-maxwell .cards.transport .card .text p.regular-price span {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+main.jessica-maxwell .cards.transport .card .checkbox {
+  border: 2px solid rgba(80, 73, 63, 0.8);
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.jessica-maxwell .cards.transport .card .checkbox .inside {
+  width: 30px;
+  height: 12px;
+}
+main.jessica-maxwell .cards.transport .card:hover .checkbox .inside {
+  background-color: rgba(80, 73, 63, 0.6);
+}
+main.jessica-maxwell .cards.transport .card.active .checkbox .inside {
+  background-color: rgba(80, 73, 63, 0.8);
+}
+main.jessica-maxwell .info {
+  text-align: center;
+  font-weight: bold;
+  max-width: 90%;
+  margin: 0 auto;
+}
+main.jessica-maxwell .buy-form .wrapper-fieldsets {
+  display: grid;
+  gap: 25px;
+  margin: 0 auto;
+}
+main.jessica-maxwell .buy-form .wrapper-fieldsets.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+main.jessica-maxwell .buy-form .wrapper-fieldsets.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+main.jessica-maxwell .buy-form .wrapper-fieldsets .btn.cta {
+  margin-top: 15px;
+  color: white;
+  background-color: #333333;
+}
+main.jessica-maxwell .buy-form .wrapper-fieldsets fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+main.jessica-maxwell .buy-form .wrapper-fieldsets fieldset p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+main.jessica-maxwell .buy-form .btn.cta {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  color: white;
+  background-color: #333333;
+  border: 2px solid #333333;
+}
+main.jessica-maxwell .buy-form .btn.cta:hover {
+  color: #333333;
+  background-color: white;
+}
+main.jessica-maxwell .buy-form .btn.cta[disabled] {
+  cursor: not-allowed;
+}
+main.jessica-maxwell .buttons button.back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+main.jessica-maxwell .buttons button.back:hover {
+  opacity: 0.7;
+}
+main.jessica-maxwell .buttons button.back svg {
+  width: 50px;
+  fill: #50493f;
+}
+main.jessica-maxwell .faqs .questions-wrapper .question .title {
+  background-color: #305941;
+}
+main.jessica-maxwell .faqs .questions-wrapper .question .title h3 {
+  color: white !important;
+}
+@media screen and (max-width: 900px) {
+  main.jessica-maxwell .cards.transport {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  main.jessica-maxwell .cards.transport .card {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  main.jessica-maxwell .cards.transport .card br {
+    display: none;
+  }
+  main.jessica-maxwell .buy-form .wrapper-fieldsets.two-columns, main.jessica-maxwell .buy-form .wrapper-fieldsets.three-columns {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  main.jessica-maxwell .paralax {
+    background-attachment: scroll !important;
+    height: 400px;
+  }
+  main.jessica-maxwell .paralax p {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  main.jessica-maxwell .cards.transport {
+    width: 70%;
+  }
+  main.jessica-maxwell .buy-form .wrapper-fieldsets {
+    width: 90%;
+  }
+  main.jessica-maxwell .paralax p {
+    font-size: 1.6rem;
+  }
+}
