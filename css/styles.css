@@ -2980,53 +2980,23 @@ main.jessica-maxwell .transportation .content {
   position: relative;
 }
 main.jessica-maxwell .transportation .titles {
-  position: absolute;
-  bottom: -20%;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  pointer-events: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+main.jessica-maxwell .transportation .titles p, main.jessica-maxwell .transportation .titles h1 {
+  background-color: #839c8e;
+  color: #50493f;
+  font-size: 30px;
+  padding: 30px 60px;
+  width: 100%;
+  display: inline-block;
+  width: calc(100% - 60px);
 }
 main.jessica-maxwell .transportation .titles h1, main.jessica-maxwell .transportation .titles p {
   background-color: #839c8e;
   color: #50493f;
   padding: 15px 40px;
   font-size: 30px;
-}
-@media screen and (max-width: 1000px) {
-  main.jessica-maxwell .transportation .titles {
-    bottom: -15%;
-  }
-}
-@media screen and (max-width: 900px) {
-  main.jessica-maxwell .transportation .titles {
-    bottom: -10%;
-  }
-  main.jessica-maxwell .transportation .titles h1, main.jessica-maxwell .transportation .titles p {
-    padding: 10px 30px;
-    font-size: 25px;
-  }
-}
-@media screen and (max-width: 700px) {
-  main.jessica-maxwell .transportation .titles {
-    bottom: -5%;
-  }
-  main.jessica-maxwell .transportation .titles h1, main.jessica-maxwell .transportation .titles p {
-    padding: 8px 20px;
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 500px) {
-  main.jessica-maxwell .transportation .titles {
-    bottom: 0;
-  }
-  main.jessica-maxwell .transportation .titles h1, main.jessica-maxwell .transportation .titles p {
-    padding: 5px 15px;
-    font-size: 18px;
-  }
 }
 main.jessica-maxwell h2 {
   text-align: center;
