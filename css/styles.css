@@ -2990,13 +2990,7 @@ main.jessica-maxwell .transportation .titles p, main.jessica-maxwell .transporta
   padding: 30px 60px;
   width: 100%;
   display: inline-block;
-  width: calc(100% - 60px);
-}
-main.jessica-maxwell .transportation .titles h1, main.jessica-maxwell .transportation .titles p {
-  background-color: #839c8e;
-  color: #50493f;
-  padding: 15px 40px;
-  font-size: 30px;
+  width: calc(100% - 120px);
 }
 main.jessica-maxwell h2 {
   text-align: center;
