@@ -2770,6 +2770,355 @@ main.kiana-swaroop .faqs .questions-wrapper .question .title h3 {
 }
 
 @font-face {
+  font-family: "FontPrimaryBold";
+  src: url("../fonts/font-primary-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FontSecondaryRegular";
+  src: url("../fonts/font-secondary-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+header.monica-vivek, #footer.monica-vivek {
+  background-color: rgb(245, 205, 71);
+  font-family: "FontPrimaryBold", sans-serif;
+  color: #50493f;
+}
+header.monica-vivek a, #footer.monica-vivek a {
+  font-family: "FontPrimaryBold", sans-serif;
+}
+header.monica-vivek .content nav ul li a, #footer.monica-vivek .content nav ul li a {
+  color: white;
+}
+header.monica-vivek .content nav ul li a:hover, #footer.monica-vivek .content nav ul li a:hover {
+  color: rgba(80, 73, 63, 0.6);
+}
+header.monica-vivek h2, #footer.monica-vivek h2 {
+  font-family: "FontSecondaryRegular", sans-serif;
+}
+header.monica-vivek .btn.menu svg, #footer.monica-vivek .btn.menu svg {
+  fill: white;
+}
+
+#footer.monica-vivek .widgets .widget p, #footer.monica-vivek .widgets .widget a, #footer.monica-vivek .widgets .widget span, #footer.monica-vivek .widgets .widget h2 {
+  color: white;
+}
+#footer.monica-vivek .widgets .widget:nth-child(2) {
+  width: 250px;
+}
+#footer.monica-vivek .widgets .widget a:hover {
+  opacity: 0.6;
+  color: white;
+}
+#footer.monica-vivek .widgets .widget a svg, #footer.monica-vivek .widgets .widget p svg {
+  fill: white;
+}
+#footer.monica-vivek small {
+  color: white;
+}
+@media screen and (max-width: 750px) {
+  #footer.monica-vivek .widgets {
+    align-items: flex-start;
+  }
+}
+
+main.monica-vivek {
+  color: #50493f;
+  font-family: "FontPrimaryBold", sans-serif;
+}
+main.monica-vivek label {
+  padding: 10px 0;
+  width: 100%;
+}
+main.monica-vivek label input, main.monica-vivek label select {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  border: 1px solid #4F6A9E;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+main.monica-vivek label input:disabled, main.monica-vivek label input .disabled, main.monica-vivek label select:disabled, main.monica-vivek label select .disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+main.monica-vivek label input:focus:not(:disabled), main.monica-vivek label input:hover:not(:disabled), main.monica-vivek label select:focus:not(:disabled), main.monica-vivek label select:hover:not(:disabled) {
+  outline: none;
+  box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+main.monica-vivek h2, main.monica-vivek h3, main.monica-vivek h4, main.monica-vivek h5, main.monica-vivek h6 {
+  font-family: "FontSecondaryRegular", sans-serif;
+  color: #50493f;
+}
+main.monica-vivek h1 {
+  font-family: "FontSecondaryRegular", sans-serif;
+  color: white !important;
+}
+main.monica-vivek p, main.monica-vivek a, main.monica-vivek span, main.monica-vivek label, main.monica-vivek input, main.monica-vivek select, main.monica-vivek button {
+  font-family: "FontSecondaryRegular", sans-serif;
+  color: #50493f;
+}
+main.monica-vivek .transportation .content {
+  position: relative;
+}
+main.monica-vivek .transportation .titles {
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+main.monica-vivek .transportation .titles p, main.monica-vivek .transportation .titles h1 {
+  background-color: rgb(245, 205, 71);
+  color: #50493f;
+  font-size: 30px;
+  padding: 30px 60px;
+  width: 100%;
+  display: inline-block;
+  width: calc(100% - 120px);
+}
+main.monica-vivek h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+main.monica-vivek h2 + p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+main.monica-vivek .paralax {
+  background-image: url("../imgs/monica-vivek-logo.webp");
+  height: 700px;
+  position: relative;
+  background-color: rgb(245, 205, 71);
+}
+main.monica-vivek .paralax p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  font-weight: 100;
+  font-family: "FontSecondaryRegular", sans-serif;
+  letter-spacing: 1.1rem;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(80, 73, 63, 0.6);
+}
+main.monica-vivek .logo-event {
+  width: 100%;
+  display: block;
+  margin: 0;
+}
+main.monica-vivek .gallery .imgs {
+  width: 300% !important;
+}
+main.monica-vivek .gallery .imgs img {
+  width: 33.33% !important;
+}
+main.monica-vivek .airport {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 400px;
+}
+main.monica-vivek .airport select {
+  width: 100%;
+}
+main.monica-vivek .cards.transport {
+  gap: 25px;
+  margin-bottom: 20px;
+}
+main.monica-vivek .cards.transport .card {
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 20px;
+  padding: 15px;
+  flex-direction: row;
+}
+main.monica-vivek .cards.transport .card .text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  width: calc(100% - 44px);
+}
+main.monica-vivek .cards.transport .card .text h3, main.monica-vivek .cards.transport .card .text p.price {
+  text-align: left;
+  width: 100%;
+  color: rgba(80, 73, 63, 0.8) !important;
+}
+main.monica-vivek .cards.transport .card .text h3 span, main.monica-vivek .cards.transport .card .text p.price span {
+  color: #50493f;
+}
+main.monica-vivek .cards.transport .card .text h3 {
+  margin-bottom: 0;
+}
+main.monica-vivek .cards.transport .card .text p {
+  text-align: left;
+}
+main.monica-vivek .cards.transport .card .text p span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+main.monica-vivek .cards.transport .card .text p.price {
+  font-size: 1.3rem;
+  color: rgb(245, 205, 71);
+}
+main.monica-vivek .cards.transport .card .text p.price span {
+  display: block;
+}
+main.monica-vivek .cards.transport .card .text p.regular-price {
+  font-size: 1rem;
+  margin: 10px 0;
+  opacity: 0.4;
+}
+main.monica-vivek .cards.transport .card .text p.regular-price span {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+main.monica-vivek .cards.transport .card .checkbox {
+  border: 2px solid rgba(80, 73, 63, 0.8);
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.monica-vivek .cards.transport .card .checkbox .inside {
+  width: 30px;
+  height: 12px;
+}
+main.monica-vivek .cards.transport .card:hover .checkbox .inside {
+  background-color: rgba(80, 73, 63, 0.6);
+}
+main.monica-vivek .cards.transport .card.active .checkbox .inside {
+  background-color: rgba(80, 73, 63, 0.8);
+}
+main.monica-vivek .info {
+  text-align: center;
+  font-weight: bold;
+  max-width: 90%;
+  margin: 0 auto;
+}
+main.monica-vivek .buy-form .wrapper-fieldsets {
+  display: grid;
+  gap: 25px;
+  margin: 0 auto;
+}
+main.monica-vivek .buy-form .wrapper-fieldsets.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+main.monica-vivek .buy-form .wrapper-fieldsets.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+main.monica-vivek .buy-form .wrapper-fieldsets .btn.cta {
+  margin-top: 15px;
+  color: white;
+  background-color: #8B6914;
+}
+main.monica-vivek .buy-form .wrapper-fieldsets fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+main.monica-vivek .buy-form .wrapper-fieldsets fieldset p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+main.monica-vivek .buy-form .btn.cta {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  color: white;
+  background-color: #8B6914;
+  border: 2px solid #8B6914;
+}
+main.monica-vivek .buy-form .btn.cta:hover {
+  color: #8B6914;
+  background-color: white;
+}
+main.monica-vivek .buy-form .btn.cta[disabled] {
+  cursor: not-allowed;
+}
+main.monica-vivek .buttons button.back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+main.monica-vivek .buttons button.back:hover {
+  opacity: 0.7;
+}
+main.monica-vivek .buttons button.back svg {
+  width: 50px;
+  fill: #50493f;
+}
+main.monica-vivek .faqs .questions-wrapper .question .title {
+  background-color: rgb(245, 205, 71);
+}
+main.monica-vivek .faqs .questions-wrapper .question .title h3 {
+  color: white !important;
+}
+@media screen and (max-width: 1000px) {
+  main.monica-vivek .transportation .content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  main.monica-vivek .transportation .content .titles {
+    position: initial;
+    margin-top: 0;
+    height: auto;
+  }
+  main.monica-vivek .transportation .content .titles h1, main.monica-vivek .transportation .content .titles p {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  main.monica-vivek .cards.transport {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  main.monica-vivek .cards.transport .card {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  main.monica-vivek .cards.transport .card br {
+    display: none;
+  }
+  main.monica-vivek .buy-form .wrapper-fieldsets.two-columns, main.monica-vivek .buy-form .wrapper-fieldsets.three-columns {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  main.monica-vivek .paralax {
+    background-attachment: scroll !important;
+    height: 400px;
+  }
+  main.monica-vivek .paralax p {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  main.monica-vivek .cards.transport {
+    width: 70%;
+  }
+  main.monica-vivek .buy-form .wrapper-fieldsets {
+    width: 90%;
+  }
+  main.monica-vivek .paralax p {
+    font-size: 1.6rem;
+  }
+}
+
+@font-face {
   font-family: "D-DIN";
   src: url("../fonts/D-DIN.otf") format("opentype");
   font-weight: normal;

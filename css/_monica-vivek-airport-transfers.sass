@@ -1,0 +1,371 @@
+// Variables
+$color-primary:rgb(245, 205, 71)
+$color-white: #ffffff
+$color-dark: #8B6914
+$color-black: #50493f
+$color-white: white
+$font-title: 'FontSecondaryRegular', sans-serif
+$font-regular: 'FontPrimaryBold', sans-serif
+
+@font-face
+    font-family: 'FontPrimaryBold'
+    src: url("../fonts/font-primary-bold.woff2") format("woff2")
+    font-weight: 700
+    font-style: normal
+
+@font-face
+    font-family: 'FontSecondaryRegular'
+    src: url("../fonts/font-secondary-regular.woff2") format("woff2")
+    font-weight: 400
+    font-style: normal
+
+header.monica-vivek, #footer.monica-vivek
+    background-color: $color-primary
+    font-family: $font-regular
+    color: $color-black
+
+    a
+        font-family: $font-regular
+
+    .content nav ul li a
+        color: $color-white
+        &:hover
+            color: rgba($color-black, 0.6)
+
+    h2
+        font-family: $font-title
+
+    .btn.menu svg
+        fill: $color-white
+
+#footer.monica-vivek
+
+    .widgets .widget
+
+        p, a, span, h2
+            color: $color-white
+
+        &:nth-child(2)
+            width: 250px
+
+        a:hover
+            opacity: 0.6
+            color: $color-white
+
+        a svg, p svg
+            fill: $color-white
+
+    small
+        color: $color-white
+
+    @media screen and (max-width: 750px)
+
+        .widgets 
+            align-items: flex-start
+
+main.monica-vivek
+
+    // Global inputs
+    label
+        padding: 10px 0
+        width: 100%
+
+        input, select
+            margin-top: 5px
+            display: block
+            font-size: 18px
+            width: calc(100% - 20px)
+            padding: 5px 10px
+            border: 1px solid $color-d
+            border-radius: 5px
+            transition-duration: $transition-duration
+
+            &:disabled, .disabled
+                cursor: not-allowed
+                opacity: 0.3
+
+            &:focus:not(:disabled), &:hover:not(:disabled)
+                outline: none
+                box-shadow: 0px 0px 8px 0px $color-d
+
+
+    color: $color-black
+    font-family: $font-regular
+
+    h2, h3, h4, h5, h6
+        font-family: $font-title
+        color: $color-black
+
+    h1
+        font-family: $font-title
+        color: $color-white !important
+
+    p, a, span, label, input, select, button
+        font-family: $font-title
+        color: $color-black
+
+    .transportation .content
+        position: relative
+
+    .transportation .titles
+        justify-content: flex-end 
+        margin-top: 20px
+
+        p, h1
+            background-color: $color-primary
+            color: $color-black
+            font-size: 30px
+            padding: 30px 60px
+            width: 100%
+            display: inline-block
+            width: calc(100% - 120px)
+
+    h2
+        text-align: center
+        margin-bottom: 30px
+
+    h2 + p
+        text-align: center
+        margin-bottom: 50px
+
+    .paralax
+        background-image: url("../imgs/monica-vivek-logo.webp")
+        height: 700px
+        position: relative
+        background-color: $color-primary
+
+        p
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            font-size: 4rem
+            color: $color-white
+            font-weight: 100
+            font-family: $font-title
+            letter-spacing: 1.1rem
+            width: 90%
+            margin: 0 auto
+            text-align: center
+            text-shadow: 2px 2px 2px rgba($color-black, 0.6)
+
+    .logo-event
+        width: 100%
+        display: block
+        margin: 0
+
+    .gallery
+        .imgs
+            width: 300% !important
+
+            img
+                width: 33.33% !important
+
+    .airport
+        width: 90%
+        margin: 0 auto
+        max-width: 400px
+
+        select
+            width: 100%
+
+    .cards.transport
+        gap: 25px
+        margin-bottom: 20px
+
+        .card
+            cursor: pointer
+            transition-duration: $transition-duration
+            border-radius: 20px
+            padding: 15px
+            flex-direction: row
+
+            .text
+                display: flex
+                align-items: flex-start
+                flex-direction: column
+                margin-left: 10px
+                width: calc(100% - 44px)
+
+                h3, p.price
+                    text-align: left
+                    width: 100%
+                    color: rgba($color-black, 0.8) !important
+
+                    span
+                        color: $color-black
+
+                h3
+                    margin-bottom: 0
+
+                p
+                    text-align: left
+
+                    span
+                        font-weight: bold
+                        font-size: 1.1em
+
+                p.price
+                    font-size: 1.3rem
+                    color: $color-primary
+
+                    span
+                        display: block
+
+                p.regular-price
+                    font-size: 1rem
+                    margin: 10px 0
+                    opacity: 0.4
+
+                    span
+                        text-decoration: line-through
+                        text-decoration-thickness: 2px
+
+            .checkbox
+                border: 2px solid rgba($color-black, 0.8)
+                width: 40px
+                height: 20px
+                margin-right: 10px
+                display: flex
+                align-items: center
+                justify-content: center
+
+                .inside
+                    width: 30px
+                    height: 12px
+
+            &:hover
+                .checkbox
+                    .inside
+                        background-color: rgba($color-black, 0.6)
+
+            &.active
+                .checkbox
+                    .inside
+                        background-color: rgba($color-black, 0.8)
+
+    .info
+        text-align: center
+        font-weight: bold
+        max-width: 90%
+        margin: 0 auto
+
+    .buy-form
+        .wrapper-fieldsets
+            display: grid
+            gap: 25px
+            margin: 0 auto
+
+            &.two-columns
+                grid-template-columns: repeat(2, 1fr)
+
+            &.three-columns
+                grid-template-columns: repeat(3, 1fr)
+
+            .btn.cta
+                margin-top: 15px
+                color: $color-white
+                background-color: $color-dark
+
+            fieldset
+                border: none
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                justify-content: flex-start
+                width: 100%
+
+                p
+                    font-size: 12px
+                    margin-bottom: 0
+
+        .btn.cta
+            margin: 0 auto
+            margin-top: 20px
+            display: block
+            color: $color-white
+            background-color: $color-dark
+            border: 2px solid $color-dark
+
+            &:hover
+                color: $color-dark
+                background-color: $color-white
+
+            &[disabled]
+                cursor: not-allowed
+
+    .buttons
+
+        button.back
+            background: none
+            border: none
+            cursor: pointer
+            transition-duration: $transition-duration
+
+            &:hover
+                opacity: 0.7
+
+            svg
+                width: 50px
+                fill: $color-black
+
+    .faqs
+        .questions-wrapper .question .title
+            background-color: $color-primary
+
+            h3
+                color: $color-white !important
+
+    @media screen and (max-width: 1000px)
+        .transportation .content
+            display: flex
+            flex-direction: column-reverse
+            align-items: center
+            justify-content: center
+
+            .titles
+                position: initial
+                margin-top: 0
+                height: auto
+
+                h1, p
+                    margin-top: 0
+
+    @media screen and (max-width: 900px)
+
+        .cards.transport
+            width: 50%
+            grid-template-columns: repeat(1, 1fr)
+            gap: 0
+
+            .card
+                justify-content: flex-start
+                padding: 0
+
+                br
+                    display: none
+
+        .buy-form
+            .wrapper-fieldsets
+                &.two-columns, &.three-columns
+                    width: 80%
+                    grid-template-columns: repeat(1, 1fr) !important
+
+        .paralax
+            background-attachment: scroll !important
+            height: 400px
+
+            p
+                font-size: 2.2rem
+
+    @media screen and (max-width: 500px)
+
+        .cards.transport
+            width: 70%
+
+        .buy-form .wrapper-fieldsets
+            width: 90%
+
+        .paralax
+            p
+                font-size: 1.6rem
