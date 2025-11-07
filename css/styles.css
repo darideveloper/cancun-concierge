@@ -2782,7 +2782,7 @@ main.kiana-swaroop .faqs .questions-wrapper .question .title h3 {
   font-style: normal;
 }
 header.monica-vivek, #footer.monica-vivek {
-  background-color: rgb(245, 205, 71);
+  background-color: rgb(226, 191, 79);
   font-family: "FontPrimaryBold", sans-serif;
   color: #50493f;
 }
@@ -2870,7 +2870,7 @@ main.monica-vivek .transportation .titles {
   margin-top: 20px;
 }
 main.monica-vivek .transportation .titles p, main.monica-vivek .transportation .titles h1 {
-  background-color: rgb(245, 205, 71);
+  background-color: rgb(226, 191, 79);
   color: #50493f;
   font-size: 30px;
   padding: 30px 60px;
@@ -2890,7 +2890,7 @@ main.monica-vivek .paralax {
   background-image: url("../imgs/monica-vivek-logo.webp");
   height: 700px;
   position: relative;
-  background-color: rgb(245, 205, 71);
+  background-color: rgb(226, 191, 79);
 }
 main.monica-vivek .paralax p {
   position: absolute;
@@ -2964,7 +2964,7 @@ main.monica-vivek .cards.transport .card .text p span {
 }
 main.monica-vivek .cards.transport .card .text p.price {
   font-size: 1.3rem;
-  color: rgb(245, 205, 71);
+  color: rgb(226, 191, 79);
 }
 main.monica-vivek .cards.transport .card .text p.price span {
   display: block;
@@ -3060,7 +3060,7 @@ main.monica-vivek .buttons button.back svg {
   fill: #50493f;
 }
 main.monica-vivek .faqs .questions-wrapper .question .title {
-  background-color: rgb(245, 205, 71);
+  background-color: rgb(226, 191, 79);
 }
 main.monica-vivek .faqs .questions-wrapper .question .title h3 {
   color: white !important;

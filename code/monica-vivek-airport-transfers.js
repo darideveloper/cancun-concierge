@@ -32,36 +32,36 @@ if (done) {
 const prices = {
   "CUN": {
     "Van": {
-      "arriving": [0.00, 184.00],
-      "departing": [0.00, 184.00],
-      "arriving departing": [0.00, 368],
+      "arriving": [0.00, 80.00],
+      "departing": [0.00, 80.00],
+      "arriving departing": [0.00, 160.00],
     },
     "Sprinter": {
-      "arriving": [0.00, 274],
-      "departing": [0.00, 274],
-      "arriving departing": [0.00, 548],
+      "arriving": [0.00, 120.00],
+      "departing": [0.00, 120.00],
+      "arriving departing": [0.00, 240.00],
     },
     "Suburban": {
-      "arriving": [0.00, 260.00],
-      "departing": [0.00, 260.00],
-      "arriving departing": [0.00, 520],
+      "arriving": [0.00, 115.00],
+      "departing": [0.00, 115.00],
+      "arriving departing": [0.00, 230.00],
     },
   },
   "TQO": {
     "Van": {
-      "arriving": [0.00, 204],
-      "departing": [0.00, 204],
-      "arriving departing": [0.00, 408],
+      "arriving": [0.00, 80.00],
+      "departing": [0.00, 80.00],
+      "arriving departing": [0.00, 160.00],
     },
     "Sprinter": {
-      "arriving": [0.00, 285.00],
-      "departing": [0.00, 285.00],
-      "arriving departing": [0.00, 570],
+      "arriving": [0.00, 120.00],
+      "departing": [0.00, 120.00],
+      "arriving departing": [0.00, 240.00],
     },
     "Suburban": {
-      "arriving": [0.00, 255],
-      "departing": [0.00, 255],
-      "arriving departing": [0.00, 510],
+      "arriving": [0.00, 115.00],
+      "departing": [0.00, 115.00],
+      "arriving departing": [0.00, 230.00],
     },
   }
 }
@@ -105,7 +105,7 @@ function activete_form(transport_types) {
   })
 
   // Activate current form sections
-  const selector = transport_types.map(transport_type => `fieldset.${transport_type}, fieldset.${transport_type} input:not([id*="hotel-other"]), fieldset.${transport_type} select`).join (", ")
+  const selector = transport_types.map(transport_type => `fieldset.${transport_type}, fieldset.${transport_type} input, fieldset.${transport_type} select`).join (", ")
   const fielsets = document.querySelectorAll(selector)
   fielsets.forEach(input => {
     input.classList.remove ("hide")
