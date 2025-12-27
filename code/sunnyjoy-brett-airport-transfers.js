@@ -26,27 +26,27 @@ if (done) {
 // Prices
 const prices = {
   "Van": {
-    "arriving": [75.00, 60.00],
-    "departing": [75.00, 60.00],
-    "arriving departing": [150, 139],
+    "arriving": [0, 139],
+    "departing": [0, 139],
+    "arriving departing": [0, 278.00],
   },
   "Sprinter": {
-    "arriving": [160.00, 186.00],
-    "departing": [160.00, 186.00],
-    "arriving departing": [320.00, 296.00],
+    "arriving": [0, 226.00],
+    "departing": [0, 226.00],
+    "arriving departing": [0, 452.00],
   },
   "Suburban": {
-    "arriving": [115.00, 105.00],
-    "departing": [115.00, 105.00],
-    "arriving departing": [230.00, 226.00],
+    "arriving": [0, 226.00],
+    "departing": [0, 226.00],
+    "arriving departing": [0, 452.00],
   },
 }
 
 // Array from 2 to 4
 const passengers = {
-  "Van": [1,2,3,4,5,6],
-  "Sprinter": [1,2,3,4,5,6,7,8,9,10,11,12],
-  "Suburban": [1,2,3,4]
+  "Van": [1, 2, 3, 4, 5, 6],
+  "Sprinter": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  "Suburban": [1, 2, 3, 4]
 }
 const passengersText = [
   "zero",
@@ -68,7 +68,7 @@ let current_price = 0
 
 function activete_form(transport_types) {
 
-  transport_types.push ("general")
+  transport_types.push("general")
 
   // Show form
   form_elem.classList.remove("hide")
@@ -76,26 +76,26 @@ function activete_form(transport_types) {
   // Disabled all form sections and inputs
   const all_inputs = document.querySelectorAll("fieldset, fieldset input, fieldset select")
   all_inputs.forEach(input => {
-    input.classList.add ("hide")
+    input.classList.add("hide")
     input.disabled = true
   })
 
   // Activate current form sections
-  const selector = transport_types.map(transport_type => `fieldset.${transport_type}, fieldset.${transport_type} input:not([id*="hotel-other"]), fieldset.${transport_type} select`).join (", ")
+  const selector = transport_types.map(transport_type => `fieldset.${transport_type}, fieldset.${transport_type} input:not([id*="hotel-other"]), fieldset.${transport_type} select`).join(", ")
   const fielsets = document.querySelectorAll(selector)
   fielsets.forEach(input => {
-    input.classList.remove ("hide")
+    input.classList.remove("hide")
     input.disabled = false
   })
 
   // Update form grid style
   const form = document.querySelector("form .wrapper-fieldsets")
   if (transport_types.length == 2) {
-    form.classList.add ("two-columns")
-    form.classList.remove ("three-columns")
+    form.classList.add("two-columns")
+    form.classList.remove("three-columns")
   } else if (transport_types.length == 3) {
-    form.classList.remove ("two-columns")
-    form.classList.add ("three-columns")
+    form.classList.remove("two-columns")
+    form.classList.add("three-columns")
   }
 
   // Update passengers
@@ -152,16 +152,16 @@ hotel_inputs.forEach(hotel_input => {
   hotel_input.addEventListener("change", (e) => {
 
     // Show or hide input for custom hotel
-    const input_custom_hotel = e.target.parentNode.querySelector ("input")
+    const input_custom_hotel = e.target.parentNode.querySelector("input")
     const input_wrapper = input_custom_hotel.parentNode
     if (e.target.value == "Other") {
       input_custom_hotel.classList.remove("hide")
       input_custom_hotel.disabled = false
-      input_wrapper.classList.remove ("hide")
+      input_wrapper.classList.remove("hide")
     } else {
       input_custom_hotel.classList.add("hide")
       input_custom_hotel.disabled = true
-      input_wrapper.classList.add ("hide")
+      input_wrapper.classList.add("hide")
     }
   })
 })
@@ -212,23 +212,23 @@ transport_vehicles.forEach(transport_vehicle => {
 const form = document.querySelector("form")
 form.addEventListener("submit", (e) => {
 
-  e.preventDefault ()
+  e.preventDefault()
 
   // Set submit button to loading
   document.querySelector("#submit").value = "loading..."
 
   // Get form data
   const input_selector = "input:not(.hide):not([disabled]):not(#submit), select:not(.hide):not([disabled])"
-  const inputs = document.querySelectorAll (input_selector)
+  const inputs = document.querySelectorAll(input_selector)
 
   // Create form text
   let form_data = []
   for (const input of inputs) {
     const input_name = input.getAttribute("name").replaceAll("-", " ")
     const input_value = input.value
-    form_data.push (`${input_name}: ${input_value}`)
+    form_data.push(`${input_name}: ${input_value}`)
   }
-  form_text = form_data.join (", ")
+  form_text = form_data.join(", ")
 
   // Stripe data
   let stripe_data = {
@@ -245,7 +245,7 @@ form.addEventListener("submit", (e) => {
   }
 
   // Get stripe link
-  fetch (stripe_api, {
+  fetch(stripe_api, {
     method: "POST",
     headers: {
       'Accept': 'application/json',
@@ -253,11 +253,11 @@ form.addEventListener("submit", (e) => {
     },
     body: JSON.stringify(stripe_data)
   })
-  .then (response => response.json ())
-  .then (data => {
-    // Go to stripe page
-    window.location.href = data.stripe_url
-  })
+    .then(response => response.json())
+    .then(data => {
+      // Go to stripe page
+      window.location.href = data.stripe_url
+    })
 
 })
 
