@@ -196,9 +196,9 @@ transport_vehicles.forEach(transport_vehicle => {
       price_elem.innerText = `${price_clean} USD`
 
       // Update regylar price
-      price_elem = transport_card.querySelector(".regular-price > span")
-      price_clean = prices_vehicule[transport_type][0].toFixed(2)
-      price_elem.innerText = `${price_clean} USD`
+      // price_elem = transport_card.querySelector(".regular-price > span")
+      // price_clean = prices_vehicule[transport_type][0].toFixed(2)
+      // price_elem.innerText = `${price_clean} USD`
     })
 
     // Show back button
