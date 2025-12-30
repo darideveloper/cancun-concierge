@@ -31,9 +31,9 @@ const prices = {
     "arriving departing": [0, 278.00],
   },
   "Sprinter": {
-    "arriving": [0, 226.00],
-    "departing": [0, 226.00],
-    "arriving departing": [0, 452.00],
+    "arriving": [0, 185.00],
+    "departing": [0, 185.00],
+    "arriving departing": [0, 370.00],
   },
   "Suburban": {
     "arriving": [0, 226.00],
