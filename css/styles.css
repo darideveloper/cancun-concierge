@@ -3207,16 +3207,16 @@ main.service-master-restore .activities .buy-section .details-card .btn:hover {
   fill: #000000;
 }
 #footer.service-master-restore .socials a:hover {
-  color: rgb(179.9715909091, 163.5170454545, 1.0284090909);
+  color: #b4a401;
 }
 #footer.service-master-restore .socials a:hover svg {
-  fill: rgb(179.9715909091, 163.5170454545, 1.0284090909);
+  fill: #b4a401;
 }
 #footer.service-master-restore .socials p svg {
   fill: #000000;
 }
 #footer.service-master-restore .socials p:hover svg {
-  fill: rgb(179.9715909091, 163.5170454545, 1.0284090909);
+  fill: #b4a401;
 }
 #footer.service-master-restore .copyright {
   color: #000000;
