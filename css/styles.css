@@ -3853,4 +3853,252 @@ header.sunnyjoy-brett .btn.menu svg, #footer.sunnyjoy-brett .btn.menu svg {
   .sunnyjoy-brett-airport-transfers .buy-form .wrapper-fieldsets {
     width: 90%;
   }
+}
+
+@font-face {
+  font-family: "Kinfolk";
+  src: url("../fonts/Kinfolk-Bold.otf") format("opentype");
+}
+header.digitalrealty, #footer.digitalrealty {
+  background-color: #4a5e43;
+  font-family: "Libre Baskerville", sans-serif;
+}
+header.digitalrealty a, #footer.digitalrealty a {
+  font-family: "Libre Baskerville", sans-serif;
+}
+header.digitalrealty .content nav ul li a, #footer.digitalrealty .content nav ul li a {
+  color: white;
+}
+header.digitalrealty .content nav ul li a:hover, #footer.digitalrealty .content nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+header.digitalrealty h2, #footer.digitalrealty h2 {
+  font-family: "Kinfolk", serif;
+}
+
+#footer.digitalrealty .widgets .widget:nth-child(2) {
+  width: 250px;
+}
+#footer.digitalrealty .widgets .widget a:hover {
+  opacity: 0.6;
+  color: white;
+}
+#footer.digitalrealty .widgets .widget h2 {
+  color: white;
+}
+
+.digitalrealty-airport-transfers {
+  color: #202020;
+  font-family: "Libre Baskerville", sans-serif;
+}
+.digitalrealty-airport-transfers h1, .digitalrealty-airport-transfers h2, .digitalrealty-airport-transfers h3, .digitalrealty-airport-transfers h4, .digitalrealty-airport-transfers h5, .digitalrealty-airport-transfers h6 {
+  font-family: "Kinfolk", serif;
+}
+.digitalrealty-airport-transfers p, .digitalrealty-airport-transfers a, .digitalrealty-airport-transfers span, .digitalrealty-airport-transfers label, .digitalrealty-airport-transfers input, .digitalrealty-airport-transfers select, .digitalrealty-airport-transfers button {
+  font-family: "Libre Baskerville", sans-serif;
+}
+.digitalrealty-airport-transfers h1 {
+  color: white;
+}
+.digitalrealty-airport-transfers .transportation .titles h1, .digitalrealty-airport-transfers .transportation .titles p {
+  background-color: #4a5e43;
+  color: white;
+}
+.digitalrealty-airport-transfers h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.digitalrealty-airport-transfers h2 + p {
+  text-align: center;
+  margin-bottom: 50px;
+  border: 1px solid red !important;
+}
+.digitalrealty-airport-transfers .logo-event {
+  width: 500px;
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+.digitalrealty-airport-transfers .gallery .imgs {
+  width: 300% !important;
+}
+.digitalrealty-airport-transfers .gallery .imgs img {
+  width: 33.33% !important;
+}
+.digitalrealty-airport-transfers .cards.transport {
+  gap: 25px;
+  margin-bottom: 20px;
+}
+.digitalrealty-airport-transfers .cards.transport .card {
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 20px;
+  padding: 15px;
+  flex-direction: row;
+}
+.digitalrealty-airport-transfers .cards.transport .card .text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  width: calc(100% - 44px);
+}
+.digitalrealty-airport-transfers .cards.transport .card .text h3, .digitalrealty-airport-transfers .cards.transport .card .text p.price {
+  text-align: left;
+  width: 100%;
+}
+.digitalrealty-airport-transfers .cards.transport .card .text h3 {
+  margin-bottom: 0;
+}
+.digitalrealty-airport-transfers .cards.transport .card .text p {
+  text-align: left;
+}
+.digitalrealty-airport-transfers .cards.transport .card .text p span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.digitalrealty-airport-transfers .cards.transport .card .text p.price {
+  font-size: 1.3rem;
+  color: #4a5e43;
+}
+.digitalrealty-airport-transfers .cards.transport .card .text p.price span {
+  display: block;
+}
+.digitalrealty-airport-transfers .cards.transport .card .text p.regular-price {
+  font-size: 1rem;
+  margin: 10px 0;
+  opacity: 0.4;
+}
+.digitalrealty-airport-transfers .cards.transport .card .text p.regular-price span {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+.digitalrealty-airport-transfers .cards.transport .card .checkbox {
+  border: 2px solid rgba(74, 94, 67, 0.8);
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.digitalrealty-airport-transfers .cards.transport .card .checkbox .inside {
+  width: 30px;
+  height: 12px;
+}
+.digitalrealty-airport-transfers .cards.transport .card:hover .checkbox .inside {
+  background-color: rgba(74, 94, 67, 0.6);
+}
+.digitalrealty-airport-transfers .cards.transport .card.active .checkbox .inside {
+  background-color: rgba(74, 94, 67, 0.8);
+}
+.digitalrealty-airport-transfers .info {
+  text-align: center;
+  font-weight: bold;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.digitalrealty-airport-transfers .buy-form .wrapper-fieldsets {
+  display: grid;
+  gap: 25px;
+  margin: 0 auto;
+}
+.digitalrealty-airport-transfers .buy-form .wrapper-fieldsets.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+.digitalrealty-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+.digitalrealty-airport-transfers .buy-form .wrapper-fieldsets .btn.cta {
+  margin-top: 15px;
+  color: white;
+  background-color: #283224;
+}
+.digitalrealty-airport-transfers .buy-form .wrapper-fieldsets fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.digitalrealty-airport-transfers .buy-form .wrapper-fieldsets fieldset p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.digitalrealty-airport-transfers .buy-form .wrapper-fieldsets fieldset label {
+  padding: 10px 0;
+  width: 100%;
+}
+.digitalrealty-airport-transfers .buy-form .wrapper-fieldsets fieldset label input, .digitalrealty-airport-transfers .buy-form .wrapper-fieldsets fieldset label select {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  border: 1px solid #4F6A9E;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+.digitalrealty-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:disabled, .digitalrealty-airport-transfers .buy-form .wrapper-fieldsets fieldset label input .disabled, .digitalrealty-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:disabled, .digitalrealty-airport-transfers .buy-form .wrapper-fieldsets fieldset label select .disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.digitalrealty-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:focus:not(:disabled), .digitalrealty-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:hover:not(:disabled), .digitalrealty-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:focus:not(:disabled), .digitalrealty-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:hover:not(:disabled) {
+  outline: none;
+  box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+.digitalrealty-airport-transfers .buy-form .btn.cta {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  color: white;
+  background-color: #283224;
+  border: 2px solid #283224;
+}
+.digitalrealty-airport-transfers .buy-form .btn.cta:hover {
+  color: #283224;
+  background-color: white;
+}
+.digitalrealty-airport-transfers .buy-form .btn.cta[disabled] {
+  cursor: not-allowed;
+}
+.digitalrealty-airport-transfers .buttons button.back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.digitalrealty-airport-transfers .buttons button.back:hover {
+  opacity: 0.7;
+}
+.digitalrealty-airport-transfers .buttons button.back svg {
+  width: 50px;
+  fill: #4a5e43;
+}
+@media screen and (max-width: 900px) {
+  .digitalrealty-airport-transfers .cards.transport {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  .digitalrealty-airport-transfers .cards.transport .card {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .digitalrealty-airport-transfers .cards.transport .card br {
+    display: none;
+  }
+  .digitalrealty-airport-transfers .buy-form .wrapper-fieldsets.two-columns, .digitalrealty-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .digitalrealty-airport-transfers .cards.transport {
+    width: 70%;
+  }
+  .digitalrealty-airport-transfers .buy-form .wrapper-fieldsets {
+    width: 90%;
+  }
 }/*# sourceMappingURL=styles.css.map */
