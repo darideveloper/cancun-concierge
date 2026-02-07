@@ -222,30 +222,12 @@
             Airport to Andaz Mayakoba
           </h1>
         </div>
-        <div class="gallery">
-          <button class="next slide btn white">
-            <svg>
-              <use xlink:href="#svg-arrow-footer"></use>
-            </svg>
-          </button>
-          <button class="back slide btn white">
-            <svg>
-              <use xlink:href="#svg-arrow-footer"></use>
-            </svg>
-          </button>
+        <div class="gallery static">
           <div class="imgs-wrapper">
             <div class="imgs">
               <img
-                src="../imgs/transportation-gallery-4.jpg"
-                alt="imagen 2 de transporte"
-              />
-              <img
                 src="../imgs/transportation-gallery-1.png"
-                alt="imagen 1 de transporte"
-              />
-              <img
-                src="../imgs/transportation-gallery-2.png"
-                alt="imagen 2 de transporte"
+                alt="transportation"
               />
             </div>
           </div>
@@ -258,6 +240,19 @@
             margin: 2rem auto;
             display: block;
             filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+          }
+
+          .gallery.static {
+            overflow: hidden;
+            width: 100%;
+          }
+
+          .gallery.static .imgs-wrapper .imgs {
+            width: 100% !important;
+          }
+
+          .gallery.static .imgs-wrapper .imgs img {
+            width: 100% !important;
           }
         </style>
 
@@ -875,7 +870,6 @@
     </footer>
 
     <script src="../code/header.js"></script>
-    <script src="../code/gallery.js"></script>
     <script src="../code/faqs.js"></script>
     <script src="../code/digitalrealty-airport-transfers.js"></script>
   </body>
