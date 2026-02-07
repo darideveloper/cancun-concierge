@@ -25,7 +25,7 @@ if (done) {
     icon: "success",
     confirmButtonText: "OK",
     confirmButtonColor: "#01454f",
-    iconColor: "#00FF85",
+    iconColor: "#1A1A1A",
     customClass: {
       popup: 'digitalrealty-swal-popup',
       confirmButton: 'digitalrealty-swal-button'

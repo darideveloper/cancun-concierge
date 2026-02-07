@@ -4154,4 +4154,23 @@ header.digitalrealty h2 {
 }
 .faqs .questions-wrapper .question .title svg {
   fill: #FFFFFF;
+}
+
+.digitalrealty-swal-popup {
+  font-family: "AeonikPro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  border-radius: 15px;
+  color: #1A1A1A;
+}
+.digitalrealty-swal-popup .swal2-title {
+  color: #01454f;
+  font-family: "AeonikPro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.digitalrealty-swal-button {
+  padding: 12px 30px !important;
+  font-size: 1.1rem !important;
+  border-radius: 8px !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
 }/*# sourceMappingURL=styles.css.map */
