@@ -1,6 +1,6 @@
 # Capability: Branding and Visual Styles for Digital Realty
 
-## MODIFIED Requirements
+## ADDED Requirements
 
 ### Requirement: Apply Digital Realty Color Palette
 The landing page MUST update its Sass variables and application in `css/_digitalrealty-airport-transfers.sass` to match the brand identity.
