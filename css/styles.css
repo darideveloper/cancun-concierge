@@ -4185,4 +4185,8 @@ header.digitalrealty h2 {
   .transportation .titles {
     bottom: 400px;
   }
+}
+
+button.back {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

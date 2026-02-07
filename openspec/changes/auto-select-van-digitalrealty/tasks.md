@@ -1,0 +1,3 @@
+- [x] 1.  Add auto-selection logic to `code/digitalrealty-airport-transfers.js` inside a `load` event listener.
+- [x] 2.  Verify that the "Back" button functions correctly to return to the vehicle selection screen.
+- [x] 3.  Verify that pricing and text updates correctly reflect the "VAN" selection.

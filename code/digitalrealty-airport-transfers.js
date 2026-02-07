@@ -285,7 +285,11 @@ button_back.addEventListener("click", (e) => {
   form_elem.classList.add("hide")
 })
 
-// // Run script when page loads
-// self.addEventListener('load', (e) => {
-//   document.querySelector('[data-transport-type="arriving departing"]').click()
-// })
+// Run script when page loads
+// Auto-select VAN as default vehicle
+self.addEventListener('load', (e) => {
+  const vanCard = document.querySelector('.cards.vehicle .card[data-transport-type="van"]')
+  if (vanCard) {
+    vanCard.click()
+  }
+})
