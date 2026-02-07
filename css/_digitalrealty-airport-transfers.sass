@@ -1,14 +1,31 @@
-// Branding for Digital Realty Airport Transfers
-.digitalrealty
-    // Custom styles for Digital Realty can be added here
-
-.digitalrealty-airport-transfers
-    // Custom styles for the main content can be added here
-
-// Load local fonts
+// Load local fonts - AeonikPro
 @font-face
-    font-family: 'Kinfolk'
-    src: url('../fonts/Kinfolk-Bold.otf') format('opentype')
+    font-family: 'AeonikPro'
+    src: url('../fonts/AeonikPro-Light.otf') format('opentype')
+    font-weight: 300
+    font-style: normal
+    font-display: swap
+
+@font-face
+    font-family: 'AeonikPro'
+    src: url('../fonts/AeonikPro-Regular.otf') format('opentype')
+    font-weight: 400
+    font-style: normal
+    font-display: swap
+
+@font-face
+    font-family: 'AeonikPro'
+    src: url('../fonts/AeonikPro-Medium.otf') format('opentype')
+    font-weight: 500
+    font-style: normal
+    font-display: swap
+
+@font-face
+    font-family: 'AeonikPro'
+    src: url('../fonts/AeonikPro-Bold.otf') format('opentype')
+    font-weight: 700
+    font-style: normal
+    font-display: swap
 
 // Variables
 $color-deep-teal: #01454f
@@ -19,9 +36,10 @@ $color-near-black: #1A1A1A
 
 $color-primary: $color-deep-teal
 $color-dark: $color-near-black
-$font-regular: 'Libre Baskerville', sans-serif
-$font-title: 'Kinfolk', serif
-$font-highlight: 'Vampiro One', system
+$font-primary: 'AeonikPro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif
+$font-regular: $font-primary
+$font-title: $font-primary
+$font-highlight: $font-primary
 
 header.digitalrealty
     background-color: $color-near-black
@@ -86,8 +104,8 @@ header.digitalrealty
         // border removed
 
     .logo-event
-        width: 500px
-        max-width: 90%
+        width: 400px
+        max-width: 80%
         display: block
         margin: 0 auto
 
@@ -131,7 +149,6 @@ header.digitalrealty
                     width: 100%
 
                 h3
-                    margin-bottom: 0
                     color: $color-white
 
                 p
@@ -184,7 +201,6 @@ header.digitalrealty
     .info
         text-align: center
         font-weight: bold
-        max-width: 90%
         margin: 0 auto
 
     .buy-form
@@ -300,10 +316,10 @@ header.digitalrealty
             width: 90%
 
 .faqs .questions-wrapper .question .title
-    background-color: $color-light-green
+    background-color: $color-deep-teal
 
     h3
-        color: $color-near-black
+        color: $color-white
 
     svg
-        fill: $color-near-black
+        fill: $color-white

@@ -3856,15 +3856,39 @@ header.sunnyjoy-brett .btn.menu svg, #footer.sunnyjoy-brett .btn.menu svg {
 }
 
 @font-face {
-  font-family: "Kinfolk";
-  src: url("../fonts/Kinfolk-Bold.otf") format("opentype");
+  font-family: "AeonikPro";
+  src: url("../fonts/AeonikPro-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AeonikPro";
+  src: url("../fonts/AeonikPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AeonikPro";
+  src: url("../fonts/AeonikPro-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AeonikPro";
+  src: url("../fonts/AeonikPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 header.digitalrealty {
   background-color: #1A1A1A;
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "AeonikPro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 header.digitalrealty a {
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "AeonikPro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: #FFFFFF;
 }
 header.digitalrealty .content nav ul li a {
@@ -3874,12 +3898,12 @@ header.digitalrealty .content nav ul li a:hover {
   color: #00FF85;
 }
 header.digitalrealty h2 {
-  font-family: "Kinfolk", serif;
+  font-family: "AeonikPro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 #footer.digitalrealty {
   background-color: #1A1A1A;
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "AeonikPro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 #footer.digitalrealty .widgets .widget:nth-child(2) {
   width: 250px;
@@ -3897,14 +3921,14 @@ header.digitalrealty h2 {
 
 .digitalrealty-airport-transfers {
   color: #1A1A1A;
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "AeonikPro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 .digitalrealty-airport-transfers h1, .digitalrealty-airport-transfers h2, .digitalrealty-airport-transfers h3, .digitalrealty-airport-transfers h4, .digitalrealty-airport-transfers h5, .digitalrealty-airport-transfers h6 {
-  font-family: "Kinfolk", serif;
+  font-family: "AeonikPro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: #01454f;
 }
 .digitalrealty-airport-transfers p, .digitalrealty-airport-transfers a, .digitalrealty-airport-transfers span, .digitalrealty-airport-transfers label, .digitalrealty-airport-transfers input, .digitalrealty-airport-transfers select, .digitalrealty-airport-transfers button {
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "AeonikPro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 .digitalrealty-airport-transfers h1 {
   color: #01454f;
@@ -3922,8 +3946,8 @@ header.digitalrealty h2 {
   margin-bottom: 50px;
 }
 .digitalrealty-airport-transfers .logo-event {
-  width: 500px;
-  max-width: 90%;
+  width: 400px;
+  max-width: 80%;
   display: block;
   margin: 0 auto;
 }
@@ -3964,7 +3988,6 @@ header.digitalrealty h2 {
   width: 100%;
 }
 .digitalrealty-airport-transfers .cards.transport .card .text h3 {
-  margin-bottom: 0;
   color: #FFFFFF;
 }
 .digitalrealty-airport-transfers .cards.transport .card .text p {
@@ -4013,7 +4036,6 @@ header.digitalrealty h2 {
 .digitalrealty-airport-transfers .info {
   text-align: center;
   font-weight: bold;
-  max-width: 90%;
   margin: 0 auto;
 }
 .digitalrealty-airport-transfers .buy-form .wrapper-fieldsets {
@@ -4125,11 +4147,11 @@ header.digitalrealty h2 {
 }
 
 .faqs .questions-wrapper .question .title {
-  background-color: #99efcb;
+  background-color: #01454f;
 }
 .faqs .questions-wrapper .question .title h3 {
-  color: #1A1A1A;
+  color: #FFFFFF;
 }
 .faqs .questions-wrapper .question .title svg {
-  fill: #1A1A1A;
+  fill: #FFFFFF;
 }/*# sourceMappingURL=styles.css.map */
