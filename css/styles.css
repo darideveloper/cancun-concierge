@@ -4123,11 +4123,9 @@ header.digitalrealty h2 {
   .digitalrealty-airport-transfers .cards.transport {
     width: 50%;
     grid-template-columns: repeat(1, 1fr);
-    gap: 0;
   }
   .digitalrealty-airport-transfers .cards.transport .card {
     justify-content: flex-start;
-    padding: 0;
   }
   .digitalrealty-airport-transfers .cards.transport .card br {
     display: none;
@@ -4177,4 +4175,14 @@ header.digitalrealty h2 {
 
 .transportation .titles {
   bottom: 100px;
+}
+@media screen and (max-width: 900px) {
+  .transportation .titles {
+    bottom: 350px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .transportation .titles {
+    bottom: 400px;
+  }
 }/*# sourceMappingURL=styles.css.map */
