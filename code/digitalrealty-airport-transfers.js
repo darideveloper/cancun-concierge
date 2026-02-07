@@ -3,7 +3,7 @@ var move_value = 33.33
 
 const stripe_user = "digitalrealty"
 const stripe_api = "https://omar.apps.darideveloper.com/digitalrealty/sale/"
-// const stripe_api = "http://127.0.0.1:8000/rohan-karisma/sale/"
+// const stripe_api = "http://127.0.0.1:8000/digitalrealty/sale/"
 
 // Global elements
 const form_elem = document.querySelector("form")
@@ -17,10 +17,14 @@ const button_back = document.querySelector(".buttons .back")
 // Sweet alert when done query
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
-const done = urlParams.get('done')
+const done = urlParams.get('done') || urlParams.get('thanks')
 if (done) {
-  alert("Payment saved. Check the receipt in your email")
-
+  Swal.fire({
+    title: "Payment saved",
+    text: "Check the receipt in your email",
+    icon: "success",
+    confirmButtonText: "OK"
+  })
 }
 
 // Prices
