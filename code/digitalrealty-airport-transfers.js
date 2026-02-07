@@ -23,7 +23,13 @@ if (done) {
     title: "Payment saved",
     text: "Check the receipt in your email",
     icon: "success",
-    confirmButtonText: "OK"
+    confirmButtonText: "OK",
+    confirmButtonColor: "#01454f",
+    iconColor: "#00FF85",
+    customClass: {
+      popup: 'digitalrealty-swal-popup',
+      confirmButton: 'digitalrealty-swal-button'
+    }
   })
 }
 
