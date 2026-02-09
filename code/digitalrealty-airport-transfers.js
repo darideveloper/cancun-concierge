@@ -36,20 +36,20 @@ if (done) {
 // Prices
 const prices = {
   "deluxe": {
-    "arriving": [195.00, 170.00],
-    "departing": [195.00, 170.00],
-    "arriving departing": [390, 340],
+    "arriving": [0, 158],
+    "departing": [0, 158],
+    "arriving departing": [0, 315],
   },
   "van": {
-    "arriving": [155.00, 130.00],
-    "departing": [155.00, 130.00],
-    "arriving departing": [310.00, 260.00],
+    "arriving": [0, 158],
+    "departing": [0, 158],
+    "arriving departing": [0, 315],
   },
   "sprinter": {
-    "arriving": [235.00, 205.00],
-    "departing": [235.00, 205.00],
-    "arriving departing": [470.00, 410.00],
-  },
+    "arriving": [0, 158],
+    "departing": [0, 158],
+    "arriving departing": [0, 315],
+  }
 }
 
 // Array from 2 to 4
