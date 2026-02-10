@@ -3946,16 +3946,26 @@ header.digitalrealty h2 {
   margin-bottom: 50px;
 }
 .digitalrealty-airport-transfers .logo-event {
-  width: 400px;
-  max-width: 80%;
+  max-width: 400px;
+  height: auto;
+  margin: 2rem auto;
   display: block;
-  margin: 0 auto;
 }
 .digitalrealty-airport-transfers .gallery .imgs {
   width: 300% !important;
 }
 .digitalrealty-airport-transfers .gallery .imgs img {
   width: 33.33% !important;
+}
+.digitalrealty-airport-transfers .gallery.static {
+  overflow: hidden;
+  width: 100%;
+}
+.digitalrealty-airport-transfers .gallery.static .imgs-wrapper .imgs {
+  width: 100% !important;
+}
+.digitalrealty-airport-transfers .gallery.static .imgs-wrapper .imgs img {
+  width: 100% !important;
 }
 .digitalrealty-airport-transfers .cards.transport {
   gap: 25px;

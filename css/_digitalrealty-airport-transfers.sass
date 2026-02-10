@@ -104,10 +104,10 @@ header.digitalrealty
         // border removed
 
     .logo-event
-        width: 400px
-        max-width: 80%
+        max-width: 400px
+        height: auto
+        margin: 2rem auto
         display: block
-        margin: 0 auto
 
     .gallery
         .imgs
@@ -115,6 +115,16 @@ header.digitalrealty
 
             img
                 width: 33.33% !important
+
+        &.static
+            overflow: hidden
+            width: 100%
+
+            .imgs-wrapper .imgs
+                width: 100% !important
+
+                img
+                    width: 100% !important
 
     .cards.transport
         gap: 25px
