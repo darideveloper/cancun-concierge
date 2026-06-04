@@ -11,6 +11,8 @@ const transport_cards_wrapper = document.querySelector(".cards.translate")
 const transport_cards = document.querySelectorAll(".cards.translate > .card")
 const transport_vehicles_wrapper = document.querySelector(".cards.vehicle")
 const transport_vehicles = document.querySelectorAll(".cards.vehicle > .card")
+const service_cards_wrapper = document.querySelector(".cards.service-type")
+const service_cards = document.querySelectorAll(".cards.service-type > .card")
 const buttons_wrapper = document.querySelector(".buttons")
 const button_back = document.querySelector(".buttons .back")
 const airport_select = document.querySelector("#airport")
@@ -31,46 +33,52 @@ if (done) {
 // Prices
 const prices = {
   "CUN": {
+    "Shared Shuttle": {
+      "arriving": [0.00, 52.00],
+      "departing": [0.00, 52.00],
+      "arriving departing": [0.00, 104.00],
+    },
     "Van": {
-      "arriving": [0.00, 184.00],
-      "departing": [0.00, 184.00],
-      "arriving departing": [0.00, 368],
+      "arriving": [0.00, 158.00],
+      "departing": [0.00, 158.00],
+      "arriving departing": [0.00, 316.00],
     },
     "Sprinter": {
-      "arriving": [0.00, 274],
-      "departing": [0.00, 274],
-      "arriving departing": [0.00, 548],
+      "arriving": [0.00, 234.00],
+      "departing": [0.00, 234.00],
+      "arriving departing": [0.00, 468.00],
     },
-    "Suburban": {
-      "arriving": [0.00, 260.00],
-      "departing": [0.00, 260.00],
-      "arriving departing": [0.00, 520],
+    "Deluxe SUV": {
+      "arriving": [0.00, 219.00],
+      "departing": [0.00, 219.00],
+      "arriving departing": [0.00, 438.00],
     },
   },
   "TQO": {
     "Van": {
-      "arriving": [0.00, 204],
-      "departing": [0.00, 204],
-      "arriving departing": [0.00, 408],
+      "arriving": [0.00, 158.00],
+      "departing": [0.00, 158.00],
+      "arriving departing": [0.00, 316.00],
     },
     "Sprinter": {
-      "arriving": [0.00, 285.00],
-      "departing": [0.00, 285.00],
-      "arriving departing": [0.00, 570],
+      "arriving": [0.00, 234.00],
+      "departing": [0.00, 234.00],
+      "arriving departing": [0.00, 468.00],
     },
-    "Suburban": {
-      "arriving": [0.00, 255],
-      "departing": [0.00, 255],
-      "arriving departing": [0.00, 510],
+    "Deluxe SUV": {
+      "arriving": [0.00, 219.00],
+      "departing": [0.00, 219.00],
+      "arriving departing": [0.00, 438.00],
     },
   }
 }
 
 // Passengers data
 const passengers = {
+  "Shared Shuttle": [1,2,3,4,5,6,7,8,9,10],
   "Van": [1,2,3,4,5,6],
   "Sprinter": [1,2,3,4,5,6,7,8,9,10,11,12],
-  "Suburban": [1,2,3,4]
+  "Deluxe SUV": [1,2,3,4]
 }
 const passengersText = [
   "zero",
@@ -89,6 +97,8 @@ const passengersText = [
 ]
 let current_transport_type = ""
 let current_price = 0
+let current_service_type = ""
+let selected_transfer_type = ""
 
 function activete_form(transport_types) {
 
@@ -157,6 +167,8 @@ transport_cards.forEach(transport_card => {
     const transport_type_value = transport_card.getAttribute("data-transport-type")
     const transport_types = transport_card.getAttribute("data-transport-type").split(" ")
 
+    selected_transfer_type = transport_type_value
+
     // Activate form fieldsets
     activete_form(transport_types)
 
@@ -164,10 +176,62 @@ transport_cards.forEach(transport_card => {
     transport_name = transport_card.querySelector("h3").innerText
 
     // Update price
-    current_price = prices[airport_name][current_transport_type][transport_type_value]
+    if (current_service_type === "shared") {
+      let count = parseInt(document.querySelector("#passengers").value || 1)
+      let base_rate = prices[airport_name]["Shared Shuttle"][transport_type_value]
+      current_price = [base_rate[0], base_rate[1] * count]
+    } else {
+      current_price = prices[airport_name][current_transport_type][transport_type_value]
+    }
   }))
 })
 
+// Select service type card
+service_cards.forEach(service_card => {
+  service_card.addEventListener("click", () => {
+    // Deactivate other service cards
+    service_cards.forEach(c => c.classList.remove("active"))
+    service_card.classList.add("active")
+
+    current_service_type = service_card.getAttribute("data-service-type")
+
+    // Hide service selector & airport select to clean up UI
+    service_cards_wrapper.classList.add("hide")
+    airport_select.parentElement.classList.add("hide")
+
+    // Show back button
+    buttons_wrapper.classList.remove("hide")
+
+    if (current_service_type === "private") {
+      transport_vehicles_wrapper.classList.remove("hide")
+      info_elem.innerText = "Price is per vehicle (not per person)."
+    } else {
+      current_transport_type = "Shared Shuttle"
+      
+      let prices_shuttle = prices[airport_name]["Shared Shuttle"]
+      transport_cards.forEach(transport_card => {
+        const transport_type = transport_card.getAttribute("data-transport-type")
+        let price_elem = transport_card.querySelector(".price > span")
+        let base_price = prices_shuttle[transport_type][1].toFixed(2)
+        price_elem.innerText = `${base_price} USD / person`
+      })
+
+      info_elem.innerText = "Price is per person."
+      info_elem.classList.remove("hide")
+      transport_cards_wrapper.classList.remove("hide")
+    }
+  })
+})
+
+// Recalculate price on passenger change (only for Shared Shuttle)
+const passengers_select = document.querySelector("#passengers")
+passengers_select.addEventListener("change", () => {
+  if (current_service_type === "shared" && selected_transfer_type) {
+    let count = parseInt(passengers_select.value)
+    let base_rate = prices[airport_name]["Shared Shuttle"][selected_transfer_type]
+    current_price = [base_rate[0], base_rate[1] * count]
+  }
+})
 // Show input for custom hotel
 const hotel_inputs = document.querySelectorAll('select[name*="hotel"]')
 hotel_inputs.forEach(hotel_input => {
@@ -268,7 +332,10 @@ form.addEventListener("submit", (e) => {
     "products": {}
   }
 
-  stripe_data["products"][transport_name] = {
+  const service_prefix = current_service_type === "shared" ? "Shared Shuttle" : "Private Transfer"
+  const checkout_product_name = `${service_prefix} - ${transport_name} (${current_transport_type})`
+
+  stripe_data["products"][checkout_product_name] = {
     "amount": 1,
     "price": current_price[1],
     "description": form_text,
@@ -293,23 +360,31 @@ form.addEventListener("submit", (e) => {
 })
 
 button_back.addEventListener("click", (e) => {
-  // Hide transport options
-  transport_cards_wrapper.classList.add("hide")
-
-  // Show vehicle options
-  transport_vehicles_wrapper.classList.remove("hide")
-
-  // Hide back button
-  buttons_wrapper.classList.add("hide")
-
-  // Hide form
-  form_elem.classList.add("hide")
-
-  // Show airport select
-  airport_select.parentElement.classList.remove("hide")
-
-  // Hide info
-  info_elem.classList.add("hide")
+  if (!form_elem.classList.contains("hide")) {
+    // Go from Form back to Transfer options
+    form_elem.classList.add("hide")
+    transport_cards_wrapper.classList.remove("hide")
+  } else if (!transport_cards_wrapper.classList.contains("hide")) {
+    // Go from Transfer options back
+    transport_cards_wrapper.classList.add("hide")
+    info_elem.classList.add("hide")
+    
+    if (current_service_type === "private") {
+      transport_vehicles_wrapper.classList.remove("hide")
+    } else {
+      // Shared: Go back to Service selector and Airport Select
+      service_cards_wrapper.classList.remove("hide")
+      airport_select.parentElement.classList.remove("hide")
+      buttons_wrapper.classList.add("hide")
+    }
+  } else if (!transport_vehicles_wrapper.classList.contains("hide")) {
+    // Go from Vehicle options back to Service selector
+    transport_vehicles_wrapper.classList.add("hide")
+    info_elem.classList.add("hide")
+    service_cards_wrapper.classList.remove("hide")
+    airport_select.parentElement.classList.remove("hide")
+    buttons_wrapper.classList.add("hide")
+  }
 })
 
 
@@ -317,11 +392,27 @@ button_back.addEventListener("click", (e) => {
 airport_select.addEventListener("change", (e) => {
   airport_name = e.target.value
 
+  service_cards.forEach(c => c.classList.remove("active"))
+
   if (airport_name == "") {
-    transport_vehicles_wrapper.classList.add("hide")
+    service_cards_wrapper.classList.add("hide")
   } else {
-    transport_vehicles_wrapper.classList.remove("hide")
+    service_cards_wrapper.classList.remove("hide")
+    // Hide shared shuttle if airport is TQO (since it's only offered for CUN)
+    const shared_card = document.querySelector('[data-service-type="shared"]')
+    if (airport_name === "TQO") {
+      shared_card.classList.add("hide")
+    } else {
+      shared_card.classList.remove("hide")
+    }
   }
+
+  // Ensure other wizard panels are reset / hidden
+  transport_vehicles_wrapper.classList.add("hide")
+  transport_cards_wrapper.classList.add("hide")
+  form_elem.classList.add("hide")
+  info_elem.classList.add("hide")
+  buttons_wrapper.classList.add("hide")
 
   // Update cancun texts
   const selectors = [
