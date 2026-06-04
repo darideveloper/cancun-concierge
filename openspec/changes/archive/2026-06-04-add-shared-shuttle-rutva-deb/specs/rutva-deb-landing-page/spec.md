@@ -1,19 +1,4 @@
-# rutva-deb-landing-page Specification
-
-## Purpose
-TBD - created by archiving change create-rutva-deb-landing-page. Update Purpose after archive.
-
-## Requirements
-
-### Requirement: Dedicated Landing Page for Rutva & Deb
-The system MUST provide a dedicated landing page at `/rutva-deb-airport-transfers/index.html` that displays event-specific branding ("Rutva & Deb") and booking information for transfers to the Hilton Tulum Riviera Maya resort. All styles and assets SHALL be correctly loaded and aligned with the project's base theme.
-
-#### Scenario: Page displays correct branding and styles
-- **WHEN** a user navigates to `/rutva-deb-airport-transfers/`
-- **THEN** the page header, main content titles, and paralax section MUST display "Rutva & Deb"
-- **THEN** the header background color MUST match the reference (`rgb(48, 89, 65)`)
-- **THEN** the paralax section MUST correctly load the background image
-- **THEN** the footer copyright and contact widgets MUST be visible and correctly styled
+## MODIFIED Requirements
 
 ### Requirement: Client-Specific Pricing and Stripe Integration
 The landing page MUST apply client-specific pricing and Stripe configurations. It MUST support two service types:
@@ -40,10 +25,3 @@ The page MUST show the Service selector directly on page load and default to CUN
 - **WHEN** the user navigates to the page (defaulting to CUN), selects "Private Service", vehicle "Deluxe SUV", and chooses transfer type "Arrival"
 - **THEN** the system MUST set the line item price to $219 USD (regardless of passenger count)
 - **THEN** the Stripe transaction payload MUST include "Private Transfer - Airport - Hotel Transfer (Deluxe SUV)"
-
-### Requirement: Pre-selected Destination Hotel
-The booking form MUST have "Hilton Tulum Riviera Maya" pre-selected as the destination hotel in both arriving and departing fieldsets to streamline the booking process for wedding guests.
-
-#### Scenario: Hotel is pre-selected on form load
-- **WHEN** the user selects a vehicle and transport type to activate the form
-- **THEN** the hotel selection dropdowns for both "Arriving" and "Departing" fieldsets MUST have "Hilton Tulum Riviera Maya" selected by default
