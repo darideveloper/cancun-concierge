@@ -2,3 +2,16 @@
 *.css.map
 *.txt
 changes.txt
+
+# .gitignore
+# Ignore proposals
+openspec/changes/*
+
+# Do not ignore archived proposals
+!openspec/changes/archive/
+
+# skip docs
+docs/
+
+# ignore by default all hiden folders (like agents folders)
+.*/
