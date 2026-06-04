@@ -1623,13 +1623,15 @@ header.fixed .content nav > ul > li {
 
 header.ella-james, #footer.ella-james {
   background-color: #bca078;
-  font-family: "Montserrat", sans-serif;
 }
 header.ella-james .content nav ul li a, #footer.ella-james .content nav ul li a {
   color: #010101;
 }
 header.ella-james .content nav ul li a:hover, #footer.ella-james .content nav ul li a:hover {
   color: white;
+}
+header.ella-james, #footer.ella-james {
+  font-family: "Montserrat", sans-serif;
 }
 header.ella-james h2, #footer.ella-james h2 {
   font-family: "Vast Shadow", serif;
@@ -2502,10 +2504,6 @@ header.kiana-swaroop .btn.menu svg, #footer.kiana-swaroop .btn.menu svg {
   }
 }
 
-main.kiana-swaroop {
-  color: #50493f;
-  font-family: "Quicksand", sans-serif;
-}
 main.kiana-swaroop label {
   padding: 10px 0;
   width: 100%;
@@ -2527,6 +2525,10 @@ main.kiana-swaroop label input:disabled, main.kiana-swaroop label input .disable
 main.kiana-swaroop label input:focus:not(:disabled), main.kiana-swaroop label input:hover:not(:disabled), main.kiana-swaroop label select:focus:not(:disabled), main.kiana-swaroop label select:hover:not(:disabled) {
   outline: none;
   box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+main.kiana-swaroop {
+  color: #50493f;
+  font-family: "Quicksand", sans-serif;
 }
 main.kiana-swaroop h2, main.kiana-swaroop h3, main.kiana-swaroop h4, main.kiana-swaroop h5, main.kiana-swaroop h6 {
   font-family: "Libre Baskerville", sans-serif;
@@ -2769,6 +2771,316 @@ main.kiana-swaroop .faqs .questions-wrapper .question .title h3 {
   }
 }
 
+header.rutva-deb, #footer.rutva-deb {
+  background-color: #305941;
+  font-family: "Quicksand", sans-serif;
+  color: #50493f;
+}
+header.rutva-deb a, #footer.rutva-deb a {
+  font-family: "Quicksand", sans-serif;
+}
+header.rutva-deb .content nav ul li a, #footer.rutva-deb .content nav ul li a {
+  color: white;
+}
+header.rutva-deb .content nav ul li a:hover, #footer.rutva-deb .content nav ul li a:hover {
+  color: rgba(80, 73, 63, 0.6);
+}
+header.rutva-deb h2, #footer.rutva-deb h2 {
+  font-family: "Libre Baskerville", sans-serif;
+}
+header.rutva-deb .btn.menu svg, #footer.rutva-deb .btn.menu svg {
+  fill: white;
+}
+
+#footer.rutva-deb .widgets .widget p, #footer.rutva-deb .widgets .widget a, #footer.rutva-deb .widgets .widget span, #footer.rutva-deb .widgets .widget h2 {
+  color: white;
+}
+#footer.rutva-deb .widgets .widget:nth-child(2) {
+  width: 250px;
+}
+#footer.rutva-deb .widgets .widget a:hover {
+  opacity: 0.6;
+  color: white;
+}
+#footer.rutva-deb .widgets .widget a svg, #footer.rutva-deb .widgets .widget p svg {
+  fill: white;
+}
+#footer.rutva-deb small {
+  color: white;
+}
+@media screen and (max-width: 750px) {
+  #footer.rutva-deb .widgets {
+    align-items: flex-start;
+  }
+}
+
+main.rutva-deb label {
+  padding: 10px 0;
+  width: 100%;
+}
+main.rutva-deb label input, main.rutva-deb label select {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  border: 1px solid #4F6A9E;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+main.rutva-deb label input:disabled, main.rutva-deb label input .disabled, main.rutva-deb label select:disabled, main.rutva-deb label select .disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+main.rutva-deb label input:focus:not(:disabled), main.rutva-deb label input:hover:not(:disabled), main.rutva-deb label select:focus:not(:disabled), main.rutva-deb label select:hover:not(:disabled) {
+  outline: none;
+  box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+main.rutva-deb {
+  color: #50493f;
+  font-family: "Quicksand", sans-serif;
+}
+main.rutva-deb h2, main.rutva-deb h3, main.rutva-deb h4, main.rutva-deb h5, main.rutva-deb h6 {
+  font-family: "Libre Baskerville", sans-serif;
+  color: #50493f;
+}
+main.rutva-deb h1 {
+  font-family: "Libre Baskerville", sans-serif;
+  color: white !important;
+}
+main.rutva-deb p, main.rutva-deb a, main.rutva-deb span, main.rutva-deb label, main.rutva-deb input, main.rutva-deb select, main.rutva-deb button {
+  font-family: "Quicksand", sans-serif;
+  color: #50493f;
+}
+main.rutva-deb .transportation .titles h1, main.rutva-deb .transportation .titles p {
+  background-color: #305941;
+  color: #50493f;
+}
+main.rutva-deb h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+main.rutva-deb h2 + p {
+  text-align: center;
+  margin-bottom: 50px;
+  border: 1px solid red !important;
+}
+main.rutva-deb .paralax {
+  background-image: url("../imgs/rutva-deb-logo.webp");
+  height: 700px;
+  position: relative;
+  background-color: #305941;
+}
+main.rutva-deb .paralax p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  font-family: "Libre Baskerville", sans-serif;
+  letter-spacing: 1.1rem;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(80, 73, 63, 0.6);
+}
+main.rutva-deb .logo-event {
+  width: 100%;
+  display: block;
+  margin: 0;
+}
+main.rutva-deb .gallery .imgs {
+  width: 300% !important;
+}
+main.rutva-deb .gallery .imgs img {
+  width: 33.33% !important;
+}
+main.rutva-deb .airport {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 400px;
+}
+main.rutva-deb .airport select {
+  width: 100%;
+}
+main.rutva-deb .cards.transport {
+  gap: 25px;
+  margin-bottom: 20px;
+}
+main.rutva-deb .cards.transport .card {
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 20px;
+  padding: 15px;
+  flex-direction: row;
+}
+main.rutva-deb .cards.transport .card .text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  width: calc(100% - 44px);
+}
+main.rutva-deb .cards.transport .card .text h3, main.rutva-deb .cards.transport .card .text p.price {
+  text-align: left;
+  width: 100%;
+  color: rgba(80, 73, 63, 0.8) !important;
+}
+main.rutva-deb .cards.transport .card .text h3 span, main.rutva-deb .cards.transport .card .text p.price span {
+  color: #50493f;
+}
+main.rutva-deb .cards.transport .card .text h3 {
+  margin-bottom: 0;
+}
+main.rutva-deb .cards.transport .card .text p {
+  text-align: left;
+}
+main.rutva-deb .cards.transport .card .text p span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+main.rutva-deb .cards.transport .card .text p.price {
+  font-size: 1.3rem;
+  color: #305941;
+}
+main.rutva-deb .cards.transport .card .text p.price span {
+  display: block;
+}
+main.rutva-deb .cards.transport .card .text p.regular-price {
+  font-size: 1rem;
+  margin: 10px 0;
+  opacity: 0.4;
+}
+main.rutva-deb .cards.transport .card .text p.regular-price span {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+main.rutva-deb .cards.transport .card .checkbox {
+  border: 2px solid rgba(80, 73, 63, 0.8);
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.rutva-deb .cards.transport .card .checkbox .inside {
+  width: 30px;
+  height: 12px;
+}
+main.rutva-deb .cards.transport .card:hover .checkbox .inside {
+  background-color: rgba(80, 73, 63, 0.6);
+}
+main.rutva-deb .cards.transport .card.active .checkbox .inside {
+  background-color: rgba(80, 73, 63, 0.8);
+}
+main.rutva-deb .info {
+  text-align: center;
+  font-weight: bold;
+  max-width: 90%;
+  margin: 0 auto;
+}
+main.rutva-deb .buy-form .wrapper-fieldsets {
+  display: grid;
+  gap: 25px;
+  margin: 0 auto;
+}
+main.rutva-deb .buy-form .wrapper-fieldsets.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+main.rutva-deb .buy-form .wrapper-fieldsets.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+main.rutva-deb .buy-form .wrapper-fieldsets .btn.cta {
+  margin-top: 15px;
+  color: white;
+  background-color: #333333;
+}
+main.rutva-deb .buy-form .wrapper-fieldsets fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+main.rutva-deb .buy-form .wrapper-fieldsets fieldset p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+main.rutva-deb .buy-form .btn.cta {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  color: white;
+  background-color: #333333;
+  border: 2px solid #333333;
+}
+main.rutva-deb .buy-form .btn.cta:hover {
+  color: #333333;
+  background-color: white;
+}
+main.rutva-deb .buy-form .btn.cta[disabled] {
+  cursor: not-allowed;
+}
+main.rutva-deb .buttons button.back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+main.rutva-deb .buttons button.back:hover {
+  opacity: 0.7;
+}
+main.rutva-deb .buttons button.back svg {
+  width: 50px;
+  fill: #50493f;
+}
+main.rutva-deb .faqs .questions-wrapper .question .title {
+  background-color: #305941;
+}
+main.rutva-deb .faqs .questions-wrapper .question .title h3 {
+  color: white !important;
+}
+@media screen and (max-width: 900px) {
+  main.rutva-deb .cards.transport {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  main.rutva-deb .cards.transport .card {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  main.rutva-deb .cards.transport .card br {
+    display: none;
+  }
+  main.rutva-deb .buy-form .wrapper-fieldsets.two-columns, main.rutva-deb .buy-form .wrapper-fieldsets.three-columns {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  main.rutva-deb .paralax {
+    background-attachment: scroll !important;
+    height: 400px;
+  }
+  main.rutva-deb .paralax p {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  main.rutva-deb .cards.transport {
+    width: 70%;
+  }
+  main.rutva-deb .buy-form .wrapper-fieldsets {
+    width: 90%;
+  }
+  main.rutva-deb .paralax p {
+    font-size: 1.6rem;
+  }
+}
+
 @font-face {
   font-family: "FontPrimaryBold";
   src: url("../fonts/font-primary-bold.woff2") format("woff2");
@@ -2824,10 +3136,6 @@ header.monica-vivek .btn.menu svg, #footer.monica-vivek .btn.menu svg {
   }
 }
 
-main.monica-vivek {
-  color: #50493f;
-  font-family: "FontPrimaryBold", sans-serif;
-}
 main.monica-vivek label {
   padding: 10px 0;
   width: 100%;
@@ -2849,6 +3157,10 @@ main.monica-vivek label input:disabled, main.monica-vivek label input .disabled,
 main.monica-vivek label input:focus:not(:disabled), main.monica-vivek label input:hover:not(:disabled), main.monica-vivek label select:focus:not(:disabled), main.monica-vivek label select:hover:not(:disabled) {
   outline: none;
   box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+main.monica-vivek {
+  color: #50493f;
+  font-family: "FontPrimaryBold", sans-serif;
 }
 main.monica-vivek h2, main.monica-vivek h3, main.monica-vivek h4, main.monica-vivek h5, main.monica-vivek h6 {
   font-family: "FontSecondaryRegular", sans-serif;
@@ -3207,16 +3519,16 @@ main.service-master-restore .activities .buy-section .details-card .btn:hover {
   fill: #000000;
 }
 #footer.service-master-restore .socials a:hover {
-  color: #b4a401;
+  color: rgb(179.9715909091, 163.5170454545, 1.0284090909);
 }
 #footer.service-master-restore .socials a:hover svg {
-  fill: #b4a401;
+  fill: rgb(179.9715909091, 163.5170454545, 1.0284090909);
 }
 #footer.service-master-restore .socials p svg {
   fill: #000000;
 }
 #footer.service-master-restore .socials p:hover svg {
-  fill: #b4a401;
+  fill: rgb(179.9715909091, 163.5170454545, 1.0284090909);
 }
 #footer.service-master-restore .copyright {
   color: #000000;
@@ -3287,10 +3599,6 @@ header.jessica-maxwell .btn.menu svg, #footer.jessica-maxwell .btn.menu svg {
   }
 }
 
-main.jessica-maxwell {
-  color: #50493f;
-  font-family: "ProximaNova", sans-serif;
-}
 main.jessica-maxwell label {
   padding: 10px 0;
   width: 100%;
@@ -3312,6 +3620,10 @@ main.jessica-maxwell label input:disabled, main.jessica-maxwell label input .dis
 main.jessica-maxwell label input:focus:not(:disabled), main.jessica-maxwell label input:hover:not(:disabled), main.jessica-maxwell label select:focus:not(:disabled), main.jessica-maxwell label select:hover:not(:disabled) {
   outline: none;
   box-shadow: 0px 0px 8px 0px #4F6A9E;
+}
+main.jessica-maxwell {
+  color: #50493f;
+  font-family: "ProximaNova", sans-serif;
 }
 main.jessica-maxwell h2, main.jessica-maxwell h3, main.jessica-maxwell h4, main.jessica-maxwell h5, main.jessica-maxwell h6 {
   font-family: "Kinfolk", sans-serif;
@@ -4199,4 +4511,6 @@ header.digitalrealty h2 {
 
 button.back {
   display: none;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
