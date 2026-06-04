@@ -138,13 +138,30 @@ main.rutva-deb
             img
                 width: 33.33% !important
 
-    .airport
-        width: 90%
-        margin: 0 auto
-        max-width: 400px
+    .cards.service-type
+        grid-template-columns: repeat(2, 1fr)
+        max-width: 900px
+        margin: 0 auto 50px auto
+        gap: 40px
 
-        select
-            width: 100%
+        .card
+            padding: 30px
+            min-height: 180px
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            border: 2px solid rgba($color-black, 0.1)
+            background-color: $color-white
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05)
+            
+            &:hover
+                border-color: $color-primary
+                transform: translateY(-2px)
+                box-shadow: 0 8px 25px rgba(0,0,0,0.1)
+
+            &.active
+                border-color: $color-primary
+                background-color: rgba($color-primary, 0.05)
 
     .cards.transport
         gap: 25px
@@ -306,6 +323,15 @@ main.rutva-deb
 
                 br
                     display: none
+
+        .cards.service-type
+            width: 90% !important
+            grid-template-columns: repeat(1, 1fr) !important
+            gap: 20px !important
+
+            .card
+                padding: 20px
+                min-height: 140px
 
         .buy-form
             .wrapper-fieldsets

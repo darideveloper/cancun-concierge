@@ -15,11 +15,10 @@ const service_cards_wrapper = document.querySelector(".cards.service-type")
 const service_cards = document.querySelectorAll(".cards.service-type > .card")
 const buttons_wrapper = document.querySelector(".buttons")
 const button_back = document.querySelector(".buttons .back")
-const airport_select = document.querySelector("#airport")
 const info_elem = document.querySelector(".info")
 
 // Global data
-let airport_name = ""
+let airport_name = "CUN"
 
 // Sweet alert when done query
 const queryString = window.location.search
@@ -195,9 +194,8 @@ service_cards.forEach(service_card => {
 
     current_service_type = service_card.getAttribute("data-service-type")
 
-    // Hide service selector & airport select to clean up UI
+    // Hide service selector to clean up UI
     service_cards_wrapper.classList.add("hide")
-    airport_select.parentElement.classList.add("hide")
 
     // Show back button
     buttons_wrapper.classList.remove("hide")
@@ -372,9 +370,8 @@ button_back.addEventListener("click", (e) => {
     if (current_service_type === "private") {
       transport_vehicles_wrapper.classList.remove("hide")
     } else {
-      // Shared: Go back to Service selector and Airport Select
+      // Shared: Go back to Service selector
       service_cards_wrapper.classList.remove("hide")
-      airport_select.parentElement.classList.remove("hide")
       buttons_wrapper.classList.add("hide")
     }
   } else if (!transport_vehicles_wrapper.classList.contains("hide")) {
@@ -382,51 +379,6 @@ button_back.addEventListener("click", (e) => {
     transport_vehicles_wrapper.classList.add("hide")
     info_elem.classList.add("hide")
     service_cards_wrapper.classList.remove("hide")
-    airport_select.parentElement.classList.remove("hide")
     buttons_wrapper.classList.add("hide")
-  }
-})
-
-
-// Save changes in airport
-airport_select.addEventListener("change", (e) => {
-  airport_name = e.target.value
-
-  service_cards.forEach(c => c.classList.remove("active"))
-
-  if (airport_name == "") {
-    service_cards_wrapper.classList.add("hide")
-  } else {
-    service_cards_wrapper.classList.remove("hide")
-    // Hide shared shuttle if airport is TQO (since it's only offered for CUN)
-    const shared_card = document.querySelector('[data-service-type="shared"]')
-    if (airport_name === "TQO") {
-      shared_card.classList.add("hide")
-    } else {
-      shared_card.classList.remove("hide")
-    }
-  }
-
-  // Ensure other wizard panels are reset / hidden
-  transport_vehicles_wrapper.classList.add("hide")
-  transport_cards_wrapper.classList.add("hide")
-  form_elem.classList.add("hide")
-  info_elem.classList.add("hide")
-  buttons_wrapper.classList.add("hide")
-
-  // Update cancun texts
-  const selectors = [
-    "#arriving-time span",
-    "#departing-time span",
-    '[name="arriving-airline"] + p',
-    '[name="departing-airline"] + p',
-  ]
-  const cancunTextsElemns = document.querySelectorAll(selectors.join(", "))
-  console.log({cancunTextsElemns})
-  if (airport_name != "CUN") {
-    cancunTextsElemns.forEach(elem => {
-      const text = elem.innerText
-      elem.innerText = text.replace("Cancun", "Tulum")
-    })
   }
 })

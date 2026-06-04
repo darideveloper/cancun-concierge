@@ -2897,13 +2897,30 @@ main.rutva-deb .gallery .imgs {
 main.rutva-deb .gallery .imgs img {
   width: 33.33% !important;
 }
-main.rutva-deb .airport {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 400px;
+main.rutva-deb .cards.service-type {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  gap: 40px;
 }
-main.rutva-deb .airport select {
-  width: 100%;
+main.rutva-deb .cards.service-type .card {
+  padding: 30px;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2px solid rgba(80, 73, 63, 0.1);
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+main.rutva-deb .cards.service-type .card:hover {
+  border-color: #305941;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+main.rutva-deb .cards.service-type .card.active {
+  border-color: #305941;
+  background-color: rgba(48, 89, 65, 0.05);
 }
 main.rutva-deb .cards.transport {
   gap: 25px;
@@ -3056,6 +3073,15 @@ main.rutva-deb .faqs .questions-wrapper .question .title h3 {
   }
   main.rutva-deb .cards.transport .card br {
     display: none;
+  }
+  main.rutva-deb .cards.service-type {
+    width: 90% !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 20px !important;
+  }
+  main.rutva-deb .cards.service-type .card {
+    padding: 20px;
+    min-height: 140px;
   }
   main.rutva-deb .buy-form .wrapper-fieldsets.two-columns, main.rutva-deb .buy-form .wrapper-fieldsets.three-columns {
     width: 80%;
