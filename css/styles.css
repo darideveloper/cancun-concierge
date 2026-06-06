@@ -2844,20 +2844,22 @@ main.rutva-deb h2, main.rutva-deb h3, main.rutva-deb h4, main.rutva-deb h5, main
   font-family: "Libre Baskerville", sans-serif;
   color: #50493f;
 }
-main.rutva-deb h1 {
-  font-family: "Libre Baskerville", sans-serif;
-  color: white !important;
+main.rutva-deb .transportation .titles {
+  pointer-events: none;
+  height: auto;
+  padding: 50px 0;
+  position: initial !important;
+  background: #305941 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 main.rutva-deb .transportation .titles h1.small {
   font-size: 32px;
 }
-main.rutva-deb p, main.rutva-deb a, main.rutva-deb span, main.rutva-deb label, main.rutva-deb input, main.rutva-deb select, main.rutva-deb button {
-  font-family: "Quicksand", sans-serif;
-  color: #50493f;
-}
 main.rutva-deb .transportation .titles h1, main.rutva-deb .transportation .titles p {
   background-color: #305941;
-  color: #50493f;
+  color: white;
 }
 main.rutva-deb .transportation .titles .shuttle-warning {
   color: white;

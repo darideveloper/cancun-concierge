@@ -84,12 +84,22 @@ main.rutva-deb
         font-family: $font-title
         color: $color-black
 
-    .transportation .titles h1.small
-        font-size: 32px
+    .transportation .titles
+        pointer-events: none
+        height: auto
+        padding: 50px 0
+        position: initial !important
+        background: $color-primary !important
+        margin: 0 !important
+        width: 100% !important
+        max-width: 100% !important
+
+        h1.small
+            font-size: 32px
 
     .transportation .titles h1, .transportation .titles p
         background-color: $color-primary
-        color: $color-black
+        color: $color-white
 
     .transportation .titles .shuttle-warning
         color: $color-white
