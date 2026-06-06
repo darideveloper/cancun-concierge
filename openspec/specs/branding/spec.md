@@ -12,6 +12,26 @@ The landing page SHALL reflect the "Digital Realty" brand instead of the "Rohan 
 - And the text "Rohan & Karisma Price:" should be replaced by "Digital Realty Price:"
 - And the text "Karisma & Rohan's wedding" should be replaced by "Digital Realty's event"
 
+### Requirement: Update all hotel name references to "Hotel Edition"
+The landing pages SHALL reflect the "Hotel Edition" brand instead of "Hilton Tulum Riviera Maya" in all visible text elements and form options when applicable (specifically for the "rename-hotel-to-edition" change).
+
+#### Scenario: Heading and content
+- **WHEN** a user visits a landing page affected by the rebrand (e.g., Rutva & Deb)
+- **THEN** the main heading (H1) SHOULD read "...to Hotel Edition"
+- **AND** any other mentions of "Hilton Tulum Riviera Maya" in the page content SHOULD be replaced.
+
+#### Scenario: Form dropdown selection
+- **WHEN** a user views the hotel selection dropdowns in the form
+- **THEN** the options for "Hilton Tulum Riviera Maya" MUST be replaced with "Hotel Edition" in both text and value attributes.
+
+#### Scenario: FAQs and details
+- **WHEN** a user reads the FAQs or service details
+- **THEN** all instances of "Hilton Tulum Riviera Maya" MUST be replaced with "Hotel Edition".
+
+#### Scenario: Preserve Cancun Concierge branding
+- **WHEN** a user views the logo or footer
+- **THEN** the text "Cancun Concierge" MUST remain unchanged.
+
 ### Requirement: Update branding classes and attributes
 HTML classes and attributes SHALL be renamed to follow the "Digital Realty" identifier for consistent styling and scripting.
 #### Scenario: Renaming classes for customization
