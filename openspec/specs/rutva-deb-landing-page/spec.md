@@ -42,8 +42,9 @@ The page MUST show the Service selector directly on page load and default to CUN
 - **THEN** the Stripe transaction payload MUST include "Private Transfer - Airport - Hotel Transfer (Deluxe SUV)"
 
 ### Requirement: Pre-selected Destination Hotel
-The booking form MUST have "Hilton Tulum Riviera Maya" pre-selected as the destination hotel in both arriving and departing fieldsets to streamline the booking process for wedding guests.
+The booking form MUST provide two hotel options in both arriving and departing fieldsets: **Hotel Edition** (pre-selected) and **Other** (free-text input). No other hotel options SHALL be listed.
 
-#### Scenario: Hotel is pre-selected on form load
-- **WHEN** the user selects a vehicle and transport type to activate the form
-- **THEN** the hotel selection dropdowns for both "Arriving" and "Departing" fieldsets MUST have "Hilton Tulum Riviera Maya" selected by default
+#### Scenario: Only Hotel Edition and Other are available in hotel dropdown
+- **WHEN** the booking form is displayed
+- **THEN** the arriving and departing hotel selection dropdowns MUST contain only "Hotel Edition" (selected by default) and "Other" as options
+- **THEN** "Conrad Tulum Riviera Maya" MUST NOT appear as an option in either dropdown
