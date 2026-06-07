@@ -211,7 +211,7 @@ service_cards.forEach(service_card => {
         const transport_type = transport_card.getAttribute("data-transport-type")
         let price_elem = transport_card.querySelector(".price > span")
         let base_price = prices_shuttle[transport_type][1].toFixed(2)
-        price_elem.innerText = `${base_price} USD / person`
+        price_elem.innerText = `${base_price} USD per person`
       })
 
       info_elem.innerText = "Price is per person."
