@@ -5,12 +5,12 @@ TBD - created by archiving change create-rutva-deb-landing-page. Update Purpose 
 
 ## Requirements
 
-### Requirement: Dedicated Landing Page for Rutva & Deb
-The system MUST provide a dedicated landing page at `/rutva-deb-airport-transfers/index.html` that displays event-specific branding ("Rutva & Deb") and booking information for transfers to the Hilton Tulum Riviera Maya resort. All styles and assets SHALL be correctly loaded and aligned with the project's base theme.
+### Requirement: Dedicated Landing Page for Rutva & Dev
+The system MUST provide a dedicated landing page at `/rutva-dev-airport-transfers/index.html` that displays event-specific branding ("Rutva & Dev") and booking information for transfers to the Hilton Tulum Riviera Maya resort. All styles and assets SHALL be correctly loaded and aligned with the project's base theme.
 
 #### Scenario: Page displays correct branding and styles
-- **WHEN** a user navigates to `/rutva-deb-airport-transfers/`
-- **THEN** the page header, main content titles, and paralax section MUST display "Rutva & Deb"
+- **WHEN** a user navigates to `/rutva-dev-airport-transfers/`
+- **THEN** the page header, main content titles, and paralax section MUST display "Rutva & Dev"
 - **THEN** the header background color MUST match the reference (`rgb(48, 89, 65)`)
 - **THEN** the paralax section MUST correctly load the background image
 - **THEN** the footer copyright and contact widgets MUST be visible and correctly styled
@@ -27,7 +27,7 @@ The landing page MUST apply client-specific pricing and Stripe configurations. I
    - Sprinter (maximum 12 passengers): $234 USD one-way, $468 USD round trip (tax included).
    - Deluxe SUV (maximum 4 passengers): $219 USD one-way, $438 USD round trip (tax included).
 
-The Stripe integration MUST process payments for these services under the `rutva-deb` identifier and dynamically calculate the correct checkout total (multiplying the price per person for the Shared Shuttle by the number of passengers).
+The Stripe integration MUST process payments for these services under the `rutva-dev` identifier and dynamically calculate the correct checkout total (multiplying the price per person for the Shared Shuttle by the number of passengers).
 
 The page MUST show the Service selector directly on page load and default to CUN (Cancun International Airport) internally.
 

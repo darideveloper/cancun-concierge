@@ -2771,54 +2771,54 @@ main.kiana-swaroop .faqs .questions-wrapper .question .title h3 {
   }
 }
 
-header.rutva-deb, #footer.rutva-deb {
+header.rutva-dev, #footer.rutva-dev {
   background-color: #305941;
   font-family: "Quicksand", sans-serif;
   color: #50493f;
 }
-header.rutva-deb a, #footer.rutva-deb a {
+header.rutva-dev a, #footer.rutva-dev a {
   font-family: "Quicksand", sans-serif;
 }
-header.rutva-deb .content nav ul li a, #footer.rutva-deb .content nav ul li a {
+header.rutva-dev .content nav ul li a, #footer.rutva-dev .content nav ul li a {
   color: white;
 }
-header.rutva-deb .content nav ul li a:hover, #footer.rutva-deb .content nav ul li a:hover {
+header.rutva-dev .content nav ul li a:hover, #footer.rutva-dev .content nav ul li a:hover {
   color: rgba(80, 73, 63, 0.6);
 }
-header.rutva-deb h2, #footer.rutva-deb h2 {
+header.rutva-dev h2, #footer.rutva-dev h2 {
   font-family: "Libre Baskerville", sans-serif;
 }
-header.rutva-deb .btn.menu svg, #footer.rutva-deb .btn.menu svg {
+header.rutva-dev .btn.menu svg, #footer.rutva-dev .btn.menu svg {
   fill: white;
 }
 
-#footer.rutva-deb .widgets .widget p, #footer.rutva-deb .widgets .widget a, #footer.rutva-deb .widgets .widget span, #footer.rutva-deb .widgets .widget h2 {
+#footer.rutva-dev .widgets .widget p, #footer.rutva-dev .widgets .widget a, #footer.rutva-dev .widgets .widget span, #footer.rutva-dev .widgets .widget h2 {
   color: white;
 }
-#footer.rutva-deb .widgets .widget:nth-child(2) {
+#footer.rutva-dev .widgets .widget:nth-child(2) {
   width: 250px;
 }
-#footer.rutva-deb .widgets .widget a:hover {
+#footer.rutva-dev .widgets .widget a:hover {
   opacity: 0.6;
   color: white;
 }
-#footer.rutva-deb .widgets .widget a svg, #footer.rutva-deb .widgets .widget p svg {
+#footer.rutva-dev .widgets .widget a svg, #footer.rutva-dev .widgets .widget p svg {
   fill: white;
 }
-#footer.rutva-deb small {
+#footer.rutva-dev small {
   color: white;
 }
 @media screen and (max-width: 750px) {
-  #footer.rutva-deb .widgets {
+  #footer.rutva-dev .widgets {
     align-items: flex-start;
   }
 }
 
-main.rutva-deb label {
+main.rutva-dev label {
   padding: 10px 0;
   width: 100%;
 }
-main.rutva-deb label input, main.rutva-deb label select {
+main.rutva-dev label input, main.rutva-dev label select {
   margin-top: 5px;
   display: block;
   font-size: 18px;
@@ -2828,23 +2828,23 @@ main.rutva-deb label input, main.rutva-deb label select {
   border-radius: 5px;
   transition-duration: 0.5s;
 }
-main.rutva-deb label input:disabled, main.rutva-deb label input .disabled, main.rutva-deb label select:disabled, main.rutva-deb label select .disabled {
+main.rutva-dev label input:disabled, main.rutva-dev label input .disabled, main.rutva-dev label select:disabled, main.rutva-dev label select .disabled {
   cursor: not-allowed;
   opacity: 0.3;
 }
-main.rutva-deb label input:focus:not(:disabled), main.rutva-deb label input:hover:not(:disabled), main.rutva-deb label select:focus:not(:disabled), main.rutva-deb label select:hover:not(:disabled) {
+main.rutva-dev label input:focus:not(:disabled), main.rutva-dev label input:hover:not(:disabled), main.rutva-dev label select:focus:not(:disabled), main.rutva-dev label select:hover:not(:disabled) {
   outline: none;
   box-shadow: 0px 0px 8px 0px #4F6A9E;
 }
-main.rutva-deb {
+main.rutva-dev {
   color: #50493f;
   font-family: "Quicksand", sans-serif;
 }
-main.rutva-deb h2, main.rutva-deb h3, main.rutva-deb h4, main.rutva-deb h5, main.rutva-deb h6 {
+main.rutva-dev h2, main.rutva-dev h3, main.rutva-dev h4, main.rutva-dev h5, main.rutva-dev h6 {
   font-family: "Libre Baskerville", sans-serif;
   color: #50493f;
 }
-main.rutva-deb .transportation .titles {
+main.rutva-dev .transportation .titles {
   pointer-events: none;
   height: auto;
   padding: 50px 0;
@@ -2854,14 +2854,14 @@ main.rutva-deb .transportation .titles {
   width: 100% !important;
   max-width: 100% !important;
 }
-main.rutva-deb .transportation .titles h1.small {
+main.rutva-dev .transportation .titles h1.small {
   font-size: 32px;
 }
-main.rutva-deb .transportation .titles h1, main.rutva-deb .transportation .titles p {
+main.rutva-dev .transportation .titles h1, main.rutva-dev .transportation .titles p {
   background-color: #305941;
   color: white;
 }
-main.rutva-deb .transportation .titles .shuttle-warning {
+main.rutva-dev .transportation .titles .shuttle-warning {
   color: white;
   font-weight: bold;
   margin-top: 15px;
@@ -2869,22 +2869,22 @@ main.rutva-deb .transportation .titles .shuttle-warning {
   text-align: center;
   display: block;
 }
-main.rutva-deb h2 {
+main.rutva-dev h2 {
   text-align: center;
   margin-bottom: 30px;
 }
-main.rutva-deb h2 + p {
+main.rutva-dev h2 + p {
   text-align: center;
   margin-bottom: 50px;
   border: 1px solid red !important;
 }
-main.rutva-deb .paralax {
-  background-image: url("../imgs/rutva-deb-logo.webp");
+main.rutva-dev .paralax {
+  background-image: url("../imgs/rutva-dev-logo.webp");
   height: 700px;
   position: relative;
   background-color: #305941;
 }
-main.rutva-deb .paralax p {
+main.rutva-dev .paralax p {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2899,24 +2899,24 @@ main.rutva-deb .paralax p {
   text-align: center;
   text-shadow: 2px 2px 2px rgba(80, 73, 63, 0.6);
 }
-main.rutva-deb .logo-event {
+main.rutva-dev .logo-event {
   width: 100%;
   display: block;
   margin: 0;
 }
-main.rutva-deb .gallery .imgs {
+main.rutva-dev .gallery .imgs {
   width: 300% !important;
 }
-main.rutva-deb .gallery .imgs img {
+main.rutva-dev .gallery .imgs img {
   width: 33.33% !important;
 }
-main.rutva-deb .cards.service-type {
+main.rutva-dev .cards.service-type {
   grid-template-columns: repeat(2, 1fr);
   max-width: 900px;
   margin: 0 auto 50px auto;
   gap: 40px;
 }
-main.rutva-deb .cards.service-type .card {
+main.rutva-dev .cards.service-type .card {
   padding: 30px;
   min-height: 180px;
   display: flex;
@@ -2926,68 +2926,68 @@ main.rutva-deb .cards.service-type .card {
   background-color: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
-main.rutva-deb .cards.service-type .card:hover {
+main.rutva-dev .cards.service-type .card:hover {
   border-color: #305941;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
-main.rutva-deb .cards.service-type .card.active {
+main.rutva-dev .cards.service-type .card.active {
   border-color: #305941;
   background-color: rgba(48, 89, 65, 0.05);
 }
-main.rutva-deb .cards.transport {
+main.rutva-dev .cards.transport {
   gap: 25px;
   margin-bottom: 20px;
 }
-main.rutva-deb .cards.transport .card {
+main.rutva-dev .cards.transport .card {
   cursor: pointer;
   transition-duration: 0.5s;
   border-radius: 20px;
   padding: 15px;
   flex-direction: row;
 }
-main.rutva-deb .cards.transport .card .text {
+main.rutva-dev .cards.transport .card .text {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   margin-left: 10px;
   width: calc(100% - 44px);
 }
-main.rutva-deb .cards.transport .card .text h3, main.rutva-deb .cards.transport .card .text p.price {
+main.rutva-dev .cards.transport .card .text h3, main.rutva-dev .cards.transport .card .text p.price {
   text-align: left;
   width: 100%;
   color: rgba(80, 73, 63, 0.8) !important;
 }
-main.rutva-deb .cards.transport .card .text h3 span, main.rutva-deb .cards.transport .card .text p.price span {
+main.rutva-dev .cards.transport .card .text h3 span, main.rutva-dev .cards.transport .card .text p.price span {
   color: #50493f;
 }
-main.rutva-deb .cards.transport .card .text h3 {
+main.rutva-dev .cards.transport .card .text h3 {
   margin-bottom: 0;
 }
-main.rutva-deb .cards.transport .card .text p {
+main.rutva-dev .cards.transport .card .text p {
   text-align: left;
 }
-main.rutva-deb .cards.transport .card .text p span {
+main.rutva-dev .cards.transport .card .text p span {
   font-weight: bold;
   font-size: 1.1em;
 }
-main.rutva-deb .cards.transport .card .text p.price {
+main.rutva-dev .cards.transport .card .text p.price {
   font-size: 1.3rem;
   color: #305941;
 }
-main.rutva-deb .cards.transport .card .text p.price span {
+main.rutva-dev .cards.transport .card .text p.price span {
   display: block;
 }
-main.rutva-deb .cards.transport .card .text p.regular-price {
+main.rutva-dev .cards.transport .card .text p.regular-price {
   font-size: 1rem;
   margin: 10px 0;
   opacity: 0.4;
 }
-main.rutva-deb .cards.transport .card .text p.regular-price span {
+main.rutva-dev .cards.transport .card .text p.regular-price span {
   text-decoration: line-through;
   text-decoration-thickness: 2px;
 }
-main.rutva-deb .cards.transport .card .checkbox {
+main.rutva-dev .cards.transport .card .checkbox {
   border: 2px solid rgba(80, 73, 63, 0.8);
   width: 40px;
   height: 20px;
@@ -2996,39 +2996,39 @@ main.rutva-deb .cards.transport .card .checkbox {
   align-items: center;
   justify-content: center;
 }
-main.rutva-deb .cards.transport .card .checkbox .inside {
+main.rutva-dev .cards.transport .card .checkbox .inside {
   width: 30px;
   height: 12px;
 }
-main.rutva-deb .cards.transport .card:hover .checkbox .inside {
+main.rutva-dev .cards.transport .card:hover .checkbox .inside {
   background-color: rgba(80, 73, 63, 0.6);
 }
-main.rutva-deb .cards.transport .card.active .checkbox .inside {
+main.rutva-dev .cards.transport .card.active .checkbox .inside {
   background-color: rgba(80, 73, 63, 0.8);
 }
-main.rutva-deb .info {
+main.rutva-dev .info {
   text-align: center;
   font-weight: bold;
   max-width: 90%;
   margin: 0 auto;
 }
-main.rutva-deb .buy-form .wrapper-fieldsets {
+main.rutva-dev .buy-form .wrapper-fieldsets {
   display: grid;
   gap: 25px;
   margin: 0 auto;
 }
-main.rutva-deb .buy-form .wrapper-fieldsets.two-columns {
+main.rutva-dev .buy-form .wrapper-fieldsets.two-columns {
   grid-template-columns: repeat(2, 1fr);
 }
-main.rutva-deb .buy-form .wrapper-fieldsets.three-columns {
+main.rutva-dev .buy-form .wrapper-fieldsets.three-columns {
   grid-template-columns: repeat(3, 1fr);
 }
-main.rutva-deb .buy-form .wrapper-fieldsets .btn.cta {
+main.rutva-dev .buy-form .wrapper-fieldsets .btn.cta {
   margin-top: 15px;
   color: white;
   background-color: #333333;
 }
-main.rutva-deb .buy-form .wrapper-fieldsets fieldset {
+main.rutva-dev .buy-form .wrapper-fieldsets fieldset {
   border: none;
   display: flex;
   flex-direction: column;
@@ -3036,11 +3036,11 @@ main.rutva-deb .buy-form .wrapper-fieldsets fieldset {
   justify-content: flex-start;
   width: 100%;
 }
-main.rutva-deb .buy-form .wrapper-fieldsets fieldset p {
+main.rutva-dev .buy-form .wrapper-fieldsets fieldset p {
   font-size: 12px;
   margin-bottom: 0;
 }
-main.rutva-deb .buy-form .btn.cta {
+main.rutva-dev .buy-form .btn.cta {
   margin: 0 auto;
   margin-top: 20px;
   display: block;
@@ -3048,77 +3048,77 @@ main.rutva-deb .buy-form .btn.cta {
   background-color: #333333;
   border: 2px solid #333333;
 }
-main.rutva-deb .buy-form .btn.cta:hover {
+main.rutva-dev .buy-form .btn.cta:hover {
   color: #333333;
   background-color: white;
 }
-main.rutva-deb .buy-form .btn.cta[disabled] {
+main.rutva-dev .buy-form .btn.cta[disabled] {
   cursor: not-allowed;
 }
-main.rutva-deb .buttons button.back {
+main.rutva-dev .buttons button.back {
   background: none;
   border: none;
   cursor: pointer;
   transition-duration: 0.5s;
 }
-main.rutva-deb .buttons button.back:hover {
+main.rutva-dev .buttons button.back:hover {
   opacity: 0.7;
 }
-main.rutva-deb .buttons button.back svg {
+main.rutva-dev .buttons button.back svg {
   width: 50px;
   fill: #50493f;
 }
-main.rutva-deb .faqs .questions-wrapper .question .title {
+main.rutva-dev .faqs .questions-wrapper .question .title {
   background-color: #305941;
 }
-main.rutva-deb .faqs .questions-wrapper .question .title h3 {
+main.rutva-dev .faqs .questions-wrapper .question .title h3 {
   color: white !important;
 }
 @media screen and (max-width: 900px) {
-  main.rutva-deb .cards.transport {
+  main.rutva-dev .cards.transport {
     width: 50%;
     grid-template-columns: repeat(1, 1fr);
     gap: 0;
   }
-  main.rutva-deb .cards.transport .card {
+  main.rutva-dev .cards.transport .card {
     justify-content: flex-start;
     padding: 0;
   }
-  main.rutva-deb .cards.transport .card br {
+  main.rutva-dev .cards.transport .card br {
     display: none;
   }
-  main.rutva-deb .cards.service-type {
+  main.rutva-dev .cards.service-type {
     width: 90% !important;
     grid-template-columns: repeat(1, 1fr) !important;
     gap: 20px !important;
   }
-  main.rutva-deb .cards.service-type .card {
+  main.rutva-dev .cards.service-type .card {
     padding: 20px;
     min-height: 140px;
   }
-  main.rutva-deb .buy-form .wrapper-fieldsets.two-columns, main.rutva-deb .buy-form .wrapper-fieldsets.three-columns {
+  main.rutva-dev .buy-form .wrapper-fieldsets.two-columns, main.rutva-dev .buy-form .wrapper-fieldsets.three-columns {
     width: 80%;
     grid-template-columns: repeat(1, 1fr) !important;
   }
-  main.rutva-deb .paralax {
+  main.rutva-dev .paralax {
     background-attachment: scroll !important;
     height: 400px;
   }
-  main.rutva-deb .paralax p {
+  main.rutva-dev .paralax p {
     font-size: 2.2rem;
   }
 }
 @media screen and (max-width: 500px) {
-  main.rutva-deb .cards.transport {
+  main.rutva-dev .cards.transport {
     width: 70%;
   }
-  main.rutva-deb .buy-form .wrapper-fieldsets {
+  main.rutva-dev .buy-form .wrapper-fieldsets {
     width: 90%;
   }
-  main.rutva-deb .transportation .titles h1 {
+  main.rutva-dev .transportation .titles h1 {
     font-size: 24px;
   }
-  main.rutva-deb .paralax p {
+  main.rutva-dev .paralax p {
     font-size: 1.6rem;
   }
 }
