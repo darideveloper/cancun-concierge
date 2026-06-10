@@ -99,6 +99,22 @@ let current_price = 0
 let current_service_type = ""
 let selected_transfer_type = ""
 
+function configureDateInput(input, defaultValue, isLocked) {
+  if (!input) return
+  input.value = defaultValue
+  if (isLocked) {
+    input.readOnly = true
+    input.classList.add("disabled")
+    input.style.pointerEvents = "none"
+    input.setAttribute("tabindex", "-1")
+  } else {
+    input.readOnly = false
+    input.classList.remove("disabled")
+    input.style.pointerEvents = "auto"
+    input.removeAttribute("tabindex")
+  }
+}
+
 function activete_form(transport_types) {
 
   transport_types.push ("general")
@@ -146,6 +162,13 @@ function activete_form(transport_types) {
     options += `<option value="${passenger}">${passenger} passenger${plural}</option>`
   }
   selectElem.innerHTML = options
+  // Handle date inputs defaults and readonly based on service type
+  const arriving_date_input = document.querySelector("#arriving-date")
+  const departing_date_input = document.querySelector("#departing-date")
+  const isShared = current_service_type === "shared"
+
+  configureDateInput(arriving_date_input, "2026-11-20", isShared)
+  configureDateInput(departing_date_input, "2026-11-23", isShared)
 
 }
 
@@ -228,6 +251,18 @@ passengers_select.addEventListener("change", () => {
     let count = parseInt(passengers_select.value)
     let base_rate = prices[airport_name]["Shared Shuttle"][selected_transfer_type]
     current_price = [base_rate[0], base_rate[1] * count]
+  }
+})
+
+// Prevent editing date inputs for shared shuttle service
+document.querySelector("#arriving-date").addEventListener("input", (e) => {
+  if (current_service_type === "shared") {
+    e.target.value = "2026-11-20"
+  }
+})
+document.querySelector("#departing-date").addEventListener("input", (e) => {
+  if (current_service_type === "shared") {
+    e.target.value = "2026-11-23"
   }
 })
 // Show input for custom hotel
