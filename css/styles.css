@@ -2860,6 +2860,9 @@ main.rutva-dev .transportation .titles h1.small {
 main.rutva-dev .transportation .titles h1, main.rutva-dev .transportation .titles p {
   background-color: #305941;
   color: white;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 main.rutva-dev .transportation .titles .shuttle-warning {
   color: white;
