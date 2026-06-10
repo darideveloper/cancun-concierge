@@ -26,19 +26,19 @@ if (done) {
 // Prices
 const prices = {
   "Van": {
-    "arriving": [75.00, 60.00],
-    "departing": [75.00, 60.00],
-    "arriving departing": [150, 120],
+    "arriving": [127.00, 127.00],
+    "departing": [127.00, 127.00],
+    "arriving departing": [250.00, 250.00],
   },
   "Sprinter": {
-    "arriving": [160.00, 148.00],
-    "departing": [160.00, 148.00],
-    "arriving departing": [320.00, 296.00],
+    "arriving": [185.00, 185.00],
+    "departing": [185.00, 185.00],
+    "arriving departing": [360.00, 360.00],
   },
   "Suburban": {
-    "arriving": [115.00, 105.00],
-    "departing": [115.00, 105.00],
-    "arriving departing": [230.00, 210.00],
+    "arriving": [160.00, 160.00],
+    "departing": [160.00, 160.00],
+    "arriving departing": [315.00, 315.00],
   },
 }
 
