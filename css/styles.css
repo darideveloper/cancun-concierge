@@ -2863,6 +2863,7 @@ main.rutva-dev .transportation .titles h1, main.rutva-dev .transportation .title
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 8px;
 }
 main.rutva-dev .transportation .titles .shuttle-warning {
   color: white;
