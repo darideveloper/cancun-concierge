@@ -50,11 +50,11 @@ The message SHALL be displayed in English.
 - **THEN** they SHALL see the shuttle service warning message prominently displayed below the main H1 text and intro paragraphs in the titles section.
 
 ### Requirement: Warning Styling
-The warning message SHALL be styled to be easily readable and draw attention to the specific shuttle dates.
+The warning message paragraphs (`.shuttle-warning`) SHALL be styled to be easily readable using a normal font weight instead of bold. Only key nested inline phrases (specifically wrapped in `<strong>` tags) SHALL be rendered in bold.
 
 #### Scenario: Warning styling consistency
-- **WHEN** the warning message is rendered on the event page
-- **THEN** it SHALL be styled to be prominent, potentially using a color or background that contrasts with the surrounding text to ensure it is not missed.
+- **WHEN** the warning messages are rendered on the event page
+- **THEN** they SHALL use a normal font weight for the body text, and a bold font weight ONLY for nested inline `<strong>` elements.
 
 ### Requirement: Hero H1 Font Size Reduction
 The system SHALL reduce the font size of the hero H1 (`h1.small`) on the `/rutva-dev-airport-transfers` page by 20%.
