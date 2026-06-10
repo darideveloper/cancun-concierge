@@ -2867,7 +2867,7 @@ main.rutva-dev .transportation .titles h1, main.rutva-dev .transportation .title
 }
 main.rutva-dev .transportation .titles .shuttle-warning {
   color: white;
-  font-weight: bold;
+  font-weight: normal;
   margin-top: 8px;
   font-size: 1.1rem;
   text-align: center;
