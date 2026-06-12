@@ -4564,25 +4564,25 @@ button.back {
   src: url("../fonts/Kinfolk-Bold.otf") format("opentype");
 }
 header.dana-hirshal, #footer.dana-hirshal {
-  background-color: #efeeec;
+  background-color: #bccacd;
   font-family: "Libre Baskerville", sans-serif;
-  color: #50493f;
+  color: #6c6c6c;
 }
 header.dana-hirshal a, #footer.dana-hirshal a {
   font-family: "Libre Baskerville", sans-serif;
-  color: #50493f !important;
+  color: #6c6c6c !important;
 }
 header.dana-hirshal .content nav ul li a, #footer.dana-hirshal .content nav ul li a {
   color: white;
 }
 header.dana-hirshal .content nav ul li a:hover, #footer.dana-hirshal .content nav ul li a:hover {
-  color: rgba(80, 73, 63, 0.6);
+  color: rgba(108, 108, 108, 0.6);
 }
 header.dana-hirshal h2, #footer.dana-hirshal h2 {
   font-family: "Kinfolk", serif;
 }
 header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
-  fill: #50493f;
+  fill: #6c6c6c;
 }
 
 #footer.dana-hirshal .widgets .widget:nth-child(2) {
@@ -4593,27 +4593,27 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
   color: white;
 }
 #footer.dana-hirshal .widgets .widget h2 {
-  color: #50493f;
+  color: #6c6c6c;
 }
 #footer.dana-hirshal .widgets .widget a svg, #footer.dana-hirshal .widgets .widget p svg {
-  fill: #50493f;
+  fill: #6c6c6c;
 }
 
 .dana-hirshal-airport-transfers {
-  color: #50493f;
+  color: #6c6c6c;
   font-family: "Libre Baskerville", sans-serif;
 }
 .dana-hirshal-airport-transfers h1, .dana-hirshal-airport-transfers h2, .dana-hirshal-airport-transfers h3, .dana-hirshal-airport-transfers h4, .dana-hirshal-airport-transfers h5, .dana-hirshal-airport-transfers h6 {
   font-family: "Kinfolk", serif;
-  color: #50493f;
+  color: #6c6c6c;
 }
 .dana-hirshal-airport-transfers p, .dana-hirshal-airport-transfers a, .dana-hirshal-airport-transfers span, .dana-hirshal-airport-transfers label, .dana-hirshal-airport-transfers input, .dana-hirshal-airport-transfers select, .dana-hirshal-airport-transfers button {
   font-family: "Libre Baskerville", sans-serif;
-  color: #50493f;
+  color: #6c6c6c;
 }
 .dana-hirshal-airport-transfers .transportation .titles h1, .dana-hirshal-airport-transfers .transportation .titles p {
-  background-color: #efeeec;
-  color: #50493f;
+  background-color: #bccacd;
+  color: #6c6c6c;
 }
 .dana-hirshal-airport-transfers h2 {
   text-align: center;
@@ -4622,11 +4622,34 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
 .dana-hirshal-airport-transfers h2 + p {
   text-align: center;
   margin-bottom: 50px;
-  border: 1px solid red !important;
 }
 .dana-hirshal-airport-transfers .paralax {
-  background-image: url("../imgs/dana-hirshal-logo.webp");
+  background-image: url("../imgs/dana-hirshal-hero.webp");
   height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+.dana-hirshal-airport-transfers .paralax::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(188, 202, 205, 0.18);
+  pointer-events: none;
+}
+.dana-hirshal-airport-transfers .paralax p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  font-family: "Kinfolk", serif;
+  letter-spacing: 1.1rem;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(108, 108, 108, 0.6);
 }
 .dana-hirshal-airport-transfers .logo-event {
   width: 100%;
@@ -4660,10 +4683,10 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
 .dana-hirshal-airport-transfers .cards.transport .card .text h3, .dana-hirshal-airport-transfers .cards.transport .card .text p.price {
   text-align: left;
   width: 100%;
-  color: rgba(80, 73, 63, 0.8) !important;
+  color: rgba(79, 73, 47, 0.8) !important;
 }
 .dana-hirshal-airport-transfers .cards.transport .card .text h3 span, .dana-hirshal-airport-transfers .cards.transport .card .text p.price span {
-  color: #50493f;
+  color: #4f492f;
 }
 .dana-hirshal-airport-transfers .cards.transport .card .text h3 {
   margin-bottom: 0;
@@ -4677,7 +4700,7 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
 }
 .dana-hirshal-airport-transfers .cards.transport .card .text p.price {
   font-size: 1.3rem;
-  color: #efeeec;
+  color: #bccacd;
 }
 .dana-hirshal-airport-transfers .cards.transport .card .text p.price span {
   display: block;
@@ -4692,7 +4715,7 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
   text-decoration-thickness: 2px;
 }
 .dana-hirshal-airport-transfers .cards.transport .card .checkbox {
-  border: 2px solid rgba(80, 73, 63, 0.8);
+  border: 2px solid rgba(79, 73, 47, 0.8);
   width: 40px;
   height: 20px;
   margin-right: 10px;
@@ -4705,10 +4728,10 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
   height: 12px;
 }
 .dana-hirshal-airport-transfers .cards.transport .card:hover .checkbox .inside {
-  background-color: rgba(80, 73, 63, 0.6);
+  background-color: rgba(79, 73, 47, 0.6);
 }
 .dana-hirshal-airport-transfers .cards.transport .card.active .checkbox .inside {
-  background-color: rgba(80, 73, 63, 0.8);
+  background-color: rgba(79, 73, 47, 0.8);
 }
 .dana-hirshal-airport-transfers .info {
   text-align: center;
@@ -4730,7 +4753,7 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
 .dana-hirshal-airport-transfers .buy-form .wrapper-fieldsets .btn.cta {
   margin-top: 15px;
   color: white;
-  background-color: #50493f;
+  background-color: #4f492f;
 }
 .dana-hirshal-airport-transfers .buy-form .wrapper-fieldsets fieldset {
   border: none;
@@ -4754,7 +4777,7 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
   font-size: 18px;
   width: calc(100% - 20px);
   padding: 5px 10px;
-  border: 1px solid #4F6A9E;
+  border: 1px solid #4f492f;
   border-radius: 5px;
   transition-duration: 0.5s;
 }
@@ -4764,18 +4787,18 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
 }
 .dana-hirshal-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:focus:not(:disabled), .dana-hirshal-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:hover:not(:disabled), .dana-hirshal-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:focus:not(:disabled), .dana-hirshal-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:hover:not(:disabled) {
   outline: none;
-  box-shadow: 0px 0px 8px 0px #4F6A9E;
+  box-shadow: 0px 0px 8px 0px #4f492f;
 }
 .dana-hirshal-airport-transfers .buy-form .btn.cta {
   margin: 0 auto;
   margin-top: 20px;
   display: block;
   color: white;
-  background-color: #50493f;
-  border: 2px solid #50493f;
+  background-color: #4f492f;
+  border: 2px solid #4f492f;
 }
 .dana-hirshal-airport-transfers .buy-form .btn.cta:hover {
-  color: #50493f;
+  color: #4f492f;
   background-color: white;
 }
 .dana-hirshal-airport-transfers .buy-form .btn.cta[disabled] {
@@ -4792,10 +4815,10 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
 }
 .dana-hirshal-airport-transfers .buttons button.back svg {
   width: 50px;
-  fill: #50493f;
+  fill: #4f492f;
 }
 .dana-hirshal-airport-transfers .faqs .questions-wrapper .question .title {
-  background-color: #50493f;
+  background-color: #6c6c6c;
 }
 .dana-hirshal-airport-transfers .faqs .questions-wrapper .question .title h3 {
   color: white !important;
@@ -4820,7 +4843,9 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
   .dana-hirshal-airport-transfers .paralax {
     background-attachment: scroll !important;
     height: 400px;
-    background-image: url("../imgs/dana-hirshal-logo-mobile.webp");
+  }
+  .dana-hirshal-airport-transfers .paralax p {
+    font-size: 2.2rem;
   }
 }
 @media screen and (max-width: 500px) {
@@ -4830,6 +4855,10 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
   .dana-hirshal-airport-transfers .buy-form .wrapper-fieldsets {
     width: 90%;
   }
+  .dana-hirshal-airport-transfers .paralax p {
+    font-size: 1.6rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
+/* force sync */
