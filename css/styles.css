@@ -2792,6 +2792,12 @@ header.rutva-dev .btn.menu svg, #footer.rutva-dev .btn.menu svg {
   fill: white;
 }
 
+@media screen and (max-width: 790px) {
+  header.rutva-dev .content nav:not(.collapsed) {
+    height: 240px;
+  }
+}
+
 #footer.rutva-dev .widgets .widget p, #footer.rutva-dev .widgets .widget a, #footer.rutva-dev .widgets .widget span, #footer.rutva-dev .widgets .widget h2 {
   color: white;
 }
@@ -4861,4 +4867,3 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
 }
 
 /*# sourceMappingURL=styles.css.map */
-/* force sync */

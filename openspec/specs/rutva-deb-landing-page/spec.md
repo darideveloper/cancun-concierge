@@ -4,7 +4,7 @@
 TBD - created by archiving change create-rutva-deb-landing-page. Update Purpose after archive.
 ## Requirements
 ### Requirement: Dedicated Landing Page for Rutva & Dev
-The system MUST provide a dedicated landing page at `/rutva-dev-airport-transfers/index.html` that displays event-specific branding ("Rutva & Dev") and booking information for transfers to the Hilton Tulum Riviera Maya resort. All styles and assets SHALL be correctly loaded and aligned with the project's base theme.
+The system MUST provide a dedicated landing page at `/rutva-dev-airport-transfers/index.html` that displays event-specific branding ("Rutva & Dev") and booking information for transfers to the Hilton Tulum Riviera Maya resort. All styles and assets SHALL be correctly loaded and aligned with the project's base theme. The page header navigation SHALL NOT contain links to "Social responsability" or "Los cabos".
 
 #### Scenario: Page displays correct branding and styles
 - **WHEN** a user navigates to `/rutva-dev-airport-transfers/`
@@ -12,6 +12,8 @@ The system MUST provide a dedicated landing page at `/rutva-dev-airport-transfer
 - **THEN** the header background color MUST match the reference (`rgb(48, 89, 65)`)
 - **THEN** the paralax section MUST correctly load the background image
 - **THEN** the footer copyright and contact widgets MUST be visible and correctly styled
+- **THEN** the header navigation MUST NOT display the "Social responsability" and "Los cabos" links
+- **THEN** the mobile navigation menu height MUST be adjusted to `240px` when expanded on screens with a width of `790px` or less
 
 ### Requirement: Client-Specific Pricing and Stripe Integration
 The landing page MUST apply client-specific pricing and Stripe configurations. It MUST support two service types:
