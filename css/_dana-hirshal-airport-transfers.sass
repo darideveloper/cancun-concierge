@@ -34,6 +34,11 @@ header.dana-hirshal, #footer.dana-hirshal
     .btn.menu svg
         fill: $color-black
 
+header.dana-hirshal
+    @media screen and (max-width: 790px)
+        .content nav
+            height: 240px
+
 #footer.dana-hirshal
     
     .widgets .widget 
@@ -163,6 +168,7 @@ header.dana-hirshal, #footer.dana-hirshal
                         display: block
 
                 p.regular-price
+                    display: none
                     font-size: 1rem
                     margin: 10px 0
                     opacity: 0.4
@@ -305,9 +311,14 @@ header.dana-hirshal, #footer.dana-hirshal
 
         .buy-form 
             .wrapper-fieldsets
+                &.three-columns
+                    width: 100%
+
                 &.two-columns, &.three-columns
-                    width: 80%
                     grid-template-columns: repeat(1, 1fr) !important
+
+                fieldset
+                    width: calc(100% - 24px)
 
         .paralax
             background-attachment: scroll !important
@@ -321,6 +332,9 @@ header.dana-hirshal, #footer.dana-hirshal
 
         .cards.transport
             width: 70%
+
+        .transportation .titles h1.small
+            font-size: 21px
 
         .buy-form .wrapper-fieldsets
             width: 90%

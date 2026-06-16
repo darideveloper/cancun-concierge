@@ -1,6 +1,5 @@
-## Purpose
-Define the branding, styling, and pricing requirements for the Dana & Hirshal landing page.
-## Requirements
+## MODIFIED Requirements
+
 ### Requirement: Rebranded Landing Page for Dana & Hirshal
 The system MUST provide a rebranded landing page at `/dana-hirshal-airport-transfers/index.html` displaying event-specific branding ("Dana & Hirshal" / "Dana & Hirshal's wedding") instead of "Serena & Gabriel", and MUST reference the correct hotel venue **SLS Playa Mujeres** (not "Nizuc Resort & Spa") in all guest-facing copy.
 
@@ -19,22 +18,6 @@ The system MUST provide a rebranded landing page at `/dana-hirshal-airport-trans
 #### Scenario: Los cabos link points to Marco DMC
 - **WHEN** a user clicks the "Los cabos" link in the header
 - **THEN** the link MUST navigate to `https://marcodmc.com/` (not `https://loscabosconcierge.com/`)
-
-### Requirement: Rebranded Stripe Routing and Script Controller
-The landing page MUST load a dedicated JavaScript controller `code/dana-hirshal-airport-transfers.js` which routes Stripe checkout sessions using the `dana-hirshal` identifier.
-
-#### Scenario: Submitting the booking form triggers Stripe session with correct user
-- **WHEN** a user submits the booking form on the `/dana-hirshal-airport-transfers/index.html` page
-- **THEN** the system MUST execute `code/dana-hirshal-airport-transfers.js`
-- **AND** the payload sent to the Stripe API MUST have `user` set to "dana-hirshal"
-
-### Requirement: Event Style Customization and Imports
-The stylesheet system MUST compile styling rules for the `dana-hirshal` and `dana-hirshal-airport-transfers` selectors, imported via `css/styles.sass`.
-
-#### Scenario: Compiled styles apply to the page layout
-- **WHEN** the styles are compiled from `css/styles.sass`
-- **THEN** the rules in `css/_dana-hirshal-airport-transfers.sass` MUST be included in the output stylesheet
-- **AND** elements with the class `dana-hirshal` or `dana-hirshal-airport-transfers` MUST receive the defined properties
 
 ### Requirement: Transfer pricing values
 The system SHALL display the following prices (per vehicle, not per person) on the dana-hirshal airport transfers page, dynamically applied based on vehicle and transfer type selection.
@@ -79,18 +62,7 @@ The "Dana & Hirshal Price" field SHALL display the value listed above. The "Regu
 - **THEN** the page SHALL display $360.00 USD as the Dana & Hirshal price
 - **AND** the regular price field SHALL be hidden
 
-### Requirement: Hero Parallax Names Rendering
-The landing page `/dana-hirshal-airport-transfers/index.html` MUST display the names "Dana & Hirshal" centered over the hero parallax image. The text MUST be styled using custom fonts, sizes, letter-spacing, and text-shadow, and MUST scale down responsively on mobile screens.
-
-#### Scenario: Desktop view displays styled names
-- **WHEN** the user visits the `/dana-hirshal-airport-transfers/index.html` page on a desktop device
-- **THEN** the text "Dana & Hirshal" MUST be displayed inside the `.paralax` container
-- **AND** the text MUST be centered with a font size of 4rem
-
-#### Scenario: Mobile view displays responsive names
-- **WHEN** the user visits the page on a device with screen width <= 900px
-- **THEN** the names text font size MUST scale down to 2.2rem
-- **AND** on devices with screen width <= 500px, the names text font size MUST scale down to 1.6rem
+## ADDED Requirements
 
 ### Requirement: FAQ text update
 The FAQ list item in "WHAT IS INCLUDED WITH CANCUN CONCIERGE'S TRANSPORTATION SERVICE?" SHALL use "Bottled waters" instead of "Refreshments".
@@ -98,4 +70,3 @@ The FAQ list item in "WHAT IS INCLUDED WITH CANCUN CONCIERGE'S TRANSPORTATION SE
 #### Scenario: FAQ list item displays "Bottled waters"
 - **WHEN** a user reads the FAQ "WHAT IS INCLUDED WITH CANCUN CONCIERGE'S TRANSPORTATION SERVICE?"
 - **THEN** the list item for beverages SHALL read "Bottled waters" (not "Refreshments")
-

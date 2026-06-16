@@ -4591,6 +4591,12 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
   fill: #6c6c6c;
 }
 
+@media screen and (max-width: 790px) {
+  header.dana-hirshal .content nav {
+    height: 240px;
+  }
+}
+
 #footer.dana-hirshal .widgets .widget:nth-child(2) {
   width: 250px;
 }
@@ -4712,6 +4718,7 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
   display: block;
 }
 .dana-hirshal-airport-transfers .cards.transport .card .text p.regular-price {
+  display: none;
   font-size: 1rem;
   margin: 10px 0;
   opacity: 0.4;
@@ -4842,9 +4849,14 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
   .dana-hirshal-airport-transfers .cards.transport .card br {
     display: none;
   }
+  .dana-hirshal-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+    width: 100%;
+  }
   .dana-hirshal-airport-transfers .buy-form .wrapper-fieldsets.two-columns, .dana-hirshal-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
-    width: 80%;
     grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .dana-hirshal-airport-transfers .buy-form .wrapper-fieldsets fieldset {
+    width: calc(100% - 24px);
   }
   .dana-hirshal-airport-transfers .paralax {
     background-attachment: scroll !important;
@@ -4857,6 +4869,9 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
 @media screen and (max-width: 500px) {
   .dana-hirshal-airport-transfers .cards.transport {
     width: 70%;
+  }
+  .dana-hirshal-airport-transfers .transportation .titles h1.small {
+    font-size: 21px;
   }
   .dana-hirshal-airport-transfers .buy-form .wrapper-fieldsets {
     width: 90%;
