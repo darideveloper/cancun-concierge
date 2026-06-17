@@ -4818,6 +4818,7 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
   cursor: not-allowed;
 }
 .dana-hirshal-airport-transfers .buttons button.back {
+  display: block;
   background: none;
   border: none;
   cursor: pointer;
