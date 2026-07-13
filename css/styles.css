@@ -4882,4 +4882,321 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
   }
 }
 
+@font-face {
+  font-family: "Kinfolk";
+  src: url("../fonts/Kinfolk-Bold.otf") format("opentype");
+}
+header.josh-will, #footer.josh-will {
+  background-color: #bccacd;
+  font-family: "Libre Baskerville", sans-serif;
+  color: #6c6c6c;
+}
+header.josh-will a, #footer.josh-will a {
+  font-family: "Libre Baskerville", sans-serif;
+  color: #6c6c6c !important;
+}
+header.josh-will .content nav ul li a, #footer.josh-will .content nav ul li a {
+  color: white;
+}
+header.josh-will .content nav ul li a:hover, #footer.josh-will .content nav ul li a:hover {
+  color: rgba(108, 108, 108, 0.6);
+}
+header.josh-will h2, #footer.josh-will h2 {
+  font-family: "Kinfolk", serif;
+}
+header.josh-will .btn.menu svg, #footer.josh-will .btn.menu svg {
+  fill: #6c6c6c;
+}
+
+@media screen and (max-width: 790px) {
+  header.josh-will .content nav {
+    height: 240px;
+  }
+}
+
+#footer.josh-will .widgets .widget:nth-child(2) {
+  width: 250px;
+}
+#footer.josh-will .widgets .widget a:hover {
+  opacity: 0.6;
+  color: white;
+}
+#footer.josh-will .widgets .widget h2 {
+  color: #6c6c6c;
+}
+#footer.josh-will .widgets .widget a svg, #footer.josh-will .widgets .widget p svg {
+  fill: #6c6c6c;
+}
+
+.josh-will-airport-transfers {
+  color: #6c6c6c;
+  font-family: "Libre Baskerville", sans-serif;
+}
+.josh-will-airport-transfers h1, .josh-will-airport-transfers h2, .josh-will-airport-transfers h3, .josh-will-airport-transfers h4, .josh-will-airport-transfers h5, .josh-will-airport-transfers h6 {
+  font-family: "Kinfolk", serif;
+  color: #6c6c6c;
+}
+.josh-will-airport-transfers p, .josh-will-airport-transfers a, .josh-will-airport-transfers span, .josh-will-airport-transfers label, .josh-will-airport-transfers input, .josh-will-airport-transfers select, .josh-will-airport-transfers button {
+  font-family: "Libre Baskerville", sans-serif;
+  color: #6c6c6c;
+}
+.josh-will-airport-transfers .transportation .titles h1, .josh-will-airport-transfers .transportation .titles p {
+  background-color: #bccacd;
+  color: #6c6c6c;
+}
+.josh-will-airport-transfers h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.josh-will-airport-transfers h2 + p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.josh-will-airport-transfers .paralax {
+  background-image: url("../imgs/josh-will-hero.webp");
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+.josh-will-airport-transfers .paralax::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(188, 202, 205, 0.18);
+  pointer-events: none;
+}
+.josh-will-airport-transfers .paralax p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  font-family: "Kinfolk", serif;
+  letter-spacing: 1.1rem;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(108, 108, 108, 0.6);
+}
+.josh-will-airport-transfers .logo-event {
+  width: 100%;
+  display: block;
+  margin: 0;
+}
+.josh-will-airport-transfers .gallery .imgs {
+  width: 300% !important;
+}
+.josh-will-airport-transfers .gallery .imgs img {
+  width: 33.33% !important;
+}
+.josh-will-airport-transfers .cards.transport {
+  gap: 25px;
+  margin-bottom: 20px;
+}
+.josh-will-airport-transfers .cards.transport .card {
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 20px;
+  padding: 15px;
+  flex-direction: row;
+}
+.josh-will-airport-transfers .cards.transport .card .text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  width: calc(100% - 44px);
+}
+.josh-will-airport-transfers .cards.transport .card .text h3, .josh-will-airport-transfers .cards.transport .card .text p.price {
+  text-align: left;
+  width: 100%;
+  color: rgba(79, 73, 47, 0.8) !important;
+}
+.josh-will-airport-transfers .cards.transport .card .text h3 span, .josh-will-airport-transfers .cards.transport .card .text p.price span {
+  color: #4f492f;
+}
+.josh-will-airport-transfers .cards.transport .card .text h3 {
+  margin-bottom: 0;
+}
+.josh-will-airport-transfers .cards.transport .card .text p {
+  text-align: left;
+}
+.josh-will-airport-transfers .cards.transport .card .text p span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.josh-will-airport-transfers .cards.transport .card .text p.price {
+  font-size: 1.3rem;
+  color: #bccacd;
+}
+.josh-will-airport-transfers .cards.transport .card .text p.price span {
+  display: block;
+}
+.josh-will-airport-transfers .cards.transport .card .text p.regular-price {
+  display: none;
+  font-size: 1rem;
+  margin: 10px 0;
+  opacity: 0.4;
+}
+.josh-will-airport-transfers .cards.transport .card .text p.regular-price span {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+.josh-will-airport-transfers .cards.transport .card .checkbox {
+  border: 2px solid rgba(79, 73, 47, 0.8);
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.josh-will-airport-transfers .cards.transport .card .checkbox .inside {
+  width: 30px;
+  height: 12px;
+}
+.josh-will-airport-transfers .cards.transport .card:hover .checkbox .inside {
+  background-color: rgba(79, 73, 47, 0.6);
+}
+.josh-will-airport-transfers .cards.transport .card.active .checkbox .inside {
+  background-color: rgba(79, 73, 47, 0.8);
+}
+.josh-will-airport-transfers .info {
+  text-align: center;
+  font-weight: bold;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.josh-will-airport-transfers .buy-form .wrapper-fieldsets {
+  display: grid;
+  gap: 25px;
+  margin: 0 auto;
+}
+.josh-will-airport-transfers .buy-form .wrapper-fieldsets.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+.josh-will-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+.josh-will-airport-transfers .buy-form .wrapper-fieldsets .btn.cta {
+  margin-top: 15px;
+  color: white;
+  background-color: #4f492f;
+}
+.josh-will-airport-transfers .buy-form .wrapper-fieldsets fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.josh-will-airport-transfers .buy-form .wrapper-fieldsets fieldset p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.josh-will-airport-transfers .buy-form .wrapper-fieldsets fieldset label {
+  padding: 10px 0;
+  width: 100%;
+}
+.josh-will-airport-transfers .buy-form .wrapper-fieldsets fieldset label input, .josh-will-airport-transfers .buy-form .wrapper-fieldsets fieldset label select {
+  margin-top: 5px;
+  display: block;
+  font-size: 18px;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  border: 1px solid #4f492f;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+.josh-will-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:disabled, .josh-will-airport-transfers .buy-form .wrapper-fieldsets fieldset label input .disabled, .josh-will-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:disabled, .josh-will-airport-transfers .buy-form .wrapper-fieldsets fieldset label select .disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.josh-will-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:focus:not(:disabled), .josh-will-airport-transfers .buy-form .wrapper-fieldsets fieldset label input:hover:not(:disabled), .josh-will-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:focus:not(:disabled), .josh-will-airport-transfers .buy-form .wrapper-fieldsets fieldset label select:hover:not(:disabled) {
+  outline: none;
+  box-shadow: 0px 0px 8px 0px #4f492f;
+}
+.josh-will-airport-transfers .buy-form .btn.cta {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  color: white;
+  background-color: #4f492f;
+  border: 2px solid #4f492f;
+}
+.josh-will-airport-transfers .buy-form .btn.cta:hover {
+  color: #4f492f;
+  background-color: white;
+}
+.josh-will-airport-transfers .buy-form .btn.cta[disabled] {
+  cursor: not-allowed;
+}
+.josh-will-airport-transfers .buttons button.back {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.josh-will-airport-transfers .buttons button.back:hover {
+  opacity: 0.7;
+}
+.josh-will-airport-transfers .buttons button.back svg {
+  width: 50px;
+  fill: #4f492f;
+}
+.josh-will-airport-transfers .faqs .questions-wrapper .question .title {
+  background-color: #6c6c6c;
+}
+.josh-will-airport-transfers .faqs .questions-wrapper .question .title h3 {
+  color: white !important;
+}
+@media screen and (max-width: 900px) {
+  .josh-will-airport-transfers .cards.transport {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  .josh-will-airport-transfers .cards.transport .card {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .josh-will-airport-transfers .cards.transport .card br {
+    display: none;
+  }
+  .josh-will-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+    width: 100%;
+  }
+  .josh-will-airport-transfers .buy-form .wrapper-fieldsets.two-columns, .josh-will-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .josh-will-airport-transfers .buy-form .wrapper-fieldsets fieldset {
+    width: calc(100% - 24px);
+  }
+  .josh-will-airport-transfers .paralax {
+    background-attachment: scroll !important;
+    height: 400px;
+  }
+  .josh-will-airport-transfers .paralax p {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .josh-will-airport-transfers .cards.transport {
+    width: 70%;
+  }
+  .josh-will-airport-transfers .transportation .titles h1.small {
+    font-size: 21px;
+  }
+  .josh-will-airport-transfers .buy-form .wrapper-fieldsets {
+    width: 90%;
+  }
+  .josh-will-airport-transfers .paralax p {
+    font-size: 1.6rem;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
