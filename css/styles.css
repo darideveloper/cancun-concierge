@@ -4888,11 +4888,11 @@ header.dana-hirshal .btn.menu svg, #footer.dana-hirshal .btn.menu svg {
 }
 header.josh-will, #footer.josh-will {
   background-color: #6a725b;
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #fbe7c1;
 }
 header.josh-will a, #footer.josh-will a {
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #fbe7c1 !important;
 }
 header.josh-will .content nav ul li a, #footer.josh-will .content nav ul li a {
@@ -4902,7 +4902,7 @@ header.josh-will .content nav ul li a:hover, #footer.josh-will .content nav ul l
   color: rgba(255, 255, 255, 0.6);
 }
 header.josh-will h2, #footer.josh-will h2 {
-  font-family: "Kinfolk", serif;
+  font-family: "Alegreya", serif;
 }
 header.josh-will .btn.menu svg, #footer.josh-will .btn.menu svg {
   fill: #fbe7c1;
@@ -4936,18 +4936,18 @@ header.josh-will .btn.menu svg, #footer.josh-will .btn.menu svg {
 
 .josh-will-airport-transfers {
   color: #fbe7c1;
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 .josh-will-airport-transfers h1, .josh-will-airport-transfers h2, .josh-will-airport-transfers h3, .josh-will-airport-transfers h4, .josh-will-airport-transfers h5, .josh-will-airport-transfers h6 {
-  font-family: "Kinfolk", serif;
+  font-family: "Alegreya", serif;
   color: #fbe7c1;
 }
 .josh-will-airport-transfers p, .josh-will-airport-transfers a, .josh-will-airport-transfers span, .josh-will-airport-transfers label {
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #fbe7c1;
 }
 .josh-will-airport-transfers input, .josh-will-airport-transfers select, .josh-will-airport-transfers button {
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #4f5545;
 }
 .josh-will-airport-transfers .transportation .titles h1, .josh-will-airport-transfers .transportation .titles p {
@@ -4987,7 +4987,7 @@ header.josh-will .btn.menu svg, #footer.josh-will .btn.menu svg {
   font-size: 4rem;
   color: white;
   font-weight: bold;
-  font-family: "Kinfolk", serif;
+  font-family: "Alegreya", serif;
   letter-spacing: 1.1rem;
   width: 90%;
   margin: 0 auto;
