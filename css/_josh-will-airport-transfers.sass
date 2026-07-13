@@ -4,11 +4,12 @@
     src: url('../fonts/Kinfolk-Bold.otf') format('opentype')
 
 // Variables
-$color-dark: #4f492f
-$color-primary: #bccacd
-$color-black: #6c6c6c
+$color-dark: #4f5545
+$color-primary: #6a725b
+$color-black: #fbe7c1
 $color-white: white
-$color-d: #4f492f
+$color-d: #4f5545
+$color-text: #c9ad85
 $font-regular: 'Libre Baskerville', sans-serif
 $font-title: 'Kinfolk', serif
 $font-highlight: 'Vampiro One', system
@@ -26,7 +27,7 @@ header.josh-will, #footer.josh-will
     .content nav ul li a 
         color: $color-white
         &:hover
-            color: rgba($color-black, 0.6)
+            color: rgba(255, 255, 255, 0.6)
 
     h2
         font-family: $font-title
@@ -56,6 +57,12 @@ header.josh-will
         a svg, p svg
             fill: $color-black
 
+    .wrapper-btn .btn.footer
+        color: $color-text
+
+        svg
+            fill: $color-text
+
 
 
 .josh-will-airport-transfers
@@ -67,9 +74,13 @@ header.josh-will
         font-family: $font-title
         color: $color-black
 
-    p, a, span, label, input, select, button
+    p, a, span, label
         font-family: $font-regular
         color: $color-black
+
+    input, select, button
+        font-family: $font-regular
+        color: $color-dark
 
     .transportation .titles h1, .transportation .titles p
         background-color: $color-primary
@@ -78,10 +89,14 @@ header.josh-will
     h2
         text-align: center
         margin-bottom: 30px
+        color: $color-text
 
     h2 + p
         text-align: center
         margin-bottom: 50px
+
+    .transportation.details .card h3
+        color: $color-text
 
     .paralax
         background-image: url("../imgs/josh-will-hero.webp")
@@ -93,7 +108,7 @@ header.josh-will
             content: ""
             position: absolute
             inset: 0
-            background: rgba(188, 202, 205, 0.18)
+            background: rgba(0, 0, 0, 0.35)
             pointer-events: none
 
         p
@@ -109,7 +124,7 @@ header.josh-will
             width: 90%
             margin: 0 auto
             text-align: center
-            text-shadow: 2px 2px 2px rgba($color-black, 0.6)
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3)
 
     .logo-event
         width: 100%
@@ -145,7 +160,7 @@ header.josh-will
                 h3, p.price
                     text-align: left
                     width: 100%
-                    color: rgba($color-dark, 0.8) !important
+                    color: $color-dark !important
                     
                     span
                         color: $color-dark
@@ -178,7 +193,7 @@ header.josh-will
                         text-decoration-thickness: 2px
 
             .checkbox
-                border: 2px solid rgba($color-dark, 0.8)
+                border: 2px solid $color-dark
                 width: 40px
                 height: 20px
                 margin-right: 10px
@@ -193,18 +208,19 @@ header.josh-will
             &:hover
                 .checkbox 
                     .inside
-                        background-color: rgba($color-dark, 0.6)
+                        background-color: $color-primary
 
             &.active
                 .checkbox
                     .inside
-                        background-color: rgba($color-dark, 0.8)
+                        background-color: $color-dark
 
     .info
         text-align: center
         font-weight: bold
         max-width: 90%
         margin: 0 auto
+        color: $color-text
 
     .buy-form 
         .wrapper-fieldsets
@@ -290,7 +306,7 @@ header.josh-will
 
     .faqs
         .questions-wrapper .question .title
-            background-color: $color-black
+            background-color: $color-primary
 
             h3
                 color: $color-white !important
