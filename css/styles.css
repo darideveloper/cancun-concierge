@@ -4962,7 +4962,7 @@ header.josh-will .btn.menu svg, #footer.josh-will .btn.menu svg {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(188, 202, 205, 0.18);
+  background: rgba(0, 0, 0, 0.35);
   pointer-events: none;
 }
 .josh-will-airport-transfers .paralax p {
