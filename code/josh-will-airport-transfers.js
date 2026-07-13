@@ -26,19 +26,19 @@ if (done) {
 // Prices
 const prices = {
   "Van": {
-    "arriving": [127.00, 127.00],
-    "departing": [127.00, 127.00],
-    "arriving departing": [250.00, 250.00],
+    "arriving": [155.00, 155.00],
+    "departing": [155.00, 155.00],
+    "arriving departing": [310.00, 310.00],
   },
   "Sprinter": {
-    "arriving": [185.00, 185.00],
-    "departing": [185.00, 185.00],
-    "arriving departing": [360.00, 360.00],
+    "arriving": [235.00, 235.00],
+    "departing": [235.00, 235.00],
+    "arriving departing": [470.00, 470.00],
   },
   "Suburban": {
-    "arriving": [160.00, 160.00],
-    "departing": [160.00, 160.00],
-    "arriving departing": [315.00, 315.00],
+    "arriving": [210.00, 210.00],
+    "departing": [210.00, 210.00],
+    "arriving departing": [420.00, 420.00],
   },
 }
 
@@ -195,10 +195,6 @@ transport_vehicles.forEach(transport_vehicle => {
       let price_clean = prices_vehicule[transport_type][1].toFixed(2)
       price_elem.innerText = `${price_clean} USD`
 
-      // Update regylar price
-      price_elem = transport_card.querySelector(".regular-price > span")
-      price_clean = prices_vehicule[transport_type][0].toFixed(2)
-      price_elem.innerText = `${price_clean} USD`
     })
 
     // Show back button
