@@ -5169,6 +5169,9 @@ header.josh-will .btn.menu svg, #footer.josh-will .btn.menu svg {
 .josh-will-airport-transfers .faqs .questions-wrapper .question .title h3 {
   color: white !important;
 }
+.josh-will-airport-transfers .faqs .questions-wrapper .question p {
+  color: #c9ad85;
+}
 @media screen and (max-width: 900px) {
   .josh-will-airport-transfers .cards.transport {
     width: 50%;
