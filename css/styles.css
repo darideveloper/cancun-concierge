@@ -4935,16 +4935,16 @@ header.josh-will .btn.menu svg, #footer.josh-will .btn.menu svg {
 }
 
 .josh-will-airport-transfers {
-  color: #fbe7c1;
+  color: #c9ad85;
   font-family: "Lato", sans-serif;
 }
 .josh-will-airport-transfers h1, .josh-will-airport-transfers h2, .josh-will-airport-transfers h3, .josh-will-airport-transfers h4, .josh-will-airport-transfers h5, .josh-will-airport-transfers h6 {
   font-family: "Alegreya", serif;
-  color: #fbe7c1;
+  color: #c9ad85;
 }
 .josh-will-airport-transfers p, .josh-will-airport-transfers a, .josh-will-airport-transfers span, .josh-will-airport-transfers label {
   font-family: "Lato", sans-serif;
-  color: #fbe7c1;
+  color: #c9ad85;
 }
 .josh-will-airport-transfers input, .josh-will-airport-transfers select, .josh-will-airport-transfers button {
   font-family: "Lato", sans-serif;
@@ -5169,7 +5169,7 @@ header.josh-will .btn.menu svg, #footer.josh-will .btn.menu svg {
 .josh-will-airport-transfers .faqs .questions-wrapper .question .title h3 {
   color: white !important;
 }
-.josh-will-airport-transfers .faqs .questions-wrapper .question p {
+.josh-will-airport-transfers .faqs .question p {
   color: #c9ad85;
 }
 @media screen and (max-width: 900px) {
@@ -5216,5 +5216,3 @@ header.josh-will .btn.menu svg, #footer.josh-will .btn.menu svg {
     font-size: 1.6rem;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
