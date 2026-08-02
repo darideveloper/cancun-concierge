@@ -1,90 +1,81 @@
-<div><a href='https://github.com/darideveloper/cancun-concierge/blob/master/LICENSE' target='_blank'>
-                <img src='https://img.shields.io/github/license/darideveloper/cancun-concierge.svg?style=for-the-badge' alt='MIT License' height='30px'/>
-            </a><a href='https://www.linkedin.com/in/francisco-dari-hernandez-6456b6181/' target='_blank'>
-                <img src='https://img.shields.io/static/v1?style=for-the-badge&message=LinkedIn&color=0A66C2&logo=LinkedIn&logoColor=FFFFFF&label=' alt='Linkedin' height='30px'/>
-            </a><a href='https://t.me/darideveloper' target='_blank'>
-                <img src='https://img.shields.io/static/v1?style=for-the-badge&message=Telegram&color=26A5E4&logo=Telegram&logoColor=FFFFFF&label=' alt='Telegram' height='30px'/>
-            </a><a href='https://github.com/darideveloper' target='_blank'>
-                <img src='https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=181717&logo=GitHub&logoColor=FFFFFF&label=' alt='Github' height='30px'/>
-            </a><a href='https://www.fiverr.com/darideveloper' target='_blank'>
-                <img src='https://img.shields.io/static/v1?style=for-the-badge&message=Fiverr&color=222222&logo=Fiverr&logoColor=1DBF73&label=' alt='Fiverr' height='30px'/>
-            </a><a href='https://discord.com/users/992019836811083826' target='_blank'>
-                <img src='https://img.shields.io/static/v1?style=for-the-badge&message=Discord&color=5865F2&logo=Discord&logoColor=FFFFFF&label=' alt='Discord' height='30px'/>
-            </a><a href='mailto:darideveloper@gmail.com?subject=Hello Dari Developer' target='_blank'>
-                <img src='https://img.shields.io/static/v1?style=for-the-badge&message=Gmail&color=EA4335&logo=Gmail&logoColor=FFFFFF&label=' alt='Gmail' height='30px'/>
-            </a><a href='https://www.twitch.tv/darideveloper' target='_blank'>
-                <img src='https://img.shields.io/static/v1?style=for-the-badge&message=Twitch&color=b9a3e3&logo=Twitch&logoColor=ffffff&label=' alt='Twitch' height='30px'/>
-            </a></div><div align='center'><br><br><img src='https://github.com/darideveloper/cancun-concierge/raw/master/imgs/logo.png' alt='Cancun Concierge' height='80px'/>
+# Cancun Concierge — Client Website (Vanilla JS)
 
+Client website for Cancun Concierge DMC with multiple pages, bilingual content (English/Spanish) and online payments. Includes the deprecated main landing site plus ~18 per-event booking sub-pages still in production (airport transfers, weddings, celebrations and tour carts).
 
+## Tech Stack
 
-# Cancun Concierge
+- **HTML5 / CSS / Sass** — static multi-page site, no framework or bundler
+- **Vanilla JavaScript (ES6+)** — page logic in `code/`
+- **Stripe** — payments via external Flask API
+- **AOS** — scroll animations (tour/activity pages)
+- **SweetAlert2** — success dialogs (Digital Realty page)
 
-Visit at: **[cancunconciergedmc.com](https://cancunconciergedmc.com/)**
+## Features
 
-Client's web site with landing pages and online payments
+- Main site (deprecated): home, services, transportation, social responsibility and English mirror (`/en/`)
+- ~18 booking sub-pages, one per event/client, each with its own booking form:
+  - Airport transfers: dana-hirshal, digitalrealty, ella-james, frini-chen, jessica-maxwell (multi-airport CUN/TQO), josh-will, kiana-swaroop, monica-vivek, rohan-karisma, rutva-dev (shared shuttle + private), serena-gabriel, sunnyjoy-brett, sphere-rocket
+  - Tour/activity carts: riviera-getaway, service-master-restore, the-honey-pot, plumbing/waterworks-customers-activities
+- Vehicle selection with per-event price tables and passenger rules
+- Stripe checkout with per-event Stripe account IDs
+- FAQ accordions, auto-sliding galleries and WhatsApp booking links
+- Multi-language support (Spanish at root, English under `/en/`)
 
-Project type: **client**
+## Setup
 
-</div><br><details>
-            <summary>Table of Contents</summary>
-            <ol>
-<li><a href='#buildwith'>Build With</a></li>
-<li><a href='#relatedprojects'>Related Projects</a></li>
-<li><a href='#media'>Media</a></li>
-<li><a href='#details'>Details</a></li>
-<li><a href='#roadmap'>Roadmap</a></li></ol>
-        </details><br>
+```sh
+# Open in browser or serve statically, e.g.
+python -m http.server 8080
+```
 
-# Build with
+---
 
-<div align='center'><a href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank'> <img src='https://i.imgur.com/OitgDfl.jpeg' alt='HTML + CSS' title='HTML + CSS' height='50px'/> </a><a href='https://sass-lang.com/' target='_blank'> <img src='https://cdn.svgporn.com/logos/sass.svg' alt='Sass' title='Sass' height='50px'/> </a><a href='https://stripe.com/' target='_blank'> <img src='https://cdn.svgporn.com/logos/stripe.svg' alt='Stripe' title='Stripe' height='50px'/> </a><a href='https://www.w3schools.com/js/js_es6.asp' target='_blank'> <img src='https://cdn.svgporn.com/logos/javascript.svg' alt='JavaScript' title='JavaScript' height='50px'/> </a><a href='https://sweetalert2.github.io/' target='_blank'> <img src='https://github.com/sweetalert2/sweetalert2/raw/main/assets/swal2-logo.png' alt='Sweet Alert 2' title='Sweet Alert 2' height='50px'/> </a><a href='https://michalsnik.github.io/aos/' target='_blank'> <img src='https://raw.githubusercontent.com/DariHernandez/DariHernandez/main/imgs/aos.svg' alt='AOS' title='AOS' height='50px'/> </a></div>
+## Contact
 
-# Related projects
+Developed by [Dari Developer](https://darideveloper.com)
 
-<div align='center'><a href='https://github.com/darideveloper/ezbookingtours-store' target='_blank'> <img src='https://ezbookingtours.com/wp-content/uploads/2022/04/EZ-Booking-Tours-Logo.png' alt='Ezbookingtours Store' title='Ezbookingtours Store' height='50px'/> </a><a href='https://github.com/darideveloper/rivieramayaairporttransfers' target='_blank'> <img src='https://rivieramayaairporttransfers.com/imgs/page-logo-trans.png' alt='Riviera Maya Airport Transfers' title='Riviera Maya Airport Transfers' height='50px'/> </a><a href='https://github.com/darideveloper/sarina-abhi-airport-transfers' target='_blank'> <img src='https://cancunconciergedmc.com/sarina-abhi-airport-transfers/imgs/page-logo.png' alt='Sarina Abhi Airport Transfers' title='Sarina Abhi Airport Transfers' height='50px'/> </a></div>
+- 🌐 [darideveloper.com](https://darideveloper.com)
+- 💬 [WhatsApp](https://api.whatsapp.com/send?phone=5214493402622)
+- 📂 [View project in portfolio](https://darideveloper.com/portafolio/cancunconcierge)
 
-# Media
+---
 
-![home](https://github.com/darideveloper/cancun-concierge/raw/master/screenshots/home.gif)
+# Cancun Concierge — Sitio web del cliente (Vanilla JS)
 
-![services](https://github.com/darideveloper/cancun-concierge/raw/master/screenshots/services.gif)
+Sitio web del cliente para Cancun Concierge DMC con múltiples páginas, contenido bilingüe (inglés/español) y pagos en línea. Incluye la landing principal (deprecada) y ~18 subpáginas de reserva por evento aún en producción (traslados aeroportuarios, bodas, celebraciones y carritos de tours).
 
-![transportation](https://github.com/darideveloper/cancun-concierge/raw/master/screenshots/transportation.gif)
+## Tech Stack
 
-![Social responsibility](https://github.com/darideveloper/cancun-concierge/raw/master/screenshots/social-responsability.gif)
+- **HTML5 / CSS / Sass** — sitio estático multi-página, sin framework ni bundler
+- **JavaScript vanilla (ES6+)** — lógica de páginas en `code/`
+- **Stripe** — pagos mediante API Flask externa
+- **AOS** — animaciones de scroll (páginas de tours/actividades)
+- **SweetAlert2** — diálogos de éxito (página de Digital Realty)
 
-# Details
+## Features
 
-Full website with multiple pages, multilanguaje and payments with stripe. The page its  vanilla js, and it use an flask api for generate stripe payment page. It has too multilenguaje. 
-
-
-The project have the following pages and sections:
-
-* General
-	* Header (with change languaje button)
-	* Footer (width contact data)
-* Home
-	* Hero
-	* About us
-	* Why hire us
-	* About our services
-	* About Omar Guzman
-	* Testimonials
-* Services
-	* Services cards
-* Transportation
-	* Buy transport cards
-* Social responsibility
-	* Colonia Chiapaneca Siglo XXI
+- Sitio principal (deprecado): inicio, servicios, transportación, responsabilidad social y espejo en inglés (`/en/`)
+- ~18 subpáginas de reserva, una por evento/cliente, cada una con su formulario:
+  - Traslados aeroportuarios: dana-hirshal, digitalrealty, ella-james, frini-chen, jessica-maxwell (multi-aeropuerto CUN/TQO), josh-will, kiana-swaroop, monica-vivek, rohan-karisma, rutva-dev (shuttle compartido + privado), serena-gabriel, sunnyjoy-brett, sphere-rocket
+  - Carritos de tours/actividades: riviera-getaway, service-master-restore, the-honey-pot, plumbing/waterworks-customers-activities
+- Selección de vehículo con tablas de precios y reglas de pasajeros por evento
+- Checkout de Stripe con IDs de cuenta por evento
+- Acordeones de FAQ, galerías con auto-slide y enlaces de reserva por WhatsApp
+- Soporte multi-idioma (español en la raíz, inglés en `/en/`)
 
-# Roadmap
+## Setup
 
-- [x] Multi pages
-- [x] Multilanguaje
-  - [x] English
-  - [x] Spanish
-- [x] Stripe payments
-    - [x] Single service payment
-    - [x] Multi service payment
+```sh
+# Abrir en el navegador o servir estáticamente, p.ej.
+python -m http.server 8080
+```
 
+---
+
+## Contacto
+
+Desarrollado por [Dari Developer](https://darideveloper.com)
+
+- 🌐 [darideveloper.com](https://darideveloper.com)
+- 💬 [WhatsApp](https://api.whatsapp.com/send?phone=5214493402622)
+- 📂 [Ver proyecto en el portafolio](https://darideveloper.com/portafolio/cancunconcierge)
