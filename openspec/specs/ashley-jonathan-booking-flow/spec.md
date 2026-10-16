@@ -56,7 +56,7 @@ The system SHALL present the transfer type selection as the first step and the v
 - **AND** the vehicle cards, the back button, and the booking form SHALL be hidden
 
 #### Scenario: Transfer type advances to vehicle selection
-- **WHEN** the user selects a transfer type
+- **WHEN** the user selects a departing or round-trip transfer type
 - **THEN** the vehicle cards SHALL become visible
 - **AND** the transfer type cards SHALL be hidden
 - **AND** the back button SHALL become visible
@@ -84,6 +84,7 @@ The system SHALL resolve the guest price from a single value per vehicle and tra
 - **WHEN** the user submits the form
 - **THEN** the checkout payload `price` SHALL equal the guest price resolved for the selected vehicle and transfer type
 - **AND** a zero guest price SHALL submit `price` as `0`
+- **AND** a free arriving booking with no vehicle SHALL submit `price` as `0` with an empty vehicle value
 
 ### Requirement: Back navigation resets the selection
 The back button SHALL return the user to the transfer type step and clear the current selection.
@@ -101,4 +102,50 @@ The back button SHALL return the user to the transfer type step and clear the cu
 - **WHEN** the user selects a different transfer type after returning to the first step
 - **THEN** the vehicle prices SHALL be recomputed for the newly selected transfer type
 - **AND** no previously selected vehicle SHALL remain marked as `active`
+
+### Requirement: Free arrival skips vehicle selection
+The system SHALL bypass the vehicle cards step when the user selects the arriving direction, and submit the booking with an empty vehicle value.
+
+#### Scenario: Arriving direction selected
+- **WHEN** the user clicks the card with `data-transport-type="arriving"` (Airport - Hotel Transfer)
+- **THEN** the `.cards.vehicle` section SHALL remain hidden
+- **AND** `current_transport_type` SHALL be set to `""` with `current_price` set to `0`
+- **AND** the booking form SHALL be shown directly without requiring a vehicle click
+
+#### Scenario: Free arrival payload defaults
+- **WHEN** the user submits the arriving form
+- **THEN** the payload `description.transport_vehicle` SHALL be `""`
+- **AND** the product `price` SHALL be `0`
+- **AND** the request SHALL be sent to the existing `POST .../ashley-jonathan/sale/` endpoint, which returns the `?done=true` confirmation redirect without creating a Stripe session
+
+### Requirement: Generic passenger range for free arrivals
+The system SHALL offer passengers `1-12` in the free arriving form since no vehicle constrains capacity.
+
+#### Scenario: Arriving form passenger options
+- **WHEN** the arriving form is activated without a vehicle
+- **THEN** the `#passengers` select SHALL list options `1` through `12`
+- **AND** the helper text SHALL reflect the generic maximum (e.g. "Maximum twelve passengers")
+
+### Requirement: Paid flows require a vehicle
+The system SHALL require an explicit vehicle selection before submitting departing or round-trip bookings.
+
+#### Scenario: Paid submit without vehicle
+- **WHEN** the user submits with `current_direction` of `departing` or `arriving departing` and `current_transport_type` is empty
+- **THEN** the submit SHALL be blocked
+- **AND** the user SHALL be notified to select a vehicle (e.g. alert)
+- **AND** no network request SHALL be sent
+
+#### Scenario: Paid submit with vehicle
+- **WHEN** the user submits a departing or round-trip booking with a vehicle selected
+- **THEN** the payload SHALL include the selected `transport_vehicle` and the corresponding `price`
+- **AND** the existing Stripe checkout redirect flow SHALL apply
+
+### Requirement: Back button resets free-flow state
+The system SHALL reset direction, vehicle, and price state when Back is pressed from the free arriving form.
+
+#### Scenario: Back from arriving form
+- **WHEN** the user clicks Back while the arriving form is visible
+- **THEN** the form SHALL be hidden
+- **AND** the direction cards SHALL be shown again
+- **AND** `current_direction`, `current_transport_type` SHALL be cleared and `current_price` reset
 

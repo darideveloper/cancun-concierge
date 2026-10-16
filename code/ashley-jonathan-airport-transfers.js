@@ -110,8 +110,8 @@ function activete_form(transport_types) {
     form.classList.add ("three-columns")
   }
 
-  // Update passengers
-  const passengersNums = passengers[current_transport_type]
+  // Update passengers (generic 1-12 fallback for free arrivals with no vehicle)
+  const passengersNums = passengers[current_transport_type] || [1,2,3,4,5,6,7,8,9,10,11,12]
   const maxPassengers = Math.max(...passengersNums)
   const maxPassengersText = passengersText[maxPassengers]
   const passagersTextElem = document.querySelector('#passengers + p')
@@ -160,6 +160,28 @@ transport_cards.forEach(transport_card => {
 
       transport_vehicle.querySelector(".price > span").innerText = formatPrice(prices[vehicle_type][current_direction])
     })
+
+    // Free arrival: skip vehicle selection, go straight to form
+    if (current_direction === "arriving") {
+      current_transport_type = ""
+      current_price = 0
+
+      // Keep vehicle options hidden, hide direction options
+      transport_vehicles_wrapper.classList.add("hide")
+      transport_cards_wrapper.classList.add("hide")
+
+      // Show back button
+      buttons_wrapper.classList.remove("hide")
+
+      // Show form directly with generic passengers
+      activete_form(current_direction.split(" "))
+
+      // Update CTA button text
+      if (submit_elem) {
+        submit_elem.value = "Book Free Transfer"
+      }
+      return
+    }
 
     // Show vehicle options, hide direction options
     transport_vehicles_wrapper.classList.remove("hide")
@@ -230,6 +252,13 @@ const form = document.querySelector("form")
 form.addEventListener("submit", (e) => {
 
   e.preventDefault ()
+
+  // Paid flows require an explicit vehicle selection
+  if (current_direction !== "arriving" && !current_transport_type) {
+    alert("Please select a vehicle to continue.")
+    document.querySelector("#submit").value = "Buy now"
+    return
+  }
 
   // Set submit button to loading
   document.querySelector("#submit").value = "loading..."
