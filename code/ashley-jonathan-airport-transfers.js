@@ -30,19 +30,19 @@ if (done) {
 // Prices
 const prices = {
   "deluxe": {
-    "arriving": [0.00, 0.00],
-    "departing": [195.00, 170.00],
-    "arriving departing": [195.00, 170.00],
+    "arriving": 0.00,
+    "departing": 215.00,
+    "arriving departing": 215.00,
   },
   "van": {
-    "arriving": [0.00, 0.00],
-    "departing": [155.00, 130.00],
-    "arriving departing": [155.00, 130.00],
+    "arriving": 0.00,
+    "departing": 155.00,
+    "arriving departing": 155.00,
   },
   "sprinter": {
-    "arriving": [0.00, 0.00],
-    "departing": [235.00, 205.00],
-    "arriving departing": [235.00, 205.00],
+    "arriving": 0.00,
+    "departing": 244.00,
+    "arriving departing": 244.00,
   },
 }
 
@@ -70,6 +70,13 @@ const passengersText = [
 let current_transport_type = ""
 let current_price = 0
 let transport_name = ""
+let current_direction = ""
+
+// Format a numeric price for display
+function formatPrice (value) {
+  const clean = value.toFixed(2)
+  return clean === "0.00" ? "Free" : `${clean} USD`
+}
 
 function activete_form(transport_types) {
 
@@ -121,7 +128,7 @@ function activete_form(transport_types) {
 
 }
 
-// Select transport card
+// Select transportation type (direction) - first step
 transport_cards.forEach(transport_card => {
   // Add click event
   transport_card.addEventListener("click", ((e) => {
@@ -134,23 +141,32 @@ transport_cards.forEach(transport_card => {
     // Active current card
     transport_card.classList.add("active")
 
-    // Get transport type
-    const transport_type_value = transport_card.getAttribute("data-transport-type")
-    const transport_types = transport_card.getAttribute("data-transport-type").split(" ")
+    // Reset previously selected vehicle, if any
+    transport_vehicles.forEach(transport_vehicle => {
+      transport_vehicle.classList.remove("active")
+    })
+    current_transport_type = ""
+    current_price = 0
 
-    // Activate form fieldsets
-    activete_form(transport_types)
+    // Get selected direction
+    current_direction = transport_card.getAttribute("data-transport-type")
 
     // Get product title
     transport_name = transport_card.querySelector("h3").innerText.replace(/\s+/g, ' ').trim()
 
-    // Update price
-    current_price = prices[current_transport_type][transport_type_value]
+    // Update price in each vehicle card
+    transport_vehicles.forEach(transport_vehicle => {
+      const vehicle_type = transport_vehicle.getAttribute("data-transport-type")
 
-    // Update CTA button text
-    if (submit_elem) {
-      submit_elem.value = current_price[1] === 0 ? "Book Free Transfer" : "Buy now"
-    }
+      transport_vehicle.querySelector(".price > span").innerText = formatPrice(prices[vehicle_type][current_direction])
+    })
+
+    // Show vehicle options, hide direction options
+    transport_vehicles_wrapper.classList.remove("hide")
+    transport_cards_wrapper.classList.add("hide")
+
+    // Show back button
+    buttons_wrapper.classList.remove("hide")
   }))
 })
 
@@ -176,10 +192,13 @@ hotel_inputs.forEach(hotel_input => {
   })
 })
 
-// Show transport translate options, after select vehicleç
+// Select vehicle - second step
 transport_vehicles.forEach(transport_vehicle => {
   // Add click event
   transport_vehicle.addEventListener("click", ((e) => {
+
+    // A direction must be selected first
+    if (!current_direction) return
 
     // Deactive other cards
     transport_vehicles.forEach(transport_vehicle => {
@@ -189,33 +208,21 @@ transport_vehicles.forEach(transport_vehicle => {
     // Active current card
     transport_vehicle.classList.add("active")
 
-    // Activate transport options
-    transport_cards_wrapper.classList.remove("hide")
-
-    // Get product title
+    // Get selected vehicle
     current_transport_type = transport_vehicle.getAttribute("data-transport-type")
 
-    // Update prices
-    let prices_vehicule = prices[current_transport_type]
-    transport_cards.forEach(transport_card => {
-      const transport_type = transport_card.getAttribute("data-transport-type")
+    // Update current price
+    current_price = prices[current_transport_type][current_direction]
 
-      // Update current price
-      let price_elem = transport_card.querySelector(".price > span")
-      let price_clean = prices_vehicule[transport_type][1].toFixed(2)
-      price_elem.innerText = price_clean === "0.00" ? "Free" : `${price_clean} USD`
+    // Activate form fieldsets for the selected direction
+    activete_form(current_direction.split(" "))
 
-      // Update regular price
-      price_elem = transport_card.querySelector(".regular-price > span")
-      price_clean = prices_vehicule[transport_type][0].toFixed(2)
-      price_elem.innerText = price_clean === "0.00" ? "Free" : `${price_clean} USD`
-    })
+    // Update CTA button text
+    if (submit_elem) {
+      submit_elem.value = current_price === 0 ? "Book Free Transfer" : "Buy now"
+    }
 
-    // Show back button
-    buttons_wrapper.classList.remove("hide")
-
-    // Hide vehicle options
-    transport_vehicles_wrapper.classList.add("hide")
+    // Keep vehicle options visible as a summary of the selection
   }))
 })
 
@@ -249,7 +256,7 @@ form.addEventListener("submit", (e) => {
 
   stripe_data["products"][transport_name] = {
     "amount": 1,
-    "price": current_price[1],
+    "price": current_price,
     "description": form_data,
     "image_url": "https://github.com/darideveloper/cancun-concierge/blob/master/imgs/transports.png?raw=true"
   }
@@ -281,24 +288,35 @@ form.addEventListener("submit", (e) => {
     console.error("Booking submission error:", error)
     alert("An error occurred while processing your request. Please try again.")
     if (submit_elem) {
-      submit_elem.value = (current_price && current_price[1] === 0) ? "Book Free Transfer" : "Buy now"
+      submit_elem.value = current_price === 0 ? "Book Free Transfer" : "Buy now"
     }
   })
 
 })
 
 button_back.addEventListener("click", (e) => {
-  // Hide transport options
-  transport_cards_wrapper.classList.add("hide")
+  // Hide form
+  form_elem.classList.add("hide")
 
-  // Show vehicle options
-  transport_vehicles_wrapper.classList.remove("hide")
+  // Hide vehicle options
+  transport_vehicles_wrapper.classList.add("hide")
+
+  // Show direction options
+  transport_cards_wrapper.classList.remove("hide")
 
   // Hide back button
   buttons_wrapper.classList.add("hide")
 
-  // Hide form
-  form_elem.classList.add("hide")
+  // Reset selection state
+  transport_cards.forEach(transport_card => {
+    transport_card.classList.remove("active")
+  })
+  transport_vehicles.forEach(transport_vehicle => {
+    transport_vehicle.classList.remove("active")
+  })
+  current_direction = ""
+  current_transport_type = ""
+  current_price = 0
 })
 
 // // Run script when page loads

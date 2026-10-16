@@ -67,7 +67,22 @@ header.ashley-jonathan, #footer.ashley-jonathan
     h1
         color: $color-ivory
 
+    .transportation .titles
+        // Sits on the bottom edge of the hero and rides up over the image.
+        // Being in normal flow (not absolute) means the next section is laid
+        // out below it, so it can never be covered.
+        position: relative
+        // Required: `bottom` also offsets relative elements, and an unscoped
+        // `.transportation .titles { bottom: 100px }` leaks from the
+        // digitalrealty partial (350px <=900px, 400px <=700px).
+        bottom: auto
+        height: auto
+        margin-top: -60px
+
     .transportation .titles h1, .transportation .titles p
+        // The UA-default h1 top margin added ~27px of dead space above the
+        // band, shrinking the visible overlap. Zeroing it makes the -60px exact.
+        margin-top: 0
         background-color: $color-primary
         color: $color-ivory
         font-family: $font-title
@@ -104,6 +119,9 @@ header.ashley-jonathan, #footer.ashley-jonathan
     .cards.transport
         gap: 25px
         margin-bottom: 20px
+        // Equal-height cards per row; .card's inherited `align-items: center`
+        // then centres their contents vertically.
+        align-items: stretch
 
         .card
             cursor: pointer
@@ -143,15 +161,6 @@ header.ashley-jonathan, #footer.ashley-jonathan
 
                     span
                         display: block
-
-                p.regular-price
-                    font-size: 1rem
-                    margin: 10px 0
-                    opacity: 0.4
-
-                    span
-                        text-decoration: line-through
-                        text-decoration-thickness: 2px
 
             .checkbox
                 border: 2px solid rgba($color-primary, 0.8)
@@ -203,12 +212,16 @@ header.ashley-jonathan, #footer.ashley-jonathan
                 background-color: $color-primary
 
             fieldset
+                // UA default padding (0.35em 0.75em 0.625em) made the fieldset
+                // wider than its grid column once the form went full width.
+                padding: 0
                 border: none
                 display: flex
                 flex-direction: column
                 align-items: flex-start
                 justify-content: flex-start
                 width: 100%
+                min-width: 0
 
                 p
                     font-size: 12px
@@ -258,6 +271,9 @@ header.ashley-jonathan, #footer.ashley-jonathan
     .buttons
 
         button.back 
+            // Re-show the button: an unscoped `button.back { display: none }`
+            // leaks from the digitalrealty partial and hides it everywhere.
+            display: inline-block
             background: none
             border: none
             cursor: pointer
@@ -331,13 +347,18 @@ header.ashley-jonathan, #footer.ashley-jonathan
     @media screen and (max-width: 900px)
 
         .cards.transport
-            width: 50%
+            width: 95%
+            max-width: 560px
             grid-template-columns: repeat(1, 1fr)
-            gap: 0
+            gap: 15px
 
             .card
                 justify-content: flex-start
-                padding: 0
+                padding: 15px
+                margin-bottom: 10px
+
+                .text h3
+                    margin-top: 0
 
                 br
                     display: none
@@ -346,13 +367,5 @@ header.ashley-jonathan, #footer.ashley-jonathan
         .buy-form 
             .wrapper-fieldsets
                 &.two-columns, &.three-columns
-                    width: 80%
+                    width: 100%
                     grid-template-columns: repeat(1, 1fr) !important
-
-    @media screen and (max-width: 500px)
-
-        .cards.transport
-            width: 70%
-
-        .buy-form .wrapper-fieldsets
-            width: 90%

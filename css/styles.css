@@ -5263,7 +5263,14 @@ header.ashley-jonathan h2, #footer.ashley-jonathan h2 {
 .ashley-jonathan-airport-transfers h1 {
   color: #F4EFE3;
 }
+.ashley-jonathan-airport-transfers .transportation .titles {
+  position: relative;
+  bottom: auto;
+  height: auto;
+  margin-top: -60px;
+}
 .ashley-jonathan-airport-transfers .transportation .titles h1, .ashley-jonathan-airport-transfers .transportation .titles p {
+  margin-top: 0;
   background-color: #2a3a24;
   color: #F4EFE3;
   font-family: "Cormorant Garamond", serif;
@@ -5298,6 +5305,7 @@ header.ashley-jonathan h2, #footer.ashley-jonathan h2 {
 .ashley-jonathan-airport-transfers .cards.transport {
   gap: 25px;
   margin-bottom: 20px;
+  align-items: stretch;
 }
 .ashley-jonathan-airport-transfers .cards.transport .card {
   cursor: pointer;
@@ -5337,15 +5345,6 @@ header.ashley-jonathan h2, #footer.ashley-jonathan h2 {
 }
 .ashley-jonathan-airport-transfers .cards.transport .card .text p.price span {
   display: block;
-}
-.ashley-jonathan-airport-transfers .cards.transport .card .text p.regular-price {
-  font-size: 1rem;
-  margin: 10px 0;
-  opacity: 0.4;
-}
-.ashley-jonathan-airport-transfers .cards.transport .card .text p.regular-price span {
-  text-decoration: line-through;
-  text-decoration-thickness: 2px;
 }
 .ashley-jonathan-airport-transfers .cards.transport .card .checkbox {
   border: 2px solid rgba(42, 58, 36, 0.8);
@@ -5396,12 +5395,14 @@ header.ashley-jonathan h2, #footer.ashley-jonathan h2 {
   background-color: #2a3a24;
 }
 .ashley-jonathan-airport-transfers .buy-form .wrapper-fieldsets fieldset {
+  padding: 0;
   border: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
+  min-width: 0;
 }
 .ashley-jonathan-airport-transfers .buy-form .wrapper-fieldsets fieldset p {
   font-size: 12px;
@@ -5449,6 +5450,7 @@ header.ashley-jonathan h2, #footer.ashley-jonathan h2 {
   cursor: not-allowed;
 }
 .ashley-jonathan-airport-transfers .buttons button.back {
+  display: inline-block;
   background: none;
   border: none;
   cursor: pointer;
@@ -5518,28 +5520,25 @@ header.ashley-jonathan h2, #footer.ashley-jonathan h2 {
 }
 @media screen and (max-width: 900px) {
   .ashley-jonathan-airport-transfers .cards.transport {
-    width: 50%;
+    width: 95%;
+    max-width: 560px;
     grid-template-columns: repeat(1, 1fr);
-    gap: 0;
+    gap: 15px;
   }
   .ashley-jonathan-airport-transfers .cards.transport .card {
     justify-content: flex-start;
-    padding: 0;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  .ashley-jonathan-airport-transfers .cards.transport .card .text h3 {
+    margin-top: 0;
   }
   .ashley-jonathan-airport-transfers .cards.transport .card br {
     display: none;
   }
   .ashley-jonathan-airport-transfers .buy-form .wrapper-fieldsets.two-columns, .ashley-jonathan-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
-    width: 80%;
+    width: 100%;
     grid-template-columns: repeat(1, 1fr) !important;
-  }
-}
-@media screen and (max-width: 500px) {
-  .ashley-jonathan-airport-transfers .cards.transport {
-    width: 70%;
-  }
-  .ashley-jonathan-airport-transfers .buy-form .wrapper-fieldsets {
-    width: 90%;
   }
 }
 
