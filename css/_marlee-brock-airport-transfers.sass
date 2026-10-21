@@ -1,19 +1,43 @@
-$color-dark: #bca078
-$color-primary: #bca078
-$color-black: #010101
-$color-white: white
-$font-regular: 'Montserrat', sans-serif
-$font-title: 'Vast Shadow', serif
-$font-highlight: 'Vampiro One', system
+// Load local fonts
+@font-face
+    font-family: 'Agrandir Tight'
+    src: url('../fonts/Agrandir-Tight-Medium.woff') format('woff')
+    font-weight: 500
+    font-style: normal
 
+@font-face
+    font-family: 'Caslon #540'
+    src: url('../fonts/Caslon-540-Italic.woff') format('woff')
+    font-weight: 400
+    font-style: italic
+
+@font-face
+    font-family: 'Jimmy Script'
+    src: url('../fonts/Jimmy-Script.woff') format('woff')
+    font-weight: 300
+    font-style: normal
+
+$color-primary: #042179
+$color-dark: #193585
+$color-bg: #eae9da
+$color-black: #042179
+$color-white: #ffffff
+$color-accent: #c2e1ff
+$font-regular: 'Agrandir Tight', sans-serif
+$font-title: 'Caslon #540', serif
+$font-highlight: 'Jimmy Script', cursive
+
+
+body.marlee-brock
+    background-color: $color-bg
 
 header.marlee-brock, #footer.marlee-brock
     background-color: $color-dark
 
     .content nav ul li a 
-        color: $color-black
+        color: $color-white
         &:hover
-            color: $color-white
+            color: $color-accent
 
     font-family: $font-regular
     h2
@@ -23,34 +47,64 @@ header.marlee-brock, #footer.marlee-brock
     
     .widgets .widget 
         a, & p
-            color: $color-black
+            color: $color-white
 
             svg
-                fill: $color-black
+                fill: $color-white
 
         a:hover
-            color: $color-white
+            color: $color-accent
 
         h2
             color: $color-white
 
+    .copyright
+        color: $color-white
+
+        a
+            color: $color-white
+            &:hover
+                color: $color-accent
+
 .marlee-brock-airport-transfers
 
+    background-color: $color-bg
     color: $color-black
     font-family: $font-regular
 
+    h1, h2, h3, h4, h5, h6
+        font-family: $font-title
+
+    p, a, span, label, input, select, button
+        font-family: $font-regular
+
     h1
-        font-family: $font-highlight
         color: $color-white
 
+    .font-highlight, .script-font
+        font-family: $font-highlight
+
     .transportation .titles
+        position: relative
+        bottom: auto
+        height: auto
+        margin-top: -60px
         pointer-events: none
 
         a, button, input
             pointer-events: auto
 
         h1, p
+            margin-top: 0
             background-color: $color-primary
+            font-family: $font-title
+
+    .gallery
+        .imgs
+            width: 300% !important
+
+            img
+                width: 33.33% !important
 
     h2
         text-align: center
@@ -74,11 +128,18 @@ header.marlee-brock, #footer.marlee-brock
         margin-bottom: 20px
 
         .card
+            background-color: $color-white
+            border: 1px solid rgba($color-primary, 0.15)
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05)
             cursor: pointer
             transition-duration: $transition-duration
             border-radius: 20px
             padding: 15px
             flex-direction: row
+
+            &.active
+                border-color: $color-primary
+                box-shadow: 0 4px 20px rgba($color-primary, 0.15)
 
             .text
                 display: flex
@@ -137,8 +198,9 @@ header.marlee-brock, #footer.marlee-brock
 
             &.active
                 .checkbox
+                    border-color: $color-primary
                     .inside
-                        background-color: rgba($color-primary, 0.8)
+                        background-color: $color-primary
 
     .info
         text-align: center
@@ -185,8 +247,10 @@ header.marlee-brock, #footer.marlee-brock
                         font-size: 18px
                         width: calc(100% - 20px)
                         padding: 5px 10px
-                        border: 1px solid $color-d
+                        border: 1px solid rgba($color-dark, 0.4)
                         border-radius: 5px
+                        background-color: $color-white
+                        color: $color-black
                         transition-duration: $transition-duration
 
                         &:disabled, .disabled
@@ -195,7 +259,8 @@ header.marlee-brock, #footer.marlee-brock
 
                         &:focus:not(:disabled), &:hover:not(:disabled)
                             outline: none
-                            box-shadow: 0px 0px 8px 0px $color-d
+                            border-color: $color-dark
+                            box-shadow: 0px 0px 8px 0px rgba($color-dark, 0.4)
 
         .btn.cta
             margin: 0 auto
@@ -247,6 +312,68 @@ header.marlee-brock, #footer.marlee-brock
             span.vehicle-title
                 font-weight: bold
                 color: $color-dark
+
+    .transportation.details
+        .cards
+            .card
+                background-color: $color-white
+                border: 1px solid rgba($color-primary, 0.15)
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05)
+                border-radius: 20px
+
+                svg
+                    fill: $color-primary
+
+    .faqs
+        margin-top: 60px
+        margin-bottom: 80px
+
+        h2
+            color: $color-primary
+            margin-bottom: 30px
+            font-size: 2rem
+            font-weight: 700
+
+        .questions-wrapper
+            .question
+                margin-bottom: 20px
+
+                .title
+                    background-color: $color-primary
+                    border-radius: 12px
+                    padding: 18px 25px
+                    color: $color-white
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05)
+                    transition-duration: $transition-duration
+
+                    &:hover
+                        opacity: 0.9
+
+                    h3
+                        font-family: $font-regular
+                        font-size: 1.05rem
+                        font-weight: 600
+                        letter-spacing: 0.03em
+                        line-height: 1.4
+                        color: $color-white
+
+                    svg
+                        fill: $color-white
+                        min-width: 24px
+
+                p, ul
+                    font-family: $font-regular
+                    font-size: 1.05rem
+                    line-height: 1.7
+                    color: $color-dark
+                    width: 92%
+                    margin: 15px auto
+
+                ul
+                    padding-left: 20px
+                    li
+                        margin-bottom: 8px
+                        list-style-type: disc
 
     @media screen and (max-width: 900px)
 

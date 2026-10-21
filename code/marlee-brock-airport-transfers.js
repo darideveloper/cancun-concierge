@@ -1,4 +1,8 @@
-const stripe_user = "marlee-brock"
+var move_value = 33.33
+
+// Temporarily use ashley-jonathan for testing
+const stripe_user = "ashley-jonathan"
+// const stripe_user = "marlee-brock"
 const stripe_api = "https://services.darideveloper.com/stripe-api/"
 
 // Global elements

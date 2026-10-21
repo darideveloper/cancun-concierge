@@ -95,3 +95,42 @@ The system SHALL ensure that background titles and overlay elements do not inter
 - **WHEN** a user clicks any vehicle card, direction card, or back button in the transportation section
 - **THEN** pointer events SHALL pass through background title layers (`pointer-events: none`)
 - **AND** interactive cards and controls SHALL be stacked above background elements
+
+### Requirement: Hero transportation image slider
+The landing page SHALL include an interactive, auto-rotating hero image carousel above the booking flow.
+
+#### Scenario: Image slider markup and navigation
+- **WHEN** the transportation section renders
+- **THEN** a `.gallery` container SHALL display preceding the transportation title banner
+- **AND** the gallery SHALL contain next and back navigation buttons (`button.next` and `button.back`)
+- **AND** the image container SHALL include transportation gallery images (`transportation-gallery-4.jpg`, `transportation-gallery-1.png`, and `transportation-gallery-2.png`)
+
+#### Scenario: Slider transition and automation
+- **WHEN** the page loads
+- **THEN** `code/gallery.js` SHALL be loaded and manage slide translation using `move_value = 33.33`
+- **AND** images SHALL automatically transition every 3 seconds until manual navigation occurs
+- **AND** clicking the next or back button SHALL advance or reverse the displayed slide immediately
+
+### Requirement: Accordion FAQ section
+The landing page SHALL provide an interactive FAQ accordion section directly preceding the page footer, matching the Ashley & Jonathan transportation FAQs.
+
+#### Scenario: FAQ markup and questions
+- **WHEN** the page renders
+- **THEN** a `.faqs` section SHALL be displayed before the footer containing the 5 transportation questions
+- **AND** each question article SHALL contain a clickable `.title` bar with an arrow icon and an expandable answer block (`p` or `ul`)
+
+#### Scenario: Accordion toggle interaction
+- **WHEN** a user clicks any FAQ question title
+- **THEN** the parent `.question` container SHALL toggle the `active` class via `code/faqs.js`
+- **AND** the answer text or list SHALL expand into view and the arrow SVG icon SHALL rotate 180 degrees
+
+### Requirement: Header logo branding and event logo transparency
+The header and hero branding SHALL use high-contrast assets suited for the Deep Navy and Warm Linen palette.
+
+#### Scenario: White header brand logo
+- **WHEN** the header renders on the Marlee & Brock page
+- **THEN** the Cancún Concierge logo image SHALL reference `../imgs/logo-white.png` for visibility against `#193585`
+
+#### Scenario: Transparent event logo rendering
+- **WHEN** the event logo renders
+- **THEN** `imgs/marlee-brock-logo.png` SHALL have an alpha-transparent background to seamlessly overlay the `#eae9da` Warm Linen page background without a visible white bounding box
