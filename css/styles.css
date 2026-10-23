@@ -5657,17 +5657,39 @@ header.marlee-brock .btn.menu svg, #footer.marlee-brock .btn.menu svg {
   text-align: center;
   margin-bottom: 50px;
 }
-.marlee-brock-airport-transfers .logo-event {
-  width: 500px;
-  max-width: 90%;
+.marlee-brock-airport-transfers .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 15px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.marlee-brock-airport-transfers .logo-container .logo-event {
+  width: 460px;
+  max-width: 68%;
   display: block;
-  margin: 0 auto;
+  margin: 0;
+}
+.marlee-brock-airport-transfers .logo-container .logo-doodle {
+  width: 85px;
+  max-width: 16%;
+  height: auto;
+  opacity: 0.95;
+  pointer-events: none;
+  user-select: none;
+  flex-shrink: 0;
+  display: block;
 }
 .marlee-brock-airport-transfers .cards.transport {
   position: relative;
   z-index: 2;
   gap: 25px;
   margin-bottom: 20px;
+  align-items: stretch;
 }
 .marlee-brock-airport-transfers .cards.transport .card {
   background-color: #ffffff;
@@ -5676,8 +5698,10 @@ header.marlee-brock .btn.menu svg, #footer.marlee-brock .btn.menu svg {
   cursor: pointer;
   transition-duration: 0.5s;
   border-radius: 20px;
-  padding: 15px;
+  padding: 18px 20px;
   flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
 }
 .marlee-brock-airport-transfers .cards.transport .card.active {
   border-color: #ED8A7B;
@@ -5686,6 +5710,7 @@ header.marlee-brock .btn.menu svg, #footer.marlee-brock .btn.menu svg {
 .marlee-brock-airport-transfers .cards.transport .card .text {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
   margin-left: 10px;
   width: calc(100% - 44px);
@@ -5695,25 +5720,31 @@ header.marlee-brock .btn.menu svg, #footer.marlee-brock .btn.menu svg {
   width: 100%;
 }
 .marlee-brock-airport-transfers .cards.transport .card .text h3 {
-  margin-bottom: 0;
+  margin: 0;
+  line-height: 1.3;
+  font-size: 1.15rem;
+  color: #1B365D;
 }
 .marlee-brock-airport-transfers .cards.transport .card .text p {
   text-align: left;
+  margin: 0;
 }
 .marlee-brock-airport-transfers .cards.transport .card .text p span {
   font-weight: bold;
   font-size: 1.1em;
 }
 .marlee-brock-airport-transfers .cards.transport .card .text p.price {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   color: #1B365D;
+  margin-top: 6px;
+  margin-bottom: 0;
 }
 .marlee-brock-airport-transfers .cards.transport .card .text p.price span {
   display: block;
 }
 .marlee-brock-airport-transfers .cards.transport .card .text p.regular-price {
   font-size: 1rem;
-  margin: 10px 0;
+  margin: 4px 0 0;
   opacity: 0.4;
 }
 .marlee-brock-airport-transfers .cards.transport .card .text p.regular-price span {
@@ -5724,10 +5755,12 @@ header.marlee-brock .btn.menu svg, #footer.marlee-brock .btn.menu svg {
   border: 2px solid rgba(27, 54, 93, 0.8);
   width: 40px;
   height: 20px;
+  min-width: 40px;
   margin-right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 .marlee-brock-airport-transfers .cards.transport .card .checkbox .inside {
   width: 30px;
@@ -5856,14 +5889,35 @@ header.marlee-brock .btn.menu svg, #footer.marlee-brock .btn.menu svg {
   font-weight: bold;
   color: #1B365D;
 }
+.marlee-brock-airport-transfers .transportation.details .cards {
+  gap: 30px;
+  margin-bottom: 70px;
+}
 .marlee-brock-airport-transfers .transportation.details .cards .card {
   background-color: #ffffff;
   border: 1px solid rgba(27, 54, 93, 0.15);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
+  padding: 35px 20px 30px;
+  box-sizing: border-box;
+  transition-duration: 0.5s;
+}
+.marlee-brock-airport-transfers .transportation.details .cards .card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 .marlee-brock-airport-transfers .transportation.details .cards .card svg {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 18px;
   fill: #1B365D;
+}
+.marlee-brock-airport-transfers .transportation.details .cards .card h3 {
+  margin: 0;
+  color: #1B365D;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  text-align: center;
 }
 .marlee-brock-airport-transfers .faqs {
   margin-top: 60px;
@@ -5916,18 +5970,60 @@ header.marlee-brock .btn.menu svg, #footer.marlee-brock .btn.menu svg {
   margin-bottom: 8px;
   list-style-type: disc;
 }
+.marlee-brock-airport-transfers .title-with-doodle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  position: relative;
+}
+.marlee-brock-airport-transfers .title-with-doodle .doodle-blossom {
+  width: 36px;
+  height: auto;
+  opacity: 0.95;
+  pointer-events: none;
+  user-select: none;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.marlee-brock-airport-transfers .title-with-doodle .doodle-blossom.left {
+  transform: scaleX(-1);
+}
 @media screen and (max-width: 900px) {
+  .marlee-brock-airport-transfers .logo-container {
+    gap: 20px;
+  }
+  .marlee-brock-airport-transfers .logo-container .logo-event {
+    width: 380px;
+    max-width: 65%;
+  }
+  .marlee-brock-airport-transfers .logo-container .logo-doodle {
+    width: 65px;
+    max-width: 16%;
+  }
   .marlee-brock-airport-transfers .cards.transport {
-    width: 50%;
+    width: 90%;
+    max-width: 520px;
     grid-template-columns: repeat(1, 1fr);
-    gap: 0;
+    gap: 15px;
   }
   .marlee-brock-airport-transfers .cards.transport .card {
     justify-content: flex-start;
-    padding: 0;
+    padding: 16px 20px;
+    margin-bottom: 0;
+  }
+  .marlee-brock-airport-transfers .cards.transport .card .text h3 {
+    margin-top: 0;
   }
   .marlee-brock-airport-transfers .cards.transport .card br {
     display: none;
+  }
+  .marlee-brock-airport-transfers .transportation.details .cards {
+    gap: 20px;
+  }
+  .marlee-brock-airport-transfers .transportation.details .cards .card {
+    padding: 30px 15px 25px;
   }
   .marlee-brock-airport-transfers .buy-form .wrapper-fieldsets.two-columns, .marlee-brock-airport-transfers .buy-form .wrapper-fieldsets.three-columns {
     width: 80%;
@@ -5935,11 +6031,32 @@ header.marlee-brock .btn.menu svg, #footer.marlee-brock .btn.menu svg {
   }
 }
 @media screen and (max-width: 500px) {
+  .marlee-brock-airport-transfers .logo-container {
+    gap: 12px;
+    padding: 0 10px;
+  }
+  .marlee-brock-airport-transfers .logo-container .logo-event {
+    width: 250px;
+    max-width: 62%;
+  }
+  .marlee-brock-airport-transfers .logo-container .logo-doodle {
+    width: 44px;
+    max-width: 18%;
+  }
   .marlee-brock-airport-transfers .cards.transport {
-    width: 70%;
+    width: 95%;
+  }
+  .marlee-brock-airport-transfers .transportation.details .cards .card {
+    margin-bottom: 0;
   }
   .marlee-brock-airport-transfers .buy-form .wrapper-fieldsets {
     width: 90%;
+  }
+  .marlee-brock-airport-transfers .title-with-doodle {
+    gap: 10px;
+  }
+  .marlee-brock-airport-transfers .title-with-doodle .doodle-blossom {
+    width: 26px;
   }
 }
 
