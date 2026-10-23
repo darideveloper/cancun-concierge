@@ -17,12 +17,13 @@
     font-weight: 300
     font-style: normal
 
-$color-primary: #042179
-$color-dark: #193585
-$color-bg: #eae9da
-$color-black: #042179
+$color-primary: #1B365D
+$color-dark: #1B365D
+$color-bg: #E4CBB4
+$color-accent: #ED8A7B
+$color-secondary: #A0C9E0
+$color-black: #1B365D
 $color-white: #ffffff
-$color-accent: #c2e1ff
 $font-regular: 'Agrandir Tight', sans-serif
 $font-title: 'Caslon #540', serif
 $font-highlight: 'Jimmy Script', cursive
@@ -42,6 +43,9 @@ header.marlee-brock, #footer.marlee-brock
     font-family: $font-regular
     h2
         font-family: $font-title
+
+    .btn.menu svg
+        fill: $color-white
 
 #footer.marlee-brock
     
@@ -99,6 +103,12 @@ header.marlee-brock, #footer.marlee-brock
             background-color: $color-primary
             font-family: $font-title
 
+        h1
+            color: $color-white
+
+        p
+            color: $color-secondary
+
     .gallery
         .imgs
             width: 300% !important
@@ -138,8 +148,8 @@ header.marlee-brock, #footer.marlee-brock
             flex-direction: row
 
             &.active
-                border-color: $color-primary
-                box-shadow: 0 4px 20px rgba($color-primary, 0.15)
+                border-color: $color-accent
+                box-shadow: 0 4px 20px rgba($color-accent, 0.25)
 
             .text
                 display: flex
@@ -194,13 +204,13 @@ header.marlee-brock, #footer.marlee-brock
             &:hover
                 .checkbox 
                     .inside
-                        background-color: rgba($color-primary, 0.6)
+                        background-color: rgba($color-accent, 0.4)
 
             &.active
                 .checkbox
-                    border-color: $color-primary
+                    border-color: $color-accent
                     .inside
-                        background-color: $color-primary
+                        background-color: $color-accent
 
     .info
         text-align: center
@@ -222,8 +232,10 @@ header.marlee-brock, #footer.marlee-brock
 
             .btn.cta
                 margin-top: 15px
-                color: $color-white
-                background-color: $color-dark
+                color: $color-dark
+                background-color: $color-accent
+                border: 2px solid $color-accent
+                font-weight: bold
 
             fieldset
                 border: none
@@ -266,13 +278,15 @@ header.marlee-brock, #footer.marlee-brock
             margin: 0 auto
             margin-top: 20px
             display: block
-            color: $color-white
-            background-color: $color-dark
-            border: 2px solid $color-dark
+            color: $color-dark
+            background-color: $color-accent
+            border: 2px solid $color-accent
+            font-weight: bold
 
             &:hover
-                color: $color-dark
-                background-color: $color-white
+                color: $color-white
+                background-color: $color-dark
+                border-color: $color-dark
 
             &[disabled]
                 cursor: not-allowed
@@ -358,7 +372,7 @@ header.marlee-brock, #footer.marlee-brock
                         color: $color-white
 
                     svg
-                        fill: $color-white
+                        fill: $color-accent
                         min-width: 24px
 
                 p, ul
