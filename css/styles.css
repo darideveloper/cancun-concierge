@@ -5583,6 +5583,17 @@ header.marlee-brock .btn.menu svg, #footer.marlee-brock .btn.menu svg {
   fill: #ffffff;
 }
 
+#header.marlee-brock .content {
+  flex-direction: row;
+}
+#header.marlee-brock .content .logo {
+  margin: 20px 0;
+}
+#header.marlee-brock .content nav {
+  height: auto;
+  margin: 0;
+}
+
 #footer.marlee-brock .widgets .widget a, #footer.marlee-brock .widgets .widget p {
   color: #ffffff;
 }
