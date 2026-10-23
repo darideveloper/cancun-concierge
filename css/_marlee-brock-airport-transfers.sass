@@ -17,12 +17,13 @@
     font-weight: 300
     font-style: normal
 
-$color-primary: #042179
-$color-dark: #193585
-$color-bg: #eae9da
-$color-black: #042179
+$color-primary: #1B365D
+$color-dark: #1B365D
+$color-bg: #E4CBB4
+$color-accent: #ED8A7B
+$color-secondary: #A0C9E0
+$color-black: #1B365D
 $color-white: #ffffff
-$color-accent: #c2e1ff
 $font-regular: 'Agrandir Tight', sans-serif
 $font-title: 'Caslon #540', serif
 $font-highlight: 'Jimmy Script', cursive
@@ -42,6 +43,9 @@ header.marlee-brock, #footer.marlee-brock
     font-family: $font-regular
     h2
         font-family: $font-title
+
+    .btn.menu svg
+        fill: $color-white
 
 #footer.marlee-brock
     
@@ -99,6 +103,12 @@ header.marlee-brock, #footer.marlee-brock
             background-color: $color-primary
             font-family: $font-title
 
+        h1
+            color: $color-white
+
+        p
+            color: $color-secondary
+
     .gallery
         .imgs
             width: 300% !important
@@ -114,11 +124,32 @@ header.marlee-brock, #footer.marlee-brock
         text-align: center
         margin-bottom: 50px
 
-    .logo-event
-        width: 500px
-        max-width: 90%
-        display: block
-        margin: 0 auto
+    .logo-container
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 35px
+        width: 100%
+        max-width: 900px
+        margin: 0 auto 15px
+        padding: 0 20px
+        box-sizing: border-box
+
+        .logo-event
+            width: 460px
+            max-width: 68%
+            display: block
+            margin: 0
+
+        .logo-doodle
+            width: 85px
+            max-width: 16%
+            height: auto
+            opacity: 0.95
+            pointer-events: none
+            user-select: none
+            flex-shrink: 0
+            display: block
 
 
     .cards.transport
@@ -126,6 +157,7 @@ header.marlee-brock, #footer.marlee-brock
         z-index: 2
         gap: 25px
         margin-bottom: 20px
+        align-items: stretch
 
         .card
             background-color: $color-white
@@ -134,16 +166,19 @@ header.marlee-brock, #footer.marlee-brock
             cursor: pointer
             transition-duration: $transition-duration
             border-radius: 20px
-            padding: 15px
+            padding: 18px 20px
             flex-direction: row
+            align-items: center
+            box-sizing: border-box
 
             &.active
-                border-color: $color-primary
-                box-shadow: 0 4px 20px rgba($color-primary, 0.15)
+                border-color: $color-accent
+                box-shadow: 0 4px 20px rgba($color-accent, 0.25)
 
             .text
                 display: flex
                 align-items: flex-start
+                justify-content: center
                 flex-direction: column
                 margin-left: 10px
                 width: calc(100% - 44px)
@@ -153,25 +188,31 @@ header.marlee-brock, #footer.marlee-brock
                     width: 100%
 
                 h3
-                    margin-bottom: 0
+                    margin: 0
+                    line-height: 1.3
+                    font-size: 1.15rem
+                    color: $color-primary
 
                 p
                     text-align: left
+                    margin: 0
 
                     span
                         font-weight: bold
                         font-size: 1.1em
 
                 p.price
-                    font-size: 1.3rem
+                    font-size: 1.25rem
                     color: $color-primary
+                    margin-top: 6px
+                    margin-bottom: 0
 
                     span
                         display: block
 
                 p.regular-price
                     font-size: 1rem
-                    margin: 10px 0
+                    margin: 4px 0 0
                     opacity: 0.4
 
                     span
@@ -182,10 +223,12 @@ header.marlee-brock, #footer.marlee-brock
                 border: 2px solid rgba($color-primary, 0.8)
                 width: 40px
                 height: 20px
+                min-width: 40px
                 margin-right: 10px
                 display: flex
                 align-items: center
                 justify-content: center
+                flex-shrink: 0
 
                 .inside
                     width: 30px
@@ -194,13 +237,13 @@ header.marlee-brock, #footer.marlee-brock
             &:hover
                 .checkbox 
                     .inside
-                        background-color: rgba($color-primary, 0.6)
+                        background-color: rgba($color-accent, 0.4)
 
             &.active
                 .checkbox
-                    border-color: $color-primary
+                    border-color: $color-accent
                     .inside
-                        background-color: $color-primary
+                        background-color: $color-accent
 
     .info
         text-align: center
@@ -222,8 +265,10 @@ header.marlee-brock, #footer.marlee-brock
 
             .btn.cta
                 margin-top: 15px
-                color: $color-white
-                background-color: $color-dark
+                color: $color-dark
+                background-color: $color-accent
+                border: 2px solid $color-accent
+                font-weight: bold
 
             fieldset
                 border: none
@@ -266,13 +311,15 @@ header.marlee-brock, #footer.marlee-brock
             margin: 0 auto
             margin-top: 20px
             display: block
-            color: $color-white
-            background-color: $color-dark
-            border: 2px solid $color-dark
+            color: $color-dark
+            background-color: $color-accent
+            border: 2px solid $color-accent
+            font-weight: bold
 
             &:hover
-                color: $color-dark
-                background-color: $color-white
+                color: $color-white
+                background-color: $color-dark
+                border-color: $color-dark
 
             &[disabled]
                 cursor: not-allowed
@@ -315,14 +362,34 @@ header.marlee-brock, #footer.marlee-brock
 
     .transportation.details
         .cards
+            gap: 30px
+            margin-bottom: 70px
+
             .card
                 background-color: $color-white
                 border: 1px solid rgba($color-primary, 0.15)
                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05)
                 border-radius: 20px
+                padding: 35px 20px 30px
+                box-sizing: border-box
+                transition-duration: $transition-duration
+
+                &:hover
+                    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08)
+                    transform: translateY(-2px)
 
                 svg
+                    width: 60px
+                    height: 60px
+                    margin-bottom: 18px
                     fill: $color-primary
+
+                h3
+                    margin: 0
+                    color: $color-primary
+                    font-size: 1.15rem
+                    line-height: 1.4
+                    text-align: center
 
     .faqs
         margin-top: 60px
@@ -358,7 +425,7 @@ header.marlee-brock, #footer.marlee-brock
                         color: $color-white
 
                     svg
-                        fill: $color-white
+                        fill: $color-accent
                         min-width: 24px
 
                 p, ul
@@ -375,20 +442,62 @@ header.marlee-brock, #footer.marlee-brock
                         margin-bottom: 8px
                         list-style-type: disc
 
+    .title-with-doodle
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 16px
+        text-align: center
+        position: relative
+
+        .doodle-blossom
+            width: 36px
+            height: auto
+            opacity: 0.95
+            pointer-events: none
+            user-select: none
+            display: inline-block
+            flex-shrink: 0
+
+            &.left
+                transform: scaleX(-1)
+
     @media screen and (max-width: 900px)
 
+        .logo-container
+            gap: 20px
+
+            .logo-event
+                width: 380px
+                max-width: 65%
+
+            .logo-doodle
+                width: 65px
+                max-width: 16%
+
         .cards.transport
-            width: 50%
+            width: 90%
+            max-width: 520px
             grid-template-columns: repeat(1, 1fr)
-            gap: 0
+            gap: 15px
 
             .card
                 justify-content: flex-start
-                padding: 0
+                padding: 16px 20px
+                margin-bottom: 0
+
+                .text h3
+                    margin-top: 0
 
                 br
                     display: none
-                
+
+        .transportation.details
+            .cards
+                gap: 20px
+
+                .card
+                    padding: 30px 15px 25px
 
         .buy-form 
             .wrapper-fieldsets
@@ -398,8 +507,34 @@ header.marlee-brock, #footer.marlee-brock
 
     @media screen and (max-width: 500px)
 
+        .logo-container
+            gap: 12px
+            padding: 0 10px
+
+            .logo-event
+                width: 250px
+                max-width: 62%
+
+            .logo-doodle
+                width: 44px
+                max-width: 18%
+
         .cards.transport
-            width: 70%
+            width: 95%
+
+        .transportation.details
+            .cards
+                .card
+                    margin-bottom: 0
 
         .buy-form .wrapper-fieldsets
             width: 90%
+
+        .title-with-doodle
+            gap: 10px
+
+            .doodle-blossom
+                width: 26px
+
+
+
