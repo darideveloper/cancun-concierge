@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- NOTE: When editing the stylesheet, increment the ?v= version query parameter below to bust Cloudflare cache -->
-    <link rel="stylesheet" href="../css/styles.css?v=2">
+    <link rel="stylesheet" href="../css/styles.css?v=5">
     <link rel="icon" type="image/x-icon" href="../imgs/favicon.png">
     
     <!-- Custom google fonts -->
@@ -106,14 +106,16 @@
             </div>
             <div class="titles regular-width">
                 <h1 class="small">
-                    PLEASE BOOK NOW AND SECURE YOUR TRANSFER FROM CANCUN INTERNATIONAL AIRPORT TO MAROMA, A BELMOND HOTEL
+                    Complimentary airport transportation to your hotel will be provided.
                 </h1>
+                <p>
+                    Please use this portal to submit your arrival flight details so our transportation team can coordinate your transfer to the resort.
+                </p>
             </div>
             
 
-            <h2>TRANSPORTATION OPTIONS</h2>
-            <section class="cards transport regular-width translate">
-                <article class="card" data-transport-type="arriving">
+            <section class="cards transport free regular-width">
+                <article class="card" id="free-toggle" role="checkbox" aria-checked="false" aria-controls="free-form" tabindex="0">
                     <div class="checkbox">
                         <div class="inside"></div>
                     </div>
@@ -121,7 +123,87 @@
                         <h3>Complimentary Airport Arrival Transportation</h3>
                     </div>
                 </article>
+            </section>
 
+            <p class="free-note regular-width">
+                Return transportation to the airport is not included and must be arranged by using the links below.
+            </p>
+
+            <form id="free-form" class="buy-form regular-width hide" method="post" action="#">
+                <div class="wrapper-fieldsets two-columns">
+                    <fieldset class="general hide">
+                        <h3>General</h3>
+                        <label>
+                            Name
+                            <input type="text" name="name" id="free-name" placeholder="John" required class="hide" disabled>
+                        </label>
+                        <label>
+                            Last name
+                            <input type="text" name="last-name" id="free-last-name" placeholder="Doe" required class="hide" disabled>
+                        </label>
+                        <label>
+                            Email
+                            <input type="Email" name="email" id="free-email" placeholder="example@gmail.com" required class="hide" disabled>
+                            <p>
+                                It will required again in the pament page
+                            </p>
+                        </label>
+                        <label>
+                            Number of passengers
+                            <select name="passengers" id="free-passengers" required class="hide" disabled>
+                                <option value="1">1 passenger</option>
+                                <option value="2">2 passengers</option>
+                                <option value="3">3 passengers</option>
+                                <option value="4">4 passengers</option>
+                                <option value="5">5 passengers</option>
+                                <option value="6">6 passengers</option>
+                                <option value="7">7 passengers</option>
+                                <option value="8">8 passengers</option>
+                                <option value="9">9 passengers</option>
+                                <option value="10">10 passengers</option>
+                                <option value="11">11 passengers</option>
+                                <option value="12">12 passengers</option>
+                            </select>
+                            <p>Maximum twelve passengers</p>
+                        </label>
+                    </fieldset>
+                    <fieldset class="arriving hide">
+                        <h3>Arriving</h3>
+                        <label>
+                            Arriving date
+                            <input type="date" name="arriving-date" id="free-arriving-date" required class="hide" disabled>
+                        </label>
+                        <label>
+                            Arriving time in Cancun
+                            <input type="time" name="arriving-time" id="free-arriving-time" required class="hide" disabled>
+                        </label>
+                        <label>
+                            Airline
+                            <input type="text" name="arriving-airline" id="free-arriving-airline" required class="hide" disabled>
+                            <p class="warning">*In case you have connecting flights, please make sure you provide the info for your actual flight arriving to Cancun</p>
+                        </label>
+                        <label>
+                            Flight number
+                            <input type="text" name="arriving-flight-number" id="free-arriving-flight-number" required class="hide" disabled>
+                        </label>
+                        <label>
+                            Hotel
+                            <select name="arriving-hotel" id="free-arriving-hotel" required class="hide" disabled>
+                                <option value="Maroma, A Belmond Hotel">Maroma, A Belmond Hotel</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <div class="hotel-other-wrapper hide">
+                                <input type="text" id="free-arriving-hotel-other" name="arriving-hotel-other" required class="hide hotel" disabled>
+                                <p>Transfer rates apply to hotels located in Riviera Maya area only</p>
+                            </div>
+                        </label>
+                    </fieldset>
+                </div>
+                <input type="submit" class="btn cta buy" value="Book Free Transfer">
+            </form>
+
+            <h2>TRANSPORTATION OPTIONS</h2>
+            <section class="cards transport regular-width translate">
                 <article class="card" data-transport-type="departing">
                     <div class="checkbox">
                         <div class="inside"></div>
@@ -195,7 +277,7 @@
             Prices are per vehicle (not per person). 
         </div>
 
-        <form class="buy-form regular-width hide" method="post" action="#">
+        <form id="paid-form" class="buy-form regular-width hide" method="post" action="#">
             <div class="wrapper-fieldsets">
                 <fieldset class="general hide">
                     <h3>General</h3>

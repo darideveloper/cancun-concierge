@@ -88,6 +88,11 @@ header.ashley-jonathan, #footer.ashley-jonathan
         font-family: $font-title
         letter-spacing: 0.05em
 
+    // Subtitle under the headline: a bit smaller than the 40px h1 (the
+    // shared default of 40px would match it, and `.small`'s 20px is too small)
+    .transportation .titles p
+        font-size: 26px
+
     h2
         text-align: center
         margin-bottom: 30px
@@ -144,6 +149,7 @@ header.ashley-jonathan, #footer.ashley-jonathan
                     width: 100%
 
                 h3
+                    margin-top: 0
                     margin-bottom: 0
                     color: $color-primary
 
@@ -186,6 +192,24 @@ header.ashley-jonathan, #footer.ashley-jonathan
                 .checkbox
                     .inside
                         background-color: rgba($color-primary, 0.8)
+
+    // Free arrival toggle: one card, always visible above the paid options
+    .cards.transport.free
+        grid-template-columns: minmax(0, 300px)
+        justify-content: center
+        margin: 35px auto 0
+
+    // Two paid options left (hotel - airport and round trip)
+    .cards.transport.translate
+        grid-template-columns: repeat(2, minmax(0, 300px))
+        justify-content: center
+
+    .free-note
+        text-align: center
+        margin: 18px auto 0
+        font-family: $font-title
+        font-size: 1.15rem
+        color: $color-ink
 
     .info
         text-align: center
@@ -346,6 +370,17 @@ header.ashley-jonathan, #footer.ashley-jonathan
 
     @media screen and (max-width: 900px)
 
+        // Paragraph re-shrinks on mobile; the partial imports last, so it would
+        // otherwise override the shared <=900px rule and sit bigger than the
+        // 30px mobile headline
+        .transportation .titles p
+            font-size: 18px
+
+        // Two-column grid must collapse on phones (this is more specific
+        // than the .cards.transport rule below, so it needs an explicit reset)
+        .cards.transport.translate
+            grid-template-columns: minmax(0, 300px)
+
         .cards.transport
             width: 95%
             max-width: 560px
@@ -356,9 +391,6 @@ header.ashley-jonathan, #footer.ashley-jonathan
                 justify-content: flex-start
                 padding: 15px
                 margin-bottom: 10px
-
-                .text h3
-                    margin-top: 0
 
                 br
                     display: none

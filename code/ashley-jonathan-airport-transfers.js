@@ -10,14 +10,22 @@ const stripe_api = is_local
   : "https://omar.apps.darideveloper.com/ashley-jonathan/sale/"
 
 // Global elements
-const form_elem = document.querySelector("form")
+const paid_form = document.querySelector("#paid-form")
+const free_form = document.querySelector("#free-form")
+const free_toggle = document.querySelector("#free-toggle")
 const transport_cards_wrapper = document.querySelector(".cards.translate")
 const transport_cards = document.querySelectorAll(".cards.translate > .card")
 const transport_vehicles_wrapper = document.querySelector(".cards.vehicle")
 const transport_vehicles = document.querySelectorAll(".cards.vehicle > .card")
 const buttons_wrapper = document.querySelector(".buttons")
 const button_back = document.querySelector(".buttons .back")
-const submit_elem = document.querySelector("#submit")
+const paid_submit = document.querySelector("#submit")
+const free_submit = free_form.querySelector('[type="submit"]')
+
+// Product name sent to Stripe for the free arrival flow.
+// innerText returns the CSS-uppercased text, so this must stay uppercase to
+// keep the same Stripe product as before
+const FREE_PRODUCT = "COMPLIMENTARY AIRPORT ARRIVAL TRANSPORTATION"
 
 // Alert when done query
 const queryString = window.location.search
@@ -30,17 +38,14 @@ if (done) {
 // Prices
 const prices = {
   "deluxe": {
-    "arriving": 0.00,
     "departing": 215.00,
     "arriving departing": 215.00,
   },
   "van": {
-    "arriving": 0.00,
     "departing": 155.00,
     "arriving departing": 155.00,
   },
   "sprinter": {
-    "arriving": 0.00,
     "departing": 244.00,
     "arriving departing": 244.00,
   },
@@ -78,15 +83,26 @@ function formatPrice (value) {
   return clean === "0.00" ? "Free" : `${clean} USD`
 }
 
-function activete_form(transport_types) {
+// Show or hide the custom hotel input based on the current select value
+function sync_hotel_other(form) {
+  form.querySelectorAll('select[name*="hotel"]').forEach(select => {
+    const input_custom_hotel = select.parentNode.querySelector(".hotel-other-wrapper input")
+    const is_other = select.value == "Other"
+    input_custom_hotel.classList.toggle("hide", !is_other)
+    input_custom_hotel.parentNode.classList.toggle("hide", !is_other)
+    input_custom_hotel.disabled = !is_other
+  })
+}
+
+function activate_form(form, transport_types, vehicle_type) {
 
   transport_types.push ("general")
 
   // Show form
-  form_elem.classList.remove("hide")
+  form.classList.remove("hide")
 
   // Disabled all form sections and inputs
-  const all_inputs = document.querySelectorAll("fieldset, fieldset input, fieldset select")
+  const all_inputs = form.querySelectorAll("fieldset, fieldset input, fieldset select")
   all_inputs.forEach(input => {
     input.classList.add ("hide")
     input.disabled = true
@@ -94,37 +110,39 @@ function activete_form(transport_types) {
 
   // Activate current form sections
   const selector = transport_types.map(transport_type => `fieldset.${transport_type}, fieldset.${transport_type} input:not([id*="hotel-other"]), fieldset.${transport_type} select`).join (", ")
-  const fielsets = document.querySelectorAll(selector)
+  const fielsets = form.querySelectorAll(selector)
   fielsets.forEach(input => {
     input.classList.remove ("hide")
     input.disabled = false
   })
 
   // Update form grid style
-  const form = document.querySelector("form .wrapper-fieldsets")
+  const grid = form.querySelector(".wrapper-fieldsets")
   if (transport_types.length == 2) {
-    form.classList.add ("two-columns")
-    form.classList.remove ("three-columns")
+    grid.classList.add ("two-columns")
+    grid.classList.remove ("three-columns")
   } else if (transport_types.length == 3) {
-    form.classList.remove ("two-columns")
-    form.classList.add ("three-columns")
+    grid.classList.remove ("two-columns")
+    grid.classList.add ("three-columns")
   }
 
   // Update passengers (generic 1-12 fallback for free arrivals with no vehicle)
-  const passengersNums = passengers[current_transport_type] || [1,2,3,4,5,6,7,8,9,10,11,12]
+  const passengersNums = passengers[vehicle_type] || [1,2,3,4,5,6,7,8,9,10,11,12]
   const maxPassengers = Math.max(...passengersNums)
   const maxPassengersText = passengersText[maxPassengers]
-  const passagersTextElem = document.querySelector('#passengers + p')
-  passagersTextElem.innerHTML = `Maximum ${maxPassengersText} passengers`
+  const select_elem = form.querySelector('[name="passengers"]')
+  select_elem.nextElementSibling.innerHTML = `Maximum ${maxPassengersText} passengers`
 
-  // Opdate passengers options
-  const selectElem = document.querySelector('#passengers')
-  options = ""
+  // Update passengers options
+  let options = ""
   for (const passenger of passengersNums) {
     const plural = passenger > 1 ? "s" : ""
     options += `<option value="${passenger}">${passenger} passenger${plural}</option>`
   }
-  selectElem.innerHTML = options
+  select_elem.innerHTML = options
+
+  // Re-sync the custom hotel input with the select value
+  sync_hotel_other(form)
 
 }
 
@@ -161,28 +179,6 @@ transport_cards.forEach(transport_card => {
       transport_vehicle.querySelector(".price > span").innerText = formatPrice(prices[vehicle_type][current_direction])
     })
 
-    // Free arrival: skip vehicle selection, go straight to form
-    if (current_direction === "arriving") {
-      current_transport_type = ""
-      current_price = 0
-
-      // Keep vehicle options hidden, hide direction options
-      transport_vehicles_wrapper.classList.add("hide")
-      transport_cards_wrapper.classList.add("hide")
-
-      // Show back button
-      buttons_wrapper.classList.remove("hide")
-
-      // Show form directly with generic passengers
-      activete_form(current_direction.split(" "))
-
-      // Update CTA button text
-      if (submit_elem) {
-        submit_elem.value = "Book Free Transfer"
-      }
-      return
-    }
-
     // Show vehicle options, hide direction options
     transport_vehicles_wrapper.classList.remove("hide")
     transport_cards_wrapper.classList.add("hide")
@@ -198,19 +194,7 @@ hotel_inputs.forEach(hotel_input => {
 
   // Add event listener for each hotel select
   hotel_input.addEventListener("change", (e) => {
-
-    // Show or hide input for custom hotel
-    const input_custom_hotel = e.target.parentNode.querySelector ("input")
-    const input_wrapper = input_custom_hotel.parentNode
-    if (e.target.value == "Other") {
-      input_custom_hotel.classList.remove("hide")
-      input_custom_hotel.disabled = false
-      input_wrapper.classList.remove ("hide")
-    } else {
-      input_custom_hotel.classList.add("hide")
-      input_custom_hotel.disabled = true
-      input_wrapper.classList.add ("hide")
-    }
+    sync_hotel_other(e.target.form)
   })
 })
 
@@ -237,35 +221,27 @@ transport_vehicles.forEach(transport_vehicle => {
     current_price = prices[current_transport_type][current_direction]
 
     // Activate form fieldsets for the selected direction
-    activete_form(current_direction.split(" "))
+    activate_form(paid_form, current_direction.split(" "), current_transport_type)
 
     // Update CTA button text
-    if (submit_elem) {
-      submit_elem.value = current_price === 0 ? "Book Free Transfer" : "Buy now"
+    if (paid_submit) {
+      paid_submit.value = current_price === 0 ? "Book Free Transfer" : "Buy now"
     }
 
     // Keep vehicle options visible as a summary of the selection
   }))
 })
 
-const form = document.querySelector("form")
-form.addEventListener("submit", (e) => {
-
-  e.preventDefault ()
-
-  // Paid flows require an explicit vehicle selection
-  if (current_direction !== "arriving" && !current_transport_type) {
-    alert("Please select a vehicle to continue.")
-    document.querySelector("#submit").value = "Buy now"
-    return
-  }
+// Send the booking to the Stripe API
+function send_booking(form, product_name, price, button, vehicle) {
 
   // Set submit button to loading
-  document.querySelector("#submit").value = "loading..."
+  const initial_label = button.value
+  button.value = "loading..."
 
   // Get form data
-  const input_selector = "input:not(.hide):not([disabled]):not(#submit), select:not(.hide):not([disabled])"
-  const inputs = document.querySelectorAll (input_selector)
+  const input_selector = 'input:not(.hide):not([disabled]):not([type="submit"]), select:not(.hide):not([disabled])'
+  const inputs = form.querySelectorAll (input_selector)
 
   // Create form text
   let form_data = {}
@@ -274,7 +250,7 @@ form.addEventListener("submit", (e) => {
     const input_value = input.value
     form_data[input_name] = input_value
   }
-  form_data['transport_vehicle'] = current_transport_type
+  form_data['transport_vehicle'] = vehicle
 
   // Stripe data
   let stripe_data = {
@@ -283,9 +259,9 @@ form.addEventListener("submit", (e) => {
     "products": {}
   }
 
-  stripe_data["products"][transport_name] = {
+  stripe_data["products"][product_name] = {
     "amount": 1,
-    "price": current_price,
+    "price": price,
     "description": form_data,
     "image_url": "https://github.com/darideveloper/cancun-concierge/blob/master/imgs/transports.png?raw=true"
   }
@@ -316,16 +292,40 @@ form.addEventListener("submit", (e) => {
   .catch (error => {
     console.error("Booking submission error:", error)
     alert("An error occurred while processing your request. Please try again.")
-    if (submit_elem) {
-      submit_elem.value = current_price === 0 ? "Book Free Transfer" : "Buy now"
+    if (button) {
+      button.value = initial_label
     }
   })
+
+}
+
+// Paid flow: a vehicle is required
+paid_form.addEventListener("submit", (e) => {
+
+  e.preventDefault ()
+
+  if (!current_transport_type) {
+    alert("Please select a vehicle to continue.")
+    paid_submit.value = "Buy now"
+    return
+  }
+
+  send_booking(paid_form, transport_name, current_price, paid_submit, current_transport_type)
+
+})
+
+// Free arrival flow: price 0 and no vehicle, independent from the paid flow
+free_form.addEventListener("submit", (e) => {
+
+  e.preventDefault ()
+
+  send_booking(free_form, FREE_PRODUCT, 0, free_submit, "")
 
 })
 
 button_back.addEventListener("click", (e) => {
   // Hide form
-  form_elem.classList.add("hide")
+  paid_form.classList.add("hide")
 
   // Hide vehicle options
   transport_vehicles_wrapper.classList.add("hide")
@@ -346,6 +346,35 @@ button_back.addEventListener("click", (e) => {
   current_direction = ""
   current_transport_type = ""
   current_price = 0
+})
+
+// Free arrival toggle: shows/hides its own form, independent from the paid flow
+function set_free_active(active) {
+
+  free_toggle.classList.toggle("active", active)
+  free_toggle.setAttribute("aria-checked", active)
+
+  if (active) {
+    // Empty vehicle type => generic 1-12 passengers, whatever is selected below
+    activate_form(free_form, ["arriving"], "")
+  } else {
+    free_form.classList.add("hide")
+    free_form.querySelectorAll("fieldset, input, select").forEach(elem => {
+      elem.disabled = true
+    })
+  }
+}
+
+function toggle_free() {
+  set_free_active(!free_toggle.classList.contains("active"))
+}
+
+free_toggle.addEventListener("click", toggle_free)
+free_toggle.addEventListener("keydown", (e) => {
+  if (e.key === " " || e.key === "Enter") {
+    e.preventDefault()
+    toggle_free()
+  }
 })
 
 // // Run script when page loads

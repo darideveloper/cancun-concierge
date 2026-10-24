@@ -5276,6 +5276,9 @@ header.ashley-jonathan h2, #footer.ashley-jonathan h2 {
   font-family: "Cormorant Garamond", serif;
   letter-spacing: 0.05em;
 }
+.ashley-jonathan-airport-transfers .transportation .titles p {
+  font-size: 26px;
+}
 .ashley-jonathan-airport-transfers h2 {
   text-align: center;
   margin-bottom: 30px;
@@ -5328,6 +5331,7 @@ header.ashley-jonathan h2, #footer.ashley-jonathan h2 {
   width: 100%;
 }
 .ashley-jonathan-airport-transfers .cards.transport .card .text h3 {
+  margin-top: 0;
   margin-bottom: 0;
   color: #2a3a24;
 }
@@ -5370,6 +5374,22 @@ header.ashley-jonathan h2, #footer.ashley-jonathan h2 {
 }
 .ashley-jonathan-airport-transfers .cards.transport .card.active .checkbox .inside {
   background-color: rgba(42, 58, 36, 0.8);
+}
+.ashley-jonathan-airport-transfers .cards.transport.free {
+  grid-template-columns: minmax(0, 300px);
+  justify-content: center;
+  margin: 35px auto 0;
+}
+.ashley-jonathan-airport-transfers .cards.transport.translate {
+  grid-template-columns: repeat(2, minmax(0, 300px));
+  justify-content: center;
+}
+.ashley-jonathan-airport-transfers .free-note {
+  text-align: center;
+  margin: 18px auto 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.15rem;
+  color: #6b5a44;
 }
 .ashley-jonathan-airport-transfers .info {
   text-align: center;
@@ -5519,6 +5539,12 @@ header.ashley-jonathan h2, #footer.ashley-jonathan h2 {
   padding-left: 5px;
 }
 @media screen and (max-width: 900px) {
+  .ashley-jonathan-airport-transfers .transportation .titles p {
+    font-size: 18px;
+  }
+  .ashley-jonathan-airport-transfers .cards.transport.translate {
+    grid-template-columns: minmax(0, 300px);
+  }
   .ashley-jonathan-airport-transfers .cards.transport {
     width: 95%;
     max-width: 560px;
@@ -5529,9 +5555,6 @@ header.ashley-jonathan h2, #footer.ashley-jonathan h2 {
     justify-content: flex-start;
     padding: 15px;
     margin-bottom: 10px;
-  }
-  .ashley-jonathan-airport-transfers .cards.transport .card .text h3 {
-    margin-top: 0;
   }
   .ashley-jonathan-airport-transfers .cards.transport .card br {
     display: none;
@@ -6070,5 +6093,3 @@ header.marlee-brock .btn.menu svg, #footer.marlee-brock .btn.menu svg {
     width: 26px;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
